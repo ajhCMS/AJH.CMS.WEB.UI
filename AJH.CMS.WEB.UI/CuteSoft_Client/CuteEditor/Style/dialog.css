@@ -1,0 +1,168 @@
+body,input,textarea,button,select,fieldset,table
+{
+	color: windowtext; font:normal 11px Verdana;
+}
+
+button
+{
+	padding-top: 1px;
+	height: 22px;
+}
+fieldset
+{
+	padding: 2px;
+}
+.normal
+{
+	color: windowtext; font:normal 11px Verdana; 
+}
+.sortable
+{
+	color: windowtext; font:normal 11px Verdana; 
+}
+
+body
+{
+	background-color:menu;	
+	overflow:hidden;
+	margin:0;padding:4;
+}
+
+.TabNav 
+{
+	float:left;
+	display:block;
+	padding: 3px 3px 3px 3px;
+	font:bold 11px Tahoma;
+    color: #000000;
+    text-decoration: none;
+    margin-left:3px;
+    background-color: #d7d3cc;
+    border-right: buttonshadow 1px solid; border-top: buttonhighlight 1px solid; border-left: buttonhighlight 1px solid; border-bottom: buttonshadow 1px solid; 
+}
+
+.ActiveTabNav, .TabNav:hover
+{
+	float:left;
+	font:bold 11px Verdana;
+    padding: 3px 3px 3px 3px;
+    font:bold 11px Tahoma;
+    color: #000000;
+    text-decoration: none;
+    margin-left:3px;     
+    background-color: #c0c0c0;
+    border: #0A246A 1px solid; 
+}
+
+.StyleNav
+{
+	display:block;
+	font:normal 11px Verdana;
+    padding: 1px 3px 3px 3px;
+    color: #000;
+    height:23px;
+    width:100px;
+    text-decoration: none;
+    margin-left:0px;
+    margin-right:2px;
+    margin-bottom:2px;
+    background-color: #d7d3cc;
+    border-right: buttonshadow 1px solid; border-top: buttonhighlight 1px solid; border-left: buttonhighlight 1px solid; border-bottom: buttonshadow 1px solid;
+}
+
+.ActiveStyleNav, .StyleNav:hover
+{
+	display:block;
+	font:normal 11px Verdana;
+    padding: 1px 3px 3px 3px;
+    color: #000;
+    height:23px;
+    width:100px;
+    text-decoration: none;
+    margin-left:0px;
+    margin-right:2px;
+    margin-bottom:2px;
+    border: #0A246A 1px solid; background-color: #c0c0c0;
+}
+.ActiveStyleNav:hover
+{
+	display:block;
+	border:darkgreen 1px solid;
+}
+
+#div_demo
+{
+	position:static!important;
+	width:100%!important;
+	height:100%!important;
+}
+
+#outer
+{
+	height:65px;
+	width:300px;
+	overflow:hidden; 
+	padding:5px;
+	background-color: #ffffff;
+	margin-top:10px;
+	font:normal 11px Verdana;
+    border-right: buttonhighlight 1px solid; 
+	border-top: buttonshadow 1px solid; 
+	border-left: buttonshadow 1px solid; 
+	border-bottom: buttonhighlight 1px solid; 
+}
+
+.inputbuttoncancel , .inputbuttoninsert
+{
+	width:80px;
+	padding-top:2px;
+}
+.dialogButton
+{
+	border:1px solid #f5f5f4;
+	padding:1px;
+}
+
+.CuteEditorDropDown {	margin-left:1px; margin-right:1px; width:80px; border:#dad6d0 1px solid!important; height:21px; vertical-align:middle;}
+.CuteEditorToolbar {}
+.CuteEditorGroupMenu {background-image: url(Load.ashx?type=image&file=horizontal.background.gif); height:25px; background-repeat: repeat-x; vertical-align:middle;}
+.CuteEditorGroupImage { margin:0px; vertical-align:middle;}
+.CuteEditorLineBreak {}
+.CuteEditorFrame {}
+.CuteEditorButton { margin:1px; vertical-align:middle;}
+.CuteEditorButtonActive { margin:0px; vertical-align:middle; border:#0a246a 1px solid!important; background-color:#d4d5d8;}
+.CuteEditorButtonOver { margin:0px;vertical-align:middle;border:#0a246a 1px solid!important; background-color:#b6bdd2;}
+.CuteEditorButtonDown { border-right: buttonhighlight 1px solid!important; border-top: buttonshadow 1px solid!important; border-left: buttonshadow 1px solid!important; border-bottom: buttonhighlight 1px solid!important; margin:0px;vertical-align:middle; }
+.CuteEditorButtonDisabled 
+{
+	/*filter:gray alpha(opacity=25);opacity: .25; -moz-opacity: .25;*/
+	border:1px solid #f5f5f4;
+	-moz-opacity: .25;
+}
+.ToolControl{}
+.ToolControlOver{}
+.ToolControlDown{}
+.separator {background-image: url(Load.ashx?type=image&file=Separator.gif); height:25px; background-repeat: no-repeat; vertical-align:middle; width:2px;margin-left:2px; margin-right:2px;	}
+.editimgDisabled 
+{
+	/*filter:gray alpha(opacity=25);opacity: .25; -moz-opacity: .25;*/
+}
+.filelistHeadCol A
+{
+	font:normal 11px Verdana; 
+/*	cursor: default; */
+	color: windowtext;
+}
+
+a.filelistHeadCol:visited, a.filelistHeadCol:link /* Font used for links in the navigation menu */
+{
+	font:normal 11px Verdana;
+	color: #ffffff;
+    text-decoration: none; 
+}
+
+a.filelistHeadCol:Hover /* Font used for hovering over a link in the navigation menu */
+{
+    color: #FF3300;
+	font:normal 11px Verdana; 
+}

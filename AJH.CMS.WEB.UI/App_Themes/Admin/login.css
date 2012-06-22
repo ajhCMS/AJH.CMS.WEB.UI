@@ -1,0 +1,104 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Cantata+One);
+HTML, BODY
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 12px;
+    overflow-x: hidden;
+}
+body
+{
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F2F2F2', endColorstr='#F0F0F0'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#F0F0F0)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #F2F2F2,  #F0F0F0); /* for firefox 3.6+ */
+}
+#MainContent_upnlLogin
+{
+    width: 390px;
+    height: 300px;
+    margin: 0 auto;
+    background: #fff;
+    border: solid 1px #BDBDBD;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -box-shadow: 0 0 10px rgba(0,0,0,.4);
+    display: none;
+}
+.user-login, .user-login table
+{
+    width: 100%;
+}
+.user-login .title-login
+{
+    font-size: 45px;
+    font-family: 'Cantata One' , serif;
+    line-height: 35px;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+.user-login .lbl-login
+{
+    display: block;
+    font-size: 13px;
+    padding: 5px;
+    color: #666;
+    font-weight: bold;
+    width: 100%;
+    float: left;
+    clear: both;
+    text-align: left;
+    padding-top: 15px;
+}
+.user-login input[type=text], .user-login input[type=password]
+{
+    width: 250px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 5px;
+    color: #2988C2;
+    margin: 10px 0;
+    border: solid 1px #dbdbdb;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.4);
+    -box-shadow: 0 0 5px rgba(0,0,0,.4);
+}
+.user-login input[type=text]:focus, .user-login input[type=password]:focus
+{
+    border: solid 1px # #2988C2;
+}
+.inst-login
+{
+    display: none;
+}
+.chk-login
+{
+    padding-left: 90px;
+}
+.user-login input.loginbtn-login
+{
+    background: url(../Image/signin-btn.png) repeat-x;
+    width: 104px;
+    height: 38px;
+    border: solid 1px #dbdbdb;
+    border-radius: 10px;
+    color: #fff;
+    line-height: 36px;
+    font-weight: bold;
+    margin-right: 28px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.fail-login
+{
+    position: absolute;
+    margin-left: 10px;
+    padding: 7px 30px;
+    background: #FFE424;
+    color: #363636;
+    text-shadow: 0.1em 0.1em 0.05em #eee;
+    border-radius: 10px;
+}

@@ -1,0 +1,4 @@
+﻿<%--#Region RegisterControls--%>
+<%--#Endregion RegisterControls--%>
+<asp:Content ID="plcContent" ContentPlaceHolderID="plcHolder" runat="server">
+</asp:Content>

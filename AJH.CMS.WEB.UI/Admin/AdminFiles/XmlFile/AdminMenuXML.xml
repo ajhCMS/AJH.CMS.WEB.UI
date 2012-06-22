@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menus>
+  <Menu Id="1" Name="Content" Url="~/Admin/FrmLanding.aspx" Class="top-menu-item tmi1">
+    <Menu Id="4" Name="Category" Url="~/Admin/Category/FrmCategory.aspx" Class="" ParentID="1" Image="~/App_Themes/Image/Dashboard-Category.png"></Menu>
+    <Menu Id="5" Name="Article" Url="~/Admin/Article/FrmArticle.aspx" Class="" ParentID="1" Image="~/App_Themes/Image/Dashboard-Article.png"></Menu>
+    <Menu Id="6" Name="Menu" Url="~/Admin/Menu/FrmMenu.aspx" Class="" ParentID="1" Image="~/App_Themes/Image/Dashboard-Menu.png"></Menu>
+    <Menu Id="7" Name="Gallery" Url="~/Admin/Gallery/FrmGallery.aspx" Class="" ParentID="1" Image="~/App_Themes/Image/Dashboard-Gallery.png"></Menu>
+    <Menu Id="8" Name="HTML" Url="~/Admin/HTML/FrmHtmlBlock.aspx" Class="" ParentID="1" Image="~/App_Themes/Image/Dashboard-HTML.png"></Menu>
+  </Menu>
+  <Menu Id="2" Name="Setup" Url="~/Admin/FrmLanding.aspx" Class="top-menu-item tmi2">
+    <Menu Id="0" Name="Template" Url="~/Admin/Template/FrmTemplate.aspx" Class="" ParentID="2" Image="~/App_Themes/Image/Dashboard-Template.png"></Menu>
+    <Menu Id="10" Name="Page" Url="~/Admin/Page/FrmPage.aspx" Class="" ParentID="2" Image="~/App_Themes/Image/Dashboard-Page.png"></Menu>
+    <Menu Id="11" Name="Style" Url="~/Admin/Style/FrmStyle.aspx" Class="" ParentID="2" Image="~/App_Themes/Image/Dashboard-Style.png"></Menu>
+    <Menu Id="12" Name="XSL Template" Url="~/Admin/XSLTemplate/FrmXSLTemplate.aspx" Class="" ParentID="2" Image="~/App_Themes/Image/Dashboard-XSLTemplate.png"></Menu>
+    <Menu Id="13" Name="Controls" Url="~/Admin/CMSControl/FrmCMSControl.aspx" Class="" ParentID="2" Image="~/App_Themes/Image/Dashboard-CMSControl.png"></Menu>
+  </Menu>
+  <Menu Id="3" Name="Security" Url="~/Admin/FrmLanding.aspx" Class="top-menu-item tmi3">
+    <Menu Id="14" Name="Permissions" Url="~/Admin/Security/FrmPermission.aspx" Class="" ParentID="3" Image="~/App_Themes/Image/Dashboard-Permissions.png"></Menu>
+    <Menu Id="15" Name="Users" Url="~/Admin/Security/FrmUser.aspx" Class="" ParentID="3" Image="~/App_Themes/Image/Dashboard-Users.png"></Menu>
+    <Menu Id="17" Name="Roles" Url="~/Admin/Security/FrmRole.aspx" Class="" ParentID="3" Image="~/App_Themes/Image/Dashboard-Roles.png"></Menu>
+    <Menu Id="16" Name="Forms" Url="~/Admin/Security/FrmForm.aspx" Class="" ParentID="3" Image="~/App_Themes/Image/Dashboard-Forms.png"></Menu>
+  </Menu>
+  <Menu Id="4" Name="ECommerce" Url="~/Admin/FrmLanding.aspx" Class="top-menu-item tmi3">
+    <Menu Id="17" Name="Catalog" Url="~/Admin/ECommerce/Catalog/FrmCatalog.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png"></Menu>
+    <Menu Id="18" Name="Group" Url="~/Admin/ECommerce/Group/FrmGroup.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png"></Menu>
+    <Menu Id="29" Name="Attribute" Url="~/Admin/ECommerce/Attribute/FrmAttribute.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png"></Menu>
+    <Menu Id="20" Name="Feature" Url="~/Admin/ECommerce/Feature/FrmFeature.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png"></Menu>
+    <Menu Id="21" Name="Tax" Url="~/Admin/ECommerce/Tax/FrmTax.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png"></Menu>
+    <Menu Id="22" Name="Supplier" Url="~/Admin/ECommerce/Supplier/FrmSupplier.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png"></Menu>
+    <Menu Id="23" Name="Manufacturar" Url="~/Admin/ECommerce/Manufacturar/FrmManufacturar.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png"></Menu>
+    <Menu Id="24" Name="Product" Url="~/Admin/ECommerce/Product/FrmProductSearch.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png"></Menu>
+  </Menu>
+</Menus>

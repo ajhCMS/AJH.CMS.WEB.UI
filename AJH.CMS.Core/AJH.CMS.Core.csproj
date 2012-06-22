@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDA30750-3BAB-40EB-B604-373671D38DD0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AJH.CMS.Core</RootNamespace>
+    <AssemblyName>AJH.CMS.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\CMSConfig.cs" />
+    <Compile Include="Configuration\ConfigElements\CacheConfigElement.cs" />
+    <Compile Include="Configuration\ConfigElements\SecurityConfigElement.cs" />
+    <Compile Include="Configuration\ConfigElements\CustomerConfigElement.cs" />
+    <Compile Include="Configuration\ConfigSectionHandler\CoreConfigSectionHandler.cs" />
+    <Compile Include="Configuration\CoreConfigurationManager.cs" />
+    <Compile Include="Data\Helper\CMSEncryptAndDecrypt.cs" />
+    <Compile Include="Data\Managers\CacheManager.cs" />
+    <Compile Include="Data\Managers\CMSControlManager.cs" />
+    <Compile Include="Data\Managers\ArticleManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\AttributeManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\CatalogManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\CombinationProductManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\FeatureManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\GroupManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\ManufacturarManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\ProductManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\ProductImageManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\ProductPriceManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\SupplierManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\TaxManager.cs" />
+    <Compile Include="Data\Managers\PublishManager.cs" />
+    <Compile Include="Data\Managers\FormUserManager.cs" />
+    <Compile Include="Data\Managers\FormRoleManager.cs" />
+    <Compile Include="Data\Managers\LanguageManager.cs" />
+    <Compile Include="Data\Managers\RoleManager.cs" />
+    <Compile Include="Data\Managers\FormManager.cs" />
+    <Compile Include="Data\Managers\GalleryManager.cs" />
+    <Compile Include="Data\Managers\ModuleManager.cs" />
+    <Compile Include="Data\Managers\UserManager.cs" />
+    <Compile Include="Data\Managers\HtmlBlockManager.cs" />
+    <Compile Include="Data\Managers\StyleManager.cs" />
+    <Compile Include="Data\Managers\XSLTemplateManager.cs" />
+    <Compile Include="Data\Mappers\CMSControlDataMapper.cs" />
+    <Compile Include="Data\Mappers\ArticleDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\AttributeDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\CatalogDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\CombinationProductDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\TaxDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\SupplierDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\ProductPriceDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\ProductImageDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\ProductDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\ManufacturarDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\GroupDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\FeatureDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\ECommerceDataMapperBase.cs" />
+    <Compile Include="Data\Mappers\PublishDataMapper.cs" />
+    <Compile Include="Data\Mappers\FormUserDataMapper.cs" />
+    <Compile Include="Data\Mappers\FormRoleDataMapper.cs" />
+    <Compile Include="Data\Mappers\LanguageDataMapper.cs" />
+    <Compile Include="Data\Mappers\RoleDataMapper.cs" />
+    <Compile Include="Data\Mappers\FormDataMapper.cs" />
+    <Compile Include="Data\Mappers\GalleryDataMapper.cs" />
+    <Compile Include="Data\Mappers\ModuleDataMapper.cs" />
+    <Compile Include="Data\Mappers\UserDataMapper.cs" />
+    <Compile Include="Data\Mappers\HtmlBlockDataMapper.cs" />
+    <Compile Include="Data\Mappers\StyleDataMapper.cs" />
+    <Compile Include="Data\Mappers\XSLTemplateDataMapper.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\CMSControl.cs" />
+    <Compile Include="Entities\Article.cs" />
+    <Compile Include="Entities\ECommerce\Attribute.cs" />
+    <Compile Include="Entities\ECommerce\Catalog.cs" />
+    <Compile Include="Entities\ECommerce\CombinationProduct.cs" />
+    <Compile Include="Entities\ECommerce\Tax.cs" />
+    <Compile Include="Entities\ECommerce\Supplier.cs" />
+    <Compile Include="Entities\ECommerce\ProductPrice.cs" />
+    <Compile Include="Entities\ECommerce\ProductImage.cs" />
+    <Compile Include="Entities\ECommerce\Product.cs" />
+    <Compile Include="Entities\ECommerce\Manufacturar.cs" />
+    <Compile Include="Entities\ECommerce\Feature.cs" />
+    <Compile Include="Entities\ECommerce\Group.cs" />
+    <Compile Include="Entities\Publish.cs" />
+    <Compile Include="Entities\FormUser.cs" />
+    <Compile Include="Entities\FormRole.cs" />
+    <Compile Include="Entities\Language.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\Form.cs" />
+    <Compile Include="Entities\Gallery.cs" />
+    <Compile Include="Entities\Module.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\HtmlBlock.cs" />
+    <Compile Include="Entities\Style.cs" />
+    <Compile Include="Entities\XSLTemplate.cs" />
+    <Compile Include="Entities\Template.cs" />
+    <Compile Include="Entities\Page.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\Menu.cs" />
+    <Compile Include="Enums\CMSEnums.cs" />
+    <Compile Include="Data\Helper\CMSCoreHelper.cs" />
+    <Compile Include="Data\Managers\CategoryManager.cs" />
+    <Compile Include="Data\Managers\TemplateManager.cs" />
+    <Compile Include="Data\Managers\PageManager.cs" />
+    <Compile Include="Data\Managers\MenuManager.cs" />
+    <Compile Include="Data\Mappers\CMSCoreBase.cs" />
+    <Compile Include="Data\Mappers\CategoryDataMapper.cs" />
+    <Compile Include="Data\Mappers\TemplateDataMapper.cs" />
+    <Compile Include="Data\Mappers\PageDataMapper.cs" />
+    <Compile Include="Data\Mappers\MenuDataMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

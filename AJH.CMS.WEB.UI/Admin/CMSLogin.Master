@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="CMSLogin.Master.cs"
+    Inherits="AJH.CMS.WEB.UI.Admin.CMSLogin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <%=PageTitle() %></title>
+    <link href="~/App_Themes/Admin/login.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <asp:ScriptManager ID="scManager" EnableCdn="false" runat="server">
+        <CompositeScript>
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/jquery-1.7.1.min.js" />
+                <asp:ScriptReference Path="~/Scripts/CMSPageSettings.js" />
+                <asp:ScriptReference Path="~/Scripts/CMSLogin.js" />
+            </Scripts>
+        </CompositeScript>
+    </asp:ScriptManager>
+    <asp:Label ID="lblCMS" runat="server"></asp:Label>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </form>
+</body>
+</html>

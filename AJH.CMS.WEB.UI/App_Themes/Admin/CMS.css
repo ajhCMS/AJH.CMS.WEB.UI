@@ -1,0 +1,1099 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background: #3A2A46;
+    font-size: .80em;
+    font-family: 'Segoe UI Light' , 'Segoe UI' , 'Lucida Grande' ,Verdana,Arial,Helvetica,sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+    overflow-x: hidden;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 37px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header
+{
+    position: absolute;
+    margin: 0px;
+    padding: 5px;
+    background: #3A2A46;
+    width: 100%;
+    height: 40px;
+}
+.left span.logo
+{
+    font-family: 'Segoe UI Light' , 'Segoe UI' , 'Lucida Grande' ,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 26px;
+    color: white;
+    padding: 6px 10px 7px;
+    display: block;
+}
+.left
+{
+    width: 249px;
+    float: left;
+    display: block;
+    margin-right: 10px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color: #3a4f63;
+    width: 100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline
+{
+    display: inline;
+}
+
+legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+/************************* ALAA ******************************/
+.content
+{
+    min-height: 700px;
+    overflow: hidden;
+    display: block;
+    margin-left: 255px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.top-menu
+{
+    float: right;
+}
+.top-menu-item
+{
+    background: black;
+    width: 126px;
+    height: 33px;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    padding-top: 7px;
+    text-decoration: none;
+    color: white !important;
+    padding-left: 12px;
+    font-size: 17px;
+}
+
+
+.tmi1
+{
+    background: #40A4B9 !important;
+}
+
+.tmi2
+{
+    background: #348596 !important;
+}
+
+.tmi3
+{
+    background: #1D4A54 !important;
+}
+.active-top-menu-item
+{
+    height: 45px;
+    background: #2B9BC6 !important;
+}
+
+/*************** Left menu *************/
+
+.page-title
+{
+    color: white !important;
+    font-size: 28px;
+    padding-left: 15px;
+}
+.left-menu li ul
+{
+    margin-bottom: 10px;
+}
+.left-menu li li:before
+{
+    content: "-";
+    margin-left: -50px;
+    padding-right: 5px;
+}
+.left-menu li li
+{
+    background: none;
+}
+.left-menu li
+{
+    background: url("/App_Themes/Image/bg-left-menu-item.png") no-repeat scroll left 4px transparent;
+    color: white;
+    font-size: 15px;
+    list-style: none outside none;
+    padding-left: 15px;
+    line-height: 22px;
+}
+.left-menu a:hover
+{
+    background: url("/App_Themes/Image/bg-left-menu-item-hover.png") repeat scroll 0 0 transparent;
+    color: White !important;
+}
+.left-menu a
+{
+    padding: 0 3px;
+    cursor: pointer;
+}
+
+.left-menu
+{
+    margin: 5px 15px;
+    padding: 8px 0;
+    width: 249px;
+}
+
+/*************************************/
+
+/**************** menu ******/
+.grid-title
+{
+    float: left;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.grid-top
+{
+    width: 100%;
+    background: #eaeaea;
+    height: 30px;
+    margin-top: 10px;
+}
+.Item-table td
+{
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.menus-details td
+{
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+textarea
+{
+    height: 12px;
+    vertical-align: bottom;
+}
+
+.grid-items a
+{
+    color: #3A2A46;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.grid-items
+{
+    border: 1px solid #eaeaea;
+    display: block;
+    overflow: hidden;
+    min-height: 150px;
+    padding: 0px 0 10px 5px;
+    margin-bottom: 25px;
+    width: 99.4%\9;
+}
+.footer-buttons input
+{
+    float: right;
+    border: none;
+    margin-left: 10px;
+    font-family: 'Segoe UI Light' , 'Segoe UI' , 'Lucida Grande' ,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+    cursor: pointer;
+}
+.product-navigator
+{
+    background-color: #3A2A46;
+    min-height: 162px;
+}
+.product-navigator > div
+{
+    background-color: #4F3D6A;
+    float: left;
+    height: 75px;
+    margin: 3px;
+    position: relative;
+    width: 75px;
+    cursor: pointer;
+}
+.product-navigator > div:hover
+{
+    background-color: #2988C2;
+}
+.product-navigator .active
+{
+    background-color: #2988C2;
+}
+.prd-icons
+{
+    height: 52px;
+    margin: 0 auto;
+    width: 52px;
+    margin-top: 3px;
+}
+.sb-icon.prd-icons.toolsweb
+{
+    background: url(../image/active-tool.png) no-repeat center;
+}
+.product-navigator .prd-icons
+{
+    display: block;
+}
+.product-navigator .prod-name
+{
+    left: 4px;
+    position: relative;
+    text-align: center;
+}
+
+.product-navigator a, .left a
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.sb-icon.prd-icons.chartweb
+{
+    background: url(../image/chart.png) no-repeat center;
+}
+.sb-icon.prd-icons.gridgroupingweb
+{
+    background: url(../image/grid.png) no-repeat center;
+}
+.sb-icon.prd-icons.diagramweb
+{
+    background: url(../image/digram.png) no-repeat center;
+}
+.sb-icon.prd-icons.gaugeweb
+{
+    background: url(../image/gauge.png) no-repeat center;
+}
+.sb-icon.prd-icons.scheduleweb
+{
+    background: url(../image/schoual.png) no-repeat center;
+}
+.content h2
+{
+    padding-top: 52px;
+    padding-left: 10px;
+}
+
+.content select
+{
+    height: 35px;
+    padding: 7px 7px;
+}
+.Item-table
+{
+    width: 100%;
+}
+.content input[type=text], .content select, .content textarea, .content input[type=file]
+{
+    width: 100%;
+    border: solid 1px #ccc;
+    color: #ccc;
+}
+.content input[type=text]
+{
+    width: 98.5%;
+}
+.content select:focus
+{
+    border: solid 1px #ccc;
+    border-bottom: none;
+}
+.content input[type=text]:focus, .content textarea:focus
+{
+    border: solid 1px #40A4B9;
+    color: #2988C2;
+}
+.content input[type=text]
+{
+    height: 35px;
+    padding: 0 7px;
+}
+
+.order-num input[type=text]
+{
+    border: solid 1px #ccc;
+    background: #eee;
+    color: #8EA718;
+}
+.content option
+{
+    padding: 5px 7px;
+    font-size: 13px;
+    color: #2988C2;
+}
+.search-item select
+{
+    padding-left: 5px;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 10px;
+}
+.content textarea
+{
+    padding: 7px;
+    width: 98.5%;
+}
+.content label
+{
+    font-size: 14px;
+    color: #3A2A46;
+    font-weight: bold;
+}
+.order-num input[type=button]
+{
+    margin-left: -25px;
+}
+.order-num input[type=text]
+{
+    height: 26px;
+    padding: 0 17px 0 0;
+}
+.content input[type=submit]
+{
+    width: 104px;
+    height: 30px;
+    border: solid 1px #dbdbdb;
+    border-radius: 10px;
+    color: #666;
+    font-weight: bold;
+    margin-right: 7px;
+    margin-top: 30px;
+    cursor: pointer;
+    text-shadow: 0.1em 0.1em 0.05em #eee;
+    background: #ccc;
+    border: solid 1px #999;
+    padding-bottom: 3px;
+}
+.content input[type=submit]:hover
+{
+    background: #eee;
+}
+.grid-actions input[type=image]
+{
+    width: 24px;
+    height: 24px;
+}
+.grid-actions
+{
+    float: right;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+a:focus
+{
+    border: none;
+}
+.dv-OperationDoneSuccessfully
+{
+    width: 300px;
+    float: right;
+    position: fixed;
+    right: 10PX;
+    padding: 15px;
+    background: #eee;
+    border-top: 3px solid yellow;
+    bottom: 0PX;
+    border-radius: 10px;
+}
+.leftnav
+{
+    background: #2988C2;
+    height: 400px;
+}
+
+.jScrollPaneContainer
+{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.jScrollPaneTrack
+{
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #aaa;
+}
+.jScrollPaneDrag
+{
+    position: absolute;
+    background: #666;
+    cursor: pointer;
+    overflow: hidden;
+}
+.jScrollPaneDragTop
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.jScrollPaneDragBottom
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+a.jScrollArrowUp
+{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    text-indent: -2000px;
+    overflow: hidden; /*background-color: #666;*/
+    height: 9px;
+}
+a.jScrollArrowUp:hover
+{
+    /*background-color: #f60;*/
+}
+
+a.jScrollArrowDown
+{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    text-indent: -2000px;
+    overflow: hidden; /*background-color: #666;*/
+    height: 9px;
+}
+a.jScrollArrowDown:hover
+{
+    /*background-color: #f60;*/
+}
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover
+{
+    /*background-color: #f00;*/
+}
+
+a.jScrollArrowUp
+{
+    background: url(../image/basic_arrow_up.gif) repeat-x 0 0;
+}
+a.jScrollArrowUp:hover
+{
+    background-position: 0 -15px;
+}
+a.jScrollArrowDown
+{
+    background: url(../image/basic_arrow_down.gif) repeat-x 0 0;
+}
+a.jScrollArrowDown:hover
+{
+    background-position: 0 -15px;
+}
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover
+{
+    background-position: 0 -30px;
+}
+
+
+
+.holder
+{
+}
+
+.scroll-pane
+{
+    width: 249px;
+    overflow: auto;
+    float: left;
+}
+
+#pane4
+{
+    height: 320px;
+}
+
+.content select#MainContent_ucManageMenu_ddlPage
+{
+    width: 400px;
+}
+.loadingPanel
+{
+    background-color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    filter: alpha(opacity=50);
+    opacity: 0.50;
+}
+.grd td
+{
+    padding: 7px;
+}
+.grd th
+{
+    padding: 0 7px;
+}
+.grd tr:hover
+{
+    background: #eee;
+}
+.grd th
+{
+    background: #3A2A46;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    border: solid 1px #3A2A46;
+}
+.grd th td:hover
+{
+    background: none;
+}
+.grd a
+{
+    color: #2988C2;
+    text-decoration: none;
+}
+.leftnav .active-left-menu-item a
+{
+    background: url("/App_Themes/Image/bg-left-menu-item-hover.png") repeat;
+}
+.left a
+{
+    display: block;
+    margin-right: 20px;
+}
+.grd
+{
+    margin-bottom: 20px;
+}
+.grid-headers
+{
+    background: #ccc;
+    height: 32px;
+    line-height: 32px;
+    color: #666;
+    padding-left: 15px;
+    text-shadow: 0.1em 0.1em 0.05em #eee;
+    margin-top: 15px;
+}
+.ajaxdate-cntrl input[type=text];
+{
+    width: 95.5%;
+}
+.Dashboard-Items
+{
+    margin-top: 100px;
+}
+.Dashboard-Items li
+{
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+    padding-top: 0px;
+    list-style: none;
+    height: 100px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #ffffff,  #eeeeee); /* for firefox 3.6+ */
+    border: solid 1px #ccc;
+    text-align: center;
+    color: #999;
+    border-radius: 6px;
+}
+.Dashboard-Items li a
+{
+    color: #999;
+    text-decoration: none;
+}
+.Dashboard-Items li img
+{
+    width: 60px;
+    height: 60px;
+    padding: 0px;
+    border: none;
+    margin: 11px;
+}
+.welcome-msg
+{
+    color: White;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: absolute;
+}
+.welcome-msg a
+{
+    display: inline;
+    margin-right: 0;
+    color: white;
+    text-decoration: none;
+}
+.btn-addcontrol, .btn-update, .btn-addstyle
+{
+    float: right;
+    margin-bottom: 10px;
+}
+.sep-tbl
+{
+    height: 4PX;
+    background: #348596;
+    margin: 10px 0;
+}
+.dv-problem
+{
+    color: Red;
+}
+#MainContent_ucManageGallery_upnlGallery .grd tr:hover
+{
+    background: none;
+}
+#MainContent_ucManageGallery_upnlGallery .grd td{ width:20%;}
+#MainContent_ucManageGallery_upnlGallery .grd td .glry-item
+{
+     border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #ffffff,  #eeeeee); /* for firefox 3.6+ */
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -box-shadow: 0 0 10px rgba(0,0,0,.4);
+    margin: 10px;
+    height: 170px;
+    
+}
+#MainContent_ucManageGallery_upnlGallery .grd td .glry-item input
+{
+    float: left;
+    margin: 10px;
+}
+#MainContent_ucManageGallery_upnlGallery .grd td .glry-item img
+{
+    margin: 10px 10px 10px 0;
+}
+#MainContent_ucManageGallery_upnlGallery .grd td .glry-item .gallery-img
+{
+    text-align: center;
+    height: 120px;
+}
+#MainContent_ucManageGallery_upnlGallery .grd td .glry-item .gallery-name
+{
+    text-shadow: 0.1em 0.1em 0.05em #eee;
+    text-align: center;
+}
+#MainContent_ucManageGallery_upnlGallery .grd td .glry-item .gallery-name a
+{
+    text-shadow: 0.1em 0.1em 0.05em #999;
+    display: block;
+    color: #000;
+    padding: 0 6px;
+}
+.content table input[type=image]
+{
+    margin: -26px 0 0;
+    position: absolute;
+    right: 22px;
+}
+.swfupload{  border: 1px solid #ccc;
+   
+    padding-bottom: 0;
+    padding-left: 12px;
+    padding-top: 4px;
+    border-radius:7px; background:#eee;}
+    
+    .flash-uploadbutton input{position:absolute;}
+    .flash-uploadprogress{   border: 1px solid #AFE14C;
+    margin: 10px 0;
+    padding: 20px 10px;}
+    span.legend{   background-color: #FFFFFF;
+    color: #73B304;
+    font: 700 14px Arial,Helvetica,sans-serif;
+    padding: 3px;
+    position: relative;
+    top: -30px;}
+    .progressWrapper {
+    overflow: hidden;
+    width: 357px;
+}
+.progressContainer {
+    background-color: #F7F7F7;
+    border: 1px solid #E8E8E8;
+    margin: 5px;
+    overflow: hidden;
+    padding: 4px;
+}
+.message {
+    background-color: #FFFFCC;
+    border: 1px solid #FFDD99;
+    margin: 1em 0;
+    overflow: hidden;
+    padding: 10px 20px;
+}
+.red {
+    background-color: #FFEBEB;
+    border: 1px solid #B50000;
+}
+.green {
+    background-color: #EBFFEB;
+    border: 1px solid #DDF0DD;
+}
+.blue {
+    background-color: #F0F5FF;
+    border: 1px solid #CEE2F2;
+}
+.progressName {
+    color: #555555;
+    font-size: 8pt;
+    font-weight: 700;
+    height: 14px;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    width: 323px;
+}
+.progressBarInProgress, .progressBarComplete, .progressBarError {
+    background-color: blue;
+    font-size: 0;
+    height: 2px;
+    margin-top: 2px;
+    width: 0;
+}
+.progressBarComplete {
+    background-color: green;
+    visibility: hidden;
+    width: 100%;
+}
+.progressBarError {
+    background-color: red;
+    visibility: hidden;
+    width: 100%;
+}
+.progressBarStatus {
+    font-family: Arial;
+    font-size: 7pt;
+    margin-top: 2px;
+    text-align: left;
+    white-space: nowrap;
+    width: 337px;
+}
+a.progressCancel {
+    background-image: url("../image/cancelbutton.gif");
+    background-position: -14px 0;
+    background-repeat: no-repeat;
+    display: block;
+    float: right;
+    font-size: 0;
+    height: 14px;
+    width: 14px;
+}
+a.progressCancel:hover {
+    background-position: 0 0;
+}
+.contentImg_slideshow {
+   
+    height: 122px;
+   
+    width: 560px;
+    
+    overflow:hidden}
+    
+    .content table input[type="image"].btn-search {position:static; margin:0; }
+.roles {
+    right: 157px !important;
+    width: 28px;
+    padding-top: 12px;
+}
+.users {
+    right: 51px !important;
+    width: 26px;
+    padding-top: 12px;
+}
+.roles-users {
+    width: 26px;
+    padding-top: 12px;
+left: 414px !important;
+}
+

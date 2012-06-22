@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="CMSAdmin.master.cs"
+    Inherits="AJH.CMS.WEB.UI.Admin.CMSAdmin" %>
+
+<%@ Register Src="~/Admin/Controls/AdminXmlXsl_UC.ascx" TagName="AdminXmlXsl_UC"
+    TagPrefix="controls" %>
+<%@ Register Src="~/Admin/Controls/Logout_UC.ascx" TagName="Logout_UC" TagPrefix="controls" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <%=PageTitle() %>
+    </title>
+    <link href="~/App_Themes/Admin/CMS.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Admin/JQTabContainer.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server" enctype="multipart/form-data">
+    <asp:ScriptManager ID="scManager" EnableCdn="false" runat="server">
+        <CompositeScript>
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/CMSPageSettings.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-1.7.1.min.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.mousewheel.js" />
+                <asp:ScriptReference Path="~/Scripts/jScrollPane.js" />
+                <asp:ScriptReference Path="~/Scripts/Global.js" />
+                <asp:ScriptReference Path="~/Scripts/CMSAdmin.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-ui-personalized-1.5.2.packed.js" />
+                <asp:ScriptReference Path="~/Scripts/sprinkle.js" />
+            </Scripts>
+        </CompositeScript>
+    </asp:ScriptManager>
+    <div class="header">
+        <controls:AdminXmlXsl_UC ID="ucTopMenu" KeyControlValue="TopMenuXmlXsl" DocumentSource="~/Admin/AdminFiles/XmlFile/AdminMenuXML.xml"
+            TransformSource="~/Admin/AdminFiles/XslFile/AdminParentMenuXSL.xslt" runat="server" />
+    </div>
+    <div class="left">
+        <asp:Label CssClass="logo" ID="lblLogoName" runat="server"></asp:Label>
+        <div class="leftnav">
+            <controls:AdminXmlXsl_UC ID="ucLeftMenu" KeyControlValue="LeftMenuXmlXsl" DocumentSource="~/Admin/AdminFiles/XmlFile/AdminMenuXML.xml"
+                TransformSource="~/Admin/AdminFiles/XslFile/AdminChildMenuXSL.xslt" runat="server" />
+        </div>
+        <div class="product-navigator">
+            <div class="active iis-header">
+                <span class="sb-icon prd-icons toolsweb"></span><a name="tools" class="prod-name"
+                    href="#">Tools</a>
+            </div>
+            <div class="iis-header">
+                <span class="sb-icon prd-icons chartweb"></span><a name="chart" class="prod-name"
+                    href="#">Chart</a>
+            </div>
+            <div class="iis-header">
+                <span class="sb-icon prd-icons gridgroupingweb"></span><a name="grid.grouping" class="prod-name"
+                    href="#">Grid</a>
+            </div>
+            <div class="iis-header">
+                <span class="sb-icon prd-icons diagramweb"></span><a name="diagram" class="prod-name"
+                    href="#">Diagram</a>
+            </div>
+            <div class="iis-header">
+                <span class="sb-icon prd-icons gaugeweb"></span><a name="gauge" class="prod-name"
+                    href="#">Gauge</a>
+            </div>
+            <div class="iis-header">
+                <span class="sb-icon prd-icons scheduleweb"></span><a name="schedule" class="prod-name"
+                    href="#">Schedule</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <controls:Logout_UC ID="ucLogout" runat="server" />
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+    <div id="dvOperation" class="dv-OperationDoneSuccessfully" style="display: none">
+        Operation done successfully
+    </div>
+    </form>
+</body>
+</html>
