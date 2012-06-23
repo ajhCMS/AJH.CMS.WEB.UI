@@ -107,6 +107,21 @@ namespace AJH.CMS.Core.Data
             }
         }
 
+        public static XmlDocument GenerateCatalogXmlDoc(Catalog catalog)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+
+            xmlDoc.CreateXmlDeclaration("1.0", "utf-8", null);
+            XmlElement xmlRoot = xmlDoc.CreateElement("Catalogs");
+            xmlDoc.AppendChild(xmlRoot);
+
+            XmlElement xmlEle = xmlDoc.CreateElement("Catalog");
+            xmlRoot.AppendChild(xmlEle);
+            SetAttributeCatalogNode(xmlEle, catalog);
+
+            return xmlDoc;
+        }
+
         private static void SetAttributeCatalogNode(XmlElement xmlEle, Catalog CatalogItem)
         {
             XmlAttribute xmlAtt = xmlEle.OwnerDocument.CreateAttribute("ID");
@@ -126,7 +141,7 @@ namespace AJH.CMS.Core.Data
             xmlEle.Attributes.Append(xmlAtt);
 
             xmlAtt = xmlEle.OwnerDocument.CreateAttribute("Description");
-            xmlAtt.Value = CatalogItem.Image;
+            xmlAtt.Value = CatalogItem.Description;
             xmlEle.Attributes.Append(xmlAtt);
         }
     }
