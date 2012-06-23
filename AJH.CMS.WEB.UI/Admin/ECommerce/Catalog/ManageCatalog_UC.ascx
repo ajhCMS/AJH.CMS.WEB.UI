@@ -90,7 +90,8 @@
                         <asp:Label ID="lblDescription" runat="server" Text="Description" AssociatedControlID="txtDescription"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtDescription" runat="server" MaxLength="100"></asp:TextBox>
+                        <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Height="60px"
+                            MaxLength="500"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvDescription" runat="server" ControlToValidate="txtDescription"
                             ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Description"></asp:RequiredFieldValidator>
                     </td>
@@ -100,17 +101,20 @@
                         <asp:Label ID="lblMetaTitle" runat="server" Text="Meta Title" AssociatedControlID="txtMetaTitle"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtMetaTitle" runat="server" MaxLength="100"></asp:TextBox>
+                        <asp:TextBox ID="txtMetaTitle" runat="server" TextMode="MultiLine" Height="60px"
+                            MaxLength="500"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvMetaTitle" runat="server" ControlToValidate="txtMetaTitle"
                             ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Title"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="lblMetaDescription" runat="server" Text="Meta Description" AssociatedControlID="txtMetaDescription"></asp:Label>
+                        <asp:Label ID="lblMetaDescription" runat="server" TextMode="MultiLine" Text="Meta Description"
+                            AssociatedControlID="txtMetaDescription"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtMetaDescription" runat="server" MaxLength="100"></asp:TextBox>
+                        <asp:TextBox ID="txtMetaDescription" runat="server" TextMode="MultiLine" Height="60px"
+                            MaxLength="500"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvMetaDescription" runat="server" ControlToValidate="txtMetaDescription"
                             ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Description"></asp:RequiredFieldValidator>
                     </td>
@@ -120,7 +124,8 @@
                         <asp:Label ID="lblMetaKeywords" runat="server" Text="Meta Keywords" AssociatedControlID="txtMetaKeywords"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtMetaKeywords" runat="server" MaxLength="100"></asp:TextBox>
+                        <asp:TextBox ID="txtMetaKeywords" runat="server" TextMode="MultiLine" Height="60px"
+                            MaxLength="500"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvMetaKeywords" runat="server" ControlToValidate="txtMetaKeywords"
                             ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Keywords"></asp:RequiredFieldValidator>
                     </td>
