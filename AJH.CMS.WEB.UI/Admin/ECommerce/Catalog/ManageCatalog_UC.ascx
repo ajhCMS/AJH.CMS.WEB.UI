@@ -69,7 +69,7 @@
                         <controls:SWFUpload_UC ID="ucSWFUpload" ValidationGroup="AddEditCatalog" ErrorText="*"
                             ErrorMessage="Please wait while the upload finish" runat="server" UploadPage="~/Controls/SWFUpload/frmSWFUpload.ashx"
                             ProgressTitle="Files Upload" TotalFilesQueueLimit="1" TotalFilesUploadLimit="1"
-                            IsImage="true" UploadFileSizeLimit="8 MB" FileTypeDescription="Images" FileTypes="*.gif; *.png; *.jpg; *.jpeg; *.bmp"
+                            IsImage="true" UploadFileSizeLimit="15 MB" FileTypeDescription="Images" FileTypes="*.gif; *.png; *.jpg; *.jpeg; *.bmp"
                             ButtonText="Upload" />
                     </td>
                 </tr>
