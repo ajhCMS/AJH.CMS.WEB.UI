@@ -67,6 +67,7 @@ namespace AJH.CMS.Core.Data
         internal const string SN_PRODUCT_DELETE_LOGICAL = "[ECOMMERCE].[ProductDeleteLogical]";
         internal const string SN_PRODUCT_GET_BY_ID = "[ECOMMERCE].[ProductGetByID]";
         internal const string SN_PRODUCT_GET_ALL = "[ECOMMERCE].[ProductGetAll]";
+        internal const string SN_PRODUCT_GET_BY_CATALOG_ID = "[ECOMMERCE].[ProductGetByCatalogID]";
 
 
         #endregion
@@ -524,6 +525,55 @@ namespace AJH.CMS.Core.Data
             }
             return colProducts;
         }
+
+        internal static List<Product> GetProductsByCatalogID(int catalogId, int portalID, int languageID)
+        {
+            List<Product> colProducts = null;
+            Product Product = null;
+
+            using (SqlConnection sqlConnection = new SqlConnection(CMSCoreBase.CMSCoreConnectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(SN_PRODUCT_GET_BY_CATALOG_ID, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlParameter sqlParameter = null;
+                sqlParameter = new SqlParameter(CatalogDataMapper.PN_CATALOG_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = catalogId;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_ECO_LAN_LAN_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = languageID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_MODULE_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = (int)CMSEnums.ECommerceModule.Product;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_PRODUCT_PORTAL_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = portalID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlCommand.Connection.Open();
+                using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader(System.Data.CommandBehavior.CloseConnection))
+                {
+                    colProducts = new List<Product>();
+                    while (sqlDataReader.Read())
+                    {
+                        Product = GetProduct(colProducts, sqlDataReader);
+                        FillFromReader(Product, sqlDataReader);
+                    }
+
+                    sqlDataReader.Close();
+                    sqlCommand.Connection.Close();
+                }
+            }
+            return colProducts;
+        }
+
 
         internal static Product GetProduct(int id, int portalID, int languageID)
         {

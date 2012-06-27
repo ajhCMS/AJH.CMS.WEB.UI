@@ -354,17 +354,71 @@ namespace AJH.CMS.WEB.UI.Admin
 
         void btnSaveProdcutImage_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ProductImage productImage = null;
+                List<string> imagesNames = ucSWFUploadProductImage.GetFilesName();
 
+                if (imagesNames != null && imagesNames.Count > 0)
+                {
+                    for (int i = 0; i <= imagesNames.Count - 1; i++)
+                    {
+                        productImage = new ProductImage
+                        {
+                            Image = imagesNames[i],
+                            ImageCaption = txtCaption.Text,
+                            IsCoverImage = cbIsCoverImage.Checked,
+                            LanguageID = CMSContext.LanguageID,
+                            ModuleID = (int)CMSEnums.ECommerceModule.ProductImage,
+                            IsDeleted = false,
+                            ProductID = SelecedProductId,
+                        };
+
+                        ProductImageManager.Add(productImage);
+                    }
+                }
+
+                FillProdcutImages(SelecedProductId);
+                txtCaption.Text = string.Empty;
+                cbIsCoverImage.Checked = false;
+                ucSWFUploadProductImage.BeginAddMode();
+            }
+            catch (Exception ex)
+            {
+                dvProdcutImageProblems.Visible = true;
+                dvProdcutImageProblems.InnerText = ex.ToString();
+            }
+            finally
+            {
+                upnlProductImage.Update();
+            }
         }
 
         void ibtnDeleteProductImage_Click(object sender, ImageClickEventArgs e)
         {
-
+            for (int i = 0; i < dlsProductImage.Items.Count; i++)
+            {
+                CheckBox chkItem = (CheckBox)dlsProductImage.Items[i].FindControl("chkItem");
+                if (chkItem != null && chkItem.Checked)
+                {
+                    HtmlInputHidden hdnID = (HtmlInputHidden)dlsProductImage.Items[i].FindControl("hdnID");
+                    if (hdnID != null && !string.IsNullOrEmpty(hdnID.Value))
+                    {
+                        int imageId = Convert.ToInt32(hdnID.Value);
+                        ProductImageManager.DeleteLogical(imageId);
+                    }
+                }
+            }
+            FillProdcutImages(SelecedProductId);
+            upnlProductImage.Update();
         }
 
         void ibtnAddProductImage_Click(object sender, ImageClickEventArgs e)
         {
-
+            txtCaption.Text = string.Empty;
+            cbIsCoverImage.Checked = false;
+            ucSWFUploadProductImage.BeginAddMode();
+            upnlProductImage.Update();
         }
 
         #endregion

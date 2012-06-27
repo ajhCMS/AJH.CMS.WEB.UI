@@ -20,9 +20,9 @@ namespace AJH.CMS.Core.Data
             ProductImageDataMapper.Update(productImage);
         }
 
-        public static void Delete(int id)
+        public static void Delete(int id, int languageID)
         {
-            ProductImageDataMapper.Delete(id);
+            ProductImageDataMapper.Delete(id, languageID);
         }
 
         public static void DeleteLogical(int id)

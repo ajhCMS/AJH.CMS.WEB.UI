@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AJH.CMS.WEB.UI {
+namespace AJH.CMS.WEB.UI.Admin {
     
     
     public partial class WebForm1 {
@@ -22,21 +22,30 @@ namespace AJH.CMS.WEB.UI {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// scManager control.
+        /// smanager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager scManager;
+        protected global::System.Web.UI.ScriptManager smanager1;
         
         /// <summary>
-        /// GalleryServiceXSL_UC1 control.
+        /// upnl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AJH.CMS.WEB.UI.GalleryServiceXSL_UC GalleryServiceXSL_UC1;
+        protected global::System.Web.UI.UpdatePanel upnl;
+        
+        /// <summary>
+        /// ucSWFUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AJH.CMS.WEB.UI.Controls.SWFUpload.SWFUpload_UC ucSWFUpload;
     }
 }
