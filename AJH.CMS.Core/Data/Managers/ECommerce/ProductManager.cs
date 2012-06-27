@@ -40,6 +40,12 @@ namespace AJH.CMS.Core.Data
             return ProductDataMapper.GetProducts(portalID, languageID);
         }
 
+        public static List<Product> GetProductsByCatalogID(int catalogId, int portalID, int languageID)
+        {
+            return ProductDataMapper.GetProductsByCatalogID(catalogId, portalID, languageID);
+        }
+
+
         public static Product GetProduct(int id, int portalID, int languageID)
         {
             return ProductDataMapper.GetProduct(id, portalID, languageID);

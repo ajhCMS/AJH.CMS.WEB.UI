@@ -51,7 +51,8 @@ namespace AJH.CMS.WEB.UI.Controls.SWFUpload
                                 //Uncomment the line to use resize the image
                                 //if (uploadFile.ContentType.ToLower().Contains("image"))
                                 {
-                                    InputStream = CMSUpload.SaveJPGWithCompressionSetting(InputStream, context.Server.MapPath(virtualPath));
+                                    uploadFile.SaveAs(context.Server.MapPath(virtualPath));
+                                    //InputStream = CMSUpload.SaveJPGWithCompressionSetting(InputStream, context.Server.MapPath(virtualPath));
                                     string virtualThumbnailPath = CMSContext.VirtualUploadThumbnailFolder + uploadFileName;
                                     CMSUpload.CreateThumbnail(InputStream, context.Server.MapPath(virtualThumbnailPath));
                                 }

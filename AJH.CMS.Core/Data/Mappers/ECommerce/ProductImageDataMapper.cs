@@ -161,7 +161,7 @@ namespace AJH.CMS.Core.Data
             }
         }
 
-        internal static void Delete(int id)
+        internal static void Delete(int id, int languageID)
         {
             using (SqlConnection sqlConnection = new SqlConnection(CMSCoreBase.CMSCoreConnectionString))
             {
@@ -173,6 +173,16 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_PROD_IMAGE_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = id;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_MODULE_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = (int)CMSEnums.ECommerceModule.ProductImage;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_ECO_LAN_LAN_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = languageID;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 try
@@ -192,7 +202,7 @@ namespace AJH.CMS.Core.Data
         {
             using (SqlConnection sqlConnection = new SqlConnection(CMSCoreBase.CMSCoreConnectionString))
             {
-                SqlCommand sqlCommand = new SqlCommand(SN_PRODUCT_IMAGE_DELETE, sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand(SN_PRODUCT_IMAGE_DELETE_LOGICAL, sqlConnection);
                 sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
 
                 SqlParameter sqlParameter = null;

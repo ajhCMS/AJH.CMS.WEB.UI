@@ -940,15 +940,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.Panel pnlProductImages;
         
         /// <summary>
-        /// ibtnAddProductImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibtnAddProductImage;
-        
-        /// <summary>
         /// ibtnDeleteProductImage control.
         /// </summary>
         /// <remarks>
@@ -956,6 +947,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibtnDeleteProductImage;
+        
+        /// <summary>
+        /// ibtnAddProductImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnAddProductImage;
         
         /// <summary>
         /// lblProductImage control.
@@ -1064,6 +1064,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSaveProdcutImage;
+        
+        /// <summary>
+        /// btnExitProdcutImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExitProdcutImage;
         
         /// <summary>
         /// dvProductPrice control.

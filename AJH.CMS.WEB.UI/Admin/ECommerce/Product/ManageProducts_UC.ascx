@@ -367,10 +367,10 @@
             <ContentTemplate>
                 <asp:Panel ID="pnlProductImages" runat="server">
                     <div class="grid-actions">
-                        <asp:ImageButton ID="ibtnAddProductImage" runat="server" ImageUrl="~/App_Themes/image/add.png"
-                            ToolTip="Add" CausesValidation="False"></asp:ImageButton>
                         <asp:ImageButton ID="ibtnDeleteProductImage" runat="server" ImageUrl="~/App_Themes/image/delete.png"
                             ToolTip="Delete" NotificationOperationDone="true"></asp:ImageButton>
+                        <asp:ImageButton ID="ibtnAddProductImage" runat="server" ImageUrl="~/App_Themes/image/add.png"
+                            ToolTip="Add" CausesValidation="False"></asp:ImageButton>
                     </div>
                     <div class="grid-headers">
                         <asp:Label ID="lblProductImage" runat="server" Text="Prodcut Images"></asp:Label>
@@ -397,7 +397,7 @@
                         </asp:DataList>
                     </div>
                 </asp:Panel>
-                <asp:Panel ID="pnlProductImageDetails" runat="server">
+                <asp:Panel ID="pnlProductImageDetails" runat="server" Visible="false">
                     <div id="dvProdcutImageProblems" runat="server" class="dv-problem">
                     </div>
                     <table width="100%">
@@ -426,7 +426,7 @@
                             <td>
                                 <controls:SWFUpload_UC ID="ucSWFUploadProductImage" runat="server" UploadPage="~/Controls/SWFUpload/frmSWFUpload.ashx"
                                     ProgressTitle="Files Upload" TotalFilesQueueLimit="10" TotalFilesUploadLimit="10"
-                                    UploadFileSizeLimit="20 MB" OnUploadComplete="UploadCompleteFlashUpload" FileTypeDescription="Images"
+                                    UploadFileSizeLimit="20 MB" OnUploadComplete="" FileTypeDescription="Images"
                                     ValidationGroup="AddEditProductImage" FileTypes="*.gif; *.png; *.jpg; *.jpeg; *.bmp"
                                     ButtonImageUrl="~/App_Themes/Image/button_upload.png" ButtonTextLeftPadding="12"
                                     ButtonTextTopPadding="3" ButtonText="Click To Upload" />
@@ -436,6 +436,8 @@
                     <div class="footer-buttons">
                         <asp:Button ID="btnSaveProdcutImage" CssClass="btn" runat="server" Width="60px" Text="Save"
                             NotificationOperationDone="true" ValidationGroup="AddEditProductImage" />
+                        <asp:Button ID="btnExitProdcutImage" CssClass="btn" runat="server" Width="60px" Text="Exit"
+                            NotificationOperationDone="false" CausesValidation="false" />
                     </div>
                 </asp:Panel>
             </ContentTemplate>

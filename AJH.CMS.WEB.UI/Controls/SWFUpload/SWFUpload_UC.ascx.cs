@@ -404,30 +404,24 @@ namespace AJH.CMS.WEB.UI.Controls.SWFUpload
         #region RegisterScripts
         void RegisterScripts()
         {
+            ScriptReferenceCollection scCol = ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts;
 
-            ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/fileprogress.js"));
-            ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/handlers.js"));
-            ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/swfupload.js"));
-            ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/swfupload.queue.js"));
+            ScriptReference scReference = scCol.Where(sc => sc.Path.Contains("Controls/SWFUpload/script/fileprogress.js")).FirstOrDefault();
+            if (scReference == null)
+                ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/fileprogress.js"));
 
-            //ScriptReferenceCollection scCol = ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts;
+            scReference = scCol.Where(sc => sc.Path.Contains("Controls/SWFUpload/script/handlers.js")).FirstOrDefault();
+            if (scReference == null)
+                ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/handlers.js"));
 
-            //ScriptReference scReference = scCol.Where(sc => sc.Path.Contains("Controls/SWFUpload/script/fileprogress.js")).FirstOrDefault();
-            //if (scReference == null)
-            //    ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/fileprogress.js"));
+            scReference = scCol.Where(sc => sc.Path.Contains("Controls/SWFUpload/script/swfupload.js")).FirstOrDefault();
+            if (scReference == null)
 
-            //scReference = scCol.Where(sc => sc.Path.Contains("Controls/SWFUpload/script/handlers.js")).FirstOrDefault();
-            //if (scReference == null)
-            //    ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/handlers.js"));
+                ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/swfupload.js"));
 
-            //scReference = scCol.Where(sc => sc.Path.Contains("Controls/SWFUpload/script/swfupload.js")).FirstOrDefault();
-            //if (scReference == null)
-
-            //    ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/swfupload.js"));
-
-            //scReference = scCol.Where(sc => sc.Path.Contains("/Controls/SWFUpload/script/swfupload.queue.js")).FirstOrDefault();
-            //if (scReference == null)
-            //    ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/swfupload.queue.js"));
+            scReference = scCol.Where(sc => sc.Path.Contains("/Controls/SWFUpload/script/swfupload.queue.js")).FirstOrDefault();
+            if (scReference == null)
+                ScriptManager.GetCurrent(this.Page).CompositeScript.Scripts.Add(new ScriptReference("~/Controls/SWFUpload/script/swfupload.queue.js"));
         }
         #endregion
 

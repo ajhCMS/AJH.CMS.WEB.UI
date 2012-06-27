@@ -1,6 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="CMSAdmin.master.cs"
     Inherits="AJH.CMS.WEB.UI.Admin.CMSAdmin" %>
 
+<%@ Register Src="~/Controls/SWFUpload/SWFUpload_UC.ascx" TagName="SWFUpload_UC"
+    TagPrefix="controls" %>
 <%@ Register Src="~/Admin/Controls/AdminXmlXsl_UC.ascx" TagName="AdminXmlXsl_UC"
     TagPrefix="controls" %>
 <%@ Register Src="~/Admin/Controls/Logout_UC.ascx" TagName="Logout_UC" TagPrefix="controls" %>
@@ -11,13 +13,13 @@
         <%=PageTitle() %>
     </title>
     <link href="~/App_Themes/Admin/CMS.css" rel="stylesheet" type="text/css" />
-    <link href="../App_Themes/Admin/JQTabContainer.css" rel="stylesheet" type="text/css" />
+    <link href="~/App_Themes/Admin/JQTabContainer.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="headContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="Form1" runat="server" enctype="multipart/form-data">
-    <asp:ScriptManager ID="scManager" EnableCdn="false" runat="server">
+    <asp:ScriptManager ID="scManager" EnableCdn="false" runat="server" LoadScriptsBeforeUI="false">
         <CompositeScript>
             <Scripts>
                 <asp:ScriptReference Path="~/Scripts/CMSPageSettings.js" />

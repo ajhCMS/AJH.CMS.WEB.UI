@@ -146,6 +146,7 @@
     <Content Include="Admin\AdminFiles\XmlFile\AdminMenuXML.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Admin\WebForm1.aspx" />
     <Content Include="Admin\XSLTemplate\FrmXSLTemplate.aspx" />
     <Content Include="Admin\XSLTemplate\ManageXSLTemplate_UC.ascx" />
     <Content Include="App_Themes\Admin\CMS.css" />
@@ -1433,6 +1434,7 @@
     <Content Include="GUI\Contact\ContactUs_UC.ascx" />
     <Content Include="GUI\ECommerce\Catalog\CatalogDetailsXSL_UC.ascx" />
     <Content Include="GUI\ECommerce\Catalog\CatalogXSL_UC.ascx" />
+    <Content Include="GUI\ECommerce\Product\ProductXSL_UC.ascx" />
     <Content Include="GUI\Gallery\GalleryServiceXSL_UC.ascx" />
     <Content Include="GUI\Gallery\GalleryXSL_UC.ascx" />
     <Content Include="GUI\HTML\HTMLViewer_UC.ascx" />
@@ -1459,7 +1461,6 @@
     <Content Include="Scripts\jScrollPane.js" />
     <Content Include="Scripts\sprinkle.js" />
     <Content Include="TestPage.aspx" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Article\FrmArticle.aspx.cs">
@@ -1901,6 +1902,13 @@
     <Compile Include="Admin\Template\ManageTemplate_UC.ascx.designer.cs">
       <DependentUpon>ManageTemplate_UC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\XSLTemplate\FrmXSLTemplate.aspx.cs">
       <DependentUpon>FrmXSLTemplate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1974,6 +1982,13 @@
     </Compile>
     <Compile Include="GUI\ECommerce\Catalog\CatalogXSL_UC.ascx.designer.cs">
       <DependentUpon>CatalogXSL_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Product\ProductXSL_UC.ascx.cs">
+      <DependentUpon>ProductXSL_UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Product\ProductXSL_UC.ascx.designer.cs">
+      <DependentUpon>ProductXSL_UC.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Gallery\GalleryServiceXSL_UC.ascx.cs">
       <DependentUpon>GalleryServiceXSL_UC.ascx</DependentUpon>
@@ -2102,13 +2117,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\CMSContext.cs" />
     <Compile Include="Utilities\CMSWebHelper.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2159,9 +2167,9 @@
     <Content Include="CuteSoft_Client\CuteEditor\Dialogs\tag.config" />
     <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Web.config" />
     <Content Include="CuteSoft_Client\CuteEditor\Editor.cep" />
-    <Content Include="bin\cuteeditor.lic" />
-    <Content Include="bin\cuteeditor_.lic" />
     <Content Include="Controls\SWFUpload\frmSWFUpload.ashx" />
+    <None Include="bin\cuteeditor.lic" />
+    <None Include="bin\cuteeditor_.lic" />
     <None Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\Thumbs.db" />
     <None Include="CuteSoft_Client\CuteEditor\ImageEditor\Symbols\Thumbs.db" />
     <None Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\009047c8-3d6b-4366-b146-b543e954dc0e000001-.tmp" />
