@@ -30,7 +30,7 @@
     </xsl:variable>
     <div class="Dashboard-Items">
       <ul class="Dashboard-UL">
-        <xsl:apply-templates select="Menus/Menu [@Id=$CurrentItemID]/Menu">
+        <xsl:apply-templates select="Menus/Menu [@Id=$CurrentItemID]/Menu [@Visible='true']">
         </xsl:apply-templates>
       </ul>
     </div>

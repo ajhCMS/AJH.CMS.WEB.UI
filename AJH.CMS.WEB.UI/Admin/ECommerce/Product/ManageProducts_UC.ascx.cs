@@ -359,6 +359,7 @@ namespace AJH.CMS.WEB.UI.Admin
             {
                 ProductImage productImage = null;
                 List<string> imagesNames = ucSWFUploadProductImage.GetFilesName();
+<<<<<<< HEAD
 
                 if (imagesNames != null && imagesNames.Count > 0)
                 {
@@ -401,6 +402,42 @@ namespace AJH.CMS.WEB.UI.Admin
             txtCaption.Text = string.Empty;
             cbIsCoverImage.Checked = false;
             ucSWFUploadProductImage.BeginAddMode();
+=======
+
+                if (imagesNames != null && imagesNames.Count > 0)
+                {
+                    for (int i = 0; i <= imagesNames.Count - 1; i++)
+                    {
+                        productImage = new ProductImage
+                        {
+                            Image = imagesNames[i],
+                            ImageCaption = txtCaption.Text,
+                            IsCoverImage = cbIsCoverImage.Checked,
+                            LanguageID = CMSContext.LanguageID,
+                            ModuleID = (int)CMSEnums.ECommerceModule.ProductImage,
+                            IsDeleted = false,
+                            ProductID = SelecedProductId,
+                        };
+
+                        ProductImageManager.Add(productImage);
+                    }
+                }
+
+                FillProdcutImages(SelecedProductId);
+                txtCaption.Text = string.Empty;
+                cbIsCoverImage.Checked = false;
+                ucSWFUploadProductImage.BeginAddMode();
+            }
+            catch (Exception ex)
+            {
+                dvProdcutImageProblems.Visible = true;
+                dvProdcutImageProblems.InnerText = ex.ToString();
+            }
+            finally
+            {
+                upnlProductImage.Update();
+            }
+>>>>>>> e8dd88f61eb7ac8084c4fbd5e0d3bdc1c2751c71
         }
 
         void ibtnDeleteProductImage_Click(object sender, ImageClickEventArgs e)
@@ -424,10 +461,17 @@ namespace AJH.CMS.WEB.UI.Admin
 
         void ibtnAddProductImage_Click(object sender, ImageClickEventArgs e)
         {
+<<<<<<< HEAD
             pnlProductImageDetails.Visible = true;
             txtCaption.Text = string.Empty;
             cbIsCoverImage.Checked = false;
             ucSWFUploadProductImage.BeginAddMode();
+=======
+            txtCaption.Text = string.Empty;
+            cbIsCoverImage.Checked = false;
+            ucSWFUploadProductImage.BeginAddMode();
+            upnlProductImage.Update();
+>>>>>>> e8dd88f61eb7ac8084c4fbd5e0d3bdc1c2751c71
         }
 
         #endregion

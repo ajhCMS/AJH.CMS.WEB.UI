@@ -20,7 +20,7 @@
     </xsl:variable>
     <xsl:variable name="CurrentItemID">
       <xsl:choose>
-        <xsl:when test="count(Menus/Menu [@Id=$CurrentModuleID and Visible='true'])>0">
+        <xsl:when test="count(Menus/Menu [@Id=$CurrentModuleID])>0">
           <xsl:value-of select="$CurrentModuleID"/>
         </xsl:when>
         <xsl:otherwise>
@@ -35,7 +35,7 @@
     </div>
     <div class="holder">
       <ul id="ulMenuChildItems" class="scroll-pane left-menu">
-        <xsl:apply-templates select="Menus/Menu [@Id=$CurrentItemID]/Menu">
+        <xsl:apply-templates select="Menus/Menu [@Id=$CurrentItemID]/Menu [@Visible='true']">
         </xsl:apply-templates>
       </ul>
     </div>
