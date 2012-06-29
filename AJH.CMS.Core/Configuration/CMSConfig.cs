@@ -68,7 +68,7 @@ namespace AJH.CMS.Core.Configuration
 
             public static string GetProcutDetailsPage()
             {
-                return "~/Admin/ECommerce/FrmProduct.aspx?" + QueryString.ModuleID + "=4";
+                return "~/Admin/ECommerce/Product/FrmProduct.aspx?" + QueryString.ModuleID + "=4";
             }
         }
 
