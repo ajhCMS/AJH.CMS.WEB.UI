@@ -1225,7 +1225,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 cddlTax.SelectedValue = Request.Params[ddlTax.UniqueID];
 
             if (Request.Params[ddlManufacturar.UniqueID] != null)
-                cddlManufacturar.SelectedValue = Request.Params[ddlTax.UniqueID];
+                cddlManufacturar.SelectedValue = Request.Params[cddlManufacturar.UniqueID];
 
             if (Request.Params[ddlSupplier.UniqueID] != null)
                 cddlSupplier.SelectedValue = Request.Params[ddlSupplier.UniqueID];
@@ -1233,7 +1233,7 @@ namespace AJH.CMS.WEB.UI.Admin
             if (Request.Params[ddlFeature.UniqueID] != null)
                 cddlFeature.SelectedValue = Request.Params[ddlFeature.UniqueID];
 
-            if (Request.Params[cddCombinationSupplier.UniqueID] != null)
+            if (Request.Params[ddlCombinationSupplier.UniqueID] != null)
                 cddCombinationSupplier.SelectedValue = Request.Params[ddlCombinationSupplier.UniqueID];
 
             if (Request.Params[cddGroup.UniqueID] != null)
