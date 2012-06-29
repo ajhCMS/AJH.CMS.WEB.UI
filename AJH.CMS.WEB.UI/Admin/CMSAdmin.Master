@@ -1,7 +1,11 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="CMSAdmin.master.cs"
     Inherits="AJH.CMS.WEB.UI.Admin.CMSAdmin" %>
+<<<<<<< HEAD
 
 <%@ Register Src="~/Controls/SWFUpload/SWFUpload_UC.ascx" TagName="SWFUpload_UC"
+=======
+    <%@ Register Src="~/Controls/SWFUpload/SWFUpload_UC.ascx" TagName="SWFUpload_UC"
+>>>>>>> e8dd88f61eb7ac8084c4fbd5e0d3bdc1c2751c71
     TagPrefix="controls" %>
 <%@ Register Src="~/Admin/Controls/AdminXmlXsl_UC.ascx" TagName="AdminXmlXsl_UC"
     TagPrefix="controls" %>
