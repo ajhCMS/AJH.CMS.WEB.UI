@@ -130,7 +130,7 @@ namespace AJH.CMS.WEB.UI.Admin
                         product.DisplayTextInBackOrderText = txtDisplayTextWhenbackOrder.Text;
                         product.ShortDescription = txtShortDescription.Text;
                         product.Tags = txtTags.Text;
-                        product.SupplierID = Convert.ToInt32(ddlSupplier.SelectedValue);
+                        product.SupplierID = Convert.ToInt32(cddlSupplier.SelectedValue);
                         product.Ean13OrJan = txtEAN13.Text;
                         product.UPC = txtUpc.Text;
                         product.Location = txtLocation.Text;
@@ -139,9 +139,9 @@ namespace AJH.CMS.WEB.UI.Admin
                         product.InitialStock = Convert.ToInt32(txtInitialStock.Text);
                         product.MinimumQuantity = Convert.ToInt32(txtMinimumQuantity.Text);
                         product.AdditionalShippingCost = Convert.ToDecimal(txtAdditionalShippingCost.Text);
-                        product.ManufacturarID = Convert.ToInt32(ddlManufacturar.SelectedValue);
+                        product.ManufacturarID = Convert.ToInt32(cddlManufacturar.SelectedValue);
                         product.IsEnabled = cbIsEnabled.Checked;
-                        product.TaxID = Convert.ToInt32(ddlTax.SelectedValue);
+                        product.TaxID = Convert.ToInt32(cddlTax.SelectedValue);
                         product.SizeChart = txtSizeChart.Text;
                         product.LanguageID = ucPortalLanguage.SelectedLanguageID;
 
@@ -217,7 +217,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     DisplayTextInBackOrderText = txtDisplayTextWhenbackOrder.Text,
                     ShortDescription = txtShortDescription.Text,
                     Tags = txtTags.Text,
-                    SupplierID = Convert.ToInt32(ddlSupplier.SelectedValue),
+                    SupplierID = Convert.ToInt32(cddlSupplier.SelectedValue),
                     Ean13OrJan = txtEAN13.Text,
                     UPC = txtUpc.Text,
                     Location = txtLocation.Text,
@@ -226,9 +226,9 @@ namespace AJH.CMS.WEB.UI.Admin
                     InitialStock = Convert.ToInt32(txtInitialStock.Text),
                     MinimumQuantity = Convert.ToInt32(txtMinimumQuantity.Text),
                     AdditionalShippingCost = Convert.ToDecimal(txtAdditionalShippingCost.Text),
-                    ManufacturarID = Convert.ToInt32(ddlManufacturar.SelectedValue),
+                    ManufacturarID = Convert.ToInt32(cddlManufacturar.SelectedValue),
                     IsEnabled = cbIsEnabled.Checked,
-                    TaxID = Convert.ToInt32(ddlTax.SelectedValue),
+                    TaxID = Convert.ToInt32(cddlTax.SelectedValue),
                     SizeChart = txtSizeChart.Text,
 
                     IsDeleted = false,
@@ -259,6 +259,8 @@ namespace AJH.CMS.WEB.UI.Admin
 
         void ManageProducts_UC_Load(object sender, EventArgs e)
         {
+            ReflectDDL();
+
             if (!IsPostBack)
             {
                 Performsettings();
@@ -326,7 +328,7 @@ namespace AJH.CMS.WEB.UI.Admin
             try
             {
                 int featureId = -1;
-                int.TryParse(ddlFeature.SelectedValue, out featureId);
+                int.TryParse(cddlFeature.SelectedValue, out featureId);
                 if (featureId > 0 && SelecedProductId > 0)
                 {
                     FeatureManager.DeleteProductFeature(featureId, SelecedProductId);
@@ -456,7 +458,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 combinationProduct.ProductReference = txtProductReference.Text;
                 combinationProduct.ProductUPC = txtCombinationUPC.Text;
 
-                combinationProduct.SupplierRefernce = Convert.ToInt32(ddlCombinationSupplier.SelectedValue);
+                combinationProduct.SupplierRefernce = Convert.ToInt32(cddCombinationSupplier.SelectedValue);
                 combinationProduct.WholesalePrice = Convert.ToDecimal(txtWholesalePrice.Text);
 
                 CombinationProductManager.Add(combinationProduct);
@@ -499,7 +501,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     combinationProduct.ProductReference = txtProductReference.Text;
                     combinationProduct.ProductUPC = txtCombinationUPC.Text;
 
-                    combinationProduct.SupplierRefernce = Convert.ToInt32(ddlCombinationSupplier.SelectedValue);
+                    combinationProduct.SupplierRefernce = Convert.ToInt32(cddCombinationSupplier.SelectedValue);
                     combinationProduct.WholesalePrice = Convert.ToDecimal(txtWholesalePrice.Text);
 
                     CombinationProductManager.Update(combinationProduct);
@@ -570,7 +572,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     combinationProduct.ProductReference = txtProductReference.Text;
                     combinationProduct.ProductUPC = txtCombinationUPC.Text;
 
-                    combinationProduct.SupplierRefernce = Convert.ToInt32(ddlCombinationSupplier.SelectedValue);
+                    combinationProduct.SupplierRefernce = Convert.ToInt32(cddCombinationSupplier.SelectedValue);
                     combinationProduct.WholesalePrice = Convert.ToDecimal(txtWholesalePrice.Text);
 
                     CombinationProductManager.Update(combinationProduct);
@@ -686,7 +688,7 @@ namespace AJH.CMS.WEB.UI.Admin
             gvNotConnectedCombinationAttributes.DataSource = new List<AJH.CMS.Core.Entities.Attribute>();
 
             int groupId = -1;
-            int.TryParse(ddlGroup.SelectedValue, out groupId);
+            int.TryParse(cddGroup.SelectedValue, out groupId);
             if (groupId > 0)
             {
                 List<AJH.CMS.Core.Entities.Attribute> combinationAttributes = AttributeManager.GetAttributesByCombinationID(SelecedCombinationProductId, CMSContext.LanguageID);
@@ -895,7 +897,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     txtDisplayTextWhenbackOrder.Text = product.DisplayTextInBackOrderText;
                     txtShortDescription.Text = product.ShortDescription;
                     txtTags.Text = product.Tags;
-                    ddlSupplier.SelectedValue = product.SupplierID.ToString();
+                    cddlSupplier.SelectedValue = product.SupplierID.ToString();
                     txtEAN13.Text = product.Ean13OrJan;
                     txtUpc.Text = product.UPC;
                     txtLocation.Text = product.Location;
@@ -904,9 +906,9 @@ namespace AJH.CMS.WEB.UI.Admin
                     txtInitialStock.Text = product.InitialStock.ToString();
                     txtMinimumQuantity.Text = product.MinimumQuantity.ToString();
                     txtAdditionalShippingCost.Text = product.AdditionalShippingCost.ToString();
-                    ddlManufacturar.SelectedValue = product.ManufacturarID.ToString();
+                    cddlManufacturar.SelectedValue = product.ManufacturarID.ToString();
                     cbIsEnabled.Checked = product.IsEnabled;
-                    ddlTax.SelectedValue = product.TaxID.ToString();
+                    cddlTax.SelectedValue = product.TaxID.ToString();
                     txtSizeChart.Text = product.SizeChart;
 
 
@@ -1216,6 +1218,29 @@ namespace AJH.CMS.WEB.UI.Admin
 
         #endregion
 
+        #region ReflectDDL
+        void ReflectDDL()
+        {
+            if (Request.Params[ddlTax.UniqueID] != null)
+                cddlTax.SelectedValue = Request.Params[ddlTax.UniqueID];
+
+            if (Request.Params[ddlManufacturar.UniqueID] != null)
+                cddlManufacturar.SelectedValue = Request.Params[ddlTax.UniqueID];
+
+            if (Request.Params[ddlSupplier.UniqueID] != null)
+                cddlSupplier.SelectedValue = Request.Params[ddlSupplier.UniqueID];
+
+            if (Request.Params[ddlFeature.UniqueID] != null)
+                cddlFeature.SelectedValue = Request.Params[ddlFeature.UniqueID];
+
+            if (Request.Params[cddCombinationSupplier.UniqueID] != null)
+                cddCombinationSupplier.SelectedValue = Request.Params[ddlCombinationSupplier.UniqueID];
+
+            if (Request.Params[cddGroup.UniqueID] != null)
+                cddGroup.SelectedValue = Request.Params[ddlGroup.UniqueID];
+
+        }
+        #endregion
         #endregion
     }
 }

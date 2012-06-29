@@ -225,14 +225,11 @@
                             <ajax:CascadingDropDown ID="cddlTax" runat="server" TargetControlID="ddlTax" Category="Tax"
                                 PromptValue="-1" PromptText="[Select]" LoadingText="[Loading...]" ServicePath="~/Admin/Services/ECommerce/Tax/TaxService.asmx"
                                 ServiceMethod="GetAllTaxs" />
-                            <asp:RequiredFieldValidator ID="rfvTax" runat="server" ControlToValidate="ddlTax"
-                                ValidationGroup="AddEditProduct" Text="*" InitialValue="-1" Display="Dynamic"
-                                ErrorMessage="Tax"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr runat="server">
                         <td>
-                            <asp:Label ID="lblSizeChart" runat="server" Text="SizeChart" AssociatedControlID="txtSizeChart"></asp:Label>
+                            <asp:Label ID="lblSizeChart" runat="server" Text="Details" AssociatedControlID="txtSizeChart"></asp:Label>
                         </td>
                         <td>
                             <CE:Editor ID="txtSizeChart" BreakElement="Br" runat="server" Width="100%" Height="500px"
