@@ -66,12 +66,12 @@ namespace AJH.CMS.Core.Data
                 sqlParameter.Value = ProductImageEntity.Image;
                 sqlCommand.Parameters.Add(sqlParameter);
 
-                sqlParameter = new SqlParameter(CN_PROD_IMAGE_IS_COVER_IMAGE, System.Data.SqlDbType.Bit);
+                sqlParameter = new SqlParameter(PN_PROD_IMAGE_IS_COVER_IMAGE, System.Data.SqlDbType.Bit);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = ProductImageEntity.IsCoverImage;
                 sqlCommand.Parameters.Add(sqlParameter);
 
-                sqlParameter = new SqlParameter(CN_PROD_IMAGE_CAPTION, System.Data.SqlDbType.NVarChar);
+                sqlParameter = new SqlParameter(PN_PROD_IMAGE_CAPTION, System.Data.SqlDbType.NVarChar);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = ProductImageEntity.ImageCaption;
                 sqlCommand.Parameters.Add(sqlParameter);
@@ -128,12 +128,12 @@ namespace AJH.CMS.Core.Data
                 sqlParameter.Value = ProductImageEntity.Image;
                 sqlCommand.Parameters.Add(sqlParameter);
 
-                sqlParameter = new SqlParameter(CN_PROD_IMAGE_IS_COVER_IMAGE, System.Data.SqlDbType.Bit);
+                sqlParameter = new SqlParameter(PN_PROD_IMAGE_IS_COVER_IMAGE, System.Data.SqlDbType.Bit);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = ProductImageEntity.IsCoverImage;
                 sqlCommand.Parameters.Add(sqlParameter);
 
-                sqlParameter = new SqlParameter(CN_PROD_IMAGE_CAPTION, System.Data.SqlDbType.NVarChar);
+                sqlParameter = new SqlParameter(PN_PROD_IMAGE_CAPTION, System.Data.SqlDbType.NVarChar);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = ProductImageEntity.ImageCaption;
                 sqlCommand.Parameters.Add(sqlParameter);

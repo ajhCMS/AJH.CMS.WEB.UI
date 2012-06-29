@@ -13,7 +13,6 @@ of the actions SWFUpload makes will show up in my application.
 ********************** */
 function fileQueued(file) {
     try {
-        debugger;
         var progress = new FileProgress(file, this.customSettings.progressTarget);
         progress.setStatus("Pending...");
         progress.toggleCancel(true, this);

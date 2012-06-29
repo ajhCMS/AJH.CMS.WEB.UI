@@ -1048,15 +1048,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::AJH.CMS.WEB.UI.Controls.SWFUpload.SWFUpload_UC ucSWFUploadProductImage;
         
         /// <summary>
-        /// btnSaveProdcutImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveProdcutImage;
-        
-        /// <summary>
         /// btnExitProdcutImage control.
         /// </summary>
         /// <remarks>
@@ -1064,6 +1055,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnExitProdcutImage;
+        
+        /// <summary>
+        /// btnSaveProdcutImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveProdcutImage;
         
         /// <summary>
         /// dvProductPrice control.
@@ -1649,6 +1649,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.CascadingDropDown cddGroup;
+        
+        /// <summary>
+        /// ibtnFillGroupAttributes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnFillGroupAttributes;
         
         /// <summary>
         /// rfvGroup control.

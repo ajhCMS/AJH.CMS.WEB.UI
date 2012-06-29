@@ -17,7 +17,7 @@
 </head>
 <body>
     <form id="Form1" runat="server" enctype="multipart/form-data">
-    <asp:ScriptManager ID="scManager" EnableCdn="false" runat="server" LoadScriptsBeforeUI="false">
+    <asp:ScriptManager ID="scManager" EnableCdn="false" runat="server">
         <CompositeScript>
             <Scripts>
                 <asp:ScriptReference Path="~/Scripts/CMSPageSettings.js" />

@@ -384,9 +384,7 @@
                                             Width="70" Height="70" runat="server" ImageUrl='<%# GetProdcutImageFile(((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).Image)%>' />
                                     </div>
                                     <div class="Gallery-name">
-                                        <asp:LinkButton ID="lblName" runat="server" Text='<%#((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID+": "+ ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ImageCaption%>'
-                                            CommandArgument='<%# ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID%>'
-                                            CommandName="EditProductImage"></asp:LinkButton>
+                                        <%#((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID+": "+ ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ImageCaption%>
                                     </div>
                                 </div>
                             </ItemTemplate>
@@ -431,10 +429,10 @@
                         </tr>
                     </table>
                     <div class="footer-buttons">
-                        <asp:Button ID="btnSaveProdcutImage" CssClass="btn" runat="server" Width="60px" Text="Save"
-                            NotificationOperationDone="true" ValidationGroup="AddEditProductImage" />
                         <asp:Button ID="btnExitProdcutImage" CssClass="btn" runat="server" Width="60px" Text="Exit"
                             NotificationOperationDone="false" CausesValidation="false" />
+                        <asp:Button ID="btnSaveProdcutImage" CssClass="btn" runat="server" Width="60px" Text="Save"
+                            NotificationOperationDone="true" ValidationGroup="AddEditProductImage" />
                     </div>
                 </asp:Panel>
             </ContentTemplate>
@@ -684,11 +682,13 @@
                                         <asp:Label ID="lblGroup" runat="server" Text="Group" AssociatedControlID="ddlGroup"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="ddlGroup" runat="server" Width="254" AutoPostBack="true">
+                                        <asp:DropDownList ID="ddlGroup" runat="server" Width="254">
                                         </asp:DropDownList>
                                         <ajax:CascadingDropDown ID="cddGroup" runat="server" TargetControlID="ddlGroup" Category="Group"
                                             PromptValue="-1" PromptText="[Select]" LoadingText="[Loading...]" ServicePath="~/Admin/Services/ECommerce/Group/GroupService.asmx"
                                             ServiceMethod="GetAllGroups" />
+                                        <asp:ImageButton ID="ibtnFillGroupAttributes" runat="server" ImageUrl="~/App_Themes/Image/ddl_enter.png"
+                                            ToolTip="Search" CssClass="btn-search" />
                                         <asp:RequiredFieldValidator ID="rfvGroup" runat="server" ControlToValidate="ddlGroup"
                                             ValidationGroup="AddEditAttribute" InitialValue="-1" Text="*" Display="Dynamic"
                                             ErrorMessage="Group"></asp:RequiredFieldValidator>
@@ -741,9 +741,7 @@
                                                 Width="70" Height="70" runat="server" ImageUrl='<%# GetProdcutImageFile(((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).Image)%>' />
                                         </div>
                                         <div class="Gallery-name">
-                                            <asp:LinkButton ID="lblName" runat="server" Text='<%#((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID+": "+ ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ImageCaption%>'
-                                                CommandArgument='<%# ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID%>'
-                                                CommandName="EditAllProdcutImage"></asp:LinkButton>
+                                            <%#((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID+": "+ ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ImageCaption%>
                                         </div>
                                     </div>
                                 </ItemTemplate>
@@ -767,9 +765,7 @@
                                                 Width="70" Height="70" runat="server" ImageUrl='<%# GetProdcutImageFile(((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).Image)%>' />
                                         </div>
                                         <div class="Gallery-name">
-                                            <asp:LinkButton ID="lblName" runat="server" Text='<%#((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID+": "+ ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ImageCaption%>'
-                                                CommandArgument='<%# ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID%>'
-                                                CommandName="EditAllProdcutImage"></asp:LinkButton>
+                                            <%#((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID+": "+ ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ImageCaption%>
                                         </div>
                                     </div>
                                 </ItemTemplate>

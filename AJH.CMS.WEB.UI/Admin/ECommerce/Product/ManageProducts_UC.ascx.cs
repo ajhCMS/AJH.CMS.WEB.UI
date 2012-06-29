@@ -102,12 +102,37 @@ namespace AJH.CMS.WEB.UI.Admin
             this.btnSaveCombinationProductOtherLanguage.Click += new EventHandler(btnSaveCombinationProductOtherLanguage_Click);
             this.ibtnDeleteCombinationImage.Click += new ImageClickEventHandler(ibtnDeleteCombinationImage_Click);
             this.btnSaveCombinationImage.Click += new EventHandler(btnSaveCombinationImage_Click);
-            this.ddlGroup.SelectedIndexChanged += new EventHandler(ddlGroup_SelectedIndexChanged);
+            this.ibtnFillGroupAttributes.Click += new ImageClickEventHandler(ibtnFillGroupAttributes_Click);
             this.ibtnDeleteConnectedCombinationAttribute.Click += new ImageClickEventHandler(ibtnDeleteConnectedCombinationAttribute_Click);
             this.btnSaveCombinationAttribute.Click += new EventHandler(btnSaveCombinationAttribute_Click);
             #endregion
 
             base.OnInit(e);
+        }
+
+        void ibtnFillGroupAttributes_Click(object sender, ImageClickEventArgs e)
+        {
+            gvNotConnectedCombinationAttributes.DataSource = new List<AJH.CMS.Core.Entities.Attribute>();
+
+            int groupId = -1;
+            int.TryParse(cddGroup.SelectedValue, out groupId);
+            if (groupId > 0)
+            {
+                List<AJH.CMS.Core.Entities.Attribute> combinationAttributes = AttributeManager.GetAttributesByCombinationID(SelecedCombinationProductId, CMSContext.LanguageID);
+                List<AJH.CMS.Core.Entities.Attribute> groupAttributes = AttributeManager.GetAttributesByGroupID(groupId, CMSContext.LanguageID);
+
+                if (combinationAttributes != null && groupAttributes != null)
+                {
+                    List<int> combinationAttributesIds = combinationAttributes.Select(ca => ca.ID).ToList();
+
+                    groupAttributes = groupAttributes.Where(ga => !combinationAttributesIds.Contains(ga.ID)).ToList();
+                }
+                gvNotConnectedCombinationAttributes.DataSource = groupAttributes;
+            }
+
+            gvNotConnectedCombinationAttributes.DataBind();
+
+            upnlCombinationProductDetails.Update();
         }
 
         #endregion
@@ -683,32 +708,6 @@ namespace AJH.CMS.WEB.UI.Admin
             upnlCombinationProductDetails.Update();
         }
 
-        void ddlGroup_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            gvNotConnectedCombinationAttributes.DataSource = new List<AJH.CMS.Core.Entities.Attribute>();
-
-            int groupId = -1;
-            int.TryParse(cddGroup.SelectedValue, out groupId);
-            if (groupId > 0)
-            {
-                List<AJH.CMS.Core.Entities.Attribute> combinationAttributes = AttributeManager.GetAttributesByCombinationID(SelecedCombinationProductId, CMSContext.LanguageID);
-                List<AJH.CMS.Core.Entities.Attribute> groupAttributes = AttributeManager.GetAttributesByGroupID(groupId, CMSContext.LanguageID);
-
-                if (combinationAttributes != null && groupAttributes != null)
-                {
-                    List<int> combinationAttributesIds = combinationAttributes.Select(ca => ca.ID).ToList();
-
-                    groupAttributes = groupAttributes.Where(ga => !combinationAttributesIds.Contains(ga.ID)).ToList();
-                }
-                gvNotConnectedCombinationAttributes.DataSource = groupAttributes;
-            }
-
-            gvNotConnectedCombinationAttributes.DataBind();
-
-            upnlCombinationProductDetails.Update();
-
-        }
-
         void btnSaveCombinationImage_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < dlsAllProdcutImage.Items.Count; i++)
@@ -784,8 +783,7 @@ namespace AJH.CMS.WEB.UI.Admin
             txtDisplayTextWhenbackOrder.Text = string.Empty;
             txtShortDescription.Text = string.Empty;
             txtTags.Text = string.Empty;
-            ddlSupplier.ClearSelection();
-            cddlSupplier.SelectedValue = "-1";
+            cddlSupplier.SelectedValue = cddlSupplier.PromptValue;
             txtEAN13.Text = string.Empty;
             txtUpc.Text = string.Empty;
             txtLocation.Text = string.Empty;
@@ -794,11 +792,10 @@ namespace AJH.CMS.WEB.UI.Admin
             txtInitialStock.Text = string.Empty;
             txtMinimumQuantity.Text = string.Empty;
             txtAdditionalShippingCost.Text = string.Empty;
-            ddlManufacturar.ClearSelection();
-            cddlManufacturar.SelectedValue = "-1";
+            cddlManufacturar.SelectedValue = cddlManufacturar.PromptValue;
             cbIsEnabled.Checked = false;
-            ddlTax.ClearSelection();
-            cddlTax.SelectedValue = "-1";
+
+            cddlTax.SelectedValue = cddlTax.PromptValue;
             txtSizeChart.Text = string.Empty;
 
             btnUpdateProduct.Visible = false;
@@ -966,6 +963,7 @@ namespace AJH.CMS.WEB.UI.Admin
             foreach (AJH.CMS.Core.Entities.Catalog Catalog in parentcatalogs)
             {
                 TreeNode oNode = GetNodesChilds(Catalog, catalogs, catalogsIds);
+                oNode.SelectAction = TreeNodeSelectAction.None;
                 if (catalogsIds != null && catalogsIds.Contains(oNode.Value))
                     oNode.Checked = true;
 
@@ -979,6 +977,8 @@ namespace AJH.CMS.WEB.UI.Admin
         {
             TreeNode oNode;
             oNode = new TreeNode(catalog.ID + ": " + catalog.Name, Convert.ToString(catalog.ID));
+            oNode.SelectAction = TreeNodeSelectAction.None;
+
             if (toBecheckedNodes != null && toBecheckedNodes.Contains(oNode.Value))
                 oNode.Checked = true;
 
@@ -1130,7 +1130,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 gvConnectedCombinationAttributes.DataSource = combinationAttributes;
                 gvConnectedCombinationAttributes.DataBind();
 
-                ddlGroup.ClearSelection();
+                cddGroup.SelectedValue = cddGroup.PromptValue;
                 gvNotConnectedCombinationAttributes.DataSource = new List<AJH.CMS.Core.Entities.Attribute>();
                 gvNotConnectedCombinationAttributes.DataBind();
 
@@ -1202,7 +1202,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 gvConnectedCombinationAttributes.DataSource = combinationAttributes;
                 gvConnectedCombinationAttributes.DataBind();
 
-                ddlGroup.ClearSelection();
+                cddGroup.SelectedValue = cddGroup.PromptValue;
                 gvNotConnectedCombinationAttributes.DataSource = new List<AJH.CMS.Core.Entities.Attribute>();
                 gvNotConnectedCombinationAttributes.DataBind();
 
@@ -1225,7 +1225,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 cddlTax.SelectedValue = Request.Params[ddlTax.UniqueID];
 
             if (Request.Params[ddlManufacturar.UniqueID] != null)
-                cddlManufacturar.SelectedValue = Request.Params[cddlManufacturar.UniqueID];
+                cddlManufacturar.SelectedValue = Request.Params[ddlManufacturar.UniqueID];
 
             if (Request.Params[ddlSupplier.UniqueID] != null)
                 cddlSupplier.SelectedValue = Request.Params[ddlSupplier.UniqueID];
@@ -1236,7 +1236,7 @@ namespace AJH.CMS.WEB.UI.Admin
             if (Request.Params[ddlCombinationSupplier.UniqueID] != null)
                 cddCombinationSupplier.SelectedValue = Request.Params[ddlCombinationSupplier.UniqueID];
 
-            if (Request.Params[cddGroup.UniqueID] != null)
+            if (Request.Params[ddlGroup.UniqueID] != null)
                 cddGroup.SelectedValue = Request.Params[ddlGroup.UniqueID];
 
         }
