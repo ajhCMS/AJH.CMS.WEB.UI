@@ -21,7 +21,7 @@ namespace AJH.CMS.Core.Configuration
             public const string CurrentCatalog = "CurrentCatalog";
             public const string CatalogCatalog = "CatalogCatalog";
             public const string ProductID = "ProductID";
-            public const string CombinationProductID = "CombinationProductID";  
+            public const string CombinationProductID = "CombinationProductID";
         }
 
         public static class QueryString
@@ -65,6 +65,11 @@ namespace AJH.CMS.Core.Configuration
             {
                 return "~/Admin/FrmLanding.aspx";
             }
+
+            public static string GetProcutDetailsPage()
+            {
+                return "~/Admin/ECommerce/FrmProduct.aspx" + QueryString.ModuleID + "=4";
+            }
         }
 
         public static class CMSPage
@@ -77,11 +82,6 @@ namespace AJH.CMS.Core.Configuration
             public static string GetNewsDetailsPage()
             {
                 return "~/NewsDetails.aspx";
-            }
-
-            public static string GetProcutDetailsPage()
-            {
-                return "FrmProduct.aspx";
             }
         }
     }

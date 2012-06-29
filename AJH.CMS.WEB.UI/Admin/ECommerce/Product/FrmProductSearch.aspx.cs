@@ -33,7 +33,7 @@ namespace AJH.CMS.WEB.UI.Admin
             {
                 case "EditProduct":
                     {
-                        Response.Redirect((CMSConfig.CMSPage.GetProcutDetailsPage()) + "?" + CMSConfig.QueryString.ProdcutID + "=" + e.CommandArgument);
+                        Response.Redirect((CMSConfig.CMSAdminPages.GetProcutDetailsPage()) + "&" + CMSConfig.QueryString.ProdcutID + "=" + e.CommandArgument);
                         break;
                     }
                 default:
@@ -43,7 +43,7 @@ namespace AJH.CMS.WEB.UI.Admin
 
         void ibtnAdd_Click(object sender, System.Web.UI.ImageClickEventArgs e)
         {
-            Response.Redirect(CMSConfig.CMSPage.GetProcutDetailsPage());
+            Response.Redirect(CMSConfig.CMSAdminPages.GetProcutDetailsPage());
         }
 
         void ibtnDelete_Click(object sender, System.Web.UI.ImageClickEventArgs e)
