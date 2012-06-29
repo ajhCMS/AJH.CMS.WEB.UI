@@ -18,12 +18,19 @@ namespace AJH.CMS.WEB.UI.Admin
             this.ibtnAdd.Click += new System.Web.UI.ImageClickEventHandler(ibtnAdd_Click);
             this.gvProduct.RowCommand += new GridViewCommandEventHandler(gvProduct_RowCommand);
             this.gvProduct.PageIndexChanging += new GridViewPageEventHandler(gvProduct_PageIndexChanging);
+            this.btnSearch.Click += new EventHandler(btnSearch_Click);
             base.OnInit(e);
+        }
+
+        void btnSearch_Click(object sender, EventArgs e)
+        {
+            FillProducts(-1);
+            upnlProductSearch.Update();
         }
 
         void gvProduct_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            FillProducts(gvProduct.PageIndex);
+            FillProducts(e.NewPageIndex);
             upnlProductSearch.Update();
         }
 
@@ -68,10 +75,12 @@ namespace AJH.CMS.WEB.UI.Admin
 
         void FrmProductSearch_Load(object sender, System.EventArgs e)
         {
+            ReflectDDL();
+
             if (!IsPostBack)
             {
                 PerformSettings();
-                FillProducts(-1);
+                //FillProducts(-1);
             }
         }
 
@@ -84,7 +93,16 @@ namespace AJH.CMS.WEB.UI.Admin
 
         private void FillProducts(int pageIndex)
         {
-            List<Product> products = ProductManager.GetProducts(CMSContext.PortalID, CMSContext.LanguageID);
+            //Search :
+            gvProduct.DataSource = new List<Product>();
+            int catalogId = -1;
+            int.TryParse(cddlCatalogs.SelectedValue, out catalogId);
+
+            string productName = string.Empty;
+            if (!string.IsNullOrEmpty(txtProductName.Text))
+                productName = txtProductName.Text;
+
+            List<Product> products = ProductManager.SearchProducts(catalogId, productName, CMSContext.PortalID, CMSContext.LanguageID);
 
             if (pageIndex > -1)
                 gvProduct.PageIndex = pageIndex;
@@ -93,6 +111,15 @@ namespace AJH.CMS.WEB.UI.Admin
             gvProduct.DataBind();
         }
 
+        #region ReflectDDL
+        void ReflectDDL()
+        {
+            if (Request.Params[ddlCatalogs.UniqueID] != null)
+                cddlCatalogs.SelectedValue = Request.Params[ddlCatalogs.UniqueID];
+        }
+
+
+        #endregion
         #endregion
     }
 }

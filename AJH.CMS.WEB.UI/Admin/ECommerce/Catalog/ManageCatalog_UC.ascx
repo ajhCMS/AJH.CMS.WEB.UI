@@ -29,123 +29,193 @@
         </asp:Panel>
     </ContentTemplate>
 </asp:UpdatePanel>
-<asp:UpdatePanel ID="upnlCatalogItem" runat="server" UpdateMode="Conditional">
-    <ContentTemplate>
-        <asp:Panel ID="pnlCatalogItem" runat="server" Visible="false">
-            <controls:PortalLanguages_UC ID="ucPortalLanguage" runat="server" Visible="false"
-                ValidationGroup="AddEditCatalog" />
-            <table width="100%">
-                <tr>
-                    <td>
-                        <asp:Label ID="lblName" runat="server" Text="Name" AssociatedControlID="txtName"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtName" runat="server" MaxLength="100"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName"
-                            ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Name"></asp:RequiredFieldValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="lblIsDisplayed" runat="server" Text="Displayed" AssociatedControlID="cbIsDisplayed"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:CheckBox ID="cbIsDisplayed" runat="server" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="lblIsGalleryOnly" runat="server" Text="Gallery Only" AssociatedControlID="cbIsGalleryOnly"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:CheckBox ID="cbIsGalleryOnly" runat="server" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="lblUpload" runat="server" Text="Upload" AssociatedControlID="ucSWFUpload"></asp:Label>
-                    </td>
-                    <td>
-                        <controls:SWFUpload_UC ID="ucSWFUpload" ValidationGroup="AddEditCatalog" ErrorText="*"
-                            ErrorMessage="Please wait while the upload finish" runat="server" UploadPage="~/Controls/SWFUpload/frmSWFUpload.ashx"
-                            ProgressTitle="Files Upload" TotalFilesQueueLimit="1" TotalFilesUploadLimit="1"
-                            IsImage="true" UploadFileSizeLimit="15 MB" FileTypeDescription="Images" FileTypes="*.gif; *.png; *.jpg; *.jpeg; *.bmp"
-                            ButtonText="Upload" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="lblParentCatalog" runat="server" Text="Parent Catalog" AssociatedControlID="ddlParentCatalog"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:DropDownList ID="ddlParentCatalog" runat="server" Width="254">
-                        </asp:DropDownList>
-                        <ajax:CascadingDropDown ID="cddlParentCatalog" runat="server" TargetControlID="ddlParentCatalog"
-                            Category="Catalog" PromptValue="-1" PromptText="[Select]" LoadingText="[Loading...]"
-                            ServicePath="~/Admin/Services/ECommerce/Catalog/CatalogService.asmx" ServiceMethod="GetDropDownCatalogs" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="lblDescription" runat="server" Text="Description" AssociatedControlID="txtDescription"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Height="60px"
-                            MaxLength="500"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvDescription" runat="server" ControlToValidate="txtDescription"
-                            ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Description"></asp:RequiredFieldValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="lblMetaTitle" runat="server" Text="Meta Title" AssociatedControlID="txtMetaTitle"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtMetaTitle" runat="server" TextMode="MultiLine" Height="60px"
-                            MaxLength="500"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvMetaTitle" runat="server" ControlToValidate="txtMetaTitle"
-                            ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Title"></asp:RequiredFieldValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="lblMetaDescription" runat="server" TextMode="MultiLine" Text="Meta Description"
-                            AssociatedControlID="txtMetaDescription"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtMetaDescription" runat="server" TextMode="MultiLine" Height="60px"
-                            MaxLength="500"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvMetaDescription" runat="server" ControlToValidate="txtMetaDescription"
-                            ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Description"></asp:RequiredFieldValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="lblMetaKeywords" runat="server" Text="Meta Keywords" AssociatedControlID="txtMetaKeywords"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtMetaKeywords" runat="server" TextMode="MultiLine" Height="60px"
-                            MaxLength="500"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvMetaKeywords" runat="server" ControlToValidate="txtMetaKeywords"
-                            ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Keywords"></asp:RequiredFieldValidator>
-                    </td>
-                </tr>
-            </table>
-            <div class="footer-buttons">
-                <asp:Button CssClass="btn" ID="btnExit" runat="server" Width="60px" CausesValidation="false"
-                    Text="Exit" />
-                <asp:Button CssClass="btn" ID="btnReset" runat="server" Width="60px" CausesValidation="false"
-                    Text="Reset" />
-                <asp:Button CssClass="btn" ID="btnSaveOtherLanguage" runat="server" Width="160px"
-                    ValidationGroup="AddEditCatalog" Text="Save Other Language" NotificationOperationDone="true" />
-                <asp:Button CssClass="btn" ID="btnSave" runat="server" Width="60px" ValidationGroup="AddEditCatalog"
-                    Text="Save" NotificationOperationDone="true" />
-                <asp:Button CssClass="btn" ID="btnUpdate" runat="server" Width="60px" ValidationGroup="AddEditCatalog"
-                    Text="Update" NotificationOperationDone="true" />
-            </div>
-            <asp:ValidationSummary ID="valsummaryCatalog" runat="server" ValidationGroup="AddEditCatalog"
-                HeaderText="Please review the following field(s):" DisplayMode="BulletList" ShowMessageBox="true"
-                ShowSummary="false" />
-        </asp:Panel>
-    </ContentTemplate>
-</asp:UpdatePanel>
+<div id="tabvanilla" class="widget">
+    <ul class="tabnav">
+        <li id="liCatalogDetails"><a href="#<%=dvCatalogDetails.ClientID %>">Catalog Details</a></li>
+        <li id="liCatalogProducts"><a href="#<%=dvCatalogProducts.ClientID %>">Catalog Products</a></li>
+    </ul>
+    <div id="dvCatalogDetails" runat="server" class="tabdiv">
+        <asp:UpdatePanel ID="upnlCatalogItem" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <asp:Panel ID="pnlCatalogItem" runat="server" Visible="false">
+                    <controls:PortalLanguages_UC ID="ucPortalLanguage" runat="server" Visible="false"
+                        ValidationGroup="AddEditCatalog" />
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblName" runat="server" Text="Name" AssociatedControlID="txtName"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtName" runat="server" MaxLength="100"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName"
+                                    ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Name"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblIsDisplayed" runat="server" Text="Displayed" AssociatedControlID="cbIsDisplayed"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:CheckBox ID="cbIsDisplayed" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblIsGalleryOnly" runat="server" Text="Gallery Only" AssociatedControlID="cbIsGalleryOnly"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:CheckBox ID="cbIsGalleryOnly" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblUpload" runat="server" Text="Upload" AssociatedControlID="ucSWFUpload"></asp:Label>
+                            </td>
+                            <td>
+                                <controls:SWFUpload_UC ID="ucSWFUpload" ValidationGroup="AddEditCatalog" ErrorText="*"
+                                    ErrorMessage="Please wait while the upload finish" runat="server" UploadPage="~/Controls/SWFUpload/frmSWFUpload.ashx"
+                                    ProgressTitle="Files Upload" TotalFilesQueueLimit="1" TotalFilesUploadLimit="1"
+                                    IsImage="true" UploadFileSizeLimit="15 MB" FileTypeDescription="Images" FileTypes="*.gif; *.png; *.jpg; *.jpeg; *.bmp"
+                                    ButtonText="Upload" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblParentCatalog" runat="server" Text="Parent Catalog" AssociatedControlID="ddlParentCatalog"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:DropDownList ID="ddlParentCatalog" runat="server" Width="254">
+                                </asp:DropDownList>
+                                <ajax:CascadingDropDown ID="cddlParentCatalog" runat="server" TargetControlID="ddlParentCatalog"
+                                    Category="Catalog" PromptValue="-1" PromptText="[Select]" LoadingText="[Loading...]"
+                                    ServicePath="~/Admin/Services/ECommerce/Catalog/CatalogService.asmx" ServiceMethod="GetDropDownCatalogs" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblDescription" runat="server" Text="Description" AssociatedControlID="txtDescription"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Height="60px"
+                                    MaxLength="500"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvDescription" runat="server" ControlToValidate="txtDescription"
+                                    ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Description"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblMetaTitle" runat="server" Text="Meta Title" AssociatedControlID="txtMetaTitle"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtMetaTitle" runat="server" TextMode="MultiLine" Height="60px"
+                                    MaxLength="500"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvMetaTitle" runat="server" ControlToValidate="txtMetaTitle"
+                                    ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Title"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblMetaDescription" runat="server" TextMode="MultiLine" Text="Meta Description"
+                                    AssociatedControlID="txtMetaDescription"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtMetaDescription" runat="server" TextMode="MultiLine" Height="60px"
+                                    MaxLength="500"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvMetaDescription" runat="server" ControlToValidate="txtMetaDescription"
+                                    ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Description"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblMetaKeywords" runat="server" Text="Meta Keywords" AssociatedControlID="txtMetaKeywords"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtMetaKeywords" runat="server" TextMode="MultiLine" Height="60px"
+                                    MaxLength="500"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvMetaKeywords" runat="server" ControlToValidate="txtMetaKeywords"
+                                    ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Keywords"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="footer-buttons">
+                        <asp:Button CssClass="btn" ID="btnExit" runat="server" Width="60px" CausesValidation="false"
+                            Text="Exit" />
+                        <asp:Button CssClass="btn" ID="btnReset" runat="server" Width="60px" CausesValidation="false"
+                            Text="Reset" />
+                        <asp:Button CssClass="btn" ID="btnSaveOtherLanguage" runat="server" Width="160px"
+                            ValidationGroup="AddEditCatalog" Text="Save Other Language" NotificationOperationDone="true" />
+                        <asp:Button CssClass="btn" ID="btnSave" runat="server" Width="60px" ValidationGroup="AddEditCatalog"
+                            Text="Save" NotificationOperationDone="true" />
+                        <asp:Button CssClass="btn" ID="btnUpdate" runat="server" Width="60px" ValidationGroup="AddEditCatalog"
+                            Text="Update" NotificationOperationDone="true" />
+                    </div>
+                    <asp:ValidationSummary ID="valsummaryCatalog" runat="server" ValidationGroup="AddEditCatalog"
+                        HeaderText="Please review the following field(s):" DisplayMode="BulletList" ShowMessageBox="true"
+                        ShowSummary="false" />
+                    </div>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+    <div id="dvCatalogProducts" runat="server" class="tabdiv">
+        <asp:UpdatePanel ID="upnlProductCatalog" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <div id="dvProductCatalogProblems" runat="server" class="dv-problem">
+                </div>
+                <asp:Panel ID="pnlConnectedProductCatalog" runat="server" Visible="true">
+                    <div class="grid-headers">
+                        <asp:Label ID="lblConnectedProductCatalog" runat="server" Text="Products"></asp:Label>
+                    </div>
+                    <div class="grid-items">
+                        <asp:GridView ID="gvAllProducts" runat="server" AllowPaging="true" PageSize="10"
+                            AutoGenerateColumns="false" CssClass="grd" Width="100%" DataKeyNames="ID">
+                            <EmptyDataTemplate>
+                                No Items found
+                            </EmptyDataTemplate>
+                            <Columns>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="chkItem" runat="server" />
+                                        <input type="hidden" id="hdnID" runat="server" value='<%# ((AJH.CMS.Core.Entities.Product)Container.DataItem).ID%>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:BoundField DataField="ID" HeaderText="ID" />
+                                <asp:BoundField DataField="Name" HeaderText="Name" />
+                            </Columns>
+                        </asp:GridView>
+                    </div>
+                    <div class="footer-buttons">
+                        <asp:Button ID="btnSaveProductCatalog" CssClass="btn" runat="server" Width="60px"
+                            Text="Save" NotificationOperationDone="true" />
+                    </div>
+                    </div>
+                    <div class="grid-actions">
+                        <asp:ImageButton ID="ibtnDeleteProduct" runat="server" ImageUrl="~/App_Themes/image/delete.png"
+                            ToolTip="Delete" NotificationOperationDone="true"></asp:ImageButton>
+                    </div>
+                    <div class="grid-headers">
+                        <asp:Label ID="lblCatalogProducts" runat="server" Text="Catalog Products"></asp:Label>
+                    </div>
+                    <div class="grid-items">
+                        <asp:GridView ID="gvCatalogProducts" runat="server" AllowPaging="true" PageSize="10"
+                            AutoGenerateColumns="false" CssClass="grd" Width="100%" DataKeyNames="ID">
+                            <EmptyDataTemplate>
+                                No Items found
+                            </EmptyDataTemplate>
+                            <Columns>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="chkItem" runat="server" />
+                                        <input type="hidden" id="hdnID" runat="server" value='<%# ((AJH.CMS.Core.Entities.Product)Container.DataItem).ID%>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:BoundField DataField="ID" HeaderText="ID" />
+                                <asp:BoundField DataField="Name" HeaderText="Name" />
+                            </Columns>
+                        </asp:GridView>
+                    </div>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+</div>

@@ -12,6 +12,32 @@
             <div id="dvProblemsSearch" runat="server" class="dv-problem">
             </div>
             <asp:Panel ID="pnlSearch" runat="server" Visible="true">
+                <table>
+                    <tr>
+                        <td>
+                            <asp:Label ID="lblCatalog" runat="server" Text="Catalog"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="ddlCatalogs" runat="server" Width="254">
+                            </asp:DropDownList>
+                            <ajax:CascadingDropDown ID="cddlCatalogs" runat="server" TargetControlID="ddlCatalogs"
+                                Category="Catalog" PromptValue="-1" PromptText="[Select]" LoadingText="[Loading...]"
+                                ServicePath="~/Admin/Services/ECommerce/Catalog/CatalogService.asmx" ServiceMethod="GetDropDownCatalogs" />
+                        </td>
+                        <td>
+                            <asp:Label ID="lblProductName" runat="server" Text="Product Name"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtProductName" runat="server"></asp:TextBox>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <asp:Button ID="btnSearch" CssClass="btn" runat="server" Width="60px" CausesValidation="false"
+                                Text="Search" />
+                        </td>
+                    </tr>
+                </table>
                 <div class="grid-actions">
                     <asp:ImageButton ID="ibtnDelete" runat="server" ImageUrl="~/App_Themes/image/delete.png"
                         ToolTip="Delete" NotificationOperationDone="true"></asp:ImageButton>

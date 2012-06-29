@@ -34,7 +34,90 @@ namespace AJH.CMS.WEB.UI.Admin
             this.ucPortalLanguage.OnSelectLanguage += new EventHandler(ucPortalLanguage_OnSelectLanguage);
             this.btnSaveOtherLanguage.Click += new EventHandler(btnSaveOtherLanguage_Click);
             this.ibtnRefreshCatalogs.Click += new ImageClickEventHandler(ibtnRefreshCatalogs_Click);
+            this.btnSaveProductCatalog.Click += new EventHandler(btnSaveProductCatalog_Click);
+            this.ibtnDeleteProduct.Click += new ImageClickEventHandler(ibtnDeleteProduct_Click);
+            this.gvAllProducts.PageIndexChanging += new GridViewPageEventHandler(gvAllProducts_PageIndexChanging);
+            this.gvCatalogProducts.PageIndexChanging += new GridViewPageEventHandler(gvCatalogProducts_PageIndexChanging);
         }
+
+        void gvCatalogProducts_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvCatalogProducts.PageIndex = e.NewPageIndex;
+            FillCatalogProducts((Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID])), ucPortalLanguage.SelectedLanguageID);
+            upnlProductCatalog.Update();
+        }
+
+        void gvAllProducts_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvAllProducts.PageIndex = e.NewPageIndex;
+            FillAllProducts((Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID])), ucPortalLanguage.SelectedLanguageID);
+            upnlProductCatalog.Update();
+        }
+
+        void ibtnDeleteProduct_Click(object sender, ImageClickEventArgs e)
+        {
+            try
+            {
+                for (int i = 0; i < gvCatalogProducts.Rows.Count; i++)
+                {
+                    CheckBox chkItem = (CheckBox)gvCatalogProducts.Rows[i].FindControl("chkItem");
+                    if (chkItem != null && chkItem.Checked)
+                    {
+                        HtmlInputHidden hdnID = (HtmlInputHidden)gvCatalogProducts.Rows[i].FindControl("hdnID");
+                        if (hdnID != null && !string.IsNullOrEmpty(hdnID.Value))
+                        {
+                            int productId = Convert.ToInt32(hdnID.Value);
+                            CatalogManager.DeleteProductCatalog(productId, Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]));
+                        }
+                    }
+                }
+                FillAllProducts((Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID])), ucPortalLanguage.SelectedLanguageID);
+                FillCatalogProducts(Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]), ucPortalLanguage.SelectedLanguageID);
+                upnlProductCatalog.Update();
+            }
+            catch (Exception ex)
+            {
+                dvProductCatalogProblems.Visible = true;
+                dvProductCatalogProblems.InnerText = ex.ToString();
+            }
+            finally
+            {
+                upnlProductCatalog.Update();
+            }
+        }
+
+        void btnSaveProductCatalog_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                for (int i = 0; i < gvAllProducts.Rows.Count; i++)
+                {
+                    CheckBox chkItem = (CheckBox)gvAllProducts.Rows[i].FindControl("chkItem");
+                    if (chkItem != null && chkItem.Checked)
+                    {
+                        HtmlInputHidden hdnID = (HtmlInputHidden)gvAllProducts.Rows[i].FindControl("hdnID");
+                        if (hdnID != null && !string.IsNullOrEmpty(hdnID.Value))
+                        {
+                            int productId = Convert.ToInt32(hdnID.Value);
+                            CatalogManager.AddProductCatalog(productId, Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]));
+                        }
+                    }
+                }
+                FillAllProducts((Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID])), ucPortalLanguage.SelectedLanguageID);
+                FillCatalogProducts(Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]), ucPortalLanguage.SelectedLanguageID);
+                upnlProductCatalog.Update();
+            }
+            catch (Exception ex)
+            {
+                dvProductCatalogProblems.Visible = true;
+                dvProductCatalogProblems.InnerText = ex.ToString();
+            }
+            finally
+            {
+                upnlProductCatalog.Update();
+            }
+        }
+
         #endregion
 
         #region ibtnRefreshCatalogs_Click
@@ -310,6 +393,8 @@ namespace AJH.CMS.WEB.UI.Admin
         void PerformSettings()
         {
             ibtnDelete.OnClientClick = "return ConfirmOperation('" + trvCatalog.ClientID + "','Are you sure to delete this item(s)?');";
+            ibtnDeleteProduct.OnClientClick = "return ConfirmOperation('" + gvCatalogProducts.ClientID + "','Are you sure to delete this item(s)?');";
+            btnSaveProductCatalog.OnClientClick = "return ConfirmOperation('" + gvAllProducts.ClientID + "','Are you sure to add this product(s) to the selected catalog?');";
         }
         #endregion
 
@@ -319,6 +404,8 @@ namespace AJH.CMS.WEB.UI.Admin
             ucPortalLanguage.SelectedLanguageID = -1;
             ViewState.Remove(CMSViewStateManager.CatalogID);
             pnlCatalogItem.Visible = true;
+
+
             txtDescription.Text = string.Empty;
             txtName.Text = string.Empty;
             txtMetaDescription.Text = string.Empty;
@@ -339,6 +426,7 @@ namespace AJH.CMS.WEB.UI.Admin
 
             pnlCatalogItem.Visible = true;
 
+
             pnlCatalogItem.DefaultButton = btnSave.ID;
         }
         #endregion
@@ -353,6 +441,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 if (catalog != null)
                 {
                     pnlCatalogItem.Visible = true;
+
                     ucPortalLanguage.Visible = true;
                     ucPortalLanguage.SelectedLanguageID = catalog.LanguageID;
                     txtName.Text = catalog.Name;
@@ -373,6 +462,11 @@ namespace AJH.CMS.WEB.UI.Admin
                     btnSaveOtherLanguage.Visible = false;
                     btnUpdate.Visible = true;
 
+                    //Fill all Products:
+                    FillAllProducts(catalog.ID, ucPortalLanguage.SelectedLanguageID);
+                    FillCatalogProducts(catalog.ID, ucPortalLanguage.SelectedLanguageID);
+
+                    upnlProductCatalog.Update();
                 }
             }
         }
@@ -386,6 +480,7 @@ namespace AJH.CMS.WEB.UI.Admin
             if (catalog != null)
             {
                 pnlCatalogItem.Visible = true;
+
                 ucPortalLanguage.Visible = true;
                 txtName.Text = catalog.Name;
                 cbIsDisplayed.Checked = catalog.IsDisplayed;
@@ -412,7 +507,11 @@ namespace AJH.CMS.WEB.UI.Admin
                     btnSaveOtherLanguage.Visible = false;
                     btnUpdate.Visible = true;
                 }
+                FillAllProducts(catalog.ID, ucPortalLanguage.SelectedLanguageID);
+                FillCatalogProducts(catalog.ID, ucPortalLanguage.SelectedLanguageID);
+                upnlProductCatalog.Update();
             }
+
         }
         #endregion
 
@@ -421,6 +520,7 @@ namespace AJH.CMS.WEB.UI.Admin
         {
             BeginAddMode();
             pnlCatalogItem.Visible = false;
+
         }
         #endregion
 
@@ -466,6 +566,36 @@ namespace AJH.CMS.WEB.UI.Admin
             }
             return oNode;
         }
+        #endregion
+
+        #region Fill All Products
+        private void FillAllProducts(int catalogId, int languageId)
+        {
+            List<Product> allProducts = ProductManager.GetProducts(CMSContext.PortalID, languageId);
+            List<Product> catalogProducts = ProductManager.GetProductsByCatalogID(catalogId, CMSContext.PortalID, languageId);
+
+            if (catalogProducts != null && catalogProducts.Count > 0)
+                if (allProducts != null && allProducts.Count > 0)
+                {
+                    List<int> catalogProductsIds = catalogProducts.Select(cp => cp.ID).ToList();
+
+                    allProducts = allProducts.Where(ap => !catalogProductsIds.Contains(ap.ID)).ToList();
+                }
+
+
+            gvAllProducts.DataSource = allProducts;
+            gvAllProducts.DataBind();
+        }
+        #endregion
+
+        #region Fill Catalog Products
+        private void FillCatalogProducts(int catalogId, int languageId)
+        {
+            List<Product> catalogProducts = ProductManager.GetProductsByCatalogID(catalogId, CMSContext.PortalID, languageId);
+            gvCatalogProducts.DataSource = catalogProducts;
+            gvCatalogProducts.DataBind();
+        }
+
         #endregion
 
         #endregion

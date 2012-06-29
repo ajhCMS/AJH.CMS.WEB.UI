@@ -63,7 +63,7 @@ namespace AJH.CMS.WEB.UI
                 if (products != null && products.Count > 0)
                     foreach (Product product in products)
                     {
-                        XmlElement productElement = xmlDoc.CreateElement(product.Name);
+                        XmlElement productElement = xmlDoc.CreateElement("Product");
                         XmlAttribute attr = xmlDoc.CreateAttribute("ID");
                         attr.Value = product.ID.ToString();
                         productElement.Attributes.Append(attr);
@@ -78,7 +78,7 @@ namespace AJH.CMS.WEB.UI
                         if (productImages != null && productImages.Count > 0)
                             for (int i = 0; i <= productImages.Count - 1; i++)
                             {
-                                XmlElement productImageElement = xmlDoc.CreateElement("Image" + productImages[i].ID.ToString());
+                                XmlElement productImageElement = xmlDoc.CreateElement("Image");
                                 XmlAttribute imageAttr = xmlDoc.CreateAttribute("ID");
 
                                 imageAttr.Value = productImages[i].ID.ToString();
