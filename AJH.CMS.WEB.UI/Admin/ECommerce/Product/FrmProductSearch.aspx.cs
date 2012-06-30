@@ -40,7 +40,7 @@ namespace AJH.CMS.WEB.UI.Admin
             {
                 case "EditProduct":
                     {
-                        Response.Redirect((CMSConfig.CMSAdminPages.GetProcutDetailsPage()) + "&" + CMSConfig.QueryString.ProdcutID + "=" + e.CommandArgument);
+                        Response.Redirect((CMSConfig.CMSAdminPages.GetProcutDetailsPage()) + "&" + CMSConfig.QueryString.ProductID + "=" + e.CommandArgument);
                         break;
                     }
                 default:

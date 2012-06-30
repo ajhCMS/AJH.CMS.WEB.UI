@@ -35,7 +35,7 @@ namespace AJH.CMS.Core.Configuration
             public const string XslID = "XslID";
             public const string PageSize = "PageSize";
             public const string PageNumber = "PageNumber";
-            public const string ProdcutID = "ProdcutID";
+            public const string ProductID = "ProductID";
             public const string CatalogID = "CatalogID";
         }
 

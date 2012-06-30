@@ -755,14 +755,14 @@ namespace AJH.CMS.WEB.UI.Admin
 
         private void ManageProductMode()
         {
-            if (string.IsNullOrEmpty(Request.QueryString[CMSConfig.QueryString.ProdcutID]))
+            if (string.IsNullOrEmpty(Request.QueryString[CMSConfig.QueryString.ProductID]))
             {
                 BeginProductAddMode();
             }
             else
             {
                 int productId = 0;
-                int.TryParse(Request.QueryString[CMSConfig.QueryString.ProdcutID], out productId);
+                int.TryParse(Request.QueryString[CMSConfig.QueryString.ProductID], out productId);
 
                 if (productId > 0)
                 {

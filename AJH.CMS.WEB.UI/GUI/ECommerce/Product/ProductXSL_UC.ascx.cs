@@ -94,6 +94,8 @@ namespace AJH.CMS.WEB.UI
 
                                 productElement.AppendChild(productImageElement);
                             }
+
+                        root.AppendChild(productElement);
                     }
 
                 if (xmlDoc.ChildNodes.Count > 1)

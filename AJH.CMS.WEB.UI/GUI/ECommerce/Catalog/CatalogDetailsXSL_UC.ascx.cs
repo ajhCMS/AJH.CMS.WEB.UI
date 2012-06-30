@@ -67,6 +67,8 @@ namespace AJH.CMS.WEB.UI
                 xmlCatalog.TransformSource = xslPath;
                 xmlCatalog.TransformArgumentList = arguments;
                 xmlCatalog.DataBind();
+
+                this.Page.Title = catalog.Name;
             }
         }
         #endregion
