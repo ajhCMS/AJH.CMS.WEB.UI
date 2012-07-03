@@ -658,6 +658,10 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_NAME);
             if (!reader.IsDBNull(colIndex))
                 catalog.Name = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_CATALOG_PARENT_CATALOG_ID);
+            if (!reader.IsDBNull(colIndex))
+                catalog.ParentCalalogID = reader.GetInt32(colIndex);
         }
 
         #endregion

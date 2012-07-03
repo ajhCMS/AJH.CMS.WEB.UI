@@ -1435,6 +1435,7 @@
     <Content Include="GUI\ECommerce\Catalog\CatalogDetailsXSL_UC.ascx" />
     <Content Include="GUI\ECommerce\Catalog\CatalogXSL_UC.ascx" />
     <Content Include="GUI\ECommerce\Product\ProductDetailsXSL_UC.ascx" />
+    <Content Include="GUI\ECommerce\Product\ProductSitePath.ascx" />
     <Content Include="GUI\ECommerce\Product\ProductXSL_UC.ascx" />
     <Content Include="GUI\Gallery\GalleryServiceXSL_UC.ascx" />
     <Content Include="GUI\Gallery\GalleryXSL_UC.ascx" />
@@ -1990,6 +1991,13 @@
     </Compile>
     <Compile Include="GUI\ECommerce\Product\ProductDetailsXSL_UC.ascx.designer.cs">
       <DependentUpon>ProductDetailsXSL_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Product\ProductSitePath.ascx.cs">
+      <DependentUpon>ProductSitePath.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Product\ProductSitePath.ascx.designer.cs">
+      <DependentUpon>ProductSitePath.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\ECommerce\Product\ProductXSL_UC.ascx.cs">
       <DependentUpon>ProductXSL_UC.ascx</DependentUpon>

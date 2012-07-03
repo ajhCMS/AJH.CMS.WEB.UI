@@ -22,30 +22,12 @@ namespace AJH.CMS.WEB.UI {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// smanager1 control.
+        /// ucSitePath control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager smanager1;
-        
-        /// <summary>
-        /// upnl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upnl;
-        
-        /// <summary>
-        /// ucSWFUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AJH.CMS.WEB.UI.Controls.SWFUpload.SWFUpload_UC ucSWFUpload;
+        protected global::AJH.CMS.WEB.UI.ProductSitePath ucSitePath;
     }
 }

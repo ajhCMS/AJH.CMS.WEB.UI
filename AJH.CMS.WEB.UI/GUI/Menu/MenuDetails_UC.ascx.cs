@@ -39,6 +39,7 @@ namespace AJH.CMS.WEB.UI
                 Menu menu = MenuManager.GetMenu(menuID);
                 if (menu != null)
                 {
+                    lblMenuTitle.Text = menu.Name;
                     dvMenuDetails.InnerHtml = menu.Details;
                     this.Page.Title = menu.Name;
                 }

@@ -13,6 +13,15 @@ namespace AJH.CMS.WEB.UI {
     public partial class ArticleDetails_UC {
         
         /// <summary>
+        /// lblArticleTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblArticleTitle;
+        
+        /// <summary>
         /// dvArticleDetails control.
         /// </summary>
         /// <remarks>

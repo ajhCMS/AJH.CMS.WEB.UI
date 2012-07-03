@@ -39,6 +39,7 @@ namespace AJH.CMS.WEB.UI
                 Article article = ArticleManager.GetArticle(articleID);
                 if (article != null)
                 {
+                    lblArticleTitle.Text = article.Name;
                     dvArticleDetails.InnerHtml = article.Details;
                     this.Page.Title = article.Name;
                 }
