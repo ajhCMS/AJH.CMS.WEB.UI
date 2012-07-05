@@ -11,7 +11,8 @@ namespace AJH.CMS.WEB.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            int x = AJH.CMS.WEB.UI.Utilities.CMSContext.LanguageID;
+
         }
     }
 }

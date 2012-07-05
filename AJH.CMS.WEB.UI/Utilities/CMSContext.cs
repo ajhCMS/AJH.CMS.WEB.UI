@@ -2,6 +2,9 @@
 using System.Web;
 using AJH.CMS.Core.Data;
 using AJH.CMS.Core.Entities;
+using System.Collections.Generic;
+using System;
+
 namespace AJH.CMS.WEB.UI.Utilities
 {
     public static class CMSContext
@@ -18,7 +21,29 @@ namespace AJH.CMS.WEB.UI.Utilities
         {
             get
             {
-                return 1;
+                int languageId = -1;
+                List<LanguageURL> languageUrls = CacheManager.GetObject("AllLanguagesUrls" + PortalID) as List<LanguageURL>;
+
+                if (languageUrls == null)
+                {
+                    languageUrls = LanguageUrlManager.GetLanguageURLs(PortalID);
+                    CacheManager.AddObject("AllLanguagesUrls" + PortalID.ToString(), languageUrls);
+                }
+
+                string http = "http://";
+                string absoluteUri = HttpContext.Current.Request.Url.AbsoluteUri;
+
+                string domainUrl = absoluteUri.Replace(http, string.Empty);
+                domainUrl = domainUrl.Substring(0, domainUrl.IndexOf("/"));
+                domainUrl = http + domainUrl;
+
+                foreach (LanguageURL languageURL in languageUrls)
+                {
+                    if (string.Equals(languageURL.Name, domainUrl, StringComparison.InvariantCultureIgnoreCase))
+                        languageId = languageURL.LanguageID;
+                }
+
+                return languageId;
             }
         }
 
