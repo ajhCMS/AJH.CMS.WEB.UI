@@ -125,6 +125,12 @@ namespace AJH.CMS.Core.Entities
             get;
         }
 
+        public int Order
+        {
+            set;
+            get;
+        }
+
         #region IEntity Members
 
         public int ID
@@ -177,6 +183,7 @@ namespace AJH.CMS.Core.Entities
             this.Description = string.Empty;
             this.SizeChart = string.Empty;
             this.Tags = string.Empty;
+            this.Order = 0;
         }
     }
 }

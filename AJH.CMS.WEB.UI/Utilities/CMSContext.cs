@@ -40,7 +40,10 @@ namespace AJH.CMS.WEB.UI.Utilities
                 foreach (LanguageURL languageURL in languageUrls)
                 {
                     if (string.Equals(languageURL.Name, domainUrl, StringComparison.InvariantCultureIgnoreCase))
+                    {
                         languageId = languageURL.LanguageID;
+                        break;
+                    }
                 }
 
                 return languageId;

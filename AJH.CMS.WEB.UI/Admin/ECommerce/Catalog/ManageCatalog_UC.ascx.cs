@@ -38,6 +38,41 @@ namespace AJH.CMS.WEB.UI.Admin
             this.ibtnDeleteProduct.Click += new ImageClickEventHandler(ibtnDeleteProduct_Click);
             this.gvAllProducts.PageIndexChanging += new GridViewPageEventHandler(gvAllProducts_PageIndexChanging);
             this.gvCatalogProducts.PageIndexChanging += new GridViewPageEventHandler(gvCatalogProducts_PageIndexChanging);
+            this.gvCatalogProducts.RowCommand += new GridViewCommandEventHandler(gvCatalogProducts_RowCommand);
+        }
+
+        void gvCatalogProducts_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            switch (e.CommandName)
+            {
+                case "SaveProductOrder":
+                    {
+                        int rowIndex = -1;
+                        int productOrder = 0;
+                        ImageButton ibtnSave = (ImageButton)e.CommandSource;
+                        string strRowIndex = ibtnSave.Attributes["ContainerRowIndex"];
+
+                        int.TryParse(strRowIndex, out rowIndex);
+                        if (rowIndex > -1)
+                        {
+                            TextBox txtProductOrder = (TextBox)gvCatalogProducts.Rows[rowIndex].FindControl("txtProductOrder");
+                            if (txtProductOrder != null)
+                            {
+                                HtmlInputHidden hdnID = (HtmlInputHidden)gvCatalogProducts.Rows[rowIndex].FindControl("hdnID");
+                                if (hdnID != null && !string.IsNullOrEmpty(hdnID.Value))
+                                {
+                                    int productId = Convert.ToInt32(hdnID.Value);
+                                    CatalogManager.DeleteProductCatalog(productId, Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]));
+
+                                    int.TryParse(txtProductOrder.Text, out productOrder);
+                                    CatalogManager.AddProductCatalog(productId, Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]), productOrder);
+                                }
+                            }
+                        }
+
+                        break;
+                    }
+            }
         }
 
         void gvCatalogProducts_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -96,10 +131,12 @@ namespace AJH.CMS.WEB.UI.Admin
                     if (chkItem != null && chkItem.Checked)
                     {
                         HtmlInputHidden hdnID = (HtmlInputHidden)gvAllProducts.Rows[i].FindControl("hdnID");
+                        TextBox txtProductOrder = (TextBox)gvAllProducts.Rows[i].FindControl("txtProductOrder");
                         if (hdnID != null && !string.IsNullOrEmpty(hdnID.Value))
                         {
                             int productId = Convert.ToInt32(hdnID.Value);
-                            CatalogManager.AddProductCatalog(productId, Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]));
+                            CatalogManager.AddProductCatalog(productId,
+                                Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]), 0);
                         }
                     }
                 }
@@ -117,6 +154,10 @@ namespace AJH.CMS.WEB.UI.Admin
                 upnlProductCatalog.Update();
             }
         }
+
+
+        //if (txtProductOrder != null)
+        //                       int.TryParse(txtProductOrder.Text, out productOrder);
 
         #endregion
 
@@ -246,6 +287,10 @@ namespace AJH.CMS.WEB.UI.Admin
                         catalog.MetaDescription = txtMetaDescription.Text;
                         catalog.MetaKeywords = txtMetaKeywords.Text;
 
+                        int catalogOrder = 0;
+                        int.TryParse(txtCatalogOrder.Text, out catalogOrder);
+                        catalog.Order = catalogOrder;
+
                         CatalogManager.Update(catalog);
                         FillCatalogTree();
                         upnlCatalog.Update();
@@ -328,6 +373,10 @@ namespace AJH.CMS.WEB.UI.Admin
                 catalog.MetaTitle = txtMetaTitle.Text;
                 catalog.ModuleID = (int)CMSEnums.ECommerceModule.Catalog;
                 catalog.Name = txtName.Text;
+
+                int catalogOrder = 0;
+                int.TryParse(txtCatalogOrder.Text, out catalogOrder);
+                catalog.Order = catalogOrder;
 
                 int parentCatalogId = -1;
                 int.TryParse(ddlParentCatalog.SelectedValue, out parentCatalogId);
@@ -415,6 +464,8 @@ namespace AJH.CMS.WEB.UI.Admin
             cbIsDisplayed.Checked = false;
             ucSWFUpload.BeginAddMode();
 
+            txtCatalogOrder.Text = "0";
+
             cddlParentCatalog.SelectedValue = "0";
 
             ucPortalLanguage.Visible = false;
@@ -458,6 +509,8 @@ namespace AJH.CMS.WEB.UI.Admin
                     txtMetaDescription.Text = catalog.MetaDescription;
                     txtMetaKeywords.Text = catalog.MetaKeywords;
 
+                    txtCatalogOrder.Text = catalog.Order.ToString();
+
                     btnSave.Visible = false;
                     btnSaveOtherLanguage.Visible = false;
                     btnUpdate.Visible = true;
@@ -495,6 +548,8 @@ namespace AJH.CMS.WEB.UI.Admin
                 txtMetaTitle.Text = catalog.MetaTitle;
                 txtMetaDescription.Text = catalog.MetaDescription;
                 txtMetaKeywords.Text = catalog.MetaKeywords;
+
+                txtCatalogOrder.Text = catalog.Order.ToString();
 
                 btnSave.Visible = false;
                 if (string.IsNullOrEmpty(catalog.Name))

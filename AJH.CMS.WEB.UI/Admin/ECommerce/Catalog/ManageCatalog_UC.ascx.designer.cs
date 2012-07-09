@@ -274,15 +274,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtMetaTitle;
         
         /// <summary>
-        /// rfvMetaTitle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMetaTitle;
-        
-        /// <summary>
         /// lblMetaDescription control.
         /// </summary>
         /// <remarks>
@@ -299,15 +290,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMetaDescription;
-        
-        /// <summary>
-        /// rfvMetaDescription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMetaDescription;
         
         /// <summary>
         /// lblMetaKeywords control.
@@ -328,13 +310,31 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtMetaKeywords;
         
         /// <summary>
-        /// rfvMetaKeywords control.
+        /// lblCatalogOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMetaKeywords;
+        protected global::System.Web.UI.WebControls.Label lblCatalogOrder;
+        
+        /// <summary>
+        /// nCatalogOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.NumericUpDownExtender nCatalogOrder;
+        
+        /// <summary>
+        /// txtCatalogOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCatalogOrder;
         
         /// <summary>
         /// btnExit control.

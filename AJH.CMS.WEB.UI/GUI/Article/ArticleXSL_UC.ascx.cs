@@ -41,7 +41,7 @@ namespace AJH.CMS.WEB.UI
                     PageSize = Convert.ToInt32(Attributes["PageSize"]);
                 }
                 int TotalCount = 0;
-                string articleXML = ArticleManager.GetArticlesPublishXML(base.ContainerValue, 1, PageSize, ref TotalCount);
+                string articleXML = ArticleManager.GetArticlesPublishXML(base.ContainerValue, CMSContext.LanguageID, 1, PageSize, ref TotalCount);
 
                 string xslPath = CMSWebHelper.GetXSLTemplateFilePath(base.XSLTemplateID);
                 xslPath = XSLTemplateManager.GetXSLTemplatePath(xslPath, base.XSLTemplateID);

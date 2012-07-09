@@ -615,7 +615,7 @@ namespace AJH.CMS.Core.Data
             return article;
         }
 
-        internal static string GetArticlesPublishXML(int CategoryID, int RowFrom, int RowTo, ref int TotalCount)
+        internal static string GetArticlesPublishXML(int CategoryID, int languageId, int RowFrom, int RowTo, ref int TotalCount)
         {
             string articleXML = string.Empty;
             TotalCount = 0;
@@ -629,6 +629,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_ARTICLE_CATEGORY_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = CategoryID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_ARTICLE_LANGUAGE_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = languageId;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 sqlParameter = new SqlParameter(CMSCoreBase.PN_ROW_FROM, System.Data.SqlDbType.Int);

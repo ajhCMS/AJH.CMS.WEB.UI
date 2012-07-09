@@ -19,6 +19,8 @@ namespace AJH.CMS.Core.Data
         internal const string CN_CATALOG_PARENT_CATALOG_ID = "CATALOG_PARENT_CATALOG_ID";
         internal const string CN_CATALOG_IS_DELETED = "CATALOG_IS_DELETED";
         internal const string CN_CATALOG_PORTAL_ID = "CATALOG_PORTAL_ID";
+        internal const string CN_PRODUCT_ORDER = "PRODUCT_ORDER";
+        internal const string CN_CATALOG_ORDER = "CATALOG_ORDER";
 
         internal const string PN_CATALOG_ID = "P_CATALOG_ID";
         internal const string PN_CATALOG_PORTAL_ID = "P_CATALOG_PORTAL_ID";
@@ -27,6 +29,9 @@ namespace AJH.CMS.Core.Data
         internal const string PN_CATALOG_IMAGE = "P_CATALOG_IMAGE";
         internal const string PN_CATALOG_PARENT_CATALOG_ID = "P_CATALOG_PARENT_CATALOG_ID";
         internal const string PN_CATALOG_LANGUAGE_ID = "P_CATALOG_LANGUAGE_ID";
+        internal const string PN_PRODUCT_ORDER = "P_PRODUCT_ORDER";
+        internal const string PN_CATALOG_ORDER = "P_CATALOG_ORDER";
+
 
         internal const string SN_CATALOG_ADD = "[ECOMMERCE].[CatalogAdd]";
         internal const string SN_CATALOG_UPDATE = "[ECOMMERCE].[CatalogUpdate]";
@@ -120,6 +125,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter.Value = CatalogEntity.MetaKeywords;
                 sqlCommand.Parameters.Add(sqlParameter);
 
+                sqlParameter = new SqlParameter(PN_CATALOG_ORDER, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CatalogEntity.Order;
+                sqlCommand.Parameters.Add(sqlParameter);
+
                 try
                 {
                     sqlCommand.Connection.Open();
@@ -210,6 +220,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_ECO_LAN_KEYWORD, System.Data.SqlDbType.NVarChar);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = CatalogEntity.MetaKeywords;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_CATALOG_ORDER, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CatalogEntity.Order;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 try
@@ -344,7 +359,7 @@ namespace AJH.CMS.Core.Data
             }
         }
 
-        internal static void AddProductCatalog(int prodcutId, int catalogId)
+        internal static void AddProductCatalog(int prodcutId, int catalogId, int productOrder)
         {
             using (SqlConnection sqlConnection = new SqlConnection(CMSCoreBase.CMSCoreConnectionString))
             {
@@ -361,6 +376,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_CATALOG_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = catalogId;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_PRODUCT_ORDER, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = productOrder;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 try
@@ -645,6 +665,10 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(CN_CATALOG_IS_DELETED);
             if (!reader.IsDBNull(colIndex))
                 catalog.IsDeleted = reader.GetBoolean(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_CATALOG_ORDER);
+            if (!reader.IsDBNull(colIndex))
+                catalog.Order = reader.GetInt32(colIndex);
 
         }
 

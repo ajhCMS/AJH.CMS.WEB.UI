@@ -35,6 +35,8 @@ namespace AJH.CMS.Core.Data
         internal const string CN_PRODUCT_SHORT_DESCRIPTION = "PRODUCT_SHORT_DESCRIPTION";
         internal const string CN_PRODUCT_SIZE_CHART = "PRODUCT_SIZE_CHART";
         internal const string CN_PRODUCT_TAGS = "PRODUCT_TAGS";
+        internal const string CN_PRODUCT_ORDER = "PRODUCT_ORDER";
+
 
 
         internal const string PN_PRODUCT_ID = "P_PRODUCT_ID";
@@ -565,7 +567,7 @@ namespace AJH.CMS.Core.Data
                     while (sqlDataReader.Read())
                     {
                         Product = GetProduct(colProducts, sqlDataReader);
-                        FillFromReader(Product, sqlDataReader);
+                        FillFromReaderByCatalog(Product, sqlDataReader);
                     }
 
                     sqlDataReader.Close();
@@ -787,6 +789,107 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(CN_PRODUCT_IS_ENABLED);
             if (!reader.IsDBNull(colIndex))
                 Product.IsDeleted = reader.GetBoolean(colIndex);
+
+        }
+
+        internal static void FillFromReaderByCatalog(Product Product, SqlDataReader reader)
+        {
+            int colIndex = 0;
+            colIndex = reader.GetOrdinal(CN_PRODUCT_ID);
+            if (!reader.IsDBNull(colIndex))
+                Product.ID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_SUPPLIER_ID);
+            if (!reader.IsDBNull(colIndex))
+                Product.SupplierID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_EAN13_OR_JAN);
+            if (!reader.IsDBNull(colIndex))
+                Product.Ean13OrJan = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_UPC);
+            if (!reader.IsDBNull(colIndex))
+                Product.UPC = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_LOCATION);
+            if (!reader.IsDBNull(colIndex))
+                Product.Location = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_IS_DOWNLODABLE);
+            if (!reader.IsDBNull(colIndex))
+                Product.IsDownloadable = reader.GetBoolean(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_DISPLAY_ON_SALE_ICON);
+            if (!reader.IsDBNull(colIndex))
+                Product.DisplayOnSaleIcon = reader.GetBoolean(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_INITIAL_STOCK);
+            if (!reader.IsDBNull(colIndex))
+                Product.InitialStock = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_MINIMUM_QUANTITY);
+            if (!reader.IsDBNull(colIndex))
+                Product.MinimumQuantity = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_ADDITIONAL_SHIPPING_COST);
+            if (!reader.IsDBNull(colIndex))
+                Product.AdditionalShippingCost = reader.GetDecimal(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_MANUFACTURER_ID);
+            if (!reader.IsDBNull(colIndex))
+                Product.ManufacturarID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_IS_ENABLED);
+            if (!reader.IsDBNull(colIndex))
+                Product.IsEnabled = reader.GetBoolean(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_PORTAL_ID);
+            if (!reader.IsDBNull(colIndex))
+                Product.PortalID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_TAX_ID);
+            if (!reader.IsDBNull(colIndex))
+                Product.TaxID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_NAME);
+            if (!reader.IsDBNull(colIndex))
+                Product.Name = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_MESSAGE1);
+            if (!reader.IsDBNull(colIndex))
+                Product.DisplayTextInStockText = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_MESSAGE2);
+            if (!reader.IsDBNull(colIndex))
+                Product.DisplayTextInBackOrderText = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_DESC);
+            if (!reader.IsDBNull(colIndex))
+                Product.Description = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_DESC2);
+            if (!reader.IsDBNull(colIndex))
+                Product.ShortDescription = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_DETAILS);
+            if (!reader.IsDBNull(colIndex))
+                Product.SizeChart = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_KEYWORD);
+            if (!reader.IsDBNull(colIndex))
+                Product.Tags = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_LAN_ID);
+            if (!reader.IsDBNull(colIndex))
+                Product.LanguageID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_IS_ENABLED);
+            if (!reader.IsDBNull(colIndex))
+                Product.IsDeleted = reader.GetBoolean(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_PRODUCT_ORDER);
+            if (!reader.IsDBNull(colIndex))
+                Product.Order = reader.GetInt32(colIndex);
 
         }
 

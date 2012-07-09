@@ -91,6 +91,13 @@ namespace AJH.CMS.Core.Entities
             set;
         }
 
+        public int Order
+        {
+            get;
+            set;
+        }
+
+
         #endregion
 
         public Catalog()
@@ -109,6 +116,7 @@ namespace AJH.CMS.Core.Entities
             this.MetaDescription = string.Empty;
             this.IsDeleted = false;
             this.ModuleID = 0;
+            this.Order = 0;
         }
 
     }

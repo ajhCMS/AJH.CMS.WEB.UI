@@ -109,8 +109,6 @@
                             <td>
                                 <asp:TextBox ID="txtMetaTitle" runat="server" TextMode="MultiLine" Height="60px"
                                     MaxLength="500"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfvMetaTitle" runat="server" ControlToValidate="txtMetaTitle"
-                                    ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Title"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -121,8 +119,6 @@
                             <td>
                                 <asp:TextBox ID="txtMetaDescription" runat="server" TextMode="MultiLine" Height="60px"
                                     MaxLength="500"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfvMetaDescription" runat="server" ControlToValidate="txtMetaDescription"
-                                    ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Description"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -132,8 +128,18 @@
                             <td>
                                 <asp:TextBox ID="txtMetaKeywords" runat="server" TextMode="MultiLine" Height="60px"
                                     MaxLength="500"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfvMetaKeywords" runat="server" ControlToValidate="txtMetaKeywords"
-                                    ValidationGroup="AddEditCatalog" Text="*" Display="Dynamic" ErrorMessage="Meta Keywords"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblCatalogOrder" runat="server" Text="Order" AssociatedControlID="txtCatalogOrder"></asp:Label>
+                            </td>
+                            <td>
+                                <ajax:NumericUpDownExtender ID="nCatalogOrder" runat="server" TargetControlID="txtCatalogOrder"
+                                    Width="100" Minimum="0">
+                                </ajax:NumericUpDownExtender>
+                                <asp:TextBox ID="txtCatalogOrder" runat="server">
+                                </asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -211,6 +217,19 @@
                                 </asp:TemplateField>
                                 <asp:BoundField DataField="ID" HeaderText="ID" />
                                 <asp:BoundField DataField="Name" HeaderText="Name" />
+                                <asp:TemplateField HeaderText="Product Order">
+                                    <ItemTemplate>
+                                        <ajax:NumericUpDownExtender ID="nProductOrder" runat="server" TargetControlID="txtProductOrder"
+                                            Width="100" Minimum="0">
+                                        </ajax:NumericUpDownExtender>
+                                        <asp:TextBox ID="txtProductOrder" runat="server" Text='<%# ((AJH.CMS.Core.Entities.Product)Container.DataItem).Order%>'>
+                                        </asp:TextBox>
+                                        <asp:ImageButton ID="ibtnSaveProductOrder" runat="server" CommandName="SaveProductOrder"
+                                            CommandArgument='<%# ((AJH.CMS.Core.Entities.Product)Container.DataItem).ID%>'
+                                            ImageUrl="~/App_Themes/Image/save.png" Height="50" Width="50" ContainerRowIndex="<%# Container.DataItemIndex %>"
+                                            NotificationOperationDone="true" />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
                     </div>

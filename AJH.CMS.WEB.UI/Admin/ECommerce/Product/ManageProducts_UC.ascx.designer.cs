@@ -175,15 +175,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtDisplayTextInStock;
         
         /// <summary>
-        /// rfvDisplayTextInStock control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDisplayTextInStock;
-        
-        /// <summary>
         /// lblDisplayTextWhenbackOrder control.
         /// </summary>
         /// <remarks>
@@ -200,15 +191,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDisplayTextWhenbackOrder;
-        
-        /// <summary>
-        /// rfvDisplayTextWhenbackOrder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDisplayTextWhenbackOrder;
         
         /// <summary>
         /// lblShortDescription control.
@@ -229,15 +211,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtShortDescription;
         
         /// <summary>
-        /// rfvShortDescription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvShortDescription;
-        
-        /// <summary>
         /// lblTags control.
         /// </summary>
         /// <remarks>
@@ -254,15 +227,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTags;
-        
-        /// <summary>
-        /// rfvTags control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTags;
         
         /// <summary>
         /// lblSupplier control.
@@ -292,15 +256,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::AjaxControlToolkit.CascadingDropDown cddlSupplier;
         
         /// <summary>
-        /// rfvSupplier control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSupplier;
-        
-        /// <summary>
         /// lblEAN13 control.
         /// </summary>
         /// <remarks>
@@ -317,15 +272,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEAN13;
-        
-        /// <summary>
-        /// rfvEAN13 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEAN13;
         
         /// <summary>
         /// lblUpc control.
@@ -346,15 +292,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtUpc;
         
         /// <summary>
-        /// rfvUpc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUpc;
-        
-        /// <summary>
         /// lblLocation control.
         /// </summary>
         /// <remarks>
@@ -371,15 +308,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLocation;
-        
-        /// <summary>
-        /// rfvLocation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLocation;
         
         /// <summary>
         /// lblIsDownloadable control.
@@ -553,15 +481,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::AjaxControlToolkit.CascadingDropDown cddlManufacturar;
         
         /// <summary>
-        /// rfvManufacturar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvManufacturar;
-        
-        /// <summary>
         /// lblIsEnabled control.
         /// </summary>
         /// <remarks>
@@ -623,15 +542,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::CuteEditor.Editor txtSizeChart;
-        
-        /// <summary>
-        /// rfvSizeChart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSizeChart;
         
         /// <summary>
         /// btnExitProduct control.

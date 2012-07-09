@@ -37,9 +37,9 @@ namespace AJH.CMS.Core.Data
             CatalogDataMapper.DeleteLogical(id);
         }
 
-        public static void AddProductCatalog(int prodcutId, int catalogId)
+        public static void AddProductCatalog(int prodcutId, int catalogId, int productOrder)
         {
-            CatalogDataMapper.AddProductCatalog(prodcutId, catalogId);
+            CatalogDataMapper.AddProductCatalog(prodcutId, catalogId, productOrder);
         }
 
         public static void DeleteProductCatalog(int prodcutId, int catalogId)

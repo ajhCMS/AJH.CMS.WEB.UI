@@ -62,10 +62,10 @@ namespace AJH.CMS.Core.Data
             return ArticleDataMapper.GetArticle(articleParentObjID, languageID);
         }
 
-        public static string GetArticlesPublishXML(int CategoryID, int PageNumber, int PageSize, ref int TotalCount)
+        public static string GetArticlesPublishXML(int CategoryID, int languageId, int PageNumber, int PageSize, ref int TotalCount)
         {
             int RowFrom = ((PageNumber - 1) * PageSize) + 1, RowTo = PageNumber * PageSize;
-            return ArticleDataMapper.GetArticlesPublishXML(CategoryID, RowFrom, RowTo, ref TotalCount);
+            return ArticleDataMapper.GetArticlesPublishXML(CategoryID, languageId, RowFrom, RowTo, ref TotalCount);
         }
     }
 }

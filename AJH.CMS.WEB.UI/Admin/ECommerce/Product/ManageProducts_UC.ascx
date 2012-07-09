@@ -55,8 +55,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtDisplayTextInStock" runat="server" MaxLength="100"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvDisplayTextInStock" runat="server" ControlToValidate="txtDisplayTextInStock"
-                                ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="DisplayTextInStock"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -66,8 +64,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtDisplayTextWhenbackOrder" runat="server" MaxLength="100"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvDisplayTextWhenbackOrder" runat="server" ControlToValidate="txtDisplayTextWhenbackOrder"
-                                ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="DisplayTextWhenbackOrder"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -76,8 +72,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtShortDescription" runat="server" MaxLength="100"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvShortDescription" runat="server" ControlToValidate="txtShortDescription"
-                                ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="Short Description"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -86,8 +80,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtTags" runat="server" MaxLength="100"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvTags" runat="server" ControlToValidate="txtTags"
-                                ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="Tags"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -100,9 +92,6 @@
                             <ajax:CascadingDropDown ID="cddlSupplier" runat="server" TargetControlID="ddlSupplier"
                                 Category="Supplier" PromptValue="-1" PromptText="[Select]" LoadingText="[Loading...]"
                                 ServicePath="~/Admin/Services/ECommerce/Supplier/SupplierService.asmx" ServiceMethod="GetDropDownSuppliers" />
-                            <asp:RequiredFieldValidator ID="rfvSupplier" runat="server" ControlToValidate="ddlSupplier"
-                                ValidationGroup="AddEditProduct" Text="*" InitialValue="-1" Display="Dynamic"
-                                ErrorMessage="Supplier"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -111,8 +100,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtEAN13" runat="server" MaxLength="100"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvEAN13" runat="server" ControlToValidate="txtEAN13"
-                                ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="EAN13"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -121,8 +108,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtUpc" runat="server" MaxLength="100"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvUpc" runat="server" ControlToValidate="txtUpc"
-                                ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="UPC"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -131,8 +116,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtLocation" runat="server" MaxLength="100"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvLocation" runat="server" ControlToValidate="txtLocation"
-                                ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="Location"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -202,9 +185,6 @@
                                 Category="Manufacturar" PromptValue="-1" PromptText="[Select]" LoadingText="[Loading...]"
                                 ServicePath="~/Admin/Services/ECommerce/Manufacturar/ManufacturarService.asmx"
                                 ServiceMethod="GetAllManufacturars" />
-                            <asp:RequiredFieldValidator ID="rfvManufacturar" runat="server" ControlToValidate="ddlManufacturar"
-                                ValidationGroup="AddEditProduct" Text="*" InitialValue="-1" Display="Dynamic"
-                                ErrorMessage="Manufacturar"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -237,8 +217,6 @@
                                 <FrameStyle Height="100%" BorderWidth="1px" BorderStyle="Solid" BorderColor="#DDDDDD"
                                     Width="100%" CssClass="CuteEditorFrame" BackColor="White"></FrameStyle>
                             </CE:Editor>
-                            <asp:RequiredFieldValidator ID="rfvSizeChart" runat="server" ControlToValidate="txtSizeChart"
-                                ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="SizeChart"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>

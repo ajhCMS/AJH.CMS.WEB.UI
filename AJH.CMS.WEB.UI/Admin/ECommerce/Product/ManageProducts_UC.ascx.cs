@@ -310,7 +310,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 {
                     foreach (TreeNode node in checkedNodes)
                     {
-                        CatalogManager.AddProductCatalog(productId, Convert.ToInt32(node.Value));
+                        CatalogManager.AddProductCatalog(productId, Convert.ToInt32(node.Value), 0);
                     }
                 }
             }

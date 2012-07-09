@@ -3,13 +3,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ Register Src="~/GUI/ECommerce/Product/ProductSitePath.ascx" TagName="ucSitePath"
     TagPrefix="controls" %>
+<%@ Register Src="~/GUI/Article/ArticleXSL_UC.ascx" TagName="ucCatalogXSL" TagPrefix="controls" %>
+<%@ Register Src="~/GUI/Contact/Career_UC.ascx" TagName="ucCareer" TagPrefix="controls" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-    <controls:ucSitePath ID="ucSitePath" runat="server" />
+    <asp:ScriptManager ID="sManager1" runat="server">
+    </asp:ScriptManager>
+    <controls:ucCareer ID="ucCareer" runat="server" />
     </form>
 </body>
 </html>
