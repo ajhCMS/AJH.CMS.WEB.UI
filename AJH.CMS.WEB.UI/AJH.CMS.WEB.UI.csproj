@@ -2238,6 +2238,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\Contact\App_LocalResources\Career_UC.ascx.resx" />
+    <Content Include="GUI\Contact\App_LocalResources\Career_UC.ascx.ar-JO.resx" />
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

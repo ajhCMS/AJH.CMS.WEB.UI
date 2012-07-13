@@ -416,7 +416,7 @@ namespace AJH.CMS.Core.Data
             return colMenus;
         }
 
-        internal static List<Menu> GetMenus(int CategoryID)
+        internal static List<Menu> GetMenusByCategoryAndLanguage(int CategoryID, int languageID)
         {
             List<Menu> colMenus = null;
             Menu menu = null;
@@ -435,6 +435,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PublishDataMapper.PN_PUBLISH_MODULE_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = (int)AJH.CMS.Core.Enums.CMSEnums.Modules.Menu;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_MENU_LANGUAGE_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = languageID;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 sqlCommand.Connection.Open();
@@ -690,7 +695,7 @@ namespace AJH.CMS.Core.Data
                     while (sqlDataReader.Read())
                     {
                         menu = new Menu();
-                        FillFromReader(menu, sqlDataReader);
+                        FillFromReaderByParentObjID(menu, sqlDataReader);
                     }
 
                     sqlDataReader.Close();
@@ -808,6 +813,93 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(PublishDataMapper.CN_PUBLISH_TYPE_ID);
             if (!reader.IsDBNull(colIndex))
                 menu.IsPublished = reader.GetInt32(colIndex) == (int)AJH.CMS.Core.Enums.CMSEnums.PublishType.PublishNow;
+        }
+
+        internal static void FillFromReaderByParentObjID(Menu menu, SqlDataReader reader)  
+        {
+            int colIndex = 0;
+            colIndex = reader.GetOrdinal(CN_MENU_CATEGORY_ID);
+            if (!reader.IsDBNull(colIndex))
+                menu.CategoryID = reader.GetInt32(colIndex);
+
+            int days = 0, seconds = 0;
+            colIndex = reader.GetOrdinal(CN_MENU_CREATION_DAY);
+            if (!reader.IsDBNull(colIndex))
+                days = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_CREATION_SEC);
+            if (!reader.IsDBNull(colIndex))
+                seconds = reader.GetInt32(colIndex);
+
+            menu.CreationDate = CMSCoreHelper.GetDateTime(days, seconds);
+
+            colIndex = reader.GetOrdinal(CN_MENU_DESCRIPTION);
+            if (!reader.IsDBNull(colIndex))
+                menu.Description = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_DETAILS);
+            if (!reader.IsDBNull(colIndex))
+                menu.Details = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_ID);
+            if (!reader.IsDBNull(colIndex))
+                menu.ID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_IMAGE);
+            if (!reader.IsDBNull(colIndex))
+                menu.Image = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_IS_DELETED);
+            if (!reader.IsDBNull(colIndex))
+                menu.IsDeleted = reader.GetBoolean(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_KEYWORDS);
+            if (!reader.IsDBNull(colIndex))
+                menu.KeyWords = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_LANGUAGE_ID);
+            if (!reader.IsDBNull(colIndex))
+                menu.LanguageID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_NAME);
+            if (!reader.IsDBNull(colIndex))
+                menu.Name = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_PAGE_ID);
+            if (!reader.IsDBNull(colIndex))
+                menu.PageID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_PARENT_ID);
+            if (!reader.IsDBNull(colIndex))
+                menu.ParentID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_PORTAL_ID);
+            if (!reader.IsDBNull(colIndex))
+                menu.PortalID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_SEO_NAME);
+            if (!reader.IsDBNull(colIndex))
+                menu.SEOName = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_URL);
+            if (!reader.IsDBNull(colIndex))
+                menu.URL = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_TYPE);
+            if (!reader.IsDBNull(colIndex))
+                menu.MenuType = (CMSEnums.MenuType)reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_ORDER);
+            if (!reader.IsDBNull(colIndex))
+                menu.Order = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_CREATED_BY);
+            if (!reader.IsDBNull(colIndex))
+                menu.CreatedBy = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_PARENT_OBJ_ID);
+            if (!reader.IsDBNull(colIndex))
+                menu.ParentObjectID = reader.GetInt32(colIndex);
         }
 
         #endregion

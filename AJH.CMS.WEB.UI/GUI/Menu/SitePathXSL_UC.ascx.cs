@@ -79,7 +79,7 @@ namespace AJH.CMS.WEB.UI
                 else
                 {
                     string menuCategoryPath = CMSWebHelper.GetMenuPathByCategory(currentMenu.CategoryID);
-                    menuCategoryPath = MenuManager.GetMenuCategoryXMLPath(menuCategoryPath, currentMenu.CategoryID);
+                    menuCategoryPath = MenuManager.GetMenuCategoryXMLPath(menuCategoryPath, currentMenu.CategoryID, CMSContext.LanguageID);
 
                     XmlDocument xmlDoc = new XmlDocument();
                     xmlDoc.Load(menuCategoryPath);

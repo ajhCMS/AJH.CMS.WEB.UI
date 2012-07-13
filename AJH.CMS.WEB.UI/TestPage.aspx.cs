@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using AJH.CMS.WEB.UI.Utilities;
 
 namespace AJH.CMS.WEB.UI
 {
@@ -13,6 +14,8 @@ namespace AJH.CMS.WEB.UI
         {
             int x = AJH.CMS.WEB.UI.Utilities.CMSContext.LanguageID;
 
+            string dd =
+            CMSContext.CurrentLanguageCulture;
         }
     }
 }

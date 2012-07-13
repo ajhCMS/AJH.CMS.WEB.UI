@@ -33,7 +33,7 @@ namespace AJH.CMS.WEB.UI.Utilities
         #region Menu
         public static string GetMenuCategoryFileName(int CategoryID)
         {
-            return "MenuCategory" + CategoryID + ".xml";
+            return "MenuCategory" + CategoryID + "Lang" + CMSContext.LanguageID + ".xml";
         }
 
         public static string GetMenuPathByCategory(int CategoryID)

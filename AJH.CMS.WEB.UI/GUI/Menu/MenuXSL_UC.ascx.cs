@@ -36,7 +36,7 @@ namespace AJH.CMS.WEB.UI
             if (base.XSLTemplateID > 0 && base.ContainerValue > 0)
             {
                 string menuCategoryPath = CMSWebHelper.GetMenuPathByCategory(base.ContainerValue);
-                menuCategoryPath = MenuManager.GetMenuCategoryXMLPath(menuCategoryPath, base.ContainerValue);
+                menuCategoryPath = MenuManager.GetMenuCategoryXMLPath(menuCategoryPath, base.ContainerValue, CMSContext.LanguageID);
 
                 string xslPath = CMSWebHelper.GetXSLTemplateFilePath(base.XSLTemplateID);
                 xslPath = XSLTemplateManager.GetXSLTemplatePath(xslPath, base.XSLTemplateID);

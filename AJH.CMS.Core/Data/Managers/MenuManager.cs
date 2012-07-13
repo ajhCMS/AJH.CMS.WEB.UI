@@ -43,9 +43,9 @@ namespace AJH.CMS.Core.Data
             return MenuDataMapper.GetMenus();
         }
 
-        public static List<Menu> GetMenus(int CategoryID)
+        public static List<Menu> GetMenusByCategoryAndLanguage(int CategoryID, int languageID)
         {
-            return MenuDataMapper.GetMenus(CategoryID);
+            return MenuDataMapper.GetMenusByCategoryAndLanguage(CategoryID, languageID);
         }
 
         public static List<Menu> GetMenusParentObjByCategory(int categoryID)
@@ -60,7 +60,7 @@ namespace AJH.CMS.Core.Data
 
         public static List<Menu> GetMenus(int PortalID, int LanguageID)
         {
-            return MenuDataMapper.GetMenus(PortalID, LanguageID);
+            return MenuDataMapper.GetMenusByCategoryAndLanguage(PortalID, LanguageID);
         }
 
         public static List<Menu> GetMenus(int ParentID, int PortalID, int LanguageID)
@@ -92,7 +92,7 @@ namespace AJH.CMS.Core.Data
             return xmlDoc.OuterXml;
         }
 
-        public static string GetMenuCategoryXMLPath(string MenuCategoryPath, int CategoryID)
+        public static string GetMenuCategoryXMLPath(string MenuCategoryPath, int CategoryID, int languageID)
         {
             if (!File.Exists(MenuCategoryPath))
             {
@@ -101,7 +101,7 @@ namespace AJH.CMS.Core.Data
                 XmlElement xmlRoot = xmlDoc.CreateElement("Menus");
                 xmlDoc.AppendChild(xmlRoot);
 
-                List<Menu> menus = GetMenus(CategoryID);
+                List<Menu> menus = GetMenusByCategoryAndLanguage(CategoryID, languageID);
                 List<Menu> parentMenus = menus.Where(m => m.ParentID == 0).ToList();
                 foreach (Menu item in parentMenus)
                 {

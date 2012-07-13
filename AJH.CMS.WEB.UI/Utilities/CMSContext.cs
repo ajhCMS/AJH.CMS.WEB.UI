@@ -50,6 +50,30 @@ namespace AJH.CMS.WEB.UI.Utilities
             }
         }
 
+        public static string CurrentLanguageCulture
+        {
+            get
+            {
+                string cacheKey = "CurrentLanguageCulture" + LanguageID;
+                string languageCulture = string.Empty;
+                if (CacheManager.GetObject(cacheKey) == null)
+                {
+                    Language language = LanguageManager.GetLanguage(LanguageID);
+                    if (language != null)
+                    {
+                        languageCulture = language.Culture;
+                        CacheManager.AddObject(cacheKey, languageCulture);
+                    }
+                }
+                else
+                {
+                    languageCulture = CacheManager.GetObject("CurrentLanguageCulture" + LanguageID).ToString();
+                }
+
+                return languageCulture;
+            }
+        }
+
         public static int UserID
         {
             get

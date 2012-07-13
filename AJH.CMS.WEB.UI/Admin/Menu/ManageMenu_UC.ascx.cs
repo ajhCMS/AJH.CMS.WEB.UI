@@ -84,7 +84,7 @@ namespace AJH.CMS.WEB.UI.Admin
             {
                 string menuCategoryPath = CMSWebHelper.GetMenuPathByCategory(categoryID);
                 File.Delete(menuCategoryPath);
-                MenuManager.GetMenuCategoryXMLPath(menuCategoryPath, categoryID);
+                MenuManager.GetMenuCategoryXMLPath(menuCategoryPath, categoryID, CMSContext.LanguageID);
                 ExitMode();
                 upnlMenuItem.Update();
             }
@@ -388,13 +388,11 @@ namespace AJH.CMS.WEB.UI.Admin
             {
                 try
                 {
-                    List<CMS.Core.Entities.Menu> menus =
-                        MenuManager.GetMenus(SelectedParentMenuObjID, CMSContext.PortalID, ucPortalLanguage.SelectedLanguageID);
+                    CMS.Core.Entities.Menu menu =
+                         MenuManager.GetMenu(SelectedParentMenuObjID, ucPortalLanguage.SelectedLanguageID);
 
-                    if (menus != null && menus.Count > 0)
+                    if (menu != null)
                     {
-                        CMS.Core.Entities.Menu menu = menus.FirstOrDefault();
-
                         menu.CategoryID = Convert.ToInt32(ViewState[CMSViewStateManager.CategoryID]);
                         menu.Description = txtDescription.Text;
                         menu.Details = txtDetails.Text;
@@ -407,12 +405,13 @@ namespace AJH.CMS.WEB.UI.Admin
 
                         menu.IsDeleted = false;
                         menu.KeyWords = string.Empty;
-                        menu.LanguageID = CMSContext.LanguageID;
+                        
                         menu.MenuType = (CMSEnums.MenuType)Convert.ToInt32(ddlMenuType.SelectedValue);
                         menu.Name = txtName.Text;
                         menu.Order = Convert.ToInt32(txtOrderNumber.Text);
                         menu.ParentID = Convert.ToInt32(cddParentMenu.SelectedValue);
                         menu.PortalID = CMSContext.PortalID;
+
                         menu.SEOName = string.Empty;
 
                         switch (menu.MenuType)

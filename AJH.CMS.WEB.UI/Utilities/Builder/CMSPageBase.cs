@@ -42,6 +42,17 @@ namespace AJH.CMS.WEB.UI
             this.Title = CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.Name + " - " + this.Title;
         }
 
+        protected override void InitializeCulture()
+        {
+            base.InitializeCulture();
+
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo(CMSContext.CurrentLanguageCulture);
+
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo(CMSContext.CurrentLanguageCulture);
+        }
+
         #endregion
     }
 }

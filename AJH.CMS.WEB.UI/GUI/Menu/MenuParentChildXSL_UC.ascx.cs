@@ -71,7 +71,7 @@ namespace AJH.CMS.WEB.UI
                 else
                 {
                     string menuCategoryPath = CMSWebHelper.GetMenuPathByCategory(currentMenu.CategoryID);
-                    menuCategoryPath = MenuManager.GetMenuCategoryXMLPath(menuCategoryPath, currentMenu.CategoryID);
+                    menuCategoryPath = MenuManager.GetMenuCategoryXMLPath(menuCategoryPath, currentMenu.CategoryID, CMSContext.LanguageID);
 
                     string xslPath = CMSWebHelper.GetXSLTemplateFilePath(base.XSLTemplateID);
                     xslPath = XSLTemplateManager.GetXSLTemplatePath(xslPath, base.XSLTemplateID);
