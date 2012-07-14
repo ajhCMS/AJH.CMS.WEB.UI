@@ -5,6 +5,8 @@
     TagPrefix="controls" %>
 <%@ Register Src="~/GUI/Article/ArticleXSL_UC.ascx" TagName="ucCatalogXSL" TagPrefix="controls" %>
 <%@ Register Src="~/GUI/Contact/Career_UC.ascx" TagName="ucCareer" TagPrefix="controls" %>
+<%@ Register Src="~/GUI/ECommerce/Catalog/CatalogXSL_UC.ascx" TagName="ucCatalogs"
+    TagPrefix="controls" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -13,7 +15,7 @@
     <form id="form1" runat="server">
     <asp:ScriptManager ID="sManager1" runat="server">
     </asp:ScriptManager>
-    <controls:ucCareer ID="ucCareer" runat="server" />
+    <controls:ucCatalogs ContainerValue="20" ModuleID="9" XSLTemplateID="8" runat="server" />
     </form>
 </body>
 </html>

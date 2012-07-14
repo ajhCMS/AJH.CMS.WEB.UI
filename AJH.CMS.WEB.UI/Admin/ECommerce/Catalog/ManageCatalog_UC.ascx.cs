@@ -197,8 +197,8 @@ namespace AJH.CMS.WEB.UI.Admin
 
                         int parentCatalogId = -1;
                         int.TryParse(ddlParentCatalog.SelectedValue, out parentCatalogId);
-                        if (parentCatalogId > 0)
-                            catalog.ParentCalalogID = parentCatalogId;
+
+                        catalog.ParentCalalogID = parentCatalogId;
 
                         CatalogManager.Update(catalog);
 
@@ -279,8 +279,8 @@ namespace AJH.CMS.WEB.UI.Admin
 
                         int parentCatalogId = -1;
                         int.TryParse(ddlParentCatalog.SelectedValue, out parentCatalogId);
-                        if (parentCatalogId > 0)
-                            catalog.ParentCalalogID = parentCatalogId;
+
+                        catalog.ParentCalalogID = parentCatalogId;
 
                         catalog.Description = txtDescription.Text;
                         catalog.MetaTitle = txtMetaTitle.Text;
@@ -380,8 +380,8 @@ namespace AJH.CMS.WEB.UI.Admin
 
                 int parentCatalogId = -1;
                 int.TryParse(ddlParentCatalog.SelectedValue, out parentCatalogId);
-                if (parentCatalogId > 0)
-                    catalog.ParentCalalogID = parentCatalogId;
+
+                catalog.ParentCalalogID = parentCatalogId;
 
                 CatalogManager.Add(catalog);
 

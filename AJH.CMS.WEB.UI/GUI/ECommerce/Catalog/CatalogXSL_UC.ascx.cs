@@ -64,6 +64,10 @@ namespace AJH.CMS.WEB.UI
                     XmlAttribute xmlAtt = xmlDoc.CreateAttribute("CurrentCatalog");
                     xmlAtt.Value = CatalogValue.ToString();
                     xmlDoc.ChildNodes[1].Attributes.Append(xmlAtt);
+
+                    xmlAtt = xmlDoc.CreateAttribute("LanguageID");
+                    xmlAtt.Value = CMSContext.LanguageID.ToString();
+                    xmlDoc.ChildNodes[1].Attributes.Append(xmlAtt);
                 }
 
                 XsltArgumentList arguments = new XsltArgumentList();
