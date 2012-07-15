@@ -155,20 +155,42 @@ namespace AJH.CMS.WEB.UI.Admin
                         product.DisplayTextInBackOrderText = txtDisplayTextWhenbackOrder.Text;
                         product.ShortDescription = txtShortDescription.Text;
                         product.Tags = txtTags.Text;
-                        product.SupplierID = Convert.ToInt32(cddlSupplier.SelectedValue);
+
                         product.Ean13OrJan = txtEAN13.Text;
                         product.UPC = txtUpc.Text;
                         product.Location = txtLocation.Text;
                         product.IsDownloadable = cbIsDownloadable.Checked;
                         product.DisplayOnSaleIcon = cbDisplayOnSaleIcon.Checked;
-                        product.InitialStock = Convert.ToInt32(txtInitialStock.Text);
-                        product.MinimumQuantity = Convert.ToInt32(txtMinimumQuantity.Text);
-                        product.AdditionalShippingCost = Convert.ToDecimal(txtAdditionalShippingCost.Text);
-                        product.ManufacturarID = Convert.ToInt32(cddlManufacturar.SelectedValue);
+
                         product.IsEnabled = cbIsEnabled.Checked;
-                        product.TaxID = Convert.ToInt32(cddlTax.SelectedValue);
+
                         product.SizeChart = txtSizeChart.Text;
                         product.LanguageID = ucPortalLanguage.SelectedLanguageID;
+
+                        int supplierID = 0;
+                        int initialStock = 0;
+                        int minimumQuantity = 0;
+                        decimal additionalShippingCost = 0;
+                        int manufacturarID = 0;
+                        int taxID = 0;
+
+                        int.TryParse(cddlSupplier.SelectedValue, out supplierID);
+                        product.SupplierID = supplierID;
+
+                        int.TryParse(txtInitialStock.Text, out initialStock);
+                        product.InitialStock = initialStock;
+
+                        int.TryParse(txtMinimumQuantity.Text, out minimumQuantity);
+                        product.MinimumQuantity = minimumQuantity;
+
+                        decimal.TryParse(txtAdditionalShippingCost.Text, out additionalShippingCost);
+                        product.AdditionalShippingCost = additionalShippingCost;
+
+                        int.TryParse(cddlManufacturar.SelectedValue, out manufacturarID);
+                        product.ManufacturarID = manufacturarID;
+
+                        int.TryParse(cddlTax.SelectedValue, out taxID);
+                        product.TaxID = taxID;
 
                         ProductManager.Update(product);
                     }
@@ -242,18 +264,17 @@ namespace AJH.CMS.WEB.UI.Admin
                     DisplayTextInBackOrderText = txtDisplayTextWhenbackOrder.Text,
                     ShortDescription = txtShortDescription.Text,
                     Tags = txtTags.Text,
-                    SupplierID = Convert.ToInt32(cddlSupplier.SelectedValue),
+
                     Ean13OrJan = txtEAN13.Text,
                     UPC = txtUpc.Text,
                     Location = txtLocation.Text,
                     IsDownloadable = cbIsDownloadable.Checked,
                     DisplayOnSaleIcon = cbDisplayOnSaleIcon.Checked,
-                    InitialStock = Convert.ToInt32(txtInitialStock.Text),
-                    MinimumQuantity = Convert.ToInt32(txtMinimumQuantity.Text),
-                    AdditionalShippingCost = Convert.ToDecimal(txtAdditionalShippingCost.Text),
-                    ManufacturarID = Convert.ToInt32(cddlManufacturar.SelectedValue),
+
+
+
                     IsEnabled = cbIsEnabled.Checked,
-                    TaxID = Convert.ToInt32(cddlTax.SelectedValue),
+
                     SizeChart = txtSizeChart.Text,
 
                     IsDeleted = false,
@@ -261,6 +282,31 @@ namespace AJH.CMS.WEB.UI.Admin
                     PortalID = CMSContext.PortalID,
                     ModuleID = (int)CMSEnums.ECommerceModule.Product,
                 };
+
+                int supplierID = 0;
+                int initialStock = 0;
+                int minimumQuantity = 0;
+                decimal additionalShippingCost = 0;
+                int manufacturarID = 0;
+                int taxID = 0;
+
+                int.TryParse(cddlSupplier.SelectedValue, out supplierID);
+                product.SupplierID = supplierID;
+
+                int.TryParse(txtInitialStock.Text, out initialStock);
+                product.InitialStock = initialStock;
+
+                int.TryParse(txtMinimumQuantity.Text, out minimumQuantity);
+                product.MinimumQuantity = minimumQuantity;
+
+                decimal.TryParse(txtAdditionalShippingCost.Text, out additionalShippingCost);
+                product.AdditionalShippingCost = additionalShippingCost;
+
+                int.TryParse(cddlManufacturar.SelectedValue, out manufacturarID);
+                product.ManufacturarID = manufacturarID;
+
+                int.TryParse(cddlTax.SelectedValue, out taxID);
+                product.TaxID = taxID;
 
                 ProductManager.Add(product);
                 // ViewState[CMSConfig.ConstantManager.ProductID] = product.ID;
@@ -290,6 +336,21 @@ namespace AJH.CMS.WEB.UI.Admin
             {
                 Performsettings();
                 ManageProductMode();
+            }
+
+            //Check Preferences :
+            List<Preference> portalPreferences = PreferenceManager.GetPreferences(CMSContext.PortalID);
+            if (portalPreferences != null && portalPreferences.Count > 0)
+            {
+                foreach (Preference preference in portalPreferences)
+                {
+                    foreach (HtmlTableRow row in tblProduct.Rows)
+                    {
+                        if (string.Equals(row.ID, preference.Name, StringComparison.InvariantCultureIgnoreCase))
+                            row.Visible = preference.IsEnabled;
+                    }
+                }
+                upnlProduct.Update();
             }
         }
 

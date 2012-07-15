@@ -85,6 +85,8 @@
     <Content Include="Admin\ECommerce\Catalog\ManageCatalog_UC.ascx" />
     <Content Include="Admin\ECommerce\Manufacturar\FrmManufacturar.aspx" />
     <Content Include="Admin\ECommerce\Manufacturar\ManageManufacturar_UC.ascx" />
+    <Content Include="Admin\ECommerce\Preference\FrmPreference.aspx" />
+    <Content Include="Admin\ECommerce\Preference\ManagePreference_UC.ascx" />
     <Content Include="Admin\ECommerce\Product\FrmProductSearch.aspx" />
     <Content Include="Admin\ECommerce\Product\FrmProduct.aspx" />
     <Content Include="Admin\ECommerce\Product\ManageProducts_UC.ascx" />
@@ -1578,6 +1580,20 @@
     </Compile>
     <Compile Include="Admin\ECommerce\Manufacturar\ManageManufacturar_UC.ascx.designer.cs">
       <DependentUpon>ManageManufacturar_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ECommerce\Preference\FrmPreference.aspx.cs">
+      <DependentUpon>FrmPreference.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ECommerce\Preference\FrmPreference.aspx.designer.cs">
+      <DependentUpon>FrmPreference.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ECommerce\Preference\ManagePreference_UC.ascx.cs">
+      <DependentUpon>ManagePreference_UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ECommerce\Preference\ManagePreference_UC.ascx.designer.cs">
+      <DependentUpon>ManagePreference_UC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ECommerce\Product\FrmProductSearch.aspx.cs">
       <DependentUpon>FrmProductSearch.aspx</DependentUpon>

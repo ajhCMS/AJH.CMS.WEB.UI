@@ -103,6 +103,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::AJH.CMS.WEB.UI.Admin.PortalLanguages_UC ucPortalLanguage;
         
         /// <summary>
+        /// tblProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable tblProduct;
+        
+        /// <summary>
         /// lblName control.
         /// </summary>
         /// <remarks>
@@ -157,6 +166,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDescription;
         
         /// <summary>
+        /// trDisplayTextInStock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDisplayTextInStock;
+        
+        /// <summary>
         /// lblDisplayTextInStock control.
         /// </summary>
         /// <remarks>
@@ -173,6 +191,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDisplayTextInStock;
+        
+        /// <summary>
+        /// trDisplayTextWhenBackOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDisplayTextWhenBackOrder;
         
         /// <summary>
         /// lblDisplayTextWhenbackOrder control.
@@ -193,6 +220,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtDisplayTextWhenbackOrder;
         
         /// <summary>
+        /// trShortDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trShortDescription;
+        
+        /// <summary>
         /// lblShortDescription control.
         /// </summary>
         /// <remarks>
@@ -211,6 +247,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtShortDescription;
         
         /// <summary>
+        /// trTags control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trTags;
+        
+        /// <summary>
         /// lblTags control.
         /// </summary>
         /// <remarks>
@@ -227,6 +272,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTags;
+        
+        /// <summary>
+        /// trSupplier control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trSupplier;
         
         /// <summary>
         /// lblSupplier control.
@@ -256,6 +310,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::AjaxControlToolkit.CascadingDropDown cddlSupplier;
         
         /// <summary>
+        /// trEAN13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEAN13;
+        
+        /// <summary>
         /// lblEAN13 control.
         /// </summary>
         /// <remarks>
@@ -272,6 +335,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEAN13;
+        
+        /// <summary>
+        /// trUPC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trUPC;
         
         /// <summary>
         /// lblUpc control.
@@ -292,6 +364,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtUpc;
         
         /// <summary>
+        /// trLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trLocation;
+        
+        /// <summary>
         /// lblLocation control.
         /// </summary>
         /// <remarks>
@@ -308,6 +389,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLocation;
+        
+        /// <summary>
+        /// trDownloadable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDownloadable;
         
         /// <summary>
         /// lblIsDownloadable control.
@@ -328,6 +418,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.CheckBox cbIsDownloadable;
         
         /// <summary>
+        /// trDisplayOnSaleIcon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trDisplayOnSaleIcon;
+        
+        /// <summary>
         /// lblDisplayOnSaleIcon control.
         /// </summary>
         /// <remarks>
@@ -344,6 +443,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox cbDisplayOnSaleIcon;
+        
+        /// <summary>
+        /// trInitialStock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trInitialStock;
         
         /// <summary>
         /// lblInitialStock control.
@@ -382,6 +490,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvInitialStock;
         
         /// <summary>
+        /// trMinimumQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trMinimumQuantity;
+        
+        /// <summary>
         /// lblMinimumQuantity control.
         /// </summary>
         /// <remarks>
@@ -416,6 +533,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMinimumQuantity;
+        
+        /// <summary>
+        /// trAdditionalShoppingCost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trAdditionalShoppingCost;
         
         /// <summary>
         /// lblAdditionalShippingCost control.
@@ -454,6 +580,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAdditionalShippingCost;
         
         /// <summary>
+        /// trManufacturar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trManufacturar;
+        
+        /// <summary>
         /// lblManufacturar control.
         /// </summary>
         /// <remarks>
@@ -481,6 +616,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::AjaxControlToolkit.CascadingDropDown cddlManufacturar;
         
         /// <summary>
+        /// trEnabled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEnabled;
+        
+        /// <summary>
         /// lblIsEnabled control.
         /// </summary>
         /// <remarks>
@@ -497,6 +641,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox cbIsEnabled;
+        
+        /// <summary>
+        /// trTax control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trTax;
         
         /// <summary>
         /// lblTax control.

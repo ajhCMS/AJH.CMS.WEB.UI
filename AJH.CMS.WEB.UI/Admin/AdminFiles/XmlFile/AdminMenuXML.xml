@@ -30,5 +30,6 @@
     <Menu Id="23" Name="Manufacturar" Url="~/Admin/ECommerce/Manufacturar/FrmManufacturar.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png" Visible="true"></Menu>
     <Menu Id="24" Name="Product" Url="~/Admin/ECommerce/Product/FrmProductSearch.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png" Visible="true"></Menu>
     <Menu Id="25" Name="ProductItem" Url="~/Admin/ECommerce/Product/FrmProduct.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png" Visible="false"></Menu>
+    <Menu Id="25" Name="Preferences" Url="~/Admin/ECommerce/Preference/FrmPreference.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png" Visible="true"></Menu>
   </Menu>
 </Menus>

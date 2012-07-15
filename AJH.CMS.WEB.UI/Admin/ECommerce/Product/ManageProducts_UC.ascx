@@ -28,7 +28,7 @@
                 </div>
                 <controls:PortalLanguages_UC ID="ucPortalLanguage" runat="server" Visible="false"
                     ValidationGroup="AddEditProduct" />
-                <table width="100%">
+                <table id="tblProduct" runat="server" width="100%">
                     <tr>
                         <td>
                             <asp:Label ID="lblName" runat="server" Text="Name" AssociatedControlID="txtName"></asp:Label>
@@ -49,7 +49,7 @@
                                 ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="Description"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trDisplayTextInStock" runat="server">
                         <td>
                             <asp:Label ID="lblDisplayTextInStock" runat="server" Text="DisplayText InStock" AssociatedControlID="txtDisplayTextInStock"></asp:Label>
                         </td>
@@ -57,7 +57,7 @@
                             <asp:TextBox ID="txtDisplayTextInStock" runat="server" MaxLength="100"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trDisplayTextWhenBackOrder" runat="server">
                         <td>
                             <asp:Label ID="lblDisplayTextWhenbackOrder" runat="server" Text="Display Text When Back Order"
                                 AssociatedControlID="txtDisplayTextWhenbackOrder"></asp:Label>
@@ -66,7 +66,7 @@
                             <asp:TextBox ID="txtDisplayTextWhenbackOrder" runat="server" MaxLength="100"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trShortDescription" runat="server">
                         <td>
                             <asp:Label ID="lblShortDescription" runat="server" Text="Short Description" AssociatedControlID="txtShortDescription"></asp:Label>
                         </td>
@@ -74,7 +74,7 @@
                             <asp:TextBox ID="txtShortDescription" runat="server" MaxLength="100"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trTags" runat="server">
                         <td>
                             <asp:Label ID="lblTags" runat="server" Text="Tags" AssociatedControlID="txtTags"></asp:Label>
                         </td>
@@ -82,7 +82,7 @@
                             <asp:TextBox ID="txtTags" runat="server" MaxLength="100"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trSupplier" runat="server">
                         <td>
                             <asp:Label ID="lblSupplier" runat="server" Text="Supplier" AssociatedControlID="ddlSupplier"></asp:Label>
                         </td>
@@ -94,7 +94,7 @@
                                 ServicePath="~/Admin/Services/ECommerce/Supplier/SupplierService.asmx" ServiceMethod="GetDropDownSuppliers" />
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trEAN13" runat="server">
                         <td>
                             <asp:Label ID="lblEAN13" runat="server" Text="EAN13" AssociatedControlID="txtEAN13"></asp:Label>
                         </td>
@@ -102,7 +102,7 @@
                             <asp:TextBox ID="txtEAN13" runat="server" MaxLength="100"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trUPC" runat="server">
                         <td>
                             <asp:Label ID="lblUpc" runat="server" Text="UPC" AssociatedControlID="txtUpc"></asp:Label>
                         </td>
@@ -110,7 +110,7 @@
                             <asp:TextBox ID="txtUpc" runat="server" MaxLength="100"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trLocation" runat="server">
                         <td>
                             <asp:Label ID="lblLocation" runat="server" Text="Location" AssociatedControlID="txtLocation"></asp:Label>
                         </td>
@@ -118,7 +118,7 @@
                             <asp:TextBox ID="txtLocation" runat="server" MaxLength="100"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trDownloadable" runat="server">
                         <td>
                             <asp:Label ID="lblIsDownloadable" runat="server" Text="Downloadable" AssociatedControlID="cbIsDownloadable"></asp:Label>
                         </td>
@@ -126,7 +126,7 @@
                             <asp:CheckBox ID="cbIsDownloadable" runat="server" />
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trDisplayOnSaleIcon" runat="server">
                         <td>
                             <asp:Label ID="lblDisplayOnSaleIcon" runat="server" Text="Display On Sale Icon" AssociatedControlID="cbDisplayOnSaleIcon"></asp:Label>
                         </td>
@@ -134,7 +134,7 @@
                             <asp:CheckBox ID="cbDisplayOnSaleIcon" runat="server" />
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trInitialStock" runat="server">
                         <td>
                             <asp:Label ID="lblInitialStock" runat="server" Text="Initial Stock" AssociatedControlID="txtInitialStock"></asp:Label>
                         </td>
@@ -147,7 +147,7 @@
                                 ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="Initial Stock"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trMinimumQuantity" runat="server">
                         <td>
                             <asp:Label ID="lblMinimumQuantity" runat="server" Text="Minimum Quantity" AssociatedControlID="txtMinimumQuantity"></asp:Label>
                         </td>
@@ -160,7 +160,7 @@
                                 ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="Minimum Quantity"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trAdditionalShoppingCost" runat="server">
                         <td>
                             <asp:Label ID="lblAdditionalShippingCost" runat="server" Text="Additional Shipping Cost"
                                 AssociatedControlID="txtAdditionalShippingCost"></asp:Label>
@@ -174,7 +174,7 @@
                                 ValidationGroup="AddEditProduct" Text="*" Display="Dynamic" ErrorMessage="Additional Shipping Cost"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trManufacturar" runat="server">
                         <td>
                             <asp:Label ID="lblManufacturar" runat="server" Text="Manufacturar" AssociatedControlID="ddlManufacturar"></asp:Label>
                         </td>
@@ -187,7 +187,7 @@
                                 ServiceMethod="GetAllManufacturars" />
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trEnabled" runat="server">
                         <td>
                             <asp:Label ID="lblIsEnabled" runat="server" Text="Enabled" AssociatedControlID="cbIsEnabled"></asp:Label>
                         </td>
@@ -195,7 +195,7 @@
                             <asp:CheckBox ID="cbIsEnabled" runat="server" />
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="trTax" runat="server">
                         <td>
                             <asp:Label ID="lblTax" runat="server" Text="Tax" AssociatedControlID="ddlTax"></asp:Label>
                         </td>
@@ -207,7 +207,7 @@
                                 ServiceMethod="GetAllTaxs" />
                         </td>
                     </tr>
-                    <tr runat="server">
+                    <tr>
                         <td>
                             <asp:Label ID="lblSizeChart" runat="server" Text="Details" AssociatedControlID="txtSizeChart"></asp:Label>
                         </td>

@@ -52,6 +52,7 @@
     <Compile Include="Data\Managers\CacheManager.cs" />
     <Compile Include="Data\Managers\CMSControlManager.cs" />
     <Compile Include="Data\Managers\ArticleManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\PreferenceManager.cs" />
     <Compile Include="Data\Managers\LanguageUrlManager.cs" />
     <Compile Include="Data\Managers\ECommerce\AttributeManager.cs" />
     <Compile Include="Data\Managers\ECommerce\CatalogManager.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Data\Managers\XSLTemplateManager.cs" />
     <Compile Include="Data\Mappers\CMSControlDataMapper.cs" />
     <Compile Include="Data\Mappers\ArticleDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\PreferenceDataMapper.cs" />
     <Compile Include="Data\Mappers\LanguageUrlDataMapper.cs" />
     <Compile Include="Data\Mappers\ECommerce\AttributeDataMapper.cs" />
     <Compile Include="Data\Mappers\ECommerce\CatalogDataMapper.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\CMSControl.cs" />
     <Compile Include="Entities\Article.cs" />
+    <Compile Include="Entities\ECommerce\Preference.cs" />
     <Compile Include="Entities\LanguageURL.cs" />
     <Compile Include="Entities\ECommerce\Attribute.cs" />
     <Compile Include="Entities\ECommerce\Catalog.cs" />
