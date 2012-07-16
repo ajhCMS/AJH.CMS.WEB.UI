@@ -66,6 +66,7 @@ namespace AJH.CMS.WEB.UI.Admin
             this.ucPortalLanguage.OnSelectLanguage += new EventHandler(ucPortalLanguage_OnSelectLanguage);
             this.btnSaveOtherLanguageProduct.Click += new EventHandler(btnSaveOtherLanguageProduct_Click);
             this.btnUpdateProduct.Click += new EventHandler(btnUpdateProduct_Click);
+            this.btnSaveAndStay.Click += new EventHandler(btnSaveAndStay_Click);
 
             #endregion
 
@@ -108,6 +109,76 @@ namespace AJH.CMS.WEB.UI.Admin
             #endregion
 
             base.OnInit(e);
+        }
+
+        void btnSaveAndStay_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Product product = new Product
+                {
+                    Name = txtName.Text,
+                    Description = txtDescription.Text,
+                    DisplayTextInStockText = txtDisplayTextInStock.Text,
+                    DisplayTextInBackOrderText = txtDisplayTextWhenbackOrder.Text,
+                    ShortDescription = txtShortDescription.Text,
+                    Tags = txtTags.Text,
+
+                    Ean13OrJan = txtEAN13.Text,
+                    UPC = txtUpc.Text,
+                    Location = txtLocation.Text,
+                    IsDownloadable = cbIsDownloadable.Checked,
+                    DisplayOnSaleIcon = cbDisplayOnSaleIcon.Checked,
+
+                    IsEnabled = cbIsEnabled.Checked,
+
+                    SizeChart = txtSizeChart.Text,
+
+                    IsDeleted = false,
+                    LanguageID = CMSContext.LanguageID,
+                    PortalID = CMSContext.PortalID,
+                    ModuleID = (int)CMSEnums.ECommerceModule.Product,
+                };
+
+                int supplierID = 0;
+                int initialStock = 0;
+                int minimumQuantity = 0;
+                decimal additionalShippingCost = 0;
+                int manufacturarID = 0;
+                int taxID = 0;
+
+                int.TryParse(cddlSupplier.SelectedValue, out supplierID);
+                product.SupplierID = supplierID;
+
+                int.TryParse(txtInitialStock.Text, out initialStock);
+                product.InitialStock = initialStock;
+
+                int.TryParse(txtMinimumQuantity.Text, out minimumQuantity);
+                product.MinimumQuantity = minimumQuantity;
+
+                decimal.TryParse(txtAdditionalShippingCost.Text, out additionalShippingCost);
+                product.AdditionalShippingCost = additionalShippingCost;
+
+                int.TryParse(cddlManufacturar.SelectedValue, out manufacturarID);
+                product.ManufacturarID = manufacturarID;
+
+                int.TryParse(cddlTax.SelectedValue, out taxID);
+                product.TaxID = taxID;
+
+                int productId = ProductManager.Add(product);
+
+                Response.Redirect("FrmProduct.aspx?ProductID=" + productId);
+
+            }
+            catch (Exception ex)
+            {
+                dvProductProblems.Visible = true;
+                dvProductProblems.InnerText = ex.ToString();
+            }
+            finally
+            {
+                upnlProduct.Update();
+            }
         }
 
         void ibtnFillGroupAttributes_Click(object sender, ImageClickEventArgs e)
@@ -225,9 +296,48 @@ namespace AJH.CMS.WEB.UI.Admin
                         product.Tags = txtTags.Text;
                         product.Location = txtLocation.Text;
                         product.SizeChart = txtSizeChart.Text;
+
+                        product.Ean13OrJan = txtEAN13.Text;
+                        product.UPC = txtUpc.Text;
+                        product.Location = txtLocation.Text;
+                        product.IsDownloadable = cbIsDownloadable.Checked;
+                        product.DisplayOnSaleIcon = cbDisplayOnSaleIcon.Checked;
+
+                        product.IsEnabled = cbIsEnabled.Checked;
+
+                        product.SizeChart = txtSizeChart.Text;
+                        product.LanguageID = ucPortalLanguage.SelectedLanguageID;
+
+                        int supplierID = 0;
+                        int initialStock = 0;
+                        int minimumQuantity = 0;
+                        decimal additionalShippingCost = 0;
+                        int manufacturarID = 0;
+                        int taxID = 0;
+
+                        int.TryParse(cddlSupplier.SelectedValue, out supplierID);
+                        product.SupplierID = supplierID;
+
+                        int.TryParse(txtInitialStock.Text, out initialStock);
+                        product.InitialStock = initialStock;
+
+                        int.TryParse(txtMinimumQuantity.Text, out minimumQuantity);
+                        product.MinimumQuantity = minimumQuantity;
+
+                        decimal.TryParse(txtAdditionalShippingCost.Text, out additionalShippingCost);
+                        product.AdditionalShippingCost = additionalShippingCost;
+
+                        int.TryParse(cddlManufacturar.SelectedValue, out manufacturarID);
+                        product.ManufacturarID = manufacturarID;
+
+                        int.TryParse(cddlTax.SelectedValue, out taxID);
+                        product.TaxID = taxID;
+
                         product.LanguageID = ucPortalLanguage.SelectedLanguageID;
                         product.PortalID = CMSContext.PortalID;
                         product.ID = SelecedProductId;
+
+                        ProductManager.Update(product);
                         ProductManager.AddOtherLanguage(product);
                     }
                 }
@@ -270,8 +380,6 @@ namespace AJH.CMS.WEB.UI.Admin
                     Location = txtLocation.Text,
                     IsDownloadable = cbIsDownloadable.Checked,
                     DisplayOnSaleIcon = cbDisplayOnSaleIcon.Checked,
-
-
 
                     IsEnabled = cbIsEnabled.Checked,
 
@@ -861,6 +969,7 @@ namespace AJH.CMS.WEB.UI.Admin
 
             btnUpdateProduct.Visible = false;
             btnSaveProduct.Visible = true;
+            btnSaveAndStay.Visible = true;
             btnSaveOtherLanguageProduct.Visible = false;
             ucPortalLanguage.SelectedLanguageID = -1;
 
@@ -909,6 +1018,7 @@ namespace AJH.CMS.WEB.UI.Admin
 
                     btnUpdateProduct.Visible = true;
                     btnSaveProduct.Visible = false;
+                    btnSaveAndStay.Visible = false;
                     btnSaveOtherLanguageProduct.Visible = false;
                     ucPortalLanguage.Visible = true;
                     ucPortalLanguage.SelectedLanguageID = product.LanguageID;
@@ -971,6 +1081,7 @@ namespace AJH.CMS.WEB.UI.Admin
 
 
                     btnSaveProduct.Visible = false;
+                    btnSaveAndStay.Visible = false;
                     if (string.IsNullOrEmpty(product.Name))
                     {
                         btnSaveOtherLanguageProduct.Visible = true;

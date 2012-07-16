@@ -7,6 +7,8 @@
 <%@ Register Src="~/GUI/Contact/Career_UC.ascx" TagName="ucCareer" TagPrefix="controls" %>
 <%@ Register Src="~/GUI/ECommerce/Catalog/CatalogXSL_UC.ascx" TagName="ucCatalogs"
     TagPrefix="controls" %>
+<%@ Register Src="~/GUI/ECommerce/Catalog/CatalogSitePath.ascx" TagName="ucCatalogSitePath"
+    TagPrefix="controls" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -15,7 +17,7 @@
     <form id="form1" runat="server">
     <asp:ScriptManager ID="sManager1" runat="server">
     </asp:ScriptManager>
-    <controls:ucCatalogs ContainerValue="20" ModuleID="9" XSLTemplateID="8" runat="server" />
+    <controls:ucCatalogSitePath ID="ucCatalogPath" runat="server" />
     </form>
 </body>
 </html>

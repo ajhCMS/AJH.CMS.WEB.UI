@@ -230,6 +230,8 @@
                                     ValidationGroup="AddEditProduct" Text="Save Other Language" NotificationOperationDone="true" />
                                 <asp:Button CssClass="btn" ID="btnSaveProduct" runat="server" Width="60px" ValidationGroup="AddEditProduct"
                                     Text="Save" NotificationOperationDone="true" />
+                                <asp:Button CssClass="btn" ID="btnSaveAndStay" runat="server" ValidationGroup="AddEditProduct"
+                                    Text="Save and Stay" NotificationOperationDone="true" Width="110px" />
                                 <asp:Button CssClass="btn" ID="btnUpdateProduct" runat="server" Width="60px" ValidationGroup="AddEditProduct"
                                     Text="Update" NotificationOperationDone="true" />
                             </div>

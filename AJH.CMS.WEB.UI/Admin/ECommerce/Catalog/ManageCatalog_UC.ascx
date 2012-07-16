@@ -9,6 +9,10 @@
     <ContentTemplate>
         <div id="dvProblems" runat="server" class="dv-problem">
         </div>
+        <div style="text-align: right;">
+            <asp:LinkButton runat="server" Text="Add New Product" Font-Size="Large" Font-Bold="true"
+                PostBackUrl="~/Admin/ECommerce/Product/FrmProduct.aspx"></asp:LinkButton>
+        </div>
         <asp:Panel ID="pnlView" runat="server" Visible="true">
             <div class="grid-actions">
                 <asp:ImageButton ID="ibtnDelete" runat="server" ImageUrl="~/App_Themes/image/delete.png"
