@@ -22,6 +22,8 @@ namespace AJH.CMS.Core.Configuration
             public const string CatalogCatalog = "CatalogCatalog";
             public const string ProductID = "ProductID";
             public const string CombinationProductID = "CombinationProductID";
+            public const string ProductImageID = "ProductImageID";
+
         }
 
         public static class QueryString

@@ -31,12 +31,12 @@ namespace AJH.CMS.WEB.UI {
         protected global::System.Web.UI.ScriptManager sManager1;
         
         /// <summary>
-        /// ucCatalogPath control.
+        /// ucProductDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AJH.CMS.WEB.UI.CatalogSitePath ucCatalogPath;
+        protected global::AJH.CMS.WEB.UI.ProductDetailsXSL_UC ucProductDetails;
     }
 }

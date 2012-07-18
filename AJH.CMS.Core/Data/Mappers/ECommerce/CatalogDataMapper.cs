@@ -21,6 +21,8 @@ namespace AJH.CMS.Core.Data
         internal const string CN_CATALOG_PORTAL_ID = "CATALOG_PORTAL_ID";
         internal const string CN_PRODUCT_ORDER = "PRODUCT_ORDER";
         internal const string CN_CATALOG_ORDER = "CATALOG_ORDER";
+        internal const string CN_CATALOG_IS_PUBLISHED = "CATALOG_IS_PUBLISHED";
+
 
         internal const string PN_CATALOG_ID = "P_CATALOG_ID";
         internal const string PN_CATALOG_PORTAL_ID = "P_CATALOG_PORTAL_ID";
@@ -31,6 +33,7 @@ namespace AJH.CMS.Core.Data
         internal const string PN_CATALOG_LANGUAGE_ID = "P_CATALOG_LANGUAGE_ID";
         internal const string PN_PRODUCT_ORDER = "P_PRODUCT_ORDER";
         internal const string PN_CATALOG_ORDER = "P_CATALOG_ORDER";
+        internal const string PN_CATALOG_IS_PUBLISHED = "P_CATALOG_IS_PUBLISHED";
 
 
         internal const string SN_CATALOG_ADD = "[ECOMMERCE].[CatalogAdd]";
@@ -130,6 +133,12 @@ namespace AJH.CMS.Core.Data
                 sqlParameter.Value = CatalogEntity.Order;
                 sqlCommand.Parameters.Add(sqlParameter);
 
+                sqlParameter = new SqlParameter(PN_CATALOG_IS_PUBLISHED, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CatalogEntity.IsPublished;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+
                 try
                 {
                     sqlCommand.Connection.Open();
@@ -225,6 +234,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_CATALOG_ORDER, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = CatalogEntity.Order;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_CATALOG_IS_PUBLISHED, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CatalogEntity.IsPublished;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 try
@@ -670,6 +684,10 @@ namespace AJH.CMS.Core.Data
             if (!reader.IsDBNull(colIndex))
                 catalog.Order = reader.GetInt32(colIndex);
 
+            colIndex = reader.GetOrdinal(CN_CATALOG_IS_PUBLISHED);
+            if (!reader.IsDBNull(colIndex))
+                catalog.IsPublished = reader.GetBoolean(colIndex);
+
         }
 
         internal static void FillFromReaderByProduct(Catalog catalog, SqlDataReader reader)
@@ -686,6 +704,10 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(CN_CATALOG_PARENT_CATALOG_ID);
             if (!reader.IsDBNull(colIndex))
                 catalog.ParentCalalogID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_CATALOG_IS_PUBLISHED);
+            if (!reader.IsDBNull(colIndex))
+                catalog.IsPublished = reader.GetBoolean(colIndex);
         }
 
         #endregion

@@ -9,6 +9,8 @@
     TagPrefix="controls" %>
 <%@ Register Src="~/GUI/ECommerce/Catalog/CatalogSitePath.ascx" TagName="ucCatalogSitePath"
     TagPrefix="controls" %>
+<%@ Register Src="~/GUI/ECommerce/Product/ProductDetailsXSL_UC.ascx" TagName="ucProductDetails"
+    TagPrefix="controls" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -17,7 +19,7 @@
     <form id="form1" runat="server">
     <asp:ScriptManager ID="sManager1" runat="server">
     </asp:ScriptManager>
-    <controls:ucCatalogSitePath ID="ucCatalogPath" runat="server" />
+    <controls:ucProductDetails ID="ucProductDetails" runat="server" ContainerValue="23" />
     </form>
 </body>
 </html>

@@ -184,6 +184,24 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.CheckBox cbIsGalleryOnly;
         
         /// <summary>
+        /// lblIsPublishedOnSlider control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIsPublishedOnSlider;
+        
+        /// <summary>
+        /// cbIsPublishedOnslider control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbIsPublishedOnslider;
+        
+        /// <summary>
         /// lblUpload control.
         /// </summary>
         /// <remarks>

@@ -1057,6 +1057,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvProdcutImageProblems;
         
         /// <summary>
+        /// ucProductImageLanguage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AJH.CMS.WEB.UI.Admin.PortalLanguages_UC ucProductImageLanguage;
+        
+        /// <summary>
         /// lblCaption control.
         /// </summary>
         /// <remarks>
@@ -1136,6 +1145,24 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSaveProdcutImage;
+        
+        /// <summary>
+        /// btnUpdateProductImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdateProductImage;
+        
+        /// <summary>
+        /// btnProdcutImageSaveOtherLanguage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnProdcutImageSaveOtherLanguage;
         
         /// <summary>
         /// dvProductPrice control.

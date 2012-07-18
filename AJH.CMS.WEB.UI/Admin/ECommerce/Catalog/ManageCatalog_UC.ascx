@@ -73,6 +73,15 @@
                         </tr>
                         <tr>
                             <td>
+                                <asp:Label ID="lblIsPublishedOnSlider" runat="server" Text="Published On SLider"
+                                    AssociatedControlID="cbIsPublishedOnslider"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:CheckBox ID="cbIsPublishedOnslider" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <asp:Label ID="lblUpload" runat="server" Text="Upload" AssociatedControlID="ucSWFUpload"></asp:Label>
                             </td>
                             <td>

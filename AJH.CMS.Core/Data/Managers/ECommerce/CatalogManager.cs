@@ -143,6 +143,11 @@ namespace AJH.CMS.Core.Data
             xmlAtt = xmlEle.OwnerDocument.CreateAttribute("Description");
             xmlAtt.Value = CatalogItem.Description;
             xmlEle.Attributes.Append(xmlAtt);
+
+            xmlAtt = xmlEle.OwnerDocument.CreateAttribute("IsPublishedCatalog");
+            xmlAtt.Value = CatalogItem.IsPublished.ToString();
+            xmlEle.Attributes.Append(xmlAtt);
+
         }
     }
 }

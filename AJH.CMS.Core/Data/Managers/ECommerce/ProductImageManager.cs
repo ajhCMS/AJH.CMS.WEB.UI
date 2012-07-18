@@ -15,6 +15,11 @@ namespace AJH.CMS.Core.Data
             return ProductImageDataMapper.Add(productImage);
         }
 
+        public static void AddOtherLanguage(ProductImage productImage)
+        {
+            ProductImageDataMapper.AddOtherLanguage(productImage);
+        }
+
         public static void Update(ProductImage productImage)
         {
             ProductImageDataMapper.Update(productImage);

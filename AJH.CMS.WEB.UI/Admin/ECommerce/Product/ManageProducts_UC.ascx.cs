@@ -52,6 +52,23 @@ namespace AJH.CMS.WEB.UI.Admin
             }
         }
 
+        private int SelecedProductImageId
+        {
+            get
+            {
+                int ProductImageId = -1;
+
+                if (ViewState[CMSConfig.ConstantManager.ProductImageID] != null)
+                    ProductImageId = Convert.ToInt32(ViewState[CMSConfig.ConstantManager.ProductImageID]);
+
+                return ProductImageId;
+            }
+            set
+            {
+                ViewState[CMSConfig.ConstantManager.ProductImageID] = value;
+            }
+        }
+
         #endregion
 
         #region General Events
@@ -89,6 +106,10 @@ namespace AJH.CMS.WEB.UI.Admin
             this.ibtnDeleteProductImage.Click += new ImageClickEventHandler(ibtnDeleteProductImage_Click);
             this.btnSaveProdcutImage.Click += new EventHandler(btnSaveProdcutImage_Click);
             this.btnExitProdcutImage.Click += new EventHandler(btnExitProdcutImage_Click);
+            this.dlsProductImage.ItemCommand += new DataListCommandEventHandler(dlsProductImage_ItemCommand);
+            this.ucProductImageLanguage.OnSelectLanguage += new EventHandler(ucProductImageLanguage_OnSelectLanguage);
+            this.btnUpdateProductImage.Click += new EventHandler(btnUpdateProductImage_Click);
+            this.btnProdcutImageSaveOtherLanguage.Click += new EventHandler(btnProdcutImageSaveOtherLanguage_Click);
 
             #endregion
 
@@ -109,101 +130,6 @@ namespace AJH.CMS.WEB.UI.Admin
             #endregion
 
             base.OnInit(e);
-        }
-
-        void btnSaveAndStay_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Product product = new Product
-                {
-                    Name = txtName.Text,
-                    Description = txtDescription.Text,
-                    DisplayTextInStockText = txtDisplayTextInStock.Text,
-                    DisplayTextInBackOrderText = txtDisplayTextWhenbackOrder.Text,
-                    ShortDescription = txtShortDescription.Text,
-                    Tags = txtTags.Text,
-
-                    Ean13OrJan = txtEAN13.Text,
-                    UPC = txtUpc.Text,
-                    Location = txtLocation.Text,
-                    IsDownloadable = cbIsDownloadable.Checked,
-                    DisplayOnSaleIcon = cbDisplayOnSaleIcon.Checked,
-
-                    IsEnabled = cbIsEnabled.Checked,
-
-                    SizeChart = txtSizeChart.Text,
-
-                    IsDeleted = false,
-                    LanguageID = CMSContext.LanguageID,
-                    PortalID = CMSContext.PortalID,
-                    ModuleID = (int)CMSEnums.ECommerceModule.Product,
-                };
-
-                int supplierID = 0;
-                int initialStock = 0;
-                int minimumQuantity = 0;
-                decimal additionalShippingCost = 0;
-                int manufacturarID = 0;
-                int taxID = 0;
-
-                int.TryParse(cddlSupplier.SelectedValue, out supplierID);
-                product.SupplierID = supplierID;
-
-                int.TryParse(txtInitialStock.Text, out initialStock);
-                product.InitialStock = initialStock;
-
-                int.TryParse(txtMinimumQuantity.Text, out minimumQuantity);
-                product.MinimumQuantity = minimumQuantity;
-
-                decimal.TryParse(txtAdditionalShippingCost.Text, out additionalShippingCost);
-                product.AdditionalShippingCost = additionalShippingCost;
-
-                int.TryParse(cddlManufacturar.SelectedValue, out manufacturarID);
-                product.ManufacturarID = manufacturarID;
-
-                int.TryParse(cddlTax.SelectedValue, out taxID);
-                product.TaxID = taxID;
-
-                int productId = ProductManager.Add(product);
-
-                Response.Redirect("FrmProduct.aspx?ProductID=" + productId);
-
-            }
-            catch (Exception ex)
-            {
-                dvProductProblems.Visible = true;
-                dvProductProblems.InnerText = ex.ToString();
-            }
-            finally
-            {
-                upnlProduct.Update();
-            }
-        }
-
-        void ibtnFillGroupAttributes_Click(object sender, ImageClickEventArgs e)
-        {
-            gvNotConnectedCombinationAttributes.DataSource = new List<AJH.CMS.Core.Entities.Attribute>();
-
-            int groupId = -1;
-            int.TryParse(cddGroup.SelectedValue, out groupId);
-            if (groupId > 0)
-            {
-                List<AJH.CMS.Core.Entities.Attribute> combinationAttributes = AttributeManager.GetAttributesByCombinationID(SelecedCombinationProductId, CMSContext.LanguageID);
-                List<AJH.CMS.Core.Entities.Attribute> groupAttributes = AttributeManager.GetAttributesByGroupID(groupId, CMSContext.LanguageID);
-
-                if (combinationAttributes != null && groupAttributes != null)
-                {
-                    List<int> combinationAttributesIds = combinationAttributes.Select(ca => ca.ID).ToList();
-
-                    groupAttributes = groupAttributes.Where(ga => !combinationAttributesIds.Contains(ga.ID)).ToList();
-                }
-                gvNotConnectedCombinationAttributes.DataSource = groupAttributes;
-            }
-
-            gvNotConnectedCombinationAttributes.DataBind();
-
-            upnlCombinationProductDetails.Update();
         }
 
         #endregion
@@ -462,6 +388,101 @@ namespace AJH.CMS.WEB.UI.Admin
             }
         }
 
+        void btnSaveAndStay_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Product product = new Product
+                {
+                    Name = txtName.Text,
+                    Description = txtDescription.Text,
+                    DisplayTextInStockText = txtDisplayTextInStock.Text,
+                    DisplayTextInBackOrderText = txtDisplayTextWhenbackOrder.Text,
+                    ShortDescription = txtShortDescription.Text,
+                    Tags = txtTags.Text,
+
+                    Ean13OrJan = txtEAN13.Text,
+                    UPC = txtUpc.Text,
+                    Location = txtLocation.Text,
+                    IsDownloadable = cbIsDownloadable.Checked,
+                    DisplayOnSaleIcon = cbDisplayOnSaleIcon.Checked,
+
+                    IsEnabled = cbIsEnabled.Checked,
+
+                    SizeChart = txtSizeChart.Text,
+
+                    IsDeleted = false,
+                    LanguageID = CMSContext.LanguageID,
+                    PortalID = CMSContext.PortalID,
+                    ModuleID = (int)CMSEnums.ECommerceModule.Product,
+                };
+
+                int supplierID = 0;
+                int initialStock = 0;
+                int minimumQuantity = 0;
+                decimal additionalShippingCost = 0;
+                int manufacturarID = 0;
+                int taxID = 0;
+
+                int.TryParse(cddlSupplier.SelectedValue, out supplierID);
+                product.SupplierID = supplierID;
+
+                int.TryParse(txtInitialStock.Text, out initialStock);
+                product.InitialStock = initialStock;
+
+                int.TryParse(txtMinimumQuantity.Text, out minimumQuantity);
+                product.MinimumQuantity = minimumQuantity;
+
+                decimal.TryParse(txtAdditionalShippingCost.Text, out additionalShippingCost);
+                product.AdditionalShippingCost = additionalShippingCost;
+
+                int.TryParse(cddlManufacturar.SelectedValue, out manufacturarID);
+                product.ManufacturarID = manufacturarID;
+
+                int.TryParse(cddlTax.SelectedValue, out taxID);
+                product.TaxID = taxID;
+
+                int productId = ProductManager.Add(product);
+
+                Response.Redirect("FrmProduct.aspx?ProductID=" + productId);
+
+            }
+            catch (Exception ex)
+            {
+                dvProductProblems.Visible = true;
+                dvProductProblems.InnerText = ex.ToString();
+            }
+            finally
+            {
+                upnlProduct.Update();
+            }
+        }
+
+        void ibtnFillGroupAttributes_Click(object sender, ImageClickEventArgs e)
+        {
+            gvNotConnectedCombinationAttributes.DataSource = new List<AJH.CMS.Core.Entities.Attribute>();
+
+            int groupId = -1;
+            int.TryParse(cddGroup.SelectedValue, out groupId);
+            if (groupId > 0)
+            {
+                List<AJH.CMS.Core.Entities.Attribute> combinationAttributes = AttributeManager.GetAttributesByCombinationID(SelecedCombinationProductId, CMSContext.LanguageID);
+                List<AJH.CMS.Core.Entities.Attribute> groupAttributes = AttributeManager.GetAttributesByGroupID(groupId, CMSContext.LanguageID);
+
+                if (combinationAttributes != null && groupAttributes != null)
+                {
+                    List<int> combinationAttributesIds = combinationAttributes.Select(ca => ca.ID).ToList();
+
+                    groupAttributes = groupAttributes.Where(ga => !combinationAttributesIds.Contains(ga.ID)).ToList();
+                }
+                gvNotConnectedCombinationAttributes.DataSource = groupAttributes;
+            }
+
+            gvNotConnectedCombinationAttributes.DataBind();
+
+            upnlCombinationProductDetails.Update();
+        }
+
         #endregion
 
         #region Product Catalog Events
@@ -618,6 +639,119 @@ namespace AJH.CMS.WEB.UI.Admin
         {
             pnlProductImageDetails.Visible = true;
             BeginProductImageAddMode();
+        }
+
+        void btnProdcutImageSaveOtherLanguage_Click(object sender, EventArgs e)
+        {
+            if (SelecedProductImageId > 0 && ucProductImageLanguage.SelectedLanguageID > 0)
+            {
+                ProductImage orginalProductImage = ProductImageManager.GetProductImage(SelecedProductImageId, CMSContext.LanguageID);
+
+                orginalProductImage.IsCoverImage = cbIsCoverImage.Checked;
+                orginalProductImage.LanguageID = CMSContext.LanguageID;//Update Main Product Image(Parent Obj ID with the Main Language)
+
+                List<string> imagesNames = ucSWFUploadProductImage.GetFilesName();
+
+                if (imagesNames != null && imagesNames.Count > 0)
+                {
+                    //Only One Image In Case Update Mode :
+                    orginalProductImage.Image = imagesNames.LastOrDefault();
+                }
+                ProductImageManager.Update(orginalProductImage);
+
+                ProductImage productImage = new Core.Entities.ProductImage();
+                productImage.ID = orginalProductImage.ID;
+                productImage.ImageCaption = txtCaption.Text;
+                productImage.LanguageID = ucProductImageLanguage.SelectedLanguageID;
+
+                ProductImageManager.AddOtherLanguage(productImage);
+                FillProdcutImages(SelecedProductId);
+                upnlProductImage.Update();
+            }
+        }
+
+        void btnUpdateProductImage_Click(object sender, EventArgs e)
+        {
+            if (SelecedProductImageId > 0 && ucProductImageLanguage.SelectedLanguageID > 0)
+            {
+                ProductImage productImage = ProductImageManager.GetProductImage(SelecedProductImageId, ucProductImageLanguage.SelectedLanguageID);
+
+                productImage.ImageCaption = txtCaption.Text;
+                productImage.IsCoverImage = cbIsCoverImage.Checked;
+                productImage.LanguageID = ucProductImageLanguage.SelectedLanguageID;
+
+                List<string> imagesNames = ucSWFUploadProductImage.GetFilesName();
+
+                if (imagesNames != null && imagesNames.Count > 0)
+                {
+                    //Only One Image In Case Update Mode :
+                    productImage.Image = imagesNames.LastOrDefault();
+                }
+                ProductImageManager.Update(productImage);
+
+                FillProdcutImages(SelecedProductId);
+                upnlProductImage.Update();
+            }
+        }
+
+        void ucProductImageLanguage_OnSelectLanguage(object sender, EventArgs e)
+        {
+            if (SelecedProductImageId > 0)
+            {
+                ProductImage productImage = ProductImageManager.GetProductImage(SelecedProductImageId, ucProductImageLanguage.SelectedLanguageID);
+                if (productImage != null)
+                {
+                    SelecedProductImageId = productImage.ID;
+                    txtCaption.Text = productImage.ImageCaption;
+                    cbIsCoverImage.Checked = productImage.IsCoverImage;
+                    ucSWFUploadProductImage.BeginEditMode(productImage.Image);
+                    btnSaveProdcutImage.Visible = false;
+                    if (string.IsNullOrEmpty(productImage.ImageCaption))
+                    {
+                        btnProdcutImageSaveOtherLanguage.Visible = true;
+                        btnUpdateProductImage.Visible = false;
+                    }
+                    else
+                    {
+                        btnProdcutImageSaveOtherLanguage.Visible = false;
+                        btnUpdateProductImage.Visible = true;
+                    }
+
+                    ucProductImageLanguage.Visible = true;
+                    upnlProductImage.Update();
+                }
+            }
+        }
+
+        void dlsProductImage_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            switch (e.CommandName)
+            {
+                case "EditOtherLanguage":
+                    {
+                        HtmlInputHidden hdnID = e.Item.FindControl("hdnID") as HtmlInputHidden;
+                        if (hdnID != null)
+                        {
+                            ProductImage productImage = ProductImageManager.GetProductImage(Convert.ToInt32(hdnID.Value), CMSContext.LanguageID);
+                            if (productImage != null)
+                            {
+                                SelecedProductImageId = productImage.ID;
+                                ucProductImageLanguage.SelectedLanguageID = productImage.LanguageID;
+                                txtCaption.Text = productImage.ImageCaption;
+                                cbIsCoverImage.Checked = productImage.IsCoverImage;
+                                ucSWFUploadProductImage.BeginEditMode(productImage.Image);
+                                btnSaveProdcutImage.Visible = false;
+                                btnProdcutImageSaveOtherLanguage.Visible = false;
+                                btnUpdateProductImage.Visible = true;
+
+                                ucProductImageLanguage.Visible = true;
+                                pnlProductImageDetails.Visible = true;
+                                upnlProductImage.Update();
+                            }
+                        }
+                        break;
+                    }
+            }
         }
 
         #endregion

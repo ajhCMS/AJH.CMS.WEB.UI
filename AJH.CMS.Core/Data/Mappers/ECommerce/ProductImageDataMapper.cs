@@ -29,7 +29,7 @@ namespace AJH.CMS.Core.Data
         internal const string SN_PRODUCT_IMAGE_ADD = "[ECOMMERCE].[ProductImageAdd]";
         internal const string SN_PRODUCT_IMAGE_UPDATE = "[ECOMMERCE].[ProductImageUpdate]";
         internal const string SN_PRODUCT_IMAGE_DELETE = "[ECOMMERCE].[ProductImageDelete]";
-        internal const string SN_PRODUCT_IMAGE_ADD_OTHER_LANGUAGE = "[ECOMMERCE].[ProductImageAddLanguage]";
+        internal const string SN_PRODUCT_IMAGE_ADD_OTHER_LANGUAGE = "[ECOMMERCE].[ProductImageAddOtherLang]";
         internal const string SN_PRODUCT_IMAGE_DELETE_LOGICAL = "[ECOMMERCE].[ProductImageDeleteLogical]";
         internal const string SN_PRODUCT_IMAGE_GET_BY_ID = "[ECOMMERCE].[ProductImageGetByID]";
         internal const string SN_PRODUCT_IMAGE_GET_ALL = "[ECOMMERCE].[ProductImageGetAll]";
@@ -78,7 +78,7 @@ namespace AJH.CMS.Core.Data
 
                 sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_MODULE_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
-                sqlParameter.Value = ProductImageEntity.ModuleID;
+                sqlParameter.Value = (int)CMSEnums.ECommerceModule.ProductImage;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_ECO_LAN_LAN_ID, System.Data.SqlDbType.Int);
@@ -101,6 +101,58 @@ namespace AJH.CMS.Core.Data
             }
             return ProductImageEntity.ID;
         }
+
+        internal static void AddOtherLanguage(ProductImage entity)
+        {
+            ProductImage ProductImageEntity = (ProductImage)(entity);
+
+            using (SqlConnection sqlConnection = new SqlConnection(CMSCoreBase.CMSCoreConnectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(SN_PRODUCT_IMAGE_ADD_OTHER_LANGUAGE, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlParameter sqlParameter = null;
+
+                sqlParameter = new SqlParameter(PN_PROD_IMAGE_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = ProductImageEntity.ID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_PROD_PRODUCT_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = ProductImageEntity.ProductID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_PROD_IMAGE_CAPTION, System.Data.SqlDbType.NVarChar);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = ProductImageEntity.ImageCaption;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_MODULE_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = (int)CMSEnums.ECommerceModule.ProductImage;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_ECO_LAN_LAN_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = ProductImageEntity.LanguageID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                try
+                {
+                    sqlCommand.Connection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                    sqlCommand.Connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+
+
 
         internal static void Update(ProductImage entity)
         {
@@ -140,7 +192,7 @@ namespace AJH.CMS.Core.Data
 
                 sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_MODULE_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
-                sqlParameter.Value = ProductImageEntity.ModuleID;
+                sqlParameter.Value = (int)CMSEnums.ECommerceModule.ProductImage;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_ECO_LAN_LAN_ID, System.Data.SqlDbType.Int);
@@ -293,6 +345,7 @@ namespace AJH.CMS.Core.Data
                 {
                     while (sqlDataReader.Read())
                     {
+                        productImage = new ProductImage();
                         FillFromReader(productImage, sqlDataReader);
                     }
 
@@ -437,6 +490,9 @@ namespace AJH.CMS.Core.Data
             if (!reader.IsDBNull(colIndex))
                 ProductImage.IsDeleted = reader.GetBoolean(colIndex);
 
+            colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_LAN_ID);
+            if (!reader.IsDBNull(colIndex))
+                ProductImage.LanguageID = reader.GetInt32(colIndex);
         }
 
         #endregion

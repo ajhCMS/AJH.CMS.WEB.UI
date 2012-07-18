@@ -65,6 +65,12 @@ namespace AJH.CMS.Core.Entities
             set;
         }
 
+        public bool IsPublished
+        {
+            set;
+            get;
+        }
+
         #region IEntity Members
 
         public int ID
@@ -117,6 +123,7 @@ namespace AJH.CMS.Core.Entities
             this.IsDeleted = false;
             this.ModuleID = 0;
             this.Order = 0;
+            this.IsPublished = false;
         }
 
     }

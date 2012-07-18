@@ -188,6 +188,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     {
                         catalog.IsDisplayed = cbIsDisplayed.Checked;
                         catalog.IsGalleryOnly = cbIsGalleryOnly.Checked;
+                        catalog.IsPublished = cbIsPublishedOnslider.Checked;
 
                         List<string> files = ucSWFUpload.GetFilesName();
                         if (files.Count > 0)
@@ -268,6 +269,8 @@ namespace AJH.CMS.WEB.UI.Admin
                         catalog.Name = txtName.Text;
                         catalog.IsDisplayed = cbIsDisplayed.Checked;
                         catalog.IsGalleryOnly = cbIsGalleryOnly.Checked;
+                        catalog.IsPublished = cbIsPublishedOnslider.Checked;
+
                         catalog.LanguageID = ucPortalLanguage.SelectedLanguageID;
                         catalog.ModuleID = (int)CMSEnums.ECommerceModule.Catalog;
 
@@ -368,6 +371,8 @@ namespace AJH.CMS.WEB.UI.Admin
 
                 catalog.IsDisplayed = cbIsDisplayed.Checked;
                 catalog.IsGalleryOnly = cbIsGalleryOnly.Checked;
+                catalog.IsPublished = cbIsPublishedOnslider.Checked;
+
                 catalog.MetaDescription = txtMetaDescription.Text;
                 catalog.MetaKeywords = txtMetaKeywords.Text;
                 catalog.MetaTitle = txtMetaTitle.Text;
@@ -461,6 +466,7 @@ namespace AJH.CMS.WEB.UI.Admin
             txtMetaKeywords.Text = string.Empty;
             txtMetaTitle.Text = string.Empty;
             cbIsGalleryOnly.Checked = false;
+            cbIsPublishedOnslider.Checked = false;
             cbIsDisplayed.Checked = false;
             ucSWFUpload.BeginAddMode();
 
@@ -498,6 +504,8 @@ namespace AJH.CMS.WEB.UI.Admin
                     txtName.Text = catalog.Name;
                     cbIsDisplayed.Checked = catalog.IsDisplayed;
                     cbIsGalleryOnly.Checked = catalog.IsGalleryOnly;
+                    cbIsPublishedOnslider.Checked = catalog.IsPublished;
+
                     ucSWFUpload.BeginEditMode(catalog.Image);
 
                     cddlParentCatalog.Category = catalog.ID.ToString();
@@ -538,6 +546,8 @@ namespace AJH.CMS.WEB.UI.Admin
                 txtName.Text = catalog.Name;
                 cbIsDisplayed.Checked = catalog.IsDisplayed;
                 cbIsGalleryOnly.Checked = catalog.IsGalleryOnly;
+                catalog.IsPublished = cbIsPublishedOnslider.Checked;
+
                 ucSWFUpload.BeginEditMode(catalog.Image);
 
                 cddlParentCatalog.Category = catalog.ID.ToString();
@@ -589,6 +599,7 @@ namespace AJH.CMS.WEB.UI.Admin
             foreach (AJH.CMS.Core.Entities.Catalog Catalog in parentcatalogs)
             {
                 TreeNode oNode = GetNodesChilds(Catalog, catalogs);
+                oNode.ImageUrl = CMSWebHelper.GetPublishedImage(Catalog.IsPublished);
                 trvCatalog.Nodes.Add(oNode);
             }
             trvCatalog.ExpandAll();
@@ -601,6 +612,7 @@ namespace AJH.CMS.WEB.UI.Admin
         {
             TreeNode oNode;
             oNode = new TreeNode(catalog.ID + ": " + catalog.Name, Convert.ToString(catalog.ID));
+            oNode.ImageUrl = CMSWebHelper.GetPublishedImage(catalog.IsPublished);
 
             if (ViewState[CMSViewStateManager.CatalogID] != null)
             {
@@ -619,6 +631,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     oNode.ChildNodes.Add(GetNodesChilds(CatalogChild, Catalogs));
                 }
             }
+            
             return oNode;
         }
         #endregion

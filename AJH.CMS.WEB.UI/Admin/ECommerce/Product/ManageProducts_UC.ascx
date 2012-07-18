@@ -364,7 +364,8 @@
                                             Width="70" Height="70" runat="server" ImageUrl='<%# GetProdcutImageFile(((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).Image)%>' />
                                     </div>
                                     <div class="Gallery-name">
-                                        <%#((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID+": "+ ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ImageCaption%>
+                                        <asp:LinkButton ID="lbtnEditProductImage" runat="server" Text='<%#((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID+": "+ ((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ImageCaption%>'
+                                            CommandName="EditOtherLanguage" CommandArgument="<%#((AJH.CMS.Core.Entities.ProductImage)Container.DataItem).ID%>"></asp:LinkButton>
                                     </div>
                                 </div>
                             </ItemTemplate>
@@ -375,6 +376,8 @@
                 <asp:Panel ID="pnlProductImageDetails" runat="server" Visible="false">
                     <div id="dvProdcutImageProblems" runat="server" class="dv-problem">
                     </div>
+                    <controls:PortalLanguages_UC ID="ucProductImageLanguage" runat="server" Visible="false"
+                        ValidationGroup="AddEditProductImage" />
                     <table width="100%">
                         <tr>
                             <td>
@@ -413,6 +416,10 @@
                             NotificationOperationDone="false" CausesValidation="false" />
                         <asp:Button ID="btnSaveProdcutImage" CssClass="btn" runat="server" Width="60px" Text="Save"
                             NotificationOperationDone="true" ValidationGroup="AddEditProductImage" />
+                        <asp:Button ID="btnUpdateProductImage" CssClass="btn" runat="server" Width="110px" Text="Update"
+                            NotificationOperationDone="true" ValidationGroup="AddEditProductImage" Visible="false" />
+                        <asp:Button ID="btnProdcutImageSaveOtherLanguage" CssClass="btn" runat="server" Width="150px"
+                            Text="Save OtherLanguage" NotificationOperationDone="true" ValidationGroup="AddEditProductImage" Visible="false"/>
                     </div>
                 </asp:Panel>
             </ContentTemplate>
