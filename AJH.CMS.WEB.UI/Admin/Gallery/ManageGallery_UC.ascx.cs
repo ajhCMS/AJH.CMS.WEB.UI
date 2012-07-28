@@ -681,7 +681,7 @@ namespace AJH.CMS.WEB.UI.Admin
             {
                 CreatedBy = CMSContext.UserID,
                 LanguageID = CMSContext.LanguageID,
-                ModuleID = CMSEnums.Modules.Gallery,
+                ModuleID = AJH.CMS.Core.Enums.CMSEnums.Modules.Gallery,
                 ObjectID = galleryID,
                 PortalID = CMSContext.PortalID,
                 PublishType = CMSEnums.PublishType.PublishNow,

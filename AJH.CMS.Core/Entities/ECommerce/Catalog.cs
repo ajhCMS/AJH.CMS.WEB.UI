@@ -17,12 +17,6 @@ namespace AJH.CMS.Core.Entities
             set;
         }
 
-        public string Image
-        {
-            get;
-            set;
-        }
-
         public int ParentCalalogID
         {
             get;
@@ -114,7 +108,6 @@ namespace AJH.CMS.Core.Entities
             this.LanguageID = 0;
             this.IsDisplayed = false;
             this.IsGalleryOnly = false;
-            this.Image = string.Empty;
             this.ParentCalalogID = 0;
             this.Description = string.Empty;
             this.MetaTitle = string.Empty;

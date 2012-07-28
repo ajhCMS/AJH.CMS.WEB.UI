@@ -1944,6 +1944,11 @@
     <Compile Include="Admin\XSLTemplate\ManageXSLTemplate_UC.ascx.designer.cs">
       <DependentUpon>ManageXSLTemplate_UC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="App_GlobalResources\CMSSetupResource.ar-JO.designer.cs">
+      <DependentUpon>CMSSetupResource.ar-JO.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Controls\AjaxDate_UC.ascx.cs">
       <DependentUpon>AjaxDate_UC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2262,8 +2267,18 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GUI\Contact\App_LocalResources\Career_UC.ascx.resx" />
-    <Content Include="GUI\Contact\App_LocalResources\Career_UC.ascx.ar-JO.resx" />
+    <Content Include="GUI\Contact\App_LocalResources\Career_UC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="GUI\Contact\App_LocalResources\Career_UC.ascx.ar-JO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\CMSSetupResource.ar-JO.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>CMSSetupResource.ar-JO.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="GUI\Contact\App_LocalResources\ContactUs_UC.ascx.resx" />
+    <Content Include="GUI\Contact\App_LocalResources\ContactUs_UC.ascx.ar-JO.resx" />
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

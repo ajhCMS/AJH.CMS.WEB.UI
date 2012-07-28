@@ -48,8 +48,19 @@ namespace AJH.CMS.WEB.UI
                 if (product != null)
                 {
                     XmlElement productelement = xmlDoc.CreateElement("Element");
+                    XmlElement homeElement = xmlDoc.CreateElement("Element");
 
-                    XmlAttribute attr = xmlDoc.CreateAttribute("ID");
+                    XmlAttribute attr = xmlDoc.CreateAttribute("Name");
+                    attr.Value = Resources.CMSSetupResource.Home;
+                    homeElement.Attributes.Append(attr);
+
+                    attr = xmlDoc.CreateAttribute("Type");
+                    attr.Value = "Home";
+                    homeElement.Attributes.Append(attr);
+
+                    rootElement.AppendChild(homeElement);
+
+                    attr = xmlDoc.CreateAttribute("ID");
                     attr.Value = product.ID.ToString();
                     productelement.Attributes.Append(attr);
 
@@ -109,5 +120,6 @@ namespace AJH.CMS.WEB.UI
                 catalogElement.Attributes.Append(attr);
             }
         }
+
     }
 }

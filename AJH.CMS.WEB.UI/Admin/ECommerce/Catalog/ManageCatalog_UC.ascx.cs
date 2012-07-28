@@ -17,6 +17,7 @@ namespace AJH.CMS.WEB.UI.Admin
 {
     public partial class ManageCatalog_UC : System.Web.UI.UserControl
     {
+
         #region Events
 
         #region OnInit
@@ -39,6 +40,100 @@ namespace AJH.CMS.WEB.UI.Admin
             this.gvAllProducts.PageIndexChanging += new GridViewPageEventHandler(gvAllProducts_PageIndexChanging);
             this.gvCatalogProducts.PageIndexChanging += new GridViewPageEventHandler(gvCatalogProducts_PageIndexChanging);
             this.gvCatalogProducts.RowCommand += new GridViewCommandEventHandler(gvCatalogProducts_RowCommand);
+            this.ibtnAddCatalogImage.Click += new ImageClickEventHandler(ibtnAddCatalogImage_Click);
+            this.ibtnDeleteCatalogImage.Click += new ImageClickEventHandler(ibtnDeleteCatalogImage_Click);
+            this.btnSaveCatalogImage.Click += new EventHandler(btnSaveCatalogImage_Click);
+            this.dlsCatalogImage.ItemCommand += new DataListCommandEventHandler(dlsCatalogImage_ItemCommand);
+            this.btnUpdateCatalogImage.Click += new EventHandler(btnUpdateCatalogImage_Click);
+        }
+
+        void btnUpdateCatalogImage_Click(object sender, EventArgs e)
+        {
+            CatalogImage catalogImage = CatalogImageManager.GetCatalogImageByID(Convert.ToInt32(ViewState[CMSViewStateManager.CatalogImageID]));
+            if (catalogImage != null)
+            {
+                catalogImage.IsCoverImage = cbIsCoverImage.Checked;
+                catalogImage.Image = ucSWFUploadCatalogImage.GetFilesName().LastOrDefault();
+
+                CatalogImageManager.Update(catalogImage);
+                BeginCatalogImageAddMode();
+                FillCatalogImages(catalogImage.CatalogID);
+                upnlCatalogImage.Update();
+            }
+        }
+
+        void dlsCatalogImage_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            switch (e.CommandName)
+            {
+                case "EditCatalogImage":
+                    {
+                        CatalogImage catalogImage = CatalogImageManager.GetCatalogImageByID(Convert.ToInt32(e.CommandArgument));
+                        if (catalogImage != null)
+                        {
+
+                            ViewState[CMSViewStateManager.CatalogImageID] = e.CommandArgument;
+                            cbIsCoverImage.Checked = catalogImage.IsCoverImage;
+                            ucSWFUploadCatalogImage.IsImage = true;
+                            ucSWFUploadCatalogImage.BeginEditMode(catalogImage.Image);
+                            btnUpdateCatalogImage.Visible = true;
+                            btnSaveCatalogImage.Visible = false;
+                            upnlCatalogImage.Update();
+                        }
+                        break;
+                    }
+            }
+        }
+
+        void btnSaveCatalogImage_Click(object sender, EventArgs e)
+        {
+            List<string> imagesNames = ucSWFUploadCatalogImage.GetFilesName();
+            if (imagesNames != null && imagesNames.Count > 0)
+            {
+                foreach (string name in imagesNames)
+                {
+                    CatalogImage catalogImage = new CatalogImage
+                    {
+                        CatalogID = Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]),
+                        Image = name,
+                        IsCoverImage = cbIsCoverImage.Checked,
+                        IsDeleted = false,
+                    };
+
+                    CatalogImageManager.Add(catalogImage);
+                }
+            }
+            BeginCatalogImageAddMode();
+            FillCatalogImages(Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]));
+            upnlCatalogImage.Update();
+            upnlCatalogItem.Update();
+        }
+
+        void ibtnDeleteCatalogImage_Click(object sender, ImageClickEventArgs e)
+        {
+            for (int i = 0; i < dlsCatalogImage.Items.Count; i++)
+            {
+                CheckBox chkItem = (CheckBox)dlsCatalogImage.Items[i].FindControl("chkItem");
+                if (chkItem != null && chkItem.Checked)
+                {
+                    HtmlInputHidden hdnID = (HtmlInputHidden)dlsCatalogImage.Items[i].FindControl("hdnID");
+                    if (hdnID != null && !string.IsNullOrEmpty(hdnID.Value))
+                    {
+                        int catalogImage = Convert.ToInt32(hdnID.Value);
+                        CatalogImageManager.Delete(catalogImage);
+                    }
+                }
+            }
+
+            FillCatalogImages(Convert.ToInt32(ViewState[CMSViewStateManager.CatalogID]));
+            upnlCatalogImage.Update();
+        }
+
+        void ibtnAddCatalogImage_Click(object sender, ImageClickEventArgs e)
+        {
+            //CatalogImage Add Mode :
+            BeginCatalogImageAddMode();
+            upnlCatalogImage.Update();
         }
 
         void gvCatalogProducts_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -155,18 +250,24 @@ namespace AJH.CMS.WEB.UI.Admin
             }
         }
 
-
-        //if (txtProductOrder != null)
-        //                       int.TryParse(txtProductOrder.Text, out productOrder);
-
         #endregion
 
         #region ibtnRefreshCatalogs_Click
         void ibtnRefreshCatalogs_Click(object sender, ImageClickEventArgs e)
         {
-            string catalogXmlFilePath = CMSWebHelper.GetCatalogPath();
-            if (File.Exists(catalogXmlFilePath))
-                File.Delete(catalogXmlFilePath);
+            string catalogFolderPath = CMSWebHelper.GetCatalogFolderPath();
+
+            if (Directory.Exists(catalogFolderPath))
+            {
+                string[] files = Directory.GetFiles(catalogFolderPath);
+                if (files != null && files.Count() > 0)
+                {
+                    foreach (string fileName in files)
+                    {
+                        File.Delete(fileName);
+                    }
+                }
+            }
             ExitMode();
             upnlCatalogItem.Update();
         }
@@ -189,12 +290,6 @@ namespace AJH.CMS.WEB.UI.Admin
                         catalog.IsDisplayed = cbIsDisplayed.Checked;
                         catalog.IsGalleryOnly = cbIsGalleryOnly.Checked;
                         catalog.IsPublished = cbIsPublishedOnslider.Checked;
-
-                        List<string> files = ucSWFUpload.GetFilesName();
-                        if (files.Count > 0)
-                            catalog.Image = files[0];
-                        else
-                            catalog.Image = string.Empty;
 
                         int parentCatalogId = -1;
                         int.TryParse(ddlParentCatalog.SelectedValue, out parentCatalogId);
@@ -273,12 +368,6 @@ namespace AJH.CMS.WEB.UI.Admin
 
                         catalog.LanguageID = ucPortalLanguage.SelectedLanguageID;
                         catalog.ModuleID = (int)CMSEnums.ECommerceModule.Catalog;
-
-                        List<string> files = ucSWFUpload.GetFilesName();
-                        if (files.Count > 0)
-                            catalog.Image = files[0];
-                        else
-                            catalog.Image = string.Empty;
 
                         int parentCatalogId = -1;
                         int.TryParse(ddlParentCatalog.SelectedValue, out parentCatalogId);
@@ -363,12 +452,6 @@ namespace AJH.CMS.WEB.UI.Admin
                 catalog.PortalID = CMSContext.PortalID;
                 catalog.Description = txtDescription.Text;
 
-                List<string> files = ucSWFUpload.GetFilesName();
-                if (files.Count > 0)
-                    catalog.Image = files[0];
-                else
-                    catalog.Image = string.Empty;
-
                 catalog.IsDisplayed = cbIsDisplayed.Checked;
                 catalog.IsGalleryOnly = cbIsGalleryOnly.Checked;
                 catalog.IsPublished = cbIsPublishedOnslider.Checked;
@@ -422,6 +505,7 @@ namespace AJH.CMS.WEB.UI.Admin
         void ibtnAdd_Click(object sender, ImageClickEventArgs e)
         {
             BeginAddMode();
+            upnlCatalogImage.Update();
             upnlCatalogItem.Update();
         }
         #endregion
@@ -449,12 +533,17 @@ namespace AJH.CMS.WEB.UI.Admin
             ibtnDelete.OnClientClick = "return ConfirmOperation('" + trvCatalog.ClientID + "','Are you sure to delete this item(s)?');";
             ibtnDeleteProduct.OnClientClick = "return ConfirmOperation('" + gvCatalogProducts.ClientID + "','Are you sure to delete this item(s)?');";
             btnSaveProductCatalog.OnClientClick = "return ConfirmOperation('" + gvAllProducts.ClientID + "','Are you sure to add this product(s) to the selected catalog?');";
+            ibtnDeleteCatalogImage.OnClientClick = "return ConfirmOperation('" + dlsCatalogImage.ClientID + "','Are you sure to delete this item(s)?');";
         }
         #endregion
 
         #region BeginAddMode
         void BeginAddMode()
         {
+            BeginCatalogImageAddMode();
+            dlsCatalogImage.DataSource = new List<CatalogImage>();
+            dlsCatalogImage.DataBind();
+
             ucPortalLanguage.SelectedLanguageID = -1;
             ViewState.Remove(CMSViewStateManager.CatalogID);
             pnlCatalogItem.Visible = true;
@@ -468,7 +557,6 @@ namespace AJH.CMS.WEB.UI.Admin
             cbIsGalleryOnly.Checked = false;
             cbIsPublishedOnslider.Checked = false;
             cbIsDisplayed.Checked = false;
-            ucSWFUpload.BeginAddMode();
 
             txtCatalogOrder.Text = "0";
 
@@ -482,8 +570,6 @@ namespace AJH.CMS.WEB.UI.Admin
             btnSaveOtherLanguage.Visible = false;
 
             pnlCatalogItem.Visible = true;
-
-
             pnlCatalogItem.DefaultButton = btnSave.ID;
         }
         #endregion
@@ -506,8 +592,6 @@ namespace AJH.CMS.WEB.UI.Admin
                     cbIsGalleryOnly.Checked = catalog.IsGalleryOnly;
                     cbIsPublishedOnslider.Checked = catalog.IsPublished;
 
-                    ucSWFUpload.BeginEditMode(catalog.Image);
-
                     cddlParentCatalog.Category = catalog.ID.ToString();
                     if (catalog.ParentCalalogID > 0)
                         cddlParentCatalog.SelectedValue = catalog.ParentCalalogID.ToString();
@@ -527,6 +611,10 @@ namespace AJH.CMS.WEB.UI.Admin
                     FillAllProducts(catalog.ID, ucPortalLanguage.SelectedLanguageID);
                     FillCatalogProducts(catalog.ID, ucPortalLanguage.SelectedLanguageID);
 
+                    //Fill Catalog Images :
+                    FillCatalogImages(catalog.ID);
+
+                    upnlCatalogImage.Update();
                     upnlProductCatalog.Update();
                 }
             }
@@ -547,8 +635,6 @@ namespace AJH.CMS.WEB.UI.Admin
                 cbIsDisplayed.Checked = catalog.IsDisplayed;
                 cbIsGalleryOnly.Checked = catalog.IsGalleryOnly;
                 catalog.IsPublished = cbIsPublishedOnslider.Checked;
-
-                ucSWFUpload.BeginEditMode(catalog.Image);
 
                 cddlParentCatalog.Category = catalog.ID.ToString();
                 if (catalog.ParentCalalogID > 0)
@@ -631,7 +717,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     oNode.ChildNodes.Add(GetNodesChilds(CatalogChild, Catalogs));
                 }
             }
-            
+
             return oNode;
         }
         #endregion
@@ -662,6 +748,43 @@ namespace AJH.CMS.WEB.UI.Admin
             List<Product> catalogProducts = ProductManager.GetProductsByCatalogID(catalogId, CMSContext.PortalID, languageId);
             gvCatalogProducts.DataSource = catalogProducts;
             gvCatalogProducts.DataBind();
+        }
+
+        #endregion
+
+        #region GetCatalogImageFile
+
+        public string GetCatalogImageFile(string imageName)
+        {
+            return CMSContext.VirtualUploadFolder + imageName;
+        }
+
+        #endregion
+
+
+        #region FillCatalogImage
+
+        private void FillCatalogImages(int catalogID)
+        {
+            List<CatalogImage> catalogImages = CatalogImageManager.GetCatalogImagesByCatalogID(catalogID);
+            dlsCatalogImage.DataSource = catalogImages;
+            dlsCatalogImage.DataBind();
+            pnlCatalogImages.Visible = true;
+            pnlCatalogImageDetails.Visible = true;
+        }
+
+        #endregion
+
+        #region Begin Catalog Image Add Mode
+
+        private void BeginCatalogImageAddMode()
+        {
+            ViewState[CMSViewStateManager.CatalogImageID] = -1;
+            btnSaveCatalogImage.Visible = true;
+            btnUpdateCatalogImage.Visible = false;
+            pnlCatalogImageDetails.Visible = true;
+            cbIsCoverImage.Checked = false;
+            ucSWFUploadCatalogImage.BeginAddMode();
         }
 
         #endregion

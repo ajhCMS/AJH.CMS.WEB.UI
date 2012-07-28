@@ -83,8 +83,8 @@ namespace AJH.CMS.Core.Data
                     {
                         XmlElement xmlEle = xmlDoc.CreateElement("Catalog");
                         xmlRoot.AppendChild(xmlEle);
-                        SetAttributeCatalogNode(xmlEle, item);
-                        SetElementChildCatalog(xmlEle, Catalogs, item.ID);
+                        SetAttributeCatalogNode(xmlDoc, xmlEle, item);
+                        SetElementChildCatalog(xmlDoc, xmlEle, Catalogs, item.ID);
                     }
 
                 XmlWriter xmlWriter = XmlWriter.Create(CatalogPath);
@@ -95,15 +95,15 @@ namespace AJH.CMS.Core.Data
             return CatalogPath;
         }
 
-        private static void SetElementChildCatalog(XmlElement xmlParent, List<Catalog> Catalogs, int ParentCatalogID)
+        private static void SetElementChildCatalog(XmlDocument xmlDoc, XmlElement xmlParent, List<Catalog> Catalogs, int ParentCatalogID)
         {
             List<Catalog> childsCatalog = Catalogs.Where(m => m.ParentCalalogID == ParentCatalogID).ToList();
             foreach (Catalog item in childsCatalog)
             {
                 XmlElement xmlEle = xmlParent.OwnerDocument.CreateElement("SubCatalog");
                 xmlParent.AppendChild(xmlEle);
-                SetAttributeCatalogNode(xmlEle, item);
-                SetElementChildCatalog(xmlEle, Catalogs, item.ID);
+                SetAttributeCatalogNode(xmlDoc, xmlEle, item);
+                SetElementChildCatalog(xmlDoc, xmlEle, Catalogs, item.ID);
             }
         }
 
@@ -117,12 +117,12 @@ namespace AJH.CMS.Core.Data
 
             XmlElement xmlEle = xmlDoc.CreateElement("Catalog");
             xmlRoot.AppendChild(xmlEle);
-            SetAttributeCatalogNode(xmlEle, catalog);
+            SetAttributeCatalogNode(xmlDoc, xmlEle, catalog);
 
             return xmlDoc;
         }
 
-        private static void SetAttributeCatalogNode(XmlElement xmlEle, Catalog CatalogItem)
+        private static void SetAttributeCatalogNode(XmlDocument xmldoc, XmlElement xmlEle, Catalog CatalogItem)
         {
             XmlAttribute xmlAtt = xmlEle.OwnerDocument.CreateAttribute("ID");
             xmlAtt.Value = CatalogItem.ID.ToString();
@@ -130,10 +130,6 @@ namespace AJH.CMS.Core.Data
 
             xmlAtt = xmlEle.OwnerDocument.CreateAttribute("Name");
             xmlAtt.Value = CatalogItem.Name;
-            xmlEle.Attributes.Append(xmlAtt);
-
-            xmlAtt = xmlEle.OwnerDocument.CreateAttribute("Image");
-            xmlAtt.Value = CatalogItem.Image;
             xmlEle.Attributes.Append(xmlAtt);
 
             xmlAtt = xmlEle.OwnerDocument.CreateAttribute("ParentID");
@@ -148,6 +144,28 @@ namespace AJH.CMS.Core.Data
             xmlAtt.Value = CatalogItem.IsPublished.ToString();
             xmlEle.Attributes.Append(xmlAtt);
 
+            List<CatalogImage> catalogImages = CatalogImageManager.GetCatalogImagesByCatalogID(CatalogItem.ID);
+            if (catalogImages != null && catalogImages.Count > 0)
+            {
+                foreach (CatalogImage catalogImage in catalogImages)
+                {
+                    XmlElement imageElement = xmldoc.CreateElement("CatalogImage");
+                    XmlAttribute attri = xmldoc.CreateAttribute("ID");
+
+                    attri.Value = catalogImage.ID.ToString();
+                    imageElement.Attributes.Append(attri);
+
+                    attri = xmldoc.CreateAttribute("IsCoverImage");
+                    attri.Value = catalogImage.IsCoverImage.ToString();
+                    imageElement.Attributes.Append(attri);
+
+                    attri = xmldoc.CreateAttribute("ImageName");
+                    attri.Value = catalogImage.Image;
+                    imageElement.Attributes.Append(attri);
+
+                    xmlEle.AppendChild(imageElement);
+                }
+            }
         }
     }
 }

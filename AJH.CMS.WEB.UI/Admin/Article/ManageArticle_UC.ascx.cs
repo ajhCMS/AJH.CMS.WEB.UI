@@ -122,9 +122,21 @@ namespace AJH.CMS.WEB.UI.Admin
                                 //Get Default Value
                                 articleURL = CMSConfig.CMSPage.GetNewsDetailsPage();
                             }
-                            NameValueCollection valueCollection = HttpUtility.ParseQueryString(articleURL);
-                            if (string.IsNullOrEmpty(valueCollection[CMSConfig.QueryString.ArticleID]))
+
+                            //NameValueCollection valueCollection = HttpUtility.ParseQueryString(articleURL);
+
+                            string[] arrQueryString = articleURL.Split('?');
+                            string queryString = string.Empty;
+
+                            if (arrQueryString != null && arrQueryString.Length > 1)
                             {
+                                queryString = arrQueryString[1];
+                            }
+
+                            if (string.IsNullOrEmpty(queryString))
+                            {
+                                //if (string.IsNullOrEmpty(valueCollection[CMSConfig.QueryString.ArticleID]))
+                                //{
                                 if (articleURL.Contains("?"))
                                 {
                                     articleURL += "&" + CMSConfig.QueryString.ArticleID + "=" + article.ID;
@@ -134,6 +146,7 @@ namespace AJH.CMS.WEB.UI.Admin
                                     articleURL += "?" + CMSConfig.QueryString.ArticleID + "=" + article.ID;
                                 }
                             }
+                            //}
                             article.URL = articleURL;
                         }
 
@@ -270,9 +283,21 @@ namespace AJH.CMS.WEB.UI.Admin
                                 //Get Default Value
                                 articleURL = CMSConfig.CMSPage.GetNewsDetailsPage();
                             }
-                            NameValueCollection valueCollection = HttpUtility.ParseQueryString(articleURL);
-                            if (string.IsNullOrEmpty(valueCollection[CMSConfig.QueryString.ArticleID]))
+
+                            //NameValueCollection valueCollection = HttpUtility.ParseQueryString(articleURL);
+
+                            string[] arrQueryString = articleURL.Split('?');
+                            string queryString = string.Empty;
+
+                            if (arrQueryString != null && arrQueryString.Length > 1)
                             {
+                                queryString = arrQueryString[1];
+                            }
+
+                            if (string.IsNullOrEmpty(queryString))
+                            {
+                                //if (string.IsNullOrEmpty(valueCollection[CMSConfig.QueryString.ArticleID]))
+                                //{
                                 if (articleURL.Contains("?"))
                                 {
                                     articleURL += "&" + CMSConfig.QueryString.ArticleID + "=" + article.ID;
@@ -282,6 +307,7 @@ namespace AJH.CMS.WEB.UI.Admin
                                     articleURL += "?" + CMSConfig.QueryString.ArticleID + "=" + article.ID;
                                 }
                             }
+                            //}
                             article.URL = articleURL;
                         }
 
@@ -343,9 +369,21 @@ namespace AJH.CMS.WEB.UI.Admin
                             //Get Default Value
                             articleURL = CMSConfig.CMSPage.GetNewsDetailsPage();
                         }
-                        NameValueCollection valueCollection = HttpUtility.ParseQueryString(articleURL);
-                        if (string.IsNullOrEmpty(valueCollection[CMSConfig.QueryString.ArticleID]))
+
+                        //NameValueCollection valueCollection = HttpUtility.ParseQueryString(articleURL);
+
+                        string[] arrQueryString = articleURL.Split('?');
+                        string queryString = string.Empty;
+
+                        if (arrQueryString != null && arrQueryString.Length > 1)
                         {
+                            queryString = arrQueryString[1];
+                        }
+
+                        if (string.IsNullOrEmpty(queryString))
+                        {
+                            //if (string.IsNullOrEmpty(valueCollection[CMSConfig.QueryString.ArticleID]))
+                            //{
                             if (articleURL.Contains("?"))
                             {
                                 articleURL += "&" + CMSConfig.QueryString.ArticleID + "=" + article.ID;
@@ -355,6 +393,7 @@ namespace AJH.CMS.WEB.UI.Admin
                                 articleURL += "?" + CMSConfig.QueryString.ArticleID + "=" + article.ID;
                             }
                         }
+                        //}
                         article.URL = articleURL;
                         ArticleManager.Update(article);
                     }
@@ -465,9 +504,21 @@ namespace AJH.CMS.WEB.UI.Admin
                             //Get Default Value
                             articleURL = CMSConfig.CMSPage.GetNewsDetailsPage();
                         }
-                        NameValueCollection valueCollection = HttpUtility.ParseQueryString(articleURL);
-                        if (string.IsNullOrEmpty(valueCollection[CMSConfig.QueryString.ArticleID]))
+
+                        //NameValueCollection valueCollection = HttpUtility.ParseQueryString(articleURL);
+
+                        string[] arrQueryString = articleURL.Split('?');
+                        string queryString = string.Empty;
+
+                        if (arrQueryString != null && arrQueryString.Length > 1)
                         {
+                            queryString = arrQueryString[1];
+                        }
+
+                        if (string.IsNullOrEmpty(queryString))
+                        {
+                            //if (string.IsNullOrEmpty(valueCollection[CMSConfig.QueryString.ArticleID]))
+                            //{
                             if (articleURL.Contains("?"))
                             {
                                 articleURL += "&" + CMSConfig.QueryString.ArticleID + "=" + article.ID;
@@ -477,6 +528,7 @@ namespace AJH.CMS.WEB.UI.Admin
                                 articleURL += "?" + CMSConfig.QueryString.ArticleID + "=" + article.ID;
                             }
                         }
+                        //}
                         article.URL = articleURL;
                         ArticleManager.Update(article);
                     }

@@ -202,24 +202,6 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.CheckBox cbIsPublishedOnslider;
         
         /// <summary>
-        /// lblUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUpload;
-        
-        /// <summary>
-        /// ucSWFUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AJH.CMS.WEB.UI.Controls.SWFUpload.SWFUpload_UC ucSWFUpload;
-        
-        /// <summary>
         /// lblParentCatalog control.
         /// </summary>
         /// <remarks>
@@ -407,6 +389,141 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary valsummaryCatalog;
+        
+        /// <summary>
+        /// dvCatalogImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvCatalogImage;
+        
+        /// <summary>
+        /// upnlCatalogImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlCatalogImage;
+        
+        /// <summary>
+        /// pnlCatalogImages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlCatalogImages;
+        
+        /// <summary>
+        /// ibtnDeleteCatalogImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnDeleteCatalogImage;
+        
+        /// <summary>
+        /// ibtnAddCatalogImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnAddCatalogImage;
+        
+        /// <summary>
+        /// lblCatalogImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCatalogImage;
+        
+        /// <summary>
+        /// dlsCatalogImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList dlsCatalogImage;
+        
+        /// <summary>
+        /// pnlCatalogImageDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlCatalogImageDetails;
+        
+        /// <summary>
+        /// dvCatalogImageProblems control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvCatalogImageProblems;
+        
+        /// <summary>
+        /// lblIsCoverImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIsCoverImage;
+        
+        /// <summary>
+        /// cbIsCoverImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbIsCoverImage;
+        
+        /// <summary>
+        /// lblImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblImage;
+        
+        /// <summary>
+        /// ucSWFUploadCatalogImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AJH.CMS.WEB.UI.Controls.SWFUpload.SWFUpload_UC ucSWFUploadCatalogImage;
+        
+        /// <summary>
+        /// btnSaveCatalogImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveCatalogImage;
+        
+        /// <summary>
+        /// btnUpdateCatalogImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdateCatalogImage;
         
         /// <summary>
         /// dvCatalogProducts control.

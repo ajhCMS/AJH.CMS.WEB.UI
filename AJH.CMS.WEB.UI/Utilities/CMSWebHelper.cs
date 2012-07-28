@@ -148,6 +148,12 @@ namespace AJH.CMS.WEB.UI.Utilities
             return CMSContext.CurrentPath + "Portals\\Portal" + CMSContext.PortalID + "\\ECommerce\\Catalog\\" + GetCatalogFileName();
         }
 
+        public static string GetCatalogFolderPath()
+        {
+            return CMSContext.CurrentPath + "Portals\\Portal" + CMSContext.PortalID + "\\ECommerce\\Catalog\\";
+        }
+
+
         #endregion
 
         #endregion

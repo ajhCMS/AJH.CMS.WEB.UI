@@ -132,6 +132,9 @@
   <data name="External" xml:space="preserve">
     <value>External</value>
   </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
   <data name="InActive" xml:space="preserve">
     <value>InActive</value>
   </data>

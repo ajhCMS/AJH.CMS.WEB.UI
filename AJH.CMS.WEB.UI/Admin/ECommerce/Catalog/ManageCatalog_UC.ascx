@@ -37,6 +37,7 @@
     <ul class="tabnav">
         <li id="liCatalogDetails"><a href="#<%=dvCatalogDetails.ClientID %>">Catalog Details</a></li>
         <li id="liCatalogProducts"><a href="#<%=dvCatalogProducts.ClientID %>">Catalog Products</a></li>
+        <li id="li1"><a href="#<%=dvCatalogImage.ClientID %>">Catalog Images</a></li>
     </ul>
     <div id="dvCatalogDetails" runat="server" class="tabdiv">
         <asp:UpdatePanel ID="upnlCatalogItem" runat="server" UpdateMode="Conditional">
@@ -78,18 +79,6 @@
                             </td>
                             <td>
                                 <asp:CheckBox ID="cbIsPublishedOnslider" runat="server" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:Label ID="lblUpload" runat="server" Text="Upload" AssociatedControlID="ucSWFUpload"></asp:Label>
-                            </td>
-                            <td>
-                                <controls:SWFUpload_UC ID="ucSWFUpload" ValidationGroup="AddEditCatalog" ErrorText="*"
-                                    ErrorMessage="Please wait while the upload finish" runat="server" UploadPage="~/Controls/SWFUpload/frmSWFUpload.ashx"
-                                    ProgressTitle="Files Upload" TotalFilesQueueLimit="1" TotalFilesUploadLimit="1"
-                                    IsImage="true" UploadFileSizeLimit="15 MB" FileTypeDescription="Images" FileTypes="*.gif; *.png; *.jpg; *.jpeg; *.bmp"
-                                    ButtonText="Upload" />
                             </td>
                         </tr>
                         <tr>
@@ -171,6 +160,74 @@
                     <asp:ValidationSummary ID="valsummaryCatalog" runat="server" ValidationGroup="AddEditCatalog"
                         HeaderText="Please review the following field(s):" DisplayMode="BulletList" ShowMessageBox="true"
                         ShowSummary="false" />
+                    </div>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+    <div id="dvCatalogImage" runat="server" class="tabdiv">
+        <asp:UpdatePanel ID="upnlCatalogImage" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <asp:Panel ID="pnlCatalogImages" runat="server">
+                    <div class="grid-actions">
+                        <asp:ImageButton ID="ibtnDeleteCatalogImage" runat="server" ImageUrl="~/App_Themes/image/delete.png"
+                            ToolTip="Delete" NotificationOperationDone="true"></asp:ImageButton>
+                        <asp:ImageButton ID="ibtnAddCatalogImage" runat="server" ImageUrl="~/App_Themes/image/add.png"
+                            ToolTip="Add" CausesValidation="False"></asp:ImageButton>
+                    </div>
+                    <div class="grid-headers">
+                        <asp:Label ID="lblCatalogImage" runat="server" Text="Catalog Images"></asp:Label>
+                    </div>
+                    <div>
+                        <asp:DataList ID="dlsCatalogImage" runat="server" RepeatLayout="Table" RepeatColumns="4"
+                            CssClass="grd" RepeatDirection="Vertical" Width="100%">
+                            <ItemTemplate>
+                                <div class="gallery-img">
+                                    <input type="hidden" id="hdnID" runat="server" value='<%# ((AJH.CMS.Core.Entities.CatalogImage)Container.DataItem).ID%>' />
+                                    <asp:Image runat="server" ID="imgCatalogImage" Width="70" Height="70" ImageUrl='<%# GetCatalogImageFile(((AJH.CMS.Core.Entities.CatalogImage)Container.DataItem).Image)%>' />
+                                </div>
+                                <div class="gallery-name">
+                                    <asp:CheckBox ID="chkItem" runat="server" />
+                                    <asp:LinkButton ID="lblName" runat="server" Text="Edit" CommandArgument='<%# ((AJH.CMS.Core.Entities.CatalogImage)Container.DataItem).ID%>'
+                                        CommandName="EditCatalogImage"></asp:LinkButton>
+                                </div>
+                                <div class="glry-item">
+                                </div>
+                            </ItemTemplate>
+                        </asp:DataList>
+                    </div>
+                </asp:Panel>
+                <asp:Panel ID="pnlCatalogImageDetails" runat="server" Visible="false">
+                    <div id="dvCatalogImageProblems" runat="server" class="dv-problem">
+                    </div>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblIsCoverImage" runat="server" Text="CoverImage" AssociatedControlID="cbIsCoverImage"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:CheckBox ID="cbIsCoverImage" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblImage" runat="server" Text="Image" AssociatedControlID="ucSWFUploadCatalogImage"></asp:Label>
+                            </td>
+                            <td>
+                                <controls:SWFUpload_UC ID="ucSWFUploadCatalogImage" runat="server" UploadPage="~/Controls/SWFUpload/frmSWFUpload.ashx"
+                                    ProgressTitle="Files Upload" TotalFilesQueueLimit="10" TotalFilesUploadLimit="10"
+                                    UploadFileSizeLimit="20 MB" OnUploadComplete="" FileTypeDescription="Images"
+                                    ValidationGroup="AddEditCatalogImage" FileTypes="*.gif; *.png; *.jpg; *.jpeg; *.bmp"
+                                    ButtonImageUrl="~/App_Themes/Image/button_upload.png" ButtonTextLeftPadding="12"
+                                    ButtonTextTopPadding="3" ButtonText="Click To Upload" />
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="footer-buttons">
+                        <asp:Button ID="btnSaveCatalogImage" CssClass="btn" runat="server" Width="60px" Text="Save"
+                            NotificationOperationDone="true" ValidationGroup="AddEditCatalogImage" />
+                        <asp:Button ID="btnUpdateCatalogImage" CssClass="btn" runat="server" Width="60px"
+                            Text="Update" NotificationOperationDone="true" ValidationGroup="AddEditCatalogImage" />
                     </div>
                 </asp:Panel>
             </ContentTemplate>

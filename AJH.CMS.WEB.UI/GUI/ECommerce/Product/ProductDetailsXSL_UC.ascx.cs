@@ -6,6 +6,7 @@ using AJH.CMS.Core.Entities;
 using AJH.CMS.WEB.UI.Utilities;
 using AJH.CMS.Core.Configuration;
 using System.Xml;
+using System.Text.RegularExpressions;
 
 namespace AJH.CMS.WEB.UI
 {
@@ -69,11 +70,15 @@ namespace AJH.CMS.WEB.UI
                 productElement.Attributes.Append(attr);
 
                 attr = xmlDoc.CreateAttribute("Name");
-                attr.Value = product.Name.ToString();
+                attr.Value = product.Name;
                 productElement.Attributes.Append(attr);
 
                 attr = xmlDoc.CreateAttribute("Description");
-                attr.Value = product.Description.ToString();
+                attr.Value = product.Description;
+                productElement.Attributes.Append(attr);
+
+                attr = xmlDoc.CreateAttribute("Details");
+                attr.Value = product.SizeChart;
                 productElement.Attributes.Append(attr);
 
                 List<ProductImage> productImages =

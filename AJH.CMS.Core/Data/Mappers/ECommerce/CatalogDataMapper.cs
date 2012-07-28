@@ -78,11 +78,6 @@ namespace AJH.CMS.Core.Data
                 sqlParameter.Value = CatalogEntity.IsGalleryOnly;
                 sqlCommand.Parameters.Add(sqlParameter);
 
-                sqlParameter = new SqlParameter(PN_CATALOG_IMAGE, System.Data.SqlDbType.NVarChar);
-                sqlParameter.Direction = System.Data.ParameterDirection.Input;
-                sqlParameter.Value = CatalogEntity.Image;
-                sqlCommand.Parameters.Add(sqlParameter);
-
                 sqlParameter = new SqlParameter(PN_CATALOG_PARENT_CATALOG_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = CatalogEntity.ParentCalalogID;
@@ -179,11 +174,6 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_CATALOG_IS_GALLERY_ONLY, System.Data.SqlDbType.Bit);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = CatalogEntity.IsGalleryOnly;
-                sqlCommand.Parameters.Add(sqlParameter);
-
-                sqlParameter = new SqlParameter(PN_CATALOG_IMAGE, System.Data.SqlDbType.NVarChar);
-                sqlParameter.Direction = System.Data.ParameterDirection.Input;
-                sqlParameter.Value = CatalogEntity.Image;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 sqlParameter = new SqlParameter(PN_CATALOG_PARENT_CATALOG_ID, System.Data.SqlDbType.Int);
@@ -639,10 +629,6 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(CN_CATALOG_IS_GALLERY_ONLY);
             if (!reader.IsDBNull(colIndex))
                 catalog.IsGalleryOnly = reader.GetBoolean(colIndex);
-
-            colIndex = reader.GetOrdinal(CN_CATALOG_IMAGE);
-            if (!reader.IsDBNull(colIndex))
-                catalog.Image = reader.GetString(colIndex);
 
             colIndex = reader.GetOrdinal(CN_CATALOG_PARENT_CATALOG_ID);
             if (!reader.IsDBNull(colIndex))

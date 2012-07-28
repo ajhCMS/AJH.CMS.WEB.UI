@@ -21,9 +21,7 @@ namespace AJH.CMS.WEB.UI
         void btnSend_Click(object sender, EventArgs e)
         {
             string message = "<table><tr><td>Name:</td><td>" + Server.HtmlEncode(txtName.Text) + "</td></tr>";
-            message += "<tr><td>Company:</td>" + "<td>" + Server.HtmlEncode(txtCompany.Text) + "</td></tr>";
             message += "<tr><td>Email:</td>" + "<td>" + Server.HtmlEncode(txtEmail.Text) + "</td></tr>";
-            message += "<tr><td>Division:</td>" + "<td>" + Server.HtmlEncode(ddlDivision.SelectedValue) + "</td></tr>";
             message += "<tr><td>Subject:</td>" + "<td>" + Server.HtmlEncode(txtSubject.Text) + "</td></tr>";
             message += "<tr><td>Message:</td>" + "<td>" + Server.HtmlEncode(txtMessage.Text) + "</td></tr>";
 
@@ -31,6 +29,9 @@ namespace AJH.CMS.WEB.UI
 
             mail.From = new MailAddress(CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.EmailInfo);
             mail.To.Add(CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.EmailAdmin);
+
+            if (cbSendCopyToYourSelf.Checked)
+                mail.To.Add(txtEmail.Text);
 
             mail.Subject = Server.HtmlEncode(txtSubject.Text);
             mail.Body = message;

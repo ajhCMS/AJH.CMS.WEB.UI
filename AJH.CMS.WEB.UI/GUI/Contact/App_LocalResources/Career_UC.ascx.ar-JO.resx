@@ -270,4 +270,22 @@
   <data name="valSumContactUsResource1.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="lstitmCashier.Text" xml:space="preserve">
+    <value>أمين صندوق</value>
+  </data>
+  <data name="lstitmRoastingMan.Text" xml:space="preserve">
+    <value>رجل تحميص</value>
+  </data>
+  <data name="lstitmsales.Text" xml:space="preserve">
+    <value>المبيعات</value>
+  </data>
+  <data name="lstitmSalesRep.Text" xml:space="preserve">
+    <value>مندوب مبيعات</value>
+  </data>
+  <data name="lstitmStockKeeper.Text" xml:space="preserve">
+    <value>اميين مستودع</value>
+  </data>
+  <data name="lstitmSupervisor.Text" xml:space="preserve">
+    <value>مشرف</value>
+  </data>
 </root>
