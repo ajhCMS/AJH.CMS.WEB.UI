@@ -23,10 +23,10 @@ namespace AJH.CMS.WEB.UI
             if (!IsPostBack)
             {
                 //Localy to avoid Access Denied :)
-                if (!UserManager.CheckIfHasAccessCMS(Request.Url.AbsolutePath))
-                {
-                    Response.Redirect(CMSConfig.CMSAdminPages.GetAdminAccessDenied(), true);
-                }
+                //if (!UserManager.CheckIfHasAccessCMS(Request.Url.AbsolutePath))
+                //{
+                //    Response.Redirect(CMSConfig.CMSAdminPages.GetAdminAccessDenied(), true);
+                //}
             }
         }
         #endregion

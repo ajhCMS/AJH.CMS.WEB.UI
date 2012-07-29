@@ -1445,6 +1445,7 @@
     <Content Include="GUI\Gallery\GalleryServiceXSL_UC.ascx" />
     <Content Include="GUI\Gallery\GalleryXSL_UC.ascx" />
     <Content Include="GUI\HTML\HTMLViewer_UC.ascx" />
+    <Content Include="GUI\Menu\MenuItemTemplateXSL_UC.ascx" />
     <Content Include="GUI\Menu\MenuItemParentChildXSL_UC.ascx" />
     <Content Include="GUI\Menu\MenuParentChildXSL_UC.ascx" />
     <Content Include="GUI\Menu\SitePathXSL_UC.ascx" />
@@ -2064,6 +2065,13 @@
     </Compile>
     <Compile Include="GUI\HTML\HTMLViewer_UC.ascx.designer.cs">
       <DependentUpon>HTMLViewer_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Menu\MenuItemTemplateXSL_UC.ascx.cs">
+      <DependentUpon>MenuItemTemplateXSL_UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Menu\MenuItemTemplateXSL_UC.ascx.designer.cs">
+      <DependentUpon>MenuItemTemplateXSL_UC.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Menu\MenuItemParentChildXSL_UC.ascx.cs">
       <DependentUpon>MenuItemParentChildXSL_UC.ascx</DependentUpon>

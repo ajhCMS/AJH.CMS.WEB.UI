@@ -73,6 +73,11 @@ namespace AJH.CMS.Core.Data
             return MenuDataMapper.GetMenu(ID);
         }
 
+        public static Menu GetMenuByIdAndLanguage(int MenuID, int languageID)
+        {
+            return MenuDataMapper.GetMenuByIdAndLanguage(MenuID, languageID);
+        }
+
         public static Menu GetMenu(int parentObjID, int languageID)
         {
             return MenuDataMapper.GetMenu(parentObjID, languageID);
@@ -117,6 +122,29 @@ namespace AJH.CMS.Core.Data
                 xmlWriter.Close();
             }
             return MenuCategoryPath;
+        }
+
+        public static string GetMenuItemTemplateXml(int menuId, int languageId)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+
+            XmlElement xmlRoot = xmlDoc.CreateElement("Menus");
+            xmlDoc.AppendChild(xmlRoot);
+
+            XmlElement menuItemElement = xmlDoc.CreateElement("Menu");
+            xmlRoot.AppendChild(menuItemElement);
+
+            Menu menu = GetMenuByIdAndLanguage(menuId, languageId);
+            if (menu != null)
+            {
+                SetAttributeMenuNode(menuItemElement, menu);
+
+                XmlAttribute attr = xmlDoc.CreateAttribute("Details");
+                attr.Value = menu.Details;
+                menuItemElement.Attributes.Append(attr);
+            }
+
+            return xmlDoc.OuterXml;
         }
 
         private static void SetElementChildMenu(XmlElement xmlParent, List<Menu> menus, int ParentMenuID)

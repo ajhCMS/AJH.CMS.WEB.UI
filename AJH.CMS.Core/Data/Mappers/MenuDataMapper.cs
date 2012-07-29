@@ -65,6 +65,7 @@ namespace AJH.CMS.Core.Data
         internal const string SN_MENU_GET_BY_PAGE = "[SETUP].[MenuGetByPage]";
         internal const string SN_MENU_GET_BY_PARENT_OBJ_ID = "[SETUP].[MenuGetByParentObjID]";
         internal const string SN_MENU_GET_PARENT_OBJ_BY_CATEGORY = "[SETUP].[MenuGetParentObjByCategory]";
+        internal const string SN_MENU_GET_BY_ID_AND_LANGAUGE = "[SETUP].[MenuGetByIDAndLang]";
 
         #endregion
 
@@ -662,6 +663,47 @@ namespace AJH.CMS.Core.Data
             return menu;
         }
 
+        internal static Menu GetMenuByIdAndLanguage(int MenuID, int languageID)
+        {
+            Menu menu = null;
+
+            using (SqlConnection sqlConnection = new SqlConnection(CMSCoreBase.CMSCoreConnectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(SN_MENU_GET_BY_ID_AND_LANGAUGE, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlParameter sqlParameter = new SqlParameter(PN_MENU_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = MenuID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_MENU_LANGUAGE_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = languageID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PublishDataMapper.PN_PUBLISH_MODULE_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = (int)AJH.CMS.Core.Enums.CMSEnums.Modules.Menu;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlCommand.Connection.Open();
+                using (SqlDataReader reader = sqlCommand.ExecuteReader(System.Data.CommandBehavior.CloseConnection))
+                {
+                    while (reader.Read())
+                    {
+                        if (menu == null)
+                            menu = new Menu();
+                        FillFromReader(menu, reader);
+                    }
+                    reader.Close();
+                    sqlCommand.Connection.Close();
+                }
+            }
+            return menu;
+        }
+
+
         internal static Menu GetMenu(int parentObjID, int languageID)
         {
             Menu menu = null;
@@ -815,7 +857,7 @@ namespace AJH.CMS.Core.Data
                 menu.IsPublished = reader.GetInt32(colIndex) == (int)AJH.CMS.Core.Enums.CMSEnums.PublishType.PublishNow;
         }
 
-        internal static void FillFromReaderByParentObjID(Menu menu, SqlDataReader reader)  
+        internal static void FillFromReaderByParentObjID(Menu menu, SqlDataReader reader)
         {
             int colIndex = 0;
             colIndex = reader.GetOrdinal(CN_MENU_CATEGORY_ID);

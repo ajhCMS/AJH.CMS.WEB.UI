@@ -12,6 +12,8 @@
 <%@ Register Src="~/GUI/ECommerce/Product/ProductDetailsXSL_UC.ascx" TagName="ucProductDetails"
     TagPrefix="controls" %>
 <%@ Register Src="~/GUI/Menu/SitePathXSL_UC.ascx" TagName="ucSitePathhhh" TagPrefix="controls" %>
+<%@ Register Src="~/GUI/Menu/MenuItemTemplateXSL_UC.ascx" TagName="ucSitePathhssssshh"
+    TagPrefix="controls" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -20,7 +22,7 @@
     <form id="form1" runat="server">
     <asp:ScriptManager ID="sManager1" runat="server">
     </asp:ScriptManager>
-    <controls:ucSitePathhhh ID="ucpp" runat="server" />
+    <controls:ucSitePathhssssshh ID="ucpp" runat="server" />
     </form>
 </body>
 </html>
