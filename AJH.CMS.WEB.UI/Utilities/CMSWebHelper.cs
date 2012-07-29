@@ -40,6 +40,12 @@ namespace AJH.CMS.WEB.UI.Utilities
         {
             return CMSContext.CurrentPath + "Portals\\Portal" + CMSContext.PortalID + "\\Menu\\" + GetMenuCategoryFileName(CategoryID);
         }
+
+        public static string GetMenuFolderPath()
+        {
+            return CMSContext.CurrentPath + "Portals\\Portal" + CMSContext.PortalID + "\\Menu\\";
+        }
+
         #endregion
 
         #region Style

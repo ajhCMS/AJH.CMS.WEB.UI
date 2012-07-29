@@ -83,10 +83,23 @@ namespace AJH.CMS.WEB.UI.Admin
             if (categoryID > 0)
             {
                 string menuCategoryPath = CMSWebHelper.GetMenuPathByCategory(categoryID);
-                File.Delete(menuCategoryPath);
+
+                //Delete All XML Menu Files:
+                string[] menuFiles = Directory.GetFiles(CMSWebHelper.GetMenuFolderPath());
+
+                if (menuFiles != null && menuFiles.Length > 0)
+                {
+                    foreach (string fileName in menuFiles)
+                    {
+                        File.Delete(fileName);
+                    }
+                }
+
                 MenuManager.GetMenuCategoryXMLPath(menuCategoryPath, categoryID, CMSContext.LanguageID);
+
                 ExitMode();
                 upnlMenuItem.Update();
+
             }
         }
         #endregion
@@ -405,7 +418,7 @@ namespace AJH.CMS.WEB.UI.Admin
 
                         menu.IsDeleted = false;
                         menu.KeyWords = string.Empty;
-                        
+
                         menu.MenuType = (CMSEnums.MenuType)Convert.ToInt32(ddlMenuType.SelectedValue);
                         menu.Name = txtName.Text;
                         menu.Order = Convert.ToInt32(txtOrderNumber.Text);
