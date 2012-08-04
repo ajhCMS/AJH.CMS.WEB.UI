@@ -80,7 +80,7 @@
                         <asp:Label ID="lblDescription" runat="server" Text="Description" AssociatedControlID="txtDescription"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Height="17px"></asp:TextBox>
+                        <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Height="60px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvDescription" runat="server" ControlToValidate="txtDescription"
                             ValidationGroup="AddEditMenu" Text="*" Display="Dynamic" ErrorMessage="Description"></asp:RequiredFieldValidator>
                     </td>
