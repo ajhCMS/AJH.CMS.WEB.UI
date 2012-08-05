@@ -43,5 +43,14 @@ namespace AJH.CMS.Core.Configuration
                 return this["EmailInfo"] as string;
             }
         }
+
+        [ConfigurationProperty("EmailInfo2", IsRequired = true)]
+        public string EmailInfo2
+        {
+            get
+            {
+                return this["EmailInfo2"] as string;
+            }
+        }
     }
 }

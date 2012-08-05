@@ -41,8 +41,8 @@ namespace AJH.CMS.WEB.UI
             MailMessage mail = new MailMessage();
 
 
-            mail.From = new MailAddress(CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.EmailInfo);
-            mail.To.Add(CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.EmailAdmin);
+            mail.From = new MailAddress(CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.EmailInfo2);
+            mail.To.Add(CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.EmailInfo2);
 
             mail.Subject = Server.HtmlEncode("New Career Application");
             mail.Body = message;

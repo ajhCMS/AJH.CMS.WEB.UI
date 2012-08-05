@@ -28,7 +28,7 @@ namespace AJH.CMS.WEB.UI
             MailMessage mail = new MailMessage();
 
             mail.From = new MailAddress(CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.EmailInfo);
-            mail.To.Add(CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.EmailAdmin);
+            mail.To.Add(CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.EmailInfo);
 
             if (cbSendCopyToYourSelf.Checked)
                 mail.To.Add(txtEmail.Text);
