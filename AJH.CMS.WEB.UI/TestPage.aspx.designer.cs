@@ -37,6 +37,6 @@ namespace AJH.CMS.WEB.UI {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AJH.CMS.WEB.UI.MenuItemTemplateXSL_UC ucpp;
+        protected global::AJH.CMS.WEB.UI.MenuXSL_UC ucpp;
     }
 }

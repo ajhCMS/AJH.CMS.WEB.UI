@@ -113,7 +113,7 @@ namespace AJH.CMS.Core.Data
                     XmlElement xmlEle = xmlDoc.CreateElement("Menu");
                     xmlRoot.AppendChild(xmlEle);
                     SetAttributeMenuNode(xmlEle, item);
-                    SetElementChildMenu(xmlEle, menus, item.ID);
+                    SetElementChildMenu(xmlEle, menus, item.MainParentID);//Id Of Main Parent (PArent Of Parent Obj Id to Handle Language Issue)
                 }
 
                 XmlWriter xmlWriter = XmlWriter.Create(MenuCategoryPath);

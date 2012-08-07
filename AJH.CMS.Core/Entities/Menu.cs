@@ -101,6 +101,12 @@ namespace AJH.CMS.Core.Entities
             internal set;
         }
 
+        public int MainParentID
+        {
+            get;
+            set;
+        }
+
         #region IEntity Members
 
         public int ID
@@ -151,6 +157,7 @@ namespace AJH.CMS.Core.Entities
             this.CreatedBy = 0;
             this.ParentObjectID = 0;
             this.IsPublished = false;
+            this.MainParentID = 0;
         }
     }
 }
