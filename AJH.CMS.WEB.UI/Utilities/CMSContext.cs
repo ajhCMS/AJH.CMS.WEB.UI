@@ -74,14 +74,23 @@ namespace AJH.CMS.WEB.UI.Utilities
             }
         }
 
-        public static int UserID
+        public static int CurrentUserID
+        {
+            get
+            {
+                User user = CurrentUser;
+                if (user != null)
+                    return user.ID;
+                return 0;
+            }
+        }
+
+        public static User CurrentUser
         {
             get
             {
                 User user = UserManager.GetCurrentUser();
-                if (user != null)
-                    return user.ID;
-                return 0;
+                return user;
             }
         }
 

@@ -297,7 +297,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     menu.ParentID = Convert.ToInt32(cddParentMenu.SelectedValue);
                     menu.PortalID = CMSContext.PortalID;
                     menu.SEOName = string.Empty;
-                    menu.CreatedBy = CMSContext.UserID;
+                    menu.CreatedBy = CMSContext.CurrentUserID;
 
                     switch (menu.MenuType)
                     {
@@ -495,7 +495,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     menu.ParentID = Convert.ToInt32(cddParentMenu.SelectedValue);
                     menu.PortalID = CMSContext.PortalID;
                     menu.SEOName = string.Empty;
-                    menu.CreatedBy = CMSContext.UserID;
+                    menu.CreatedBy = CMSContext.CurrentUserID;
 
                     switch (menu.MenuType)
                     {
@@ -891,7 +891,7 @@ namespace AJH.CMS.WEB.UI.Admin
         {
             Publish publish = new Publish
             {
-                CreatedBy = CMSContext.UserID,
+                CreatedBy = CMSContext.CurrentUserID,
                 FromDate = DateTime.Now,
                 ToDate = DateTime.Now,
                 LanguageID = CMSContext.LanguageID,

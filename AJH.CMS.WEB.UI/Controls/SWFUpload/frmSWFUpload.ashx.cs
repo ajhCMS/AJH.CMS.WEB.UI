@@ -18,7 +18,7 @@ namespace AJH.CMS.WEB.UI.Controls.SWFUpload
         {
             try
             {
-                if (CMSContext.UserID > 0)
+                if (CMSContext.CurrentUserID > 0)
                 {
                     if (context.Request.Files.Count > 0)
                     {

@@ -158,7 +158,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 category.Order = Convert.ToInt32(txtOrderNumber.Text);
                 category.PortalID = CMSContext.PortalID;
                 category.ParentID = Convert.ToInt32(cddParentCategory.SelectedValue);
-                category.CreatedBy = CMSContext.UserID;
+                category.CreatedBy = CMSContext.CurrentUserID;
                 CategoryManager.Add(category);
 
                 BeginAddMode();

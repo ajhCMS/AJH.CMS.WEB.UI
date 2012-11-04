@@ -130,7 +130,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 template.LanguageID = CMSContext.LanguageID;
                 template.Name = txtName.Text;
                 template.PortalID = CMSContext.PortalID;
-                template.CreatedBy = CMSContext.UserID;
+                template.CreatedBy = CMSContext.CurrentUserID;
                 TemplateManager.Add(template);
                 BeginAddMode();
                 FillTemplates(-1);

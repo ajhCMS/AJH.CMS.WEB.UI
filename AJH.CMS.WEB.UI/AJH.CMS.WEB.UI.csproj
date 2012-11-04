@@ -152,7 +152,6 @@
     <Content Include="Admin\AdminFiles\XmlFile\AdminMenuXML.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Admin\WebForm1.aspx" />
     <Content Include="Admin\XSLTemplate\FrmXSLTemplate.aspx" />
     <Content Include="Admin\XSLTemplate\ManageXSLTemplate_UC.ascx" />
     <Content Include="App_Themes\Admin\CMS.css" />
@@ -1936,13 +1935,6 @@
     </Compile>
     <Compile Include="Admin\Template\ManageTemplate_UC.ascx.designer.cs">
       <DependentUpon>ManageTemplate_UC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\XSLTemplate\FrmXSLTemplate.aspx.cs">
       <DependentUpon>FrmXSLTemplate.aspx</DependentUpon>

@@ -130,7 +130,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 cmsControl.Description = txtDescription.Text;
                 cmsControl.UserControlPath = txtUserControlPath.Text;
                 cmsControl.ModuleID = Convert.ToInt32(cddModule.SelectedValue);
-                cmsControl.CreatedBy = CMSContext.UserID;
+                cmsControl.CreatedBy = CMSContext.CurrentUserID;
                 CMSControlManager.Add(cmsControl);
 
                 BeginAddMode();

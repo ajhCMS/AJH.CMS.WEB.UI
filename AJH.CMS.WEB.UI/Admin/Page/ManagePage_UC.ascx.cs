@@ -139,7 +139,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 page.SEOName = txtSEOName.Text;
                 page.TemplateID = Convert.ToInt32(cddTemplate.SelectedValue);
                 page.Title = txtTitle.Text;
-                page.CreatedBy = CMSContext.UserID;
+                page.CreatedBy = CMSContext.CurrentUserID;
                 PageManager.Add(page);
                 BeginAddMode();
                 FillPages(-1);

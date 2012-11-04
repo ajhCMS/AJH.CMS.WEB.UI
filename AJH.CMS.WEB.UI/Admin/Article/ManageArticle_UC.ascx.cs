@@ -358,7 +358,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     article.PortalID = CMSContext.PortalID;
                     article.SEOName = string.Empty;
                     article.URL = txtURL.Text;
-                    article.CreatedBy = CMSContext.UserID;
+                    article.CreatedBy = CMSContext.CurrentUserID;
                     ArticleManager.Add(article);
 
                     if (article.ArticleType == CMSEnums.ArticleType.Internal)
@@ -482,7 +482,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     article.PortalID = CMSContext.PortalID;
                     article.SEOName = string.Empty;
                     article.URL = txtURL.Text;
-                    article.CreatedBy = CMSContext.UserID;
+                    article.CreatedBy = CMSContext.CurrentUserID;
                     article.LanguageID = CMSContext.LanguageID;
 
                     if (SelectedParentArticleObjID > 0)
@@ -843,7 +843,7 @@ namespace AJH.CMS.WEB.UI.Admin
         {
             Publish publish = new Publish
             {
-                CreatedBy = CMSContext.UserID,
+                CreatedBy = CMSContext.CurrentUserID,
                 LanguageID = CMSContext.LanguageID,
                 ModuleID = AJH.CMS.Core.Enums.CMSEnums.Modules.Article,
                 ObjectID = articleID,

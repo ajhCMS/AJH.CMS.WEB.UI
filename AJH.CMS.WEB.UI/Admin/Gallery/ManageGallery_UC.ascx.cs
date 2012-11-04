@@ -200,7 +200,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     gallery.Order = 0;
                     gallery.PortalID = CMSContext.PortalID;
                     gallery.URL = txtAddURL.Text;
-                    gallery.CreatedBy = CMSContext.UserID;
+                    gallery.CreatedBy = CMSContext.CurrentUserID;
                     switch (gallery.GalleryItemType)
                     {
                         case CMSEnums.GalleryItemType.Internal:
@@ -679,7 +679,7 @@ namespace AJH.CMS.WEB.UI.Admin
         {
             Publish publish = new Publish
             {
-                CreatedBy = CMSContext.UserID,
+                CreatedBy = CMSContext.CurrentUserID,
                 LanguageID = CMSContext.LanguageID,
                 ModuleID = AJH.CMS.Core.Enums.CMSEnums.Modules.Gallery,
                 ObjectID = galleryID,

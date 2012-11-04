@@ -130,7 +130,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 htmlBlock.Name = txtName.Text;
                 htmlBlock.Details = txtDetails.Text;
                 htmlBlock.PortalID = CMSContext.PortalID;
-                htmlBlock.CreatedBy = CMSContext.UserID;
+                htmlBlock.CreatedBy = CMSContext.CurrentUserID;
                 HtmlBlockManager.Add(htmlBlock);
 
                 BeginAddMode();

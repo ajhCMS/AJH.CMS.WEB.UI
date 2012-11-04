@@ -133,7 +133,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 style.Name = txtName.Text;
                 style.Details = txtDetails.Text;
                 style.PortalID = CMSContext.PortalID;
-                style.CreatedBy = CMSContext.UserID;
+                style.CreatedBy = CMSContext.CurrentUserID;
                 StyleManager.Add(style);
                 string StyleFileName = CMSWebHelper.GetStyleFileName(style.ID);
                 style.FileName = StyleFileName;

@@ -140,7 +140,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 xslTemplate.Name = txtName.Text;
                 xslTemplate.Details = txtDetails.Text;
                 xslTemplate.PortalID = CMSContext.PortalID;
-                xslTemplate.CreatedBy = CMSContext.UserID;
+                xslTemplate.CreatedBy = CMSContext.CurrentUserID;
 
                 ValidateXSL(xslTemplate.Details);
 
