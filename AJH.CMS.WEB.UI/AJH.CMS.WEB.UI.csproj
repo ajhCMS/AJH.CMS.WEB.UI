@@ -1473,6 +1473,15 @@
     <Content Include="Scripts\jScrollPane.js" />
     <Content Include="Scripts\sprinkle.js" />
     <Content Include="TestPage.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Article\FrmArticle.aspx.cs">
@@ -2261,15 +2270,6 @@
     <None Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\Thumbs.db" />
     <None Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\Thumbs.db" />
     <Content Include="Services\Gallery\GalleryXSL_UC.ascx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <Content Include="Services\Gallery\frmGalleryServiceXsl.ashx" />
   </ItemGroup>
   <ItemGroup>
