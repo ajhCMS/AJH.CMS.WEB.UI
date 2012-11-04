@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [ECOMMERCE].[SupplierDeleteLogical]
+	@P_SUPPLIER_ID int
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+	update  [ECOMMERCE].[SUPPLIER] set
+		[SUPPLIER_IS_DELETED] = 1
+		where
+		[SUPPLIER_ID] = @P_SUPPLIER_ID
+		
+		END

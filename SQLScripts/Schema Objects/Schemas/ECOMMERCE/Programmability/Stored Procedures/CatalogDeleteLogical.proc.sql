@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [ECOMMERCE].[CatalogDeleteLogical]
+	@P_CATALOG_ID int
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+	update  [ECOMMERCE].[CATALOG] set
+		[CATALOG_IS_DELETED] = 1
+		where
+		[CATALOG_ID] = @P_CATALOG_ID
+		
+		END

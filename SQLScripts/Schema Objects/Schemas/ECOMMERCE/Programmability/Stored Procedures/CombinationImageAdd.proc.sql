@@ -1,0 +1,24 @@
+﻿CREATE PROCEDURE [ECOMMERCE].[CombinationImageAdd]
+
+	@P_COMBINATION_IMAGE_ID	int,
+	@P_COMBINATION_ID	int	
+    
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+	insert into 
+	  [ECOMMERCE].[COMBINATION_IMAGE]
+		(
+		COMBINATION_IMAGE_ID,
+		COMBINATION_ID	
+		)
+		values 
+		(
+		@P_COMBINATION_IMAGE_ID,
+		@P_COMBINATION_ID
+		)
+		
+		
+	
+END

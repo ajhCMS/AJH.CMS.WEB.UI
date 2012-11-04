@@ -1,0 +1,12 @@
+﻿CREATE PROCEDURE [SECURITY].[RoleUserDelete]
+	@P_ROLE_ID int,
+	@P_USER_ID int
+AS
+BEGIN
+	SET NOCOUNT ON;
+	Delete from [SECURITY].[ROLE_USER]
+		Where
+		(@P_ROLE_ID = -1 or [ROLE_USER_ROLE_ID] = @P_ROLE_ID)
+		and
+		(@P_USER_ID = -1 or [ROLE_USER_USER_ID] = @P_USER_ID)
+END

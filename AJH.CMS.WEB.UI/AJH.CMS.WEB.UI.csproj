@@ -69,8 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AdminFiles\XslFile\AdminDashboardXSL.xslt" />
-    <Content Include="Admin\AdminFiles\XslFile\AdminParentMenuXSL.xslt" />
-    <Content Include="Admin\AdminFiles\XslFile\AdminChildMenuXSL.xslt" />
+    <Content Include="Admin\AdminFiles\XslFile\AdminParentMenuXSL.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Admin\AdminFiles\XslFile\AdminChildMenuXSL.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Admin\Article\FrmArticle.aspx" />
     <Content Include="Admin\Article\ManageArticle_UC.ascx" />
     <Content Include="Admin\Category\FrmCategory.aspx" />

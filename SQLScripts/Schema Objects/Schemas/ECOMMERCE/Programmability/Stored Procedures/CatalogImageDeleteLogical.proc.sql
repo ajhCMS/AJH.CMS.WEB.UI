@@ -1,0 +1,15 @@
+﻿create PROCEDURE [ECOMMERCE].[CatalogImageDeleteLogical]
+	
+		@P_CATALOG_IMAGE_ID int
+		
+    
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	update [ECOMMERCE].[CATALOG_IMAGE]
+	set CATALOG_IMAGE_IS_DELETED = 1
+	where
+	 CATALOG_IMAGE_ID = @P_CATALOG_IMAGE_ID
+	
+END

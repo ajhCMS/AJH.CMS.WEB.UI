@@ -1,0 +1,50 @@
+﻿CREATE PROCEDURE [ECOMMERCE].[ProductImageUpdate]
+
+	@P_PROD_IMAGE_ID	int,
+	@P_PROD_PRODUCT_ID	int,
+	@P_PROD_IMAGE_NAME	nvarchar(500),
+	@P_PROD_IMAGE_IS_COVER_IMAGE bit,
+	
+	@P_PROD_IMAGE_CAPTION	nvarchar(500),
+	@P_MODULE_ID INT,
+	@P_ECO_LAN_LAN_ID INT
+    
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+	DECLARE @Transaction VARCHAR(100);
+	SELECT @Transaction = 'Transaction';
+
+	BEGIN TRANSACTION @Transaction;
+
+	update [ECOMMERCE].[PRODUCT_IMAGE]
+		set
+			PROD_PRODUCT_ID = @P_PROD_PRODUCT_ID	,
+			PROD_IMAGE_NAME = @P_PROD_IMAGE_NAME,
+			PROD_IMAGE_IS_COVER_IMAGE = @P_PROD_IMAGE_IS_COVER_IMAGE
+	
+		where PROD_IMAGE_ID = @P_PROD_IMAGE_ID
+		
+		
+		update [ECOMMERCE].[ECOMMERCE_LANGUAGE]
+			set
+				[ECO_LAN_NAME]= @P_PROD_IMAGE_CAPTION
+				
+				WHERE 
+				[ECO_LAN_OBJ_ID] = @P_PROD_IMAGE_ID
+			AND
+				[ECO_LAN_MODULE_ID] = @P_MODULE_ID
+			AND
+				[ECO_LAN_LAN_ID] = @P_ECO_LAN_LAN_ID
+			
+			IF @@ERROR != 0
+            BEGIN 
+                  ROLLBACK TRANSACTION
+                  RETURN
+            END
+
+			COMMIT TRANSACTION @Transaction
+
+			
+END

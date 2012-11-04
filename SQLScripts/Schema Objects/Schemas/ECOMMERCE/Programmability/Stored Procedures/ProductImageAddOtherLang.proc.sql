@@ -1,0 +1,29 @@
+﻿create PROCEDURE [ECOMMERCE].[ProductImageAddOtherLang]
+
+	@P_PROD_IMAGE_ID int,
+	@P_PROD_PRODUCT_ID	int,
+	
+	@P_PROD_IMAGE_CAPTION	nvarchar(500),
+	@P_MODULE_ID INT,
+	@P_ECO_LAN_LAN_ID INT
+    
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+		INSERT INTO [ECOMMERCE].[ECOMMERCE_LANGUAGE]
+			(
+				[ECO_LAN_OBJ_ID],
+				[ECO_LAN_MODULE_ID],
+				[ECO_LAN_LAN_ID],		
+				[ECO_LAN_NAME]	
+			)
+			VALUES
+			(
+				@P_PROD_IMAGE_ID,
+				@P_MODULE_ID,
+				@P_ECO_LAN_LAN_ID,
+				@P_PROD_IMAGE_CAPTION
+			)
+			
+END

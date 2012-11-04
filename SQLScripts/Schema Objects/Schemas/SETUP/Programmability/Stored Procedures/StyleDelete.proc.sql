@@ -1,0 +1,8 @@
+﻿CREATE PROCEDURE [SETUP].[StyleDelete]
+	@P_STYLE_ID int
+AS
+BEGIN
+	SET NOCOUNT ON;
+	Delete from [SETUP].[STYLE]
+		Where [STYLE_ID] = @P_STYLE_ID
+END

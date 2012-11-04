@@ -1,0 +1,9 @@
+﻿CREATE PROCEDURE [SECURITY].[UserDeleteLogical]
+	@P_USER_ID int
+AS
+BEGIN
+	SET NOCOUNT ON;
+	Update [SECURITY].[USER] set
+	[USER_IS_DELETED] = 1
+	Where [USER_ID] = @P_USER_ID
+END

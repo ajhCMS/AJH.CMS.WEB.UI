@@ -1,0 +1,9 @@
+﻿CREATE PROCEDURE [SECURITY].[FormDeleteLogical]
+	@P_FORM_ID int
+AS
+BEGIN
+	SET NOCOUNT ON;
+	Update [SECURITY].[FORM] set
+	[FORM_IS_DELETED] = 1
+	Where [FORM_ID] = @P_FORM_ID
+END

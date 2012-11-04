@@ -1,0 +1,27 @@
+﻿CREATE PROCEDURE [SECURITY].[UserGetByRoleID]
+	@P_ROLE_ID int
+AS
+BEGIN
+	SET NOCOUNT ON;
+	Select 
+	u.[USER_ID]
+	,u.[USER_NAME]
+	,u.[USER_EMAIL]
+	,u.[USER_PASSWORD]
+	,u.[USER_IS_ACTIVE]
+	,u.[USER_CREATION_DAY]
+	,u.[USER_CREATION_SEC]
+	,u.[USER_IS_DELETED]
+ from
+ [SECURITY].[USER] u
+ Inner Join
+ [SECURITY].[ROLE_USER] ru
+ on
+ u.[USER_ID] = ru.[ROLE_USER_USER_ID]
+ and
+ ru.[ROLE_USER_ROLE_ID] = @P_ROLE_ID
+Where
+	ru.[ROLE_USER_ROLE_ID] = @P_ROLE_ID
+	and
+	u.[USER_IS_DELETED] = 0
+END

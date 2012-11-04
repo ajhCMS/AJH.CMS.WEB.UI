@@ -1,0 +1,33 @@
+﻿CREATE PROCEDURE [SECURITY].[FormRoleGetByUser]
+	@P_USER_ID int
+AS
+BEGIN
+	SET NOCOUNT ON;
+	SELECT
+		fr.[FORM_ROLE_ID]
+		,fr.[FORM_ROLE_FORM_ID]
+		,fr.[FORM_ROLE_ROLE_ID]
+		,fr.[FORM_ROLE_ACCESS_TYPE]
+		,f.[FORM_CODE]
+		,r.[ROLE_NAME]
+	FROM
+	[SECURITY].[FORM_ROLE] fr
+	INNER JOIN
+	[SECURITY].[FORM] f
+	on
+	fr.[FORM_ROLE_FORM_ID] = f.[FORM_ID]
+	INNER JOIN
+	[SECURITY].[ROLE] r
+	on
+	fr.[FORM_ROLE_ROLE_ID] = r.[ROLE_ID]
+	Inner Join
+	[SECURITY].[ROLE_USER] ru
+	on
+	r.[ROLE_ID] = ru.[ROLE_USER_ROLE_ID]
+	where
+	ru.[ROLE_USER_USER_ID] = @P_USER_ID
+	and
+	f.[FORM_IS_DELETED] = 0
+	and
+	r.[ROLE_IS_DELETED] = 0
+END

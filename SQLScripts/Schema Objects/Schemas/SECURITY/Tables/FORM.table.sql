@@ -1,0 +1,10 @@
+﻿CREATE TABLE [SECURITY].[FORM] (
+    [FORM_ID]          INT             IDENTITY (1, 1) NOT NULL,
+    [FORM_NAME]        NVARCHAR (1024) NOT NULL,
+    [FORM_DESCRIPTION] NVARCHAR (1024) NOT NULL,
+    [FORM_URL]         NVARCHAR (MAX)  NOT NULL,
+    [FORM_CODE]        NVARCHAR (1024) NOT NULL,
+    [FORM_MODULE_ID]   INT             NOT NULL,
+    [FORM_IS_DELETED]  BIT             NOT NULL
+);
+

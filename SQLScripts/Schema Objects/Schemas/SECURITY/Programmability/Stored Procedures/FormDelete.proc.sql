@@ -1,0 +1,8 @@
+﻿CREATE PROCEDURE [SECURITY].[FormDelete]
+	@P_FORM_ID int
+AS
+BEGIN
+	SET NOCOUNT ON;
+	Delete from [SECURITY].[FORM]
+		Where [FORM_ID] = @P_FORM_ID
+END

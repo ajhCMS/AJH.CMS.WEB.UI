@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [ECOMMERCE].[FetureDeleteLogical]
+	@P_FEATURE_ID int
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+	update  [ECOMMERCE].[FEATURE] set
+		[FEATURE_IS_DELETED] = 1
+		where
+		[FEATURE_ID] = @P_FEATURE_ID
+		
+		END

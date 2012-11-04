@@ -1,0 +1,8 @@
+﻿CREATE PROCEDURE [SETUP].[PageDelete]
+	@P_PAGE_ID int
+AS
+BEGIN
+	SET NOCOUNT ON;
+	Delete from [SETUP].[PAGE]
+		Where [PAGE_ID] = @P_PAGE_ID
+END

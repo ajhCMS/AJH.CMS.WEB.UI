@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [ECOMMERCE].[ProductDeleteLogical]
+	@P_PRODUCT_ID int
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+	update  [ECOMMERCE].[PRODUCT] set
+		[PRODUCT_IS_DELETED] = 1
+		where
+		[PRODUCT_ID] = @P_PRODUCT_ID
+		
+		END

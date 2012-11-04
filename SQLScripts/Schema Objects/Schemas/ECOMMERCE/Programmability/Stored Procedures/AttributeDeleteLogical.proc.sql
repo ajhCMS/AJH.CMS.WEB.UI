@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [ECOMMERCE].[AttributeDeleteLogical]
+	@P_ATTRIBUTE_ID int
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+	update  [ECOMMERCE].[ATTRIBUTE] set
+		[ATTRIBUTE_IS_DELETED] = 1
+		where
+		ATTRIBUTE_ID = @P_ATTRIBUTE_ID
+		
+		END

@@ -1,0 +1,15 @@
+﻿create PROCEDURE [ECOMMERCE].[CatalogImageDelete]
+	
+		@P_CATALOG_IMAGE_ID int
+		
+    
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	delete from [ECOMMERCE].[CATALOG_IMAGE]
+	
+	where
+	 CATALOG_IMAGE_ID = @P_CATALOG_IMAGE_ID
+	
+END

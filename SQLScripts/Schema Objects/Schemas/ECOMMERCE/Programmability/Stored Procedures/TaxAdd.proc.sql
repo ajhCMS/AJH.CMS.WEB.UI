@@ -1,0 +1,26 @@
+﻿CREATE PROCEDURE [ECOMMERCE].[TaxAdd]
+
+		@P_TAX_ID	int	output,
+		@P_TAX_RATE	decimal(9,2),
+		@P_TAX_IS_ENABLED	bit,	
+		@P_TAX_PORTAL_ID	int
+    
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+	INSERT INTO [ECOMMERCE].[TAX]
+		(
+		[TAX_RATE],
+		[TAX_IS_ENABLED],
+		[TAX_PORTAL_ID]
+		)
+	VALUES
+		(
+		@P_TAX_RATE,
+		@P_TAX_IS_ENABLED,	
+		@P_TAX_PORTAL_ID
+		)
+		set @P_TAX_ID = SCOPE_IDENTITY()
+		
+END
