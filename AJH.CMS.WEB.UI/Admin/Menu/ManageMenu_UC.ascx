@@ -175,8 +175,6 @@
                     <td>
                         <CE:Editor ID="txtDetails" BreakElement="Br" runat="server" Width="100%" Height="500px"
                             EnableBrowserContextMenu="False" AutoConfigure="Simple">
-                            <FrameStyle Height="100%" BorderWidth="1px" BorderStyle="Solid" BorderColor="#DDDDDD"
-                                Width="100%" CssClass="CuteEditorFrame" BackColor="White"></FrameStyle>
                         </CE:Editor>
                         <asp:RequiredFieldValidator ID="rfvDetails" runat="server" ControlToValidate="txtDetails"
                             ValidationGroup="AddEditMenu" Text="*" Display="Dynamic" ErrorMessage="Details"></asp:RequiredFieldValidator>

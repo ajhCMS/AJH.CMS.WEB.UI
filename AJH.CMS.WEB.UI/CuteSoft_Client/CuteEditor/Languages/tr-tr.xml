@@ -7,8 +7,6 @@
 	<resource name="Verbs">Eylemler</resource>
 	<resource name="Image">Resim</resource>
 	<resource name="Document">Döküman</resource>
-	<resource name="Flash">Flash</resource>
-	<resource name="Media">Media</resource>
 	<resource name="ImageBrowsing">Resimlere gözat...</resource>
 	<resource name="Template">Þablon</resource>
 	<resource name="HorRule">Yatay çizgi</resource>
@@ -56,15 +54,12 @@
 	<resource name="Summary">Özet</resource>
 	<resource name="THEAD">Baþlýk</resource>
 	<resource name="TFOOT">Altlýk</resource>
-	<resource name="TR">TR</resource>
-	<resource name="TD">TD</resource>
 	<resource name="ChangeToTH">Baþ hücreye dönüþtür</resource>
 	<resource name="ChangeToTD">Tablo hücresine dönüþtür</resource>
 	<resource name="EditRow">Satýr özellikleri</resource>
 	<resource name="EditCell">Hücre özellikleri</resource>
 	
 	<!-- Paragraph DropDown -->
-	<resource name="Normal">Normal</resource>
 	<resource name="MenuList">Menu listesi</resource>
 	<resource name="Heading 1">Baþlýk 1</resource>
 	<resource name="Heading 2">Baþlýk 2</resource>
@@ -136,7 +131,6 @@
 	<resource name="Help">Yardým</resource>
 	<resource name="Paragraph">Paragraf</resource>
 	<resource name="InsertParagraph">Paragraf ekle</resource>
-	<resource name="FontName">Default Font</resource>
 	<resource name="FontSize">Boyut</resource>
 	<resource name="Zoom">Yakýnlaþtýr</resource>
 	<resource name="CssClass">Css</resource>
@@ -147,11 +141,9 @@
 	<resource name="FromFullPage">Eski haline getir</resource>
 	<resource name="imagesDropdown">Resimler</resource>
 	<resource name="DocumentPropertyPage">Sayfa özellikleri</resource>
-	<resource name="HTML">HTML</resource>
 	<resource name="Preview">Önizleme</resource>
 	<resource name="Enlarge">Düzenlenen pencereyi büyüt</resource>
 	<resource name="Decrease">Düzenlenen pencereyi küçült</resource>
-	<resource name="InsertForm">Form</resource>
 	<resource name="InsertInputText">Metin kutusu</resource>
 	<resource name="InsertTextBox">Metin alaný</resource>
 	<resource name="InsertListBox">Liste kutusu</resource>
@@ -242,7 +234,6 @@
 			
 	<!-- Version 5.0 -->
 	<resource name="CodeEditor">Kaynaðý Görüntüle/Düzenle</resource>
-	<resource name="ID">ID</resource>
 	<resource name="ListBox">Liste kutusu</resource>
 	<resource name="ImageMap">Resim bölge alaný ekle</resource>
 	<resource name="SelecttoCreateImageMap">Lütfen resim bölge alaný oluþturmak için bir resim seçin</resource>
@@ -275,18 +266,16 @@
 	<resource name="ValidColor">Lütfen geçerli bir renk deðeri girin.</resource>
 	<resource name="NotAailableinSafari">Bu özellik safari tarayýcýsýnda geçerli deðil.</resource>
 	<resource name="ImageEditor">Online resim editörü</resource>
-	<resource name="SelecttoEditImage">Lütfen öncelikle bir resim seçin</resource>
+	<resource name="SelectImagetoEdit">Lütfen öncelikle bir resim seçin</resource>
 	
 		
 	<!-- Dialog -->
 	<resource name="Createddate">Tarih oluþturuldu</resource>
 	<resource name="Modifieddate">Tarih düzenlendi</resource>
 	<resource name="Next">Sonraki</resource>
-	<resource name="Prev">Prev</resource>
 	<resource name="Total">Toplam</resource>
 	<resource name="Images">Resimler</resource>
 	<resource name="Name">Ýsim</resource>
-	<resource name="NotSet">Not Set</resource>
 	<resource name="Center">Orta</resource>
 	<resource name="Attributes">Özellikler</resource>
 	<resource name="Newwindow">Yeni pencere</resource>
@@ -304,7 +293,6 @@
 	<resource name="Table">Tablo</resource>
 	<resource name="InsertTable">Tablo</resource>
 	<resource name="Justify">Yasla</resource>
-	<resource name="Font">Font</resource>
 	<resource name="Text">Metin</resource>
 	<resource name="Background">Arka zemin</resource>
 	<resource name="Border">Çerçeve</resource>
@@ -416,11 +404,6 @@
 	<resource name="DeleteNode">Tamamýný sil</resource>
 	<resource name="ItIsSlowThatSwitchToCode">Html görüntüsüne dönerken Internet explorer'ýn yavaþ çalýþmasýna neden olacak büyük bir sayfa yüklüyorsunuz</resource>
 	<resource name="RemoveWordTags">Word'den yapýþtýrmadan önce gereksiz kodlarý silmek istermisiniz?</resource>
-	<resource name="RemoveHTMLTags">Remove all HTML tags</resource>
-	<resource name="RemoveWordMarkup">Remove all word specific markup</resource>
-	<resource name="CleanupCSS">Clean up cascading style sheets</resource>
-	<resource name="CleanupFont"><![CDATA[Clean up &lt;Font&gt; tags]]></resource>
-	<resource name="CleanupSpan"><![CDATA[Clean up &lt;Span&gt; tags]]></resource>
 
 	<resource name="TopMargin">Üst marjin</resource>
 	<resource name="BottomMargin">Alt marjin</resource>
@@ -432,13 +415,160 @@
 	<resource name="HTMLEncoding">HTML dil kodlamasý</resource>
 	
 	<!-- Buttons Image URL -->
+	  <resource name="RotateLeft90">Sola 90 derece çevir</resource>  
+	  <resource name="ReduceMessage">Lütfen devam etmek için mesaj boyutunu azaltýn.</resource>  
+	  <resource name="drag-and-drop">Panel üzerine rsmi sürükle ve býrak</resource>  
+	  <resource name="filpvertical">Dikey çevir</resource>  
+	  <resource name="Resize">Boyutlandýr</resource>  
+	  <resource name="SelectImagetoInsert">Lütfen eklemek için bir resim seçin.</resource>  
+	  <resource name="filphorizontal">Yatay çevir</resource>  
+	  <resource name="Rotate">Döndür</resource>  
+	  <resource name="Scale">Boyutlandýr</resource>  
+ 	  <resource name="thumbnailSuccessfully">Küçük resim baþarýyla oluþturuldu!</resource>  
+	  <resource name="ImagetooSmall">Resim küçük resim için çok küçük!</resource>  
+	  <resource name="AllowMultipleSelections">Çoklu seçime izin ver</resource>  
+	  <resource name="FolderWithNameExist">Ayný isimli bir hedef klasör zaten mevcut!</resource>  
+	  <resource name="CleanupCSS">Basamaklý sayfa biçemlerini temizle</resource>  
+	  <resource name="CleanupFont">Font taglarýný temizle</resource>  
+	  <resource name="Reload">Yükle</resource>  
+	  <resource name="drawrectangle">Kare çiz</resource>  
+ 	  <resource name="Media">Medya</resource>  
+	  <resource name="FoldernameNotsupported">Klasör adý desteklenmeyir ! Lütfen klasör adýný boþlu veya özel karakterler içermeyen bir kelimeyle belirtin.</resource>  
+	  <resource name="Disabled">Etkisizleþtirildi.</resource>  
+	  <resource name="drawellipse">Elips çiz</resource>  
+	  <resource name="UseApple_VtoPaste">Pencereye metni yapýþtýrmak için klavyeden Apple+V tuþunu kullanýn.</resource>  
+	  <resource name="RemoveHTMLTags">Bütün HTML taglarýný temizle</resource>  
+ 	  <resource name="Resizeto">Boyutlandýr :</resource>  
+	  <resource name="ValidID">ID'le yanlýzca küçük karakter ve numaralar içerebilir, ve boþlukla içeremez.</resource>  
+	  <resource name="alert_MaxTextLength">Eklenmiþ olan metin ,bu alan için karakter sýnýrýna ulaþtý:</resource>  
+	  <resource name="Saveas">Farklý kaydet</resource>  
+	  <resource name="drawtransparentellipse">Saydam bir elips çiz.</resource>  
+	  <resource name="ValidName">Lütfen geçerli bir isim girin.</resource>  
+	  <resource name="AccessKey">Eriþim anahtarý</resource>  
+	  <resource name="MoveDown">Ýndir</resource>  
+	  <resource name="SelectAnchor">Geçerli sayfada isimlerndirilmiþ bir yer imi seç</resource>  
+	  <resource name="Pen">Kalem</resource>  
+	  <resource name="MoveUp">Yükselt</resource>  
+	  <resource name="InvalidFileName">Bir dosya adý aþaðýdaki karakterlerin harhangi birini içeremez</resource>  
+	  <resource name="Crop">Kes</resource>  
+	  <resource name="FormatBlock">Paragraf</resource>  
+	  <resource name="RotateRight90">Saða 90 derece çevir</resource>  
+ 	  <resource name="Loop">Döndür</resource>  
+	  <resource name="SelectImagetoThumbnail">Lütfen küçük resim oluþturmak için bir resim seçin</resource>  
+	  <resource name="Angle">Açý</resource>  
+	  <resource name="Wrap">Sar</resource>  
+ 	  <resource name="SelectFile">Lütfen bir dosya seçin</resource>  
+	  <resource name="Erase">Sil</resource>  
+	  <resource name="DrawLine">Çizgi çiz</resource>  
+	  <resource name="ModifyTable">Tabloyu güncelle</resource>  
+	  <resource name="CleanupSpan">Span taglarýný temizle</resource>  
+	  <resource name="Under">Altý çizili</resource>  
+	  <resource name="NewGraphic">Yeni Grafik</resource>  
+	  <resource name="AutoThumbnail">Otomatik küçük resim</resource>  
+	  <resource name="NotSet">Ayarlanmamýþ</resource>  
+	  <resource name="Readonly">Yalnýzca okunabilir</resource>  
+	  <resource name="RemoveWordMarkup">Bütün word’e özgün taglarý temizle</resource>  
+	  <resource name="Exactfit">Tam boyut</resource>  
+	  <resource name="Noborder">Çerçevesiz</resource>  
+	  <resource name="drawtransparentrectangle">Saydam bir kare çiz</resource>  
+	  <resource name="Autoplay">Otomatþk oynat</resource>  
+	  <resource name="alert_MaxHTMLLength">Eklenmiþ olan HTML kod, bu alan için karakter sýnýrýna ulaþtý:</resource>  
+	  <resource name="FilenameNotsupported">Dosya adý desteklenmeyir ! Lütfen dosya adýný boþlu veya özel karakterler içermeyen bir kelimeyle belirtin.</resource>  
+ 	  <resource name="EncodingType">Kodlama tipi</resource>  
+	  <resource name="MaxLength">Maksimum uzunluk</resource>  
+	  <resource name="SelecttoEditImage">Lütfen öncelikle bir resim seçin</resource> 
+	  
+	<!-- Same as English wording -->
+	<resource name="InsertForm">Form</resource>  
+	<resource name="Flash">Flash</resource>  
+	<resource name="TabIndex">Tab Index</resource>  
+	<resource name="Prev">Prev</resource>  
+	<resource name="FontName">Font</resource>  
+	<resource name="Font">Font</resource>  
+
+	<!-- Don't translate this section -->
 	<resource name="BoldImage">bold.gif</resource>
 	<resource name="PreviewImage">preview.gif</resource>
 	<resource name="DesignImage">design.gif</resource>
 	<resource name="HtmlImage">htmlview.gif</resource>
 	<resource name="UnderImage">under.gif</resource>
-	
-	<!-- misc -->
 	<resource name="SelectFileDialogOption">status:0;help:0;resizable:0;dialogWidth:560px;dialogHeight:550px;</resource>
+		
+	<!-- may or maynot translate -->
+	<resource name="TR">TR</resource>
+	<resource name="TD">TD</resource>
+	<resource name="HTML">HTML</resource>
+	<resource name="ID">ID</resource>
+	<resource name="Normal">Normal</resource>
+
+	<!-- Feel free to translate this section below -->
+<resource name="CellScope">Cell Scope</resource>  
+<resource name="SelectImageDialogOption">dialogWidth:590px;dialogHeight:510px;</resource>  
+<resource name="ConstrainProportions">Constrain Proportions</resource>  
+<resource name="InputRequired">Input Required:</resource>  
+<resource name="Red">Red</resource>  
+<resource name="Header-Footer-3-Columns">Header, Footer and 3 Columns</resource>  
+<resource name="Decoration">Decoration</resource>  
+<resource name="WebPalette">Web Palette</resource>  
+<resource name="SelectColor">Select a color</resource>  
+<resource name="YouTubeRel">Include related videos</resource>  
+<resource name="CellPadding">Cell padding</resource>  
+<resource name="noWrap">noWrap</resource>  
+<resource name="WordNotFound">Word not found. Nothing replaced.</resource>  
+<resource name="WrongFormatImage">The Image Format is Wrong!</resource>  
+<resource name="maxRequestLengthExceeded">Maximum request length exceeded.The default value for the maxRequestLength parameter in the httpRuntime section of the Web.Config file is 4096 (4 MB). As a result, files that are larger than this value are not uploaded by default. </resource>  
+<resource name="2ColumnTable">Two-Column Table</resource>  
+<resource name="EditList">List Properties</resource>  
+<resource name="Green">Green</resource>  
+<resource name="on">on</resource>  
+<resource name="WindowlessVideo">WindowlessVideo</resource>  
+<resource name="pixels">pixels</resource>  
+<resource name="SortByDateDesc">Date Desc</resource>  
+<resource name="Close">Close</resource>  
+<resource name="Recent">Recent</resource>  
+<resource name="CustomBullet">Custom bullet</resource>  
+<resource name="SortByDateAsc">Date Asc</resource>  
+<resource name="AllowFullScreen">Allow Full Screen</resource>  
+<resource name="WordReplaced">Word(s) were replaced</resource>  
+<resource name="Words">Words</resource>  
+<resource name="SortBySizeDesc">Size Desc</resource>  
+<resource name="Header-Left-TopRight-Body">Header, Left, Top Right and Body</resource>  
+<resource name="Characters">Characters</resource>  
+<resource name="Sort">Sort</resource>  
+<resource name="off">off</resource>  
+<resource name="PasteYouTube">Paste the YouTube Embed code here</resource>  
+<resource name="ImageFileIsTooLarge">The uploaded image is too large. The max image file size of this web site is set to: </resource>  
+<resource name="Circle">Circle</resource>  
+<resource name="AutomaticImageResizeOnOff">Auto resize uploaded images function is</resource>  
+<resource name="PasteAsHTML">Paste As HTML</resource>  
+<resource name="Used">Used</resource>  
+<resource name="White">White</resource>  
+<resource name="Header-Right-TopLeft-Body">Header, Right, Top Left and Body</resource>  
+<resource name="TemplateCreated">Template created successfully!</resource>  
+<resource name="StartingNumber">Starting Number</resource>  
+<resource name="Orange">Orange</resource>  
+<resource name="Loading">Loading...</resource>  
+<resource name="TemplateModified">Template modified successfully!</resource>  
+<resource name="Cyan">Cyan</resource>  
+<resource name="CustomColor">Custom Color</resource>  
+<resource name="MaxFileSizeAllowed">Max file size allowed</resource>  
+<resource name="BorderColor">Border color</resource>  
+<resource name="3ColumnTable">Three-Column Table</resource>  
+<resource name="YouTube">Embed a YouTube video</resource>  
+<resource name="1ColumnTable">One-Column Table</resource>  
+<resource name="MaxImagedImension">Max image dimension is</resource>  
+<resource name="DIV">DIV</resource>  
+<resource name="Purple">Purple</resource>  
+<resource name="ActiveXObject">Object</resource>  
+<resource name="Square">Square</resource>  
+<resource name="Blue">Blue</resource>  
+<resource name="EditorEmpty">\nEditor is empty.\n\nNothing to clean up.</resource>  
+<resource name="MaxFolderSizeAllowed">Max Upload folder size is</resource>  
+<resource name="ShowBorder">Show Border</resource>  
+<resource name="Black">Black</resource>  
+<resource name="CellSpacing">Cell spacing</resource>  
+<resource name="Uploading">Uploading...</resource>  
+<resource name="SortBySizeAsc">Size Asc</resource>  
+<resource name="NamedColors">Named Colors </resource>  
 	
 </resources>

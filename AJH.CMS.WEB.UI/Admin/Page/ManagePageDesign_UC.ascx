@@ -90,8 +90,6 @@
                     <CE:Editor ID="txtRegisterControl" BreakElement="Br" runat="server" Width="270px"
                         Height="100px" EnableBrowserContextMenu="False" AutoConfigure="None" ActiveTab="Code"
                         ShowEditMode="false" ShowPreviewMode="false">
-                        <FrameStyle Height="100%" BorderWidth="1px" BorderStyle="Solid" BorderColor="#DDDDDD"
-                            Width="100%" CssClass="CuteEditorFrame" BackColor="White"></FrameStyle>
                     </CE:Editor>
                 </td>
                 <td>
@@ -102,8 +100,6 @@
                     <CE:Editor ID="txtUserControlTag" BreakElement="Br" runat="server" Width="270px"
                         Height="100px" EnableBrowserContextMenu="False" AutoConfigure="None" ActiveTab="Code"
                         ShowEditMode="false" ShowPreviewMode="false">
-                        <FrameStyle Height="100%" BorderWidth="1px" BorderStyle="Solid" BorderColor="#DDDDDD"
-                            Width="100%" CssClass="CuteEditorFrame" BackColor="White"></FrameStyle>
                     </CE:Editor>
                 </td>
             </tr>
@@ -125,8 +121,6 @@
                     <CE:Editor ID="txtDetails" BreakElement="Br" runat="server" Width="100%" Height="600px"
                         EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code" ShowEditMode="false"
                         ShowPreviewMode="false" EnableStripScriptTags="false">
-                        <FrameStyle Height="100%" BorderWidth="1px" BorderStyle="Solid" BorderColor="#DDDDDD"
-                            Width="100%" CssClass="CuteEditorFrame" BackColor="White"></FrameStyle>
                     </CE:Editor>
                 </td>
             </tr>

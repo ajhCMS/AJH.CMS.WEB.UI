@@ -21,11 +21,11 @@
 	string activetext="";
 %>
 
-<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Style.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=Dialog_Tag_Style.js"></script>
 
-<table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+<table border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;width:99%">
 	<tr>
-		<td style="width:94" valign="top" id="navtd">
+		<td style="width:90px;vertical-align:top" id="navtd">
 			<%
 			foreach(object[] px in ps)
 			{
@@ -34,16 +34,17 @@
 				bool iscurrent=activepanel==pname;
 				if(iscurrent)activetext=ptext;
 			%>
-			<a class='<%=iscurrent?"ActiveStyleNav":"StyleNav"%>' href='<%=CuteEditor.EditorUtility.ReplaceParam(Context.Request.RawUrl,"Style",pname)%>'>
-				<img alt="" src="Load.ashx?type=image&file=style.<%=pname%>.gif" style="border:0; vertical-align:inherit;"/>
+			<div class='buttons'><a <%=iscurrent?"class='current'":""%>' href='<%=CuteEditor.EditorUtility.ReplaceParam(Context.Request.RawUrl,"Style",pname)%>'>
+				<img alt="" src="Load.ashx?type=image&file=style.<%=pname%>.gif" />
 				<%=ptext%>
 			</a>
+			</div>
 			<%
 			}
 			%>
 		</td>
-		<td style="white-space:nowrap;width:10" ></td>
-		<td valign="top">
+		<td style="white-space:nowrap;width:3px" ></td>
+		<td>
 			<uc1:Tag_Style_Font id="PanelFont" runat="server" Visible="False"></uc1:Tag_Style_Font>
 			<uc1:Tag_Style_Background id="PanelBackground" runat="server" Visible="False"></uc1:Tag_Style_Background>
 			<uc1:Tag_Style_Text id="PanelText" runat="server" Visible="False"></uc1:Tag_Style_Text>
@@ -55,5 +56,5 @@
 	</tr>
 </table>
 <script type="text/javascript">
-var OxO7f1e=["ondblclick","navtd","shiftKey","style"]; Window_GetElement(window,OxO7f1e[0x1],true)[OxO7f1e[0x0]]=function (){if(event[OxO7f1e[0x2]]){ alert(element[OxO7f1e[0x3]].cssText) ;} ;}  ;
+var OxO7d56=["ondblclick","navtd","shiftKey","style"];Window_GetElement(window,OxO7d56[1],true)[OxO7d56[0]]=function (){if(event[OxO7d56[2]]){alert(element[OxO7d56[3]].cssText);} ;} ;
 </script>

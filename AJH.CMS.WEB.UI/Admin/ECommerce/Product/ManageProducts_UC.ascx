@@ -213,9 +213,7 @@
                         </td>
                         <td>
                             <CE:Editor ID="txtSizeChart" BreakElement="Br" runat="server" Width="100%" Height="500px"
-                                EnableBrowserContextArticle="False" AutoConfigure="Simple">
-                                <FrameStyle Height="100%" BorderWidth="1px" BorderStyle="Solid" BorderColor="#DDDDDD"
-                                    Width="100%" CssClass="CuteEditorFrame" BackColor="White"></FrameStyle>
+                                EnableBrowserContextMenu="False" AutoConfigure="Simple">
                             </CE:Editor>
                         </td>
                     </tr>
@@ -416,10 +414,12 @@
                             NotificationOperationDone="false" CausesValidation="false" />
                         <asp:Button ID="btnSaveProdcutImage" CssClass="btn" runat="server" Width="60px" Text="Save"
                             NotificationOperationDone="true" ValidationGroup="AddEditProductImage" />
-                        <asp:Button ID="btnUpdateProductImage" CssClass="btn" runat="server" Width="110px" Text="Update"
-                            NotificationOperationDone="true" ValidationGroup="AddEditProductImage" Visible="false" />
+                        <asp:Button ID="btnUpdateProductImage" CssClass="btn" runat="server" Width="110px"
+                            Text="Update" NotificationOperationDone="true" ValidationGroup="AddEditProductImage"
+                            Visible="false" />
                         <asp:Button ID="btnProdcutImageSaveOtherLanguage" CssClass="btn" runat="server" Width="150px"
-                            Text="Save OtherLanguage" NotificationOperationDone="true" ValidationGroup="AddEditProductImage" Visible="false"/>
+                            Text="Save OtherLanguage" NotificationOperationDone="true" ValidationGroup="AddEditProductImage"
+                            Visible="false" />
                     </div>
                 </asp:Panel>
             </ContentTemplate>

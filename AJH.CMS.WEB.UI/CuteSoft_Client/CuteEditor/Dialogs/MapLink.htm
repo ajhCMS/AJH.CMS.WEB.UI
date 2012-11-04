@@ -1,23 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>[[Hyperlink_Information]] 
-		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		</title>
-		
+		<title>[[Hyperlink_Information]] </title>		
 		<meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)" />
 		<meta http-equiv="Page-Exit" content="blendTrans(Duration=0.1)" />
-		<link href="Load.ashx?type=style&file=dialog.css" type="text/css" rel="stylesheet" />
+		<link href='Load.ashx?type=themecss&file=dialog.css&theme=[[_Theme_]]' type="text/css" rel="stylesheet" />
 		<!--[if IE]>
 			<link href="Load.ashx?type=style&file=IE.css" type="text/css" rel="stylesheet" />
 		<![endif]-->
-		<script type="text/javascript" src="Load.ashx?type=dialogscript&file=DialogHead.js"></script>
+		<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=DialogHead.js"></script>
 		<style type="text/css">
 		    .btn {border: 1px solid buttonface;padding: 1px;width:14px;height: 12px;vertical-align: middle;}
 		    select,input,td {font-family: MS Sans Serif; font-size: 9pt; vertical-align: top;}
@@ -34,7 +24,7 @@
 								<td style="width:60px">[[Url]]:</td>
 								<td><input type="text" id="inp_src" style="width:200px" /></td>
 								<td>
-								    <input id="btnbrowse" type="button" value="[[Browse]]" />
+								    <input id="btnbrowse" type="button" value="[[Browse]]" class="formbutton" />
 								</td>
 							</tr>
 							<tr>
@@ -71,13 +61,13 @@
 					</fieldset>
 					</div>
 					<div style="margin-top:8px;width:60%; text-align:center">
-						<input class="inputbuttoninsert" type="button" value="[[Insert]]" style="width:80px" onclick="insert_link()" />&nbsp;&nbsp;
-						<input class="inputbuttoncancel" type="button" value="[[Cancel]]" style="width:80px" onclick="top.returnValue=false;top.close()" />
+<input class="formbutton" type="button" value="[[Insert]]" style="width:80px" onclick="insert_link()" />&nbsp;&nbsp;
+<input class="formbutton" type="button" value="[[Cancel]]" style="width:80px" onclick="top.returnValue=false;(top.close||top.closeeditordialog)()" />
 					</div>
 				</td>
 			</tr>
 		</table>
 	</body>
-	<script type="text/javascript" src="Load.ashx?type=dialogscript&file=DialogFoot.js"></script>
-	<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_MapLink.js"></script>
+	<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=DialogFoot.js"></script>
+	<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=Dialog_MapLink.js"></script>
 </html>

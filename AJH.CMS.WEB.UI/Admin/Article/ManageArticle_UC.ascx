@@ -43,7 +43,7 @@
             <div class="grid-headers">
                 <asp:Label ID="lblGrdTitleArticle" runat="server" Text="Articles"></asp:Label>
             </div>
-             <div>
+            <div>
                 <asp:GridView ID="gvArticle" runat="server" AllowPaging="true" PageSize="10" AutoGenerateColumns="false"
                     CssClass="grd" Width="100%" DataKeyNames="ID">
                     <EmptyDataTemplate>
@@ -180,9 +180,7 @@
                     </td>
                     <td>
                         <CE:Editor ID="txtDetails" BreakElement="Br" runat="server" Width="100%" Height="500px"
-                            EnableBrowserContextArticle="False" AutoConfigure="Simple">
-                            <FrameStyle Height="100%" BorderWidth="1px" BorderStyle="Solid" BorderColor="#DDDDDD"
-                                Width="100%" CssClass="CuteEditorFrame" BackColor="White"></FrameStyle>
+                            EnableBrowserContextMenu="False" AutoConfigure="Simple">
                         </CE:Editor>
                         <asp:RequiredFieldValidator ID="rfvDetails" runat="server" ControlToValidate="txtDetails"
                             ValidationGroup="AddEditArticle" Text="*" Display="Dynamic" ErrorMessage="Details"></asp:RequiredFieldValidator>

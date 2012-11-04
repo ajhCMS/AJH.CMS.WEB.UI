@@ -36,8 +36,8 @@
 	<resource name="TableRules">Table Rules</resource>
 	<resource name="InsertRowTop">Insert Row Above</resource>
 	<resource name="InsertRowBottom">Insert Row Below</resource>
-	<resource name="InsertColumnLeft">Insert Column to the Left</resource>
-	<resource name="InsertColumnRight">Insert Column to the Right</resource>
+	<resource name="InsertColumnLeft">Insert Column Left</resource>
+	<resource name="InsertColumnRight">Insert Column Right</resource>
 	<resource name="MergeRight">Merge cells right</resource>
 	<resource name="MergeBottom">Merge cells down</resource>
 	<resource name="HorSplitCell">Split cells right</resource>
@@ -47,8 +47,8 @@
 	<resource name="Rows">行数</resource>
 	<resource name="Columns">列数</resource>
 	<resource name="TableAttribute">表格属性</resource>
-	<resource name="Cellpadding">单元垫充</resource>
-	<resource name="Cellspacing">单元间隔</resource>
+	<resource name="CellPadding">单元垫充</resource>
+	<resource name="CellSpacing">单元间隔</resource>
 	<resource name="Rules">Rules</resource>
 	<resource name="CollapseBorder">Collapse table border</resource>
 	<resource name="Draw Table">Draw Table</resource>
@@ -167,7 +167,7 @@
 	<resource name="Value">Value</resource>
 	<resource name="Src">Src</resource>
 	<resource name="GridLayoutPanel">Grid Layout Panel</resource>
-	<resource name="ucase">Upper case</resource>
+	<resource name="Ucase">Upper case</resource>
 	<resource name="lcase">Lower case</resource>
 	<resource name="Break">Break</resource>
 	<resource name="Update">Update</resource>
@@ -187,7 +187,7 @@
 	<resource name="statusbar">Status bar</resource>
 	<resource name="messagebox">Messagebox</resource>
 	<resource name="FontFamily">Font Family</resource>
-	<resource name="decoration">Decoration</resource>
+	<resource name="Decoration">Decoration</resource>
 	<resource name="Overline">Overline</resource>
 	<resource name="OR"> or </resource>
 	<resource name="Letters">Letters</resource>
@@ -265,7 +265,7 @@
 	<resource name="TemplateCreatedSuccessfully">Template created successfully!</resource>
 	<resource name="FileWithNameExist">A file with a name same as the target already exists!</resource>
 	<resource name="KeepLinebreaks">Keep linebreaks</resource>
-	<resource name="UseCtrl_VtoPaste">Use CTRL+V on your keyboard to paste the text into the window.</resource>
+	<resource name="UseCtrl_VtoPaste">Use CTRL+V on your keyboard to paste the text.</resource>
 	<resource name="CleanUpBox">Clean Up Box</resource>
 	<resource name="Action">Action</resource>
 	<resource name="Method">Method</resource>
@@ -361,7 +361,7 @@
 	<resource name="Top">Top</resource>
 	<resource name="Bordersize">边框大小</resource>
 	<resource name="Backgroundcolor">背景颜色</resource>
-	<resource name="Bordercolor">边框颜色</resource>
+	<resource name="BorderColor">边框颜色</resource>
 	<resource name="OK">OK</resource>
 	<resource name="InsertTemplate">插入样板</resource>
 	<resource name="Description">描写</resource>
@@ -374,14 +374,14 @@
 	<resource name="NetSpell">Spell Check</resource>
 	<resource name="uploadResult">This was stored as file</resource>
 	<resource name="uploadSuccessfully">File uploaded successfully!</resource>
-	<resource name="FileformatNotsupported">Cannot upload the file. The File format is not supported.</resource>
+	<resource name="FileformatNotsupported">Cannot upload the file. File format is not allowed.</resource>
 	<resource name="NoPermission">Forbidden. You don't have permission to access this function.</resource>
 	<resource name="UnableRename">Unable to rename this item.</resource>
-	<resource name="UnableCreateFolder">Unable to create the folder.</resource>
-	<resource name="UnableCopyfile">Unable to copy files.</resource>
-	<resource name="UnableMovefile">Unable to move files.</resource>
-	<resource name="UnableDeletefile">Unable to delete files.</resource>
-	<resource name="UnableUploadfile">Unable to upload file.</resource>
+	<resource name="UnableCreateFolder">Unable to create the folder. Please check folder permissions.</resource>
+	<resource name="UnableCopyfile">Unable to copy files. Please check folder permissions.</resource>
+	<resource name="UnableMovefile">Unable to move files. Please check folder permissions.</resource>
+	<resource name="UnableDeletefile">Unable to delete files. Please check folder permissions.</resource>
+	<resource name="UnableUploadfile">Unable to upload file. Please check folder permissions.</resource>
 	<resource name="SpecifyNewFolderName">Please specify the new folder name.</resource>
 	<resource name="SpecifyNewFileName">Please specify the new file name.</resource>
 	<resource name="AreyouSureDelete">Do you want to delete the selected folder(s) and/or file(s)?</resource>
@@ -439,6 +439,7 @@
 	<resource name="UnderImage">under.gif</resource>
 	
 	<!-- misc -->
-	<resource name="SelectFileDialogOption">status:0;help:0;resizable:0;dialogWidth:560px;dialogHeight:550px;</resource>
+	<resource name="SelectFileDialogOption">dialogWidth:600px;dialogHeight:480px;</resource>
+	<resource name="SelectImageDialogOption">dialogWidth:590px;dialogHeight:510px;</resource>
 	
 </resources>

@@ -142,9 +142,7 @@
                     </td>
                     <td>
                         <CE:Editor ID="txtDetails" BreakElement="Br" runat="server" Width="100%" Height="500px"
-                            enablebrowsercontextgallery="False" AutoConfigure="Simple">
-                            <FrameStyle Height="100%" BorderWidth="1px" BorderStyle="Solid" BorderColor="#DDDDDD"
-                                Width="100%" CssClass="CuteEditorFrame" BackColor="White"></FrameStyle>
+                            EnableBrowserContextMenu="False" AutoConfigure="Simple">
                         </CE:Editor>
                     </td>
                 </tr>
