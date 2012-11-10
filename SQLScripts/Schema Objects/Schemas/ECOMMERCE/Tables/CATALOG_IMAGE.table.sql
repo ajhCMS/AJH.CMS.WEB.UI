@@ -1,8 +1,0 @@
-﻿CREATE TABLE [ECOMMERCE].[CATALOG_IMAGE] (
-    [CATALOG_IMAGE_ID]             INT            IDENTITY (1, 1) NOT NULL,
-    [CATALOG_ID]                   INT            NOT NULL,
-    [CATALOG_IMAGE_NAME]           NVARCHAR (500) NOT NULL,
-    [CATALOG_IMAGE_IS_COVER_IMAGE] BIT            NOT NULL,
-    [CATALOG_IMAGE_IS_DELETED]     BIT            NOT NULL
-);
-

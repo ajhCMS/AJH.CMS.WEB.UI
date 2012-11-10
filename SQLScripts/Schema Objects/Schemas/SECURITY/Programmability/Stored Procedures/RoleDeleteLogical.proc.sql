@@ -1,9 +1,0 @@
-﻿CREATE PROCEDURE [SECURITY].[RoleDeleteLogical]
-	@P_ROLE_ID int
-AS
-BEGIN
-	SET NOCOUNT ON;
-	Update [SECURITY].[ROLE] set
-	[ROLE_IS_DELETED] = 1
-	Where [ROLE_ID] = @P_ROLE_ID
-END

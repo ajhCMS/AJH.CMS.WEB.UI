@@ -1,8 +1,0 @@
-﻿CREATE PROCEDURE [SETUP].[CategoryDelete]
-	@P_CATEGORY_ID int
-AS
-BEGIN
-	SET NOCOUNT ON;
-	Delete from [SETUP].[CATEGORY]
-		Where [CATEGORY_ID] = @P_CATEGORY_ID
-END

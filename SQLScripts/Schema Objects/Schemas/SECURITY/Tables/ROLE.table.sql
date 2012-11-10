@@ -1,7 +1,0 @@
-﻿CREATE TABLE [SECURITY].[ROLE] (
-    [ROLE_ID]          INT             IDENTITY (1, 1) NOT NULL,
-    [ROLE_NAME]        NVARCHAR (256)  NOT NULL,
-    [ROLE_DESCRIPTION] NVARCHAR (1024) NOT NULL,
-    [ROLE_IS_DELETED]  BIT             NOT NULL
-);
-

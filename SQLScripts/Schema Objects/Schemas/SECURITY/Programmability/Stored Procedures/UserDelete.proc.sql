@@ -1,8 +1,0 @@
-﻿CREATE PROCEDURE [SECURITY].[UserDelete]
-	@P_USER_ID int
-AS
-BEGIN
-	SET NOCOUNT ON;
-	Delete from [SECURITY].[USER]
-		Where [USER_ID] = @P_USER_ID
-END

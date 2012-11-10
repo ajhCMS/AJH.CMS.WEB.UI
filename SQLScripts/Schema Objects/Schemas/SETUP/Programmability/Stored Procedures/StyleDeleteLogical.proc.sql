@@ -1,9 +1,0 @@
-﻿CREATE PROCEDURE [SETUP].[StyleDeleteLogical]
-	@P_STYLE_ID int
-AS
-BEGIN
-	SET NOCOUNT ON;
-	Update [SETUP].[STYLE] set
-	[STYLE_IS_DELETED] = 1
-	Where [STYLE_ID] = @P_STYLE_ID
-END

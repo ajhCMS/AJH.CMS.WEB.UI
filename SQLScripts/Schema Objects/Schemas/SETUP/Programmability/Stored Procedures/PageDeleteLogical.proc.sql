@@ -1,9 +1,0 @@
-﻿CREATE PROCEDURE [SETUP].[PageDeleteLogical]
-	@P_PAGE_ID int
-AS
-BEGIN
-	SET NOCOUNT ON;
-	Update [SETUP].[PAGE] set
-	[PAGE_IS_DELETED]=1
-	Where [PAGE_ID] = @P_PAGE_ID
-END
