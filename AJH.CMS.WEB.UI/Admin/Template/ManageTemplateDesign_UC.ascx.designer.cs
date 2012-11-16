@@ -181,7 +181,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteEditor.Editor txtRegisterControl;
+        protected global::System.Web.UI.WebControls.TextBox txtRegisterControl;
         
         /// <summary>
         /// lblUserControlTag control.
@@ -199,7 +199,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteEditor.Editor txtUserControlTag;
+        protected global::System.Web.UI.WebControls.TextBox txtUserControlTag;
         
         /// <summary>
         /// upnlTemplateStyle control.
@@ -280,7 +280,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteEditor.Editor txtStyleTag;
+        protected global::System.Web.UI.WebControls.TextBox txtStyleTag;
         
         /// <summary>
         /// upnlTemplateItem control.

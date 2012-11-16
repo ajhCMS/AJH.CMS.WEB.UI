@@ -52,7 +52,8 @@ namespace AJH.CMS.WEB.UI.Admin
             Style style = StyleManager.GetStyle(Convert.ToInt32(cddStyle.SelectedValue));
             if (style != null)
             {
-                txtStyleTag.Text = "<link href=\"" + CMSWebHelper.GetStyleFileVirtualPath(style.ID) + "\" rel=\"stylesheet\" type=\"text/css\" />";
+                string styleTag = "<link href=\"" + CMSWebHelper.GetStyleFileVirtualPath(style.ID) + "\" rel=\"stylesheet\" type=\"text/css\" />";
+                txtStyleTag.Text = styleTag;
             }
         }
         #endregion

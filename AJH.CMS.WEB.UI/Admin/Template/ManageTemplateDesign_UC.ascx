@@ -87,20 +87,14 @@
                         Text="Register Control"></asp:Label>
                 </td>
                 <td>
-                    <CE:Editor ID="txtRegisterControl" BreakElement="Br" runat="server" Height="100px"
-                        Width="100%" EnableBrowserContextMenu="False" AutoConfigure="None" ActiveTab="Code"
-                        ShowEditMode="false" ShowPreviewMode="false">
-                    </CE:Editor>
+                    <asp:TextBox ID="txtRegisterControl" runat="server" Width="100%" Height="100px" TextMode="MultiLine"></asp:TextBox>
                 </td>
                 <td>
                     <asp:Label ID="lblUserControlTag" runat="server" AssociatedControlID="txtUserControlTag"
                         Text="User Control Tag"></asp:Label>
                 </td>
                 <td>
-                    <CE:Editor ID="txtUserControlTag" BreakElement="Br" runat="server" Width="100%" Height="100px"
-                        EnableBrowserContextMenu="False" AutoConfigure="None" ActiveTab="Code" ShowEditMode="false"
-                        ShowPreviewMode="false">
-                    </CE:Editor>
+                    <asp:TextBox ID="txtUserControlTag" runat="server" Width="100%" Height="100px" TextMode="MultiLine"></asp:TextBox>
                 </td>
             </tr>
         </table>
@@ -148,10 +142,7 @@
                     <asp:Label ID="lblStyleTag" runat="server" AssociatedControlID="txtStyleTag" Text="Style Tag"></asp:Label>
                 </td>
                 <td>
-                    <CE:Editor ID="txtStyleTag" BreakElement="Br" runat="server" Width="100%" Height="100px"
-                        EnableBrowserContextMenu="False" AutoConfigure="None" ActiveTab="Code" ShowEditMode="false"
-                        ShowPreviewMode="false">
-                    </CE:Editor>
+                    <asp:TextBox ID="txtStyleTag" runat="server" Width="100%" Height="100px" TextMode="MultiLine"></asp:TextBox>
                 </td>
             </tr>
         </table>
