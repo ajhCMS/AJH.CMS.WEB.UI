@@ -6,4 +6,4 @@
 	<img id="img_demo" src="" alt="" />
 </fieldset>
 
-<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Media.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1004&file=Dialog_Tag_Media.js"></script>

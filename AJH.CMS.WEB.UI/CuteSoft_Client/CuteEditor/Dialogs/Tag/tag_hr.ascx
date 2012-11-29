@@ -11,7 +11,7 @@
 								<input type="text" id="inp_width" style="width:45px" onkeypress="return CancelEventIfNotDigit()" />
 								<select id="eenheid">
 									<option selected="selected" value="%">%</option>
-									<option value="">px</option>
+									<option value="px">px</option>
 								</select>
 							</td>
 							<td style="width:3">&nbsp;
@@ -28,9 +28,8 @@
 						<tr>
 							<td class="normal">[[Color]]:</td>
 							<td>
-								<input autocomplete="off" type="text" id="hrcolor" size="7" style="WIDTH:57px" /> 
-								<img alt="" id="hrcolorpreview" src="Load.ashx?type=image&file=colorpicker.gif" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)'
-									oncolorchange="hrcolor.value=this.selectedColor; hrcolor.style.backgroundColor=this.selectedColor" />
+<input autocomplete="off" type="text" id="hrcolor" size="7" style="WIDTH:57px" /> 
+<img alt="" id="hrcolorpreview" src="Load.ashx?type=image&file=colorpicker.gif" style='vertical-align:top;' />
 							</td>
 							<td style="width:3">&nbsp;
 							</td>
@@ -65,4 +64,4 @@
 		</td>
 	</tr>
 </table>
-<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Hr.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1004&file=Dialog_Tag_Hr.js"></script>

@@ -67,11 +67,11 @@
              //getting folder for dictionaries
              string folderName="";
              
-             if(System.Configuration.ConfigurationManager.AppSettings["DictionaryFolder"]== null)
+             if(ConfigurationSettings.AppSettings["DictionaryFolder"]== null)
 				folderName = this.MapPath("~/bin");
 			 else
 			 {
-				folderName = System.Configuration.ConfigurationManager.AppSettings["DictionaryFolder"];
+				folderName = ConfigurationSettings.AppSettings["DictionaryFolder"];
 				folderName = this.MapPath(Path.Combine(Request.ApplicationPath, folderName));
 			 }
              
@@ -123,15 +123,50 @@
          this.DisableButtons();
          this.StatusText.Text = string.Format("Word: {0} of {1}", this.SpellChecker.WordIndex + 1, this.SpellChecker.WordCount);
     }
+    
+    bool IsUnderscores(string word)
+    {
+		foreach(char c in word)
+		{
+			if(c!='_')
+				return false;
+		}
+		return true;
+    }
+    bool IsValidWord(string word)
+    {
+		if(IsUnderscores(word))
+			return true;
+		
+		return false;
+    }
 
     void SpellChecker_MisspelledWord(object sender, NetSpell.SpellChecker.SpellingEventArgs e)
     {
+		if(IsValidWord(this.SpellChecker.CurrentWord))
+		{
+			this.SpellChecker.IgnoreWord();
+			this.SpellChecker.SpellCheck();
+			return;
+		}
+		
          this.SaveValues();
          this.CurrentWord.Text = this.SpellChecker.CurrentWord;
          this.SpellChecker.Suggest();
          this.Suggestions.DataSource = this.SpellChecker.Suggestions;
          this.Suggestions.DataBind();
-         this.ReplacementWord.Text = string.Empty;
+         string ua = HttpContext.Current.Request.UserAgent;
+		 if(ua==null)ua="";
+		 else ua=ua.ToLower();
+         bool _isSafari3=false;
+         if(ua.IndexOf("safari")!=-1)
+		{
+			string minorversion = ua.Substring(ua.IndexOf("safari/") + 7, 3);
+			if(Convert.ToInt32(minorversion)>=522)
+				_isSafari3=true;
+		}			
+		if(!_isSafari3)
+			this.ReplacementWord.Text = string.Empty;
          this.SpellMode.Value = "suggest";
          this.StatusText.Text = string.Format("Word: {0} of {1}", this.SpellChecker.WordIndex + 1, this.SpellChecker.WordCount);
     }
@@ -249,7 +284,13 @@
 
     void AddButton_Click(object sender, EventArgs e)
     {
-         this.SpellChecker.Dictionary.Add(this.SpellChecker.CurrentWord);
+		try
+		{
+			 this.SpellChecker.Dictionary.Add(this.SpellChecker.CurrentWord);
+		}
+		catch(Exception)
+		{
+		}
          this.SpellChecker.SpellCheck();
     }
 
@@ -281,9 +322,9 @@
 		</title>
     <link href="Load.ashx?type=style&file=spell.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript">
-		var OxO2466=[]; window.focus() ;
+		var OxO8ba9=[];window.focus();
     </script>
-    <script language="JavaScript" src="Load.ashx?type=script&file=spell.js" type="text/javascript"></script>
+    <script language="JavaScript" src="Load.ashx?type=script&verfix=1004&file=spell.js" type="text/javascript"></script>
 </head>
 <body id="SpellingBody" style="MARGIN: 0px" runat="server">
     <form id="SpellingForm" name="SpellingForm" method="post" runat="server">
@@ -426,5 +467,5 @@
 
 
 <script type="text/javascript">
-var OxOcd89=["isWinIE","isGecko","isSafari","isOpera","userAgent","ua","opera","safari","gecko","msie","Mac","isMac","dialogWidth","availWidth","dialogHeight","availHeight","innerWidth","innerHeight"];var _Browser_TypeInfo=null; function Browser__InitType(){if(_Browser_TypeInfo!=null){return ;} ;var Ox4={}; Ox4[OxOcd89[0x5]]=navigator[OxOcd89[0x4]].toLowerCase(),Ox4[OxOcd89[0x3]]=(Ox4[OxOcd89[0x5]].indexOf(OxOcd89[0x6])>-0x1),Ox4[OxOcd89[0x2]]=(Ox4[OxOcd89[0x5]].indexOf(OxOcd89[0x7])>-0x1),Ox4[OxOcd89[0x1]]=(!Ox4[OxOcd89[0x3]]&&!Ox4[OxOcd89[0x2]]&&Ox4[OxOcd89[0x5]].indexOf(OxOcd89[0x8])>-0x1),Ox4[OxOcd89[0x0]]=(!Ox4[OxOcd89[0x3]]&&Ox4[OxOcd89[0x5]].indexOf(OxOcd89[0x9])>-0x1) ; Ox4[OxOcd89[0xb]]=navigator[OxOcd89[0x4]].indexOf(OxOcd89[0xa])!=-0x1 ; _Browser_TypeInfo=Ox4 ;}  ; Browser__InitType() ; function Browser_IsWinIE(){return _Browser_TypeInfo[OxOcd89[0x0]];}  ;try{if(Browser_IsWinIE()){ top.moveTo((screen[OxOcd89[0xd]]-self[OxOcd89[0xc]])/0x2,(screen[OxOcd89[0xf]]-self[OxOcd89[0xe]])/0x2) ;} else { top.moveTo((screen[OxOcd89[0xd]]-self[OxOcd89[0x10]])/0x2,(screen[OxOcd89[0xf]]-self[OxOcd89[0x11]])/0x2) ;} ;} catch(x){} ;
+var OxO7a15=["ua","userAgent","isOpera","opera","isSafari","safari","isGecko","gecko","isWinIE","msie","isMac","Mac","availWidth","dialogWidth","availHeight","dialogHeight"];var _Browser_TypeInfo=null;function Browser__InitType(){if(_Browser_TypeInfo!=null){return ;} ;var Ox4={};Ox4[OxO7a15[0]]=navigator[OxO7a15[1]].toLowerCase();Ox4[OxO7a15[2]]=(Ox4[OxO7a15[0]].indexOf(OxO7a15[3])>-1);Ox4[OxO7a15[4]]=(Ox4[OxO7a15[0]].indexOf(OxO7a15[5])>-1);Ox4[OxO7a15[6]]=(!Ox4[OxO7a15[2]]&&!Ox4[OxO7a15[4]]&&Ox4[OxO7a15[0]].indexOf(OxO7a15[7])>-1);Ox4[OxO7a15[8]]=(!Ox4[OxO7a15[2]]&&Ox4[OxO7a15[0]].indexOf(OxO7a15[9])>-1);Ox4[OxO7a15[10]]=navigator[OxO7a15[1]].indexOf(OxO7a15[11])!=-1;_Browser_TypeInfo=Ox4;} ;Browser__InitType();function Browser_IsWinIE(){return _Browser_TypeInfo[OxO7a15[8]];} ;try{if(Browser_IsWinIE()){top.moveTo((screen[OxO7a15[12]]-self[OxO7a15[13]])/2,(screen[OxO7a15[14]]-self[OxO7a15[15]])/2);} else {} ;} catch(x){} ;
 </script>

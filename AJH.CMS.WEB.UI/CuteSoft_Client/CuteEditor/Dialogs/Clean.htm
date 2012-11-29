@@ -1,63 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>[[CleanCode]] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </title>
-		
+		<title>[[CleanCode]]</title>		
 		<meta name="content-type" content="text/html ;charset=Unicode" />
 		<meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)" />
 		<meta http-equiv="Page-Exit" content="blendTrans(Duration=0.1)" />
-		<link href="Load.ashx?type=style&file=dialog.css" type="text/css" rel="stylesheet" />
+		<link href='Load.ashx?type=themecss&file=dialog.css&theme=[[_Theme_]]' type="text/css" rel="stylesheet" />
 		<!--[if IE]>
 			<link href="Load.ashx?type=style&file=IE.css" type="text/css" rel="stylesheet" />
 		<![endif]-->
-		<script type="text/javascript" src="Load.ashx?type=dialogscript&file=DialogHead.js"></script>
+		<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1004&file=DialogHead.js"></script>
 		<style type="text/css">
-			.codebutton
+			html, body,#ajaxdiv {height: 100%;}       
+            .codebutton
 			{
-				width:200px; 
-				height:28px;
-				display:block;
-	            font:normal 11px Tahoma;
-                padding: 1px 3px 1px 3px;
-                color: #000;
-                text-decoration: none;
-                padding-top: 3px;
-                background-color: #d7d3cc;
-                border-right: buttonshadow 1px solid; border-top: buttonhighlight 1px solid; border-left: buttonhighlight 1px solid; border-bottom: buttonshadow 1px solid;
+				width:200px;
+				margin: 0 3px 3px 0;
+				height:17px;
+				text-decoration: none;
+				background-color:#f5f5f5;
+				background: url(Load.ashx?type=image&file=formbg.gif) repeat-x left top;
+				border-top:solid 1px #cccccc;
+				border-left:solid 1px #cccccc;
+				border-right:solid 1px #aaaaaa;
+				border-bottom:solid 1px #aaaaaa;
+				padding: 5px 12px 5px 5px;
+				display: block;
+				cursor: pointer;
+				font:normal 11px Tahoma;
+				line-height: 120%;
+				color: #333;
+			}
+			.codebutton img
+			{
+				margin: 0 3px -3px 0 !important;
+				padding: 0 !important;
+				border: none !important;
+				display: inline !important;
+				vertical-align:middle;
 			}
 			.codebutton:hover
-            {
-	            display:block;
-	            font:normal 11px Tahoma;
-                padding: 1px 3px 1px 3px;
-                color: #000;
-				width:200px; 
-				height:28px;	
-                text-decoration: none;
-                padding-top: 3px;
-                border: #0A246A 1px solid; background-color: #c0c0c0;
-            }
+			{
+                border: #ff0000 1px solid; background-color: #c0c0c0;
+			}
 		</style>
 	</head>
 	<body>
-		<fieldset title="Code Sweeper" style="padding:5px 5px 10px 5px;">
-			<legend>[[CleanCode]]</legend>
+		<div id="ajaxdiv">
 			<table cellspacing="0" cellpadding="5" width="100%" class="normal">
 				<tr>
 					<td>
 					    <a href="###" class="codebutton" onclick="codeCleaner('allhtml');">					
-					        <img src="Load.ashx?type=image&file=code.gif" alt="[[RemoveHTMLTags]]" style="border:0;vertical-align:middle;" />
+					        <img src="Load.ashx?type=image&file=code.gif" title="[[RemoveHTMLTags]]" />
 							[[RemoveHTMLTags]] 
 					    </a>
 					</td>
 				</tr>
 				<tr>
 					<td><a href="###" class="codebutton" onclick="codeCleaner('word');">					
-					        <img src="Load.ashx?type=image&file=doc.gif" alt="[[RemoveWordMarkup]]" style="border:0;vertical-align:middle;" />
+					        <img src="Load.ashx?type=image&file=doc.gif" title="[[RemoveWordMarkup]]" />
 							[[RemoveWordMarkup]] 
 					    </a>
 					</td>
@@ -65,7 +66,7 @@
 				<tr>
 					<td>
 					    <a href="###" class="codebutton" onclick="codeCleaner('css');">					
-					        <img src="Load.ashx?type=image&file=style.font.gif" alt="[[CleanupCSS]]" style="border:0;vertical-align:middle;" />
+					        <img src="Load.ashx?type=image&file=style.font.gif" title="[[CleanupCSS]]" />
 							[[CleanupCSS]] 
 					    </a>
 					</td>
@@ -73,7 +74,7 @@
 				<tr>
 					<td>					    
 					    <a href="###" class="codebutton" onclick="codeCleaner('font');">					
-					        <img src="Load.ashx?type=image&file=fontend.gif" alt="[[CleanupFont]]" style="border:0;vertical-align:middle;" />
+					        <img src="Load.ashx?type=image&file=fontend.gif" title="[[CleanupFont]]" />
 							[[CleanupFont]] 
 					    </a>
 					</td>
@@ -81,17 +82,18 @@
 				<tr>
 					<td>					    			    
 					    <a href="###" class="codebutton" onclick="codeCleaner('span');">					
-					        <img src="Load.ashx?type=image&file=spanend.gif" alt="[[CleanupSpan]]" style="border:0;vertical-align:middle;" />
+					        <img src="Load.ashx?type=image&file=spanend.gif" title="[[CleanupSpan]]" />
 							[[CleanupSpan]] 
 					    </a>
 					</td>
 				</tr>
 			</table>
-		</fieldset>
-		<div style="margin-top:8px;width:60%; text-align:center">
-			<input class="inputbuttoncancel" type="button" value="[[Cancel]]" style="width:80px" onclick="window.close();" />
+			<br />
+			<div align="center">
+				<input type="button" value="[[Cancel]]" class="formbutton" onclick="Close()" ID="Button1" NAME="Button1">
+			</div>					
 		</div>
 	</body>
-	<script type="text/javascript" src="Load.ashx?type=dialogscript&file=DialogFoot.js"></script>
-	<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Clean.js"></script>
+	<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1004&file=DialogFoot.js"></script>
+	<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1004&file=Dialog_Clean.js"></script>
 </html>

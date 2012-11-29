@@ -6,9 +6,9 @@
 	}
 </style>
 <fieldset><legend>[[Input]]</legend>
-	<table class="normal">
+	<table class="normal" width="98%">
 		<tr>
-			<td style="width:60">[[Name]]:</td>
+			<td style="width:60px">[[Name]]:</td>
 			<td><input type="text" id="inp_name" style="width:100px" /></td>
 			<td>&nbsp;&nbsp;&nbsp;</td>
 			<td>[[AccessKey]]:</td>
@@ -46,7 +46,7 @@
 	</table>
 	[[Items]]:
 	<br />
-	<table class="normal">
+	<table class="normal" width="98%">
 		<tr>
 			<td>[[Text]]:
 				<br />
@@ -56,7 +56,7 @@
 				<br />
 				<input type="text" id="inp_item_value" style="width:130px" />
 			</td>
-			<td rowspan="3" valign="top">
+			<td rowspan="3">
 				<table>
 					<tr>
 						<td colspan="2"><button class="codebutton" onclick="Insert();" id="btnInsertItem">[[Insert]]</button>
@@ -86,11 +86,13 @@
 			<td><select size="6" id="list_options2" style="width:130px" onchange="document.getElementById('list_options').selectedIndex = this.selectedIndex;Select(this);FireUIChanged();"></select></td>
 		</tr>
 		<tr>
-			<td>[[Color]]:&nbsp;<input autocomplete="off" size="7" type="text" id="inp_item_forecolor" oncolorpopup="this.selectedColor=value"
-					style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)' oncolorchange='inp_item_forecolor.value=this.selectedColor; inp_item_forecolor.style.backgroundColor=this.selectedColor' /></td>
-			<td>[[BackColor]]:&nbsp;<input autocomplete="off" size="7" type="text" id="inp_item_backcolor" oncolorpopup="this.selectedColor=value"
-					style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)' oncolorchange='inp_item_backcolor.value=this.selectedColor; inp_item_backcolor.style.backgroundColor=this.selectedColor' /></td>
+			<td>[[Color]]:&nbsp;<input autocomplete="off" size="7" type="text" id="inp_item_forecolor" />
+			<img alt="" id="inp_item_forecolor_Preview" src="Load.ashx?type=image&file=colorpicker.gif" class="cursor" style="margin-bottom:-2px" />
+			</td>
+			<td>[[BackColor]]:&nbsp;<input autocomplete="off" size="7" type="text" id="inp_item_backcolor" />
+			<img alt="" id="inp_item_backcolor_Preview" src="Load.ashx?type=image&file=colorpicker.gif" class="cursor" style="margin-bottom:-2px"/>
+			</td>
 		</tr>
 	</table>
 </fieldset>
-<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Select.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1004&file=Dialog_Tag_Select.js"></script>

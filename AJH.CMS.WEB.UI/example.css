@@ -1,0 +1,126 @@
+body,table,p,div {	font:normal 12px arial;}
+body {margin:5px 0 0 0;padding:0;}
+p { margin:0px;}
+h1 { font:bold 17px verdana; margin-bottom:10px; color: #224488;}
+hr { color: #666666; height:1px; text-align:left}
+a:link {color: #224488; text-decoration: underline}
+a:visited {	color: #224488; text-decoration: underline}
+a:active { color: #224488; text-decoration: underline}
+a:hover { color: #0000cc; text-decoration: none}
+#LocalToolbar {
+	vertical-align:baseline; padding:0px; background-color:#305081;margin:0 0 24px 0; 
+}
+
+.SectionMenu {
+   font:normal 11px verdana; padding:0 2px 0 2px;
+}
+
+A.SectionMenu:link, A.SectionMenu:visited, A.SectionMenu:active   {
+    text-decoration:    underline;
+    color:white;
+}
+
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+
+
+
+.sampleStyleA {
+	background-color:#FFF;
+}
+
+.sampleStyleB {
+	background-color:#FFF;
+	font-family:monospace;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.sampleStyleC {
+	background-color:#ddffdd;
+	font-family:sans-serif;
+	font-size:10pt;
+	font-style:italic;
+}
+
+.sampleStyleD {
+	background-color:Blue;
+	color:White;
+	font-family:Arial;
+	font-size:10pt;
+}
+
+/*Popup Control*/
+.popupControl{
+	background-color:White;
+	position:absolute;
+	visibility:hidden;
+}
+
+/*Reorder List*/
+.dragHandle {
+	width:10px;
+	height:15px;
+	background-color:Blue;
+	background-image:url(images/bg-menu-main.png);
+	cursor:move;
+	border:outset thin white;
+}
+
+.callbackStyle {
+	border:thin blue inset;		
+}
+
+.callbackStyle table {
+	background-color:#5377A9;	
+	color:Black;
+}
+
+
+A.SectionMenu:hover, A.SectionMenu:hover  {
+    text-decoration:    underline;
+    color:yellow;
+}
+#footer { clear: both;	padding: 1em;	text-align: center;	border-top:solid 2px #ECECF6; width:750; }	
+
+#leftcolumn
+{
+	width: 150px;
+	padding-left:0px;
+}
+#leftcolumn ul {padding:0 0 3px 10px; list-style-position: outside; margin: 0; margin-bottom: 5px; list-style: none;}
+#leftcolumn li {padding-top: 1px;padding-bottom: 1px;padding-left: 2px; }
+#leftcolumn li a{color:#333333;text-decoration: none; }
+#leftcolumn li a:hover{color:navy;text-decoration: underline; }
+.leftcolumntitle {padding:0 0 3px 10px;color:#224488;}
+
+/*----Example CSS Class --*/ 
+img.greyborder {
+	border: 1px solid #c0c0c0;
+}
+td.module {
+	background-color: #efefef;
+}
+td.content {
+	color: black; 
+	font-family: tahoma, arial, helvetica; 
+	font-weight: bold; 
+}
+.subtabbg {
+	background-color: #efefef;
+}
+.redcolor{
+	color:red;
+}
+.boldgreen
+{
+	color: green; font-weight: bold;
+}
+.highlight
+{
+	background-color: yellow;
+}
+/*----End of Example CSS Class --*/ 

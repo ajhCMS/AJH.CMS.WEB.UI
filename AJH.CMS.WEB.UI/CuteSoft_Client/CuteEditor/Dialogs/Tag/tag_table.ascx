@@ -1,6 +1,6 @@
 <%@ Control Inherits="CuteEditor.EditorUtilityCtrl" Language="c#" AutoEventWireup="false" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
-<fieldset><legend>[[TABLE]]</legend>
-	<table class="normal">
+<fieldset><legend>[[Table]]</legend>
+	<table class="normal" width="98%">
 		<tr>
 			<td>[[CellSpacing]]:</td>
 			<td><input type="text" id="inp_cellspacing"  size="14" onkeypress="return CancelEventIfNotDigit()" /></td>
@@ -16,12 +16,12 @@
 		<tr>
 			<td>[[Backgroundcolor]]:
 			</td>
-			<td><input autocomplete="off" type="text" id="inp_bgcolor"  size="14" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)'
+			<td><input autocomplete="off" type="text" id="inp_bgcolor"  size="14" style='vertical-align:top;'
 					oncolorchange="this.value=this.selectedColor; this.style.backgroundColor=this.selectedColor" />
 			</td>
 			<td>[[BorderColor]]:
 			</td>
-			<td><input autocomplete="off" type="text" id="inp_bordercolor" size="14" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)'
+			<td><input autocomplete="off" type="text" id="inp_bordercolor" size="14" style='vertical-align:top;'
 					oncolorchange="this.value=this.selectedColor; this.style.backgroundColor=this.selectedColor" />
 			</td>
 		</tr>
@@ -41,11 +41,11 @@
 			</td>
 		</tr>
 	</table>
-	<table class="normal">
+	<table class="normal" width="98%">
 		<tr>
-			<td style='width:60px'>[[Summary]] :</td>
+			<td style='width:100px;'>[[Summary]] :</td>
 			<td>
-				<textarea id="inp_summary" rows="3" cols="20" style="width:320px"></textarea>
+				<textarea id="inp_summary" rows="3" cols="20" style="width:290px"></textarea>
 			</td>
 		</tr>
 	</table>
@@ -53,27 +53,31 @@
 		<tr>
 			<td style='width:60px'>[[Caption]] :</td>
 			<td>
-			     <input id="btn_editcaption" type="button" value="[[Insert]]" />
-			     <input id="btn_delcaption" type="button" value="[[Delete]]" />
+			    <!-- <input id="btn_editcaption" type="button" value="[[Insert]]" />	  -->
+			    <!-- <input id="btn_delcaption" type="button" value="[[Delete]]" />		  -->
+			     <button id="btn_editcaption">[[Insert]]</button>
+			     <button id="btn_delcaption">[[Insert]]</button>
 			</td>
 			<td>&nbsp;</td>
 			<td>[[THEAD]]:</td>
 			<td>
-			    <input id="btn_insthead" type="button" value="[[Insert]]" />	
+				<!--<input id="btn_insthead" type="button" value="[[Insert]]" />	  -->
+			    <button id="btn_insthead">[[Insert]]</button>
 			</td>
 			
 			<td>&nbsp;</td>
 			<td>[[TFOOT]]:</td>
 			<td>
-			    <input id="btn_instfoot" type="button" value="[[Insert]]" />			
+			    <!--<input id="btn_instfoot" type="button" value="[[Insert]]" />	 -->	
+			    <button id="btn_instfoot">[[Insert]]</button>	
 			</td>
-			<td style="width:5"></td>
-			<td><img src="Load.ashx?type=image&file=Accessibility.gif" alt="Accessibility" /></td>
+			<td style="width:5px"></td>
+			<td><img src="Load.ashx?type=image&file=Accessibility.gif" title="Accessibility" /></td>
 		</tr>
 	</table>
 </fieldset>
-<fieldset><legend>[[Common]]</legend>
-	<table class="normal">
+<fieldset style="margin-top:15px"><legend>[[Common]]</legend>
+	<table class="normal" width="98%">
 		<tr>
 			<td style='width:60px'>[[CssClass]]:</td>
 			<td><input type="text" id="inp_class" style="width:80px" /></td>
@@ -95,7 +99,7 @@
 			</td>
 		</tr>
 	</table>
-	<table class="normal">
+	<table class="normal" width="98%">
 		<tr>
 			<td style='width:60px'>[[Alignment]]:</td>
 			<td><select id="sel_align">
@@ -122,7 +126,7 @@
 				</select></td>
 		</tr>
 	</table>
-	<table class="normal">
+	<table class="normal" width="98%">
 		<tr>
 			<td style='width:60px'>[[Title]] :</td>
 			<td>
@@ -131,5 +135,5 @@
 		</tr>
 	</table>
 </fieldset>
-<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Table.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1004&file=Dialog_Tag_Table.js"></script>
 

@@ -44,11 +44,11 @@
 	<table border="0" cellpadding="2" cellspacing="0" class="normal">
 		<tr>
 			<td>[[Letters]]</td>
-			<td><select style="width:64" id="sel_letter">
+			<td><select style="width:80px" id="sel_letter">
 					<option value="">[[NotSet]]</option>
 					<option value="normal">[[Normal]]</option>
 				</select>
-				[[OR]] <input type="text" id="tb_letter" style="width:42" />
+				[[OR]] <input type="text" id="tb_letter" style="width:60px" />
 				<select id="sel_letter_unit">
 					<option value="px">px</option>
 					<option value="pt">pt</option>
@@ -62,11 +62,11 @@
 		</tr>
 		<tr>
 			<td>[[Height]]</td>
-			<td><select style="width:64" id="sel_line">
+			<td><select style="width:80px" id="sel_line">
 					<option value="">[[NotSet]]</option>
 					<option value="normal">[[Normal]]</option>
 				</select>
-				[[OR]] <input type="text" id="tb_line" style="width:42" />
+				[[OR]] <input type="text" id="tb_line" style="width:60px" />
 				<select id="sel_line_unit">
 					<option value="px">px</option>
 					<option value="%">%</option>
@@ -84,7 +84,7 @@
 <fieldset><legend>[[TextFlow]]</legend>
 	<table border="0" cellspacing="0" cellpadding="2" class="normal">
 		<tr>
-			<td style="width:80">[[Indentation]]:
+			<td style="width:80px">[[Indentation]]:
 			</td>
 			<td><input type="text" id="tb_indent" style="width:42" />
 				<select id="sel_indent_unit">
@@ -120,7 +120,7 @@
 	</table>
 </fieldset>
 
-<div id="outer"><div id="div_demo">[[DemoText]]</div></div>
+<div id="outer" style="height:100px; margin-bottom:10px; padding:5px;"><div id="div_demo">[[DemoText]]</div></div><br />
 
-<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Style_Text.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1004&file=Dialog_Tag_Style_Text.js"></script>
 

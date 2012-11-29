@@ -2,6 +2,6 @@
 <div id="outer"><div id="div_demo">[[DemoText]]</div></div>
 <script type="text/javascript">
 
-var OxO3381=["cssText","style"]; function UpdateState(){ div_demo[OxO3381[0x1]][OxO3381[0x0]]=element[OxO3381[0x1]][OxO3381[0x0]] ;}  ; function SyncToView(){}  ; function SyncTo(element){}  ;
+var OxO7e4e=["cssText","style"];function UpdateState(){div_demo[OxO7e4e[1]][OxO7e4e[0]]=element[OxO7e4e[1]][OxO7e4e[0]];} ;function SyncToView(){} ;function SyncTo(element){} ;
 
 </script>

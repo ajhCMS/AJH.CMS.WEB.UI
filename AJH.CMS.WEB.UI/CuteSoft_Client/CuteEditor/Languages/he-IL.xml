@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
 	
 	<!-- context menu -->
@@ -147,7 +147,6 @@
 	<resource name="FromFullPage">שחזר מטה</resource>
 	<resource name="imagesDropdown">תמונות</resource>
 	<resource name="DocumentPropertyPage">מאפייני דף</resource>
-	<resource name="HTML">HTML</resource>
 	<resource name="Preview">תצוגה מקדימה</resource>
 	<resource name="Enlarge">הגדל חלון עריכה</resource>
 	<resource name="Decrease">הקטן חלון עריכה</resource>
@@ -242,12 +241,12 @@
 			
 	<!-- Version 5.0 -->
 	<resource name="CodeEditor">הצג/ערוך קוד מקור</resource>
-	<resource name="ID">ID</resource>
+	<resource name="ID">מס"ד</resource>
 	<resource name="ListBox">שדה בחירת מורחב</resource>
 	<resource name="ImageMap">הוספת מפת תמונה</resource>
 	<resource name="SelecttoCreateImageMap">אנא בחר תמונה בכדי ליצור מפת תמונה</resource>
-	<resource name="AddLinktoImageMap">הוספת קישור לחלק 'חם' זה</resource>
-	<resource name="AddHotSpot">הוספת 'חלקים חמים'</resource>
+	<resource name="AddLinktoImageMap">הוספת קישור לחלק "חם" זה</resource>
+	<resource name="AddHotSpot">הוספת "חלקים חמים"</resource>
 	<resource name="UniversalKeyboard">מקלדת אוניברסלית</resource>
 	<resource name="InsertPageBreak">הוספת שבירת דף</resource>
 	<resource name="BlockDirLTR">כיוון כתיבה שמאל לימין</resource>
@@ -272,20 +271,17 @@
 	<resource name="Action">פעולה</resource>
 	<resource name="Method">אופן פעולה</resource>
 	<resource name="ValidNumber">אנא הקלד מספר חוקי.</resource>
-	<resource name="ValidName">Please enter a valid name.</resource>
-	<resource name="ValidID">IDs can contain only letters and numbers, and must not contain spaces.</resource>
 	<resource name="ValidColor">אנא הקלד את הקוד הנכון של הצבע.</resource>
 	<resource name="NotAailableinSafari">התכונה הזו אינה זמינה עבור safari.</resource>
 	<resource name="ImageEditor">עורך תמונות מקוון</resource>
-	<resource name="SelecttoEditImage">יש לבחור תמונה קודם</resource>
+	<resource name="SelectImagetoEdit">יש לבחור תמונה קודם</resource>
 	
 		
 	<!-- Dialog -->
 	<resource name="Createddate">תאריך יצירה</resource>
 	<resource name="Modifieddate">תאריך שינוי</resource>
 	<resource name="Next">הבא</resource>
-	<resource name="Prev">Prev</resource>
-	<resource name="Total">סה'כ</resource>
+	<resource name="Total">סה"כ</resource>
 	<resource name="Images">תמונות</resource>
 	<resource name="Name">שם</resource>
 	<resource name="NotSet">לא נבחר</resource>
@@ -354,10 +350,6 @@
 	<resource name="Percent">אחוזים</resource>
 	<resource name="Left">שמאל</resource>
 	<resource name="Right">ימין</resource>
-	<resource name="Texttop">Texttop</resource>
-	<resource name="Absmiddle">Absmiddle</resource>
-	<resource name="Baseline">Baseline</resource>
-	<resource name="Absbottom">Absbottom</resource>
 	<resource name="Bottom">מטה</resource>
 	<resource name="Middle">אמצע</resource>
 	<resource name="Top">מעלה</resource>
@@ -418,12 +410,7 @@
 	<resource name="DeleteNode">מחק הכל</resource>
 	<resource name="ItIsSlowThatSwitchToCode">אתה צופה בדף גדול אשר יגרום לאיטיות משמעותית באינטרנט אקספלורר עם מעבר לצפיה במוד HTML.</resource>
 	<resource name="RemoveWordTags">האם ברצונך לנקות את הקוד לפני ההדבקה מ-word?</resource>
-	<resource name="RemoveHTMLTags">Remove all HTML tags</resource>
-	<resource name="RemoveWordMarkup">Remove all word specific markup</resource>
-	<resource name="CleanupCSS">Clean up cascading style sheets</resource>
-	<resource name="CleanupFont"><![CDATA[Clean up &lt;Font&gt; tags]]></resource>
-	<resource name="CleanupSpan"><![CDATA[Clean up &lt;Span&gt; tags]]></resource>
-
+	
 	<resource name="TopMargin">שוליים עליונים</resource>
 	<resource name="BottomMargin">שוליים תחתונים</resource>
 	<resource name="LeftMargin">שוליים שמאליים</resource>
@@ -431,16 +418,147 @@
 	<resource name="MarginWidth">רוחב שוליים</resource>
 	<resource name="MarginHeight">גובה שוליים</resource>
 	<resource name="PageLanguage">שפת הדף</resource>
-	<resource name="HTMLEncoding">HTML Encoding</resource>
-	
-	<!-- Buttons Image URL -->
-	<resource name="BoldImage">bold.gif</resource>
-	<resource name="PreviewImage">preview.gif</resource>
-	<resource name="DesignImage">design.gif</resource>
-	<resource name="HtmlImage">htmlview.gif</resource>
-	<resource name="UnderImage">under.gif</resource>
-	
-	<!-- misc -->
-	<resource name="SelectFileDialogOption">status:0;help:0;resizable:0;dialogWidth:560px;dialogHeight:550px;</resource>
+
+	<!-- Feel free to translate the section below -->
+<resource name="AutoThumbnail">Auto Thumbnail</resource>  
+<resource name="Baseline">Baseline</resource>  
+<resource name="FolderWithNameExist">A folder with a name same as the target already exists!</resource>  
+<resource name="CleanupCSS">Clean up cascading style sheets</resource>  
+<resource name="ValidName">Please enter a valid name.</resource>  
+<resource name="Decoration">Decoration</resource>  
+<resource name="InputRequired">Input Required:</resource>  
+<resource name="DrawLine">Draw a line</resource>  
+<resource name="SelectFile">Please select a file</resource>  
+<resource name="Absbottom">Absbottom</resource>  
+<resource name="Loading">Loading...</resource>  
+<resource name="ReduceMessage">Please reduce the message length to continue.</resource>  
+<resource name="PreviewImage">preview.gif</resource>  
+<resource name="HTML">HTML</resource>  
+<resource name="Reload">Reload</resource>  
+<resource name="filpvertical">flip vertically</resource>  
+<resource name="1ColumnTable">One-Column Table</resource>  
+<resource name="alert_MaxHTMLLength">The HTML Code to be added has reached the character limit for this field:</resource>  
+<resource name="filphorizontal">flip horizontally</resource>  
+<resource name="MoveUp">Move Up</resource>  
+<resource name="3ColumnTable">Three-Column Table</resource>  
+<resource name="CellSpacing">Cell spacing</resource>  
+<resource name="CleanupFont">Clean up Font tags</resource>  
+<resource name="Header-Right-TopLeft-Body">Header, Right, Top Left and Body</resource>  
+<resource name="drawrectangle">Draw a rectangle</resource>  
+<resource name="Uploading">Uploading...</resource>  
+<resource name="Square">Square</resource>  
+<resource name="DIV">DIV</resource>  
+<resource name="Autoplay">Autoplay</resource>  
+<resource name="BoldImage">bold.gif</resource>  
+<resource name="MaxLength">Max Length</resource>  
+<resource name="White">White</resource>  
+<resource name="ActiveXObject">Object</resource>  
+<resource name="Black">Black</resource>  
+<resource name="Erase">Erase</resource>  
+<resource name="ImagetooSmall">Image too small for thumbnail!</resource>  
+<resource name="Used">Used</resource>  
+<resource name="EditorEmpty">\nEditor is empty.\n\nNothing to clean up.</resource>  
+<resource name="TemplateCreated">Template created successfully!</resource>  
+<resource name="AllowMultipleSelections">Allow Multiple Selections</resource>  
+<resource name="CleanupSpan">Clean up Span tags</resource>  
+<resource name="drawtransparentrectangle">Draw a transparent rectangle</resource>  
+<resource name="Resizeto">Resize to</resource>  
+<resource name="Blue">Blue</resource>  
+<resource name="Prev">Prev</resource>  
+<resource name="Disabled">Disabled</resource>  
+<resource name="ConstrainProportions">Constrain Proportions</resource>  
+<resource name="off">off</resource>  
+<resource name="NewGraphic">New Graphic</resource>  
+<resource name="Purple">Purple</resource>  
+<resource name="MaxImagedImension">Max image dimension is</resource>  
+<resource name="Words">Words</resource>  
+<resource name="FilenameNotsupported">File name not allowed! Please keep the file name one word with no spaces or special characters. </resource>  
+<resource name="SelectColor">Select a color</resource>  
+<resource name="drawellipse">Draw an ellipse</resource>  
+<resource name="Ucase">Upper case</resource>  
+<resource name="EncodingType">Encoding Type</resource>  
+<resource name="NamedColors">Named Colors </resource>  
+<resource name="AllowFullScreen">Allow Full Screen</resource>  
+<resource name="YouTube">Embed a YouTube video</resource>  
+<resource name="WebPalette">Web Palette</resource>  
+<resource name="InvalidFileName">A filename cannot contain any of the following characters</resource>  
+<resource name="Wrap">Wrap</resource>  
+<resource name="UseApple_VtoPaste">Use Apple+V on your keyboard to paste the text.</resource>  
+<resource name="Sort">Sort</resource>  
+<resource name="SelectAnchor">Select a named anchor in the current page</resource>  
+<resource name="on">on</resource>  
+<resource name="BorderColor">Border color</resource>  
+<resource name="TabIndex">Tab Index</resource>  
+<resource name="SortBySizeAsc">Size Asc</resource>  
+<resource name="Pen">Pen</resource>  
+<resource name="SelectImagetoInsert">Please choose an image to insert</resource>  
+<resource name="WordNotFound">Word not found. Nothing replaced.</resource>  
+<resource name="SortBySizeDesc">Size Desc</resource>  
+<resource name="maxRequestLengthExceeded">Maximum request length exceeded.The default value for the maxRequestLength parameter in the httpRuntime section of the Web.Config file is 4096 (4 MB). As a result, files that are larger than this value are not uploaded by default. </resource>  
+<resource name="TemplateModified">Template modified successfully!</resource>  
+<resource name="FoldernameNotsupported">Folder name not allowed! Please keep the folder name one word with no spaces or special characters. </resource>  
+<resource name="Characters">Characters</resource>  
+<resource name="SelectFileDialogOption">dialogWidth:600px;dialogHeight:480px;</resource>  
+<resource name="drawtransparentellipse">Draw a transparent ellipse</resource>  
+<resource name="Orange">Orange</resource>  
+<resource name="Under">Underline</resource>  
+<resource name="SortByDateAsc">Date Asc</resource>  
+<resource name="Header-Left-TopRight-Body">Header, Left, Top Right and Body</resource>  
+<resource name="SelectImageDialogOption">dialogWidth:590px;dialogHeight:510px;</resource>  
+<resource name="SortByDateDesc">Date Desc</resource>  
+<resource name="ImageFileIsTooLarge">The uploaded image is too large. The max image file size of this web site is set to: </resource>  
+<resource name="alert_MaxTextLength">The text to be added has reached the character limit for this field:</resource>  
+<resource name="AccessKey">Access Key</resource>  
+<resource name="Scale">Scale</resource>  
+<resource name="Red">Red</resource>  
+<resource name="ShowBorder">Show Border</resource>  
+<resource name="Cyan">Cyan</resource>  
+<resource name="Readonly">Readonly</resource>  
+<resource name="noWrap">noWrap</resource>  
+<resource name="HtmlImage">htmlview.gif</resource>  
+<resource name="Recent">Recent</resource>  
+<resource name="PasteYouTube">Paste the YouTube Embed code here</resource>  
+<resource name="CellPadding">Cell padding</resource>  
+<resource name="2ColumnTable">Two-Column Table</resource>  
+<resource name="Circle">Circle</resource>  
+<resource name="pixels">pixels</resource>  
+<resource name="EditList">List Properties</resource>  
+<resource name="CustomColor">Custom Color</resource>  
+<resource name="DesignImage">design.gif</resource>  
+<resource name="HTMLEncoding">HTML Encoding</resource>  
+<resource name="MaxFolderSizeAllowed">Max Upload folder size is</resource>  
+<resource name="Header-Footer-3-Columns">Header, Footer and 3 Columns</resource>  
+<resource name="Crop">Crop</resource>  
+<resource name="drag-and-drop">Drag and drop image onto panel</resource>  
+<resource name="MaxFileSizeAllowed">Max file size allowed</resource>  
+<resource name="YouTubeRel">Include related videos</resource>  
+<resource name="RotateLeft90">Rotate Left 90</resource>  
+<resource name="AutomaticImageResizeOnOff">Auto resize uploaded images function is</resource>  
+<resource name="RotateRight90">Rotate Right 90</resource>  
+<resource name="UnderImage">under.gif</resource>  
+<resource name="Rotate">Rotate</resource>  
+<resource name="Saveas">Save as</resource>  
+<resource name="PasteAsHTML">Paste As HTML</resource>  
+<resource name="RemoveHTMLTags">Remove all HTML tags</resource>  
+<resource name="WindowlessVideo">WindowlessVideo</resource>  
+<resource name="Exactfit">Exact fit</resource>  
+<resource name="Green">Green</resource>  
+<resource name="Texttop">Texttop</resource>  
+<resource name="Absmiddle">Absmiddle</resource>  
+<resource name="Noborder">No border</resource>  
+<resource name="Angle">Angle</resource>  
+<resource name="Loop">Loop</resource>  
+<resource name="Resize">Resize</resource>  
+<resource name="SelectImagetoThumbnail">Please choose an image to generate a thumbnail</resource>  
+<resource name="StartingNumber">Starting Number</resource>  
+<resource name="MoveDown">Move Down</resource>  
+<resource name="WrongFormatImage">The Image Format is Wrong!</resource>  
+<resource name="thumbnailSuccessfully">Thumbnail was created successfully!</resource>  
+<resource name="WordReplaced">Word(s) were replaced</resource>  
+<resource name="Close">Close</resource>  
+<resource name="CustomBullet">Custom bullet</resource>  
+<resource name="CellScope">Cell Scope</resource>  
+<resource name="ValidID">IDs can contain only letters and numbers, and must not contain spaces.</resource>  
+<resource name="RemoveWordMarkup">Remove all word specific markup</resource>  
 	
 </resources>

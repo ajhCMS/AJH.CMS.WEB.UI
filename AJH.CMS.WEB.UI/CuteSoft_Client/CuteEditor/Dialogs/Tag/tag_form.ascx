@@ -1,9 +1,9 @@
 <%@ Control Inherits="CuteEditor.EditorUtilityCtrl" Language="c#" AutoEventWireup="false" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <fieldset><legend>[[InsertForm]]</legend>
-	<table class="normal">
+	<table class="normal" width="98%">
 		<tr>
-			<td style="width:100">[[Action]]:</td>
-			<td><input type="text" id="inp_action" style="width:200px" /></td>
+			<td style="width:100px">[[Action]]:</td>
+			<td><input type="text" id="inp_action" style="width:300px" /></td>
 		</tr>
 		<tr>
 			<td>[[Method]]:</td>
@@ -41,4 +41,4 @@
 	</table>
 </fieldset>
 
-<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Form.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1004&file=Dialog_Tag_Form.js"></script>

@@ -1,12 +1,12 @@
 <%@ Control Inherits="CuteEditor.EditorUtilityCtrl" Language="c#" AutoEventWireup="false" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <fieldset><legend>[[Input]]</legend>
-	<table class="normal">
+	<table class="normal" width="98%">
 		<tr>
 			<td>[[Type]]:</td>
 			<td colspan="3"><input type="text" id="inp_type" readonly="readonly" disabled="disabled" style="width:100px" /></td>
 		</tr>
 		<tr>
-			<td style="width:60">[[Name]]:</td>
+			<td style="width:60px">[[Name]]:</td>
 			<td colspan="3"><input type="text" id="inp_name" style="width:100px" /></td>
 		</tr>
 		<tr>
@@ -31,7 +31,7 @@
 		<tr id="row_img2">
 			<td>[[Alignment]]:</td>
 			<td>
-				<select name="inp_Align" style="WIDTH : 80px" id="sel_Align">
+				<select name="inp_Align" style="width:80px;" id="sel_Align">
 					<option id="optNotSet" value="">[[Notset]]</option>
 					<option id="optLeft" value="left">[[Left]]</option>
 					<option id="optRight" value="right">[[Right]]</option>
@@ -47,7 +47,7 @@
 			<td>[[Bordersize]]:</td>
 			<td>
 				<input type="text" size="2" name="inp_Border" onkeypress="return CancelEventIfNotDigit()"
-					style="WIDTH : 80px" id="inp_Border" />
+					style="width:80px;" id="inp_Border" />
 			</td>
 		</tr>
 		<tr id="row_img3">
@@ -114,5 +114,5 @@
 		</tr>
 	</table>
 </fieldset>
-<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Input.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1004&file=Dialog_Tag_Input.js"></script>
 
