@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="ContactUs_UC.ascx.cs"
-    Inherits="AJH.CMS.WEB.UI.ContactUs_UC" meta:resourcekey="PageTitle" %>
-<asp:UpdatePanel ID="upnlContactUs" runat="server">
+    Inherits="AJH.CMS.WEB.UI.ContactUs_UC" %>
+<asp:UpdatePanel ID="upnlContactUs" runat="server" UpdateMode="Conditional">
     <ContentTemplate>
         <div id="dvMessage" runat="server" visible="false">
             <asp:Label ID="lblMsgconfirmation" runat="server" meta:resourcekey="lblMsgconfirmation"></asp:Label>

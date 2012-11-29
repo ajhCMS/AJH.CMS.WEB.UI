@@ -2,16 +2,16 @@
 <fieldset><legend>[[Layout]]</legend>
 	<table border="0" cellspacing="0" cellpadding="2" class="normal">
 		<tr>
-			<td style="width:50px">[[Position]]:
+			<td style="width:50">[[Position]]:
 			</td>
-			<td><select style="width:80px" id="sel_position">
+			<td><select style="width:80" id="sel_position">
 					<option value="">[[NotSet]]</option>
 					<option value="absolute">[[Absolute]]</option>
 					<option value="relative">[[Relative]]</option>
 				</select></td>
-			<td>[[Display]]:
+			<td style="width:50">[[Display]]:
 			</td>
-			<td><select style="width:80px" id="sel_display">
+			<td><select style="width:80" id="sel_display">
 					<option value="">[[NotSet]]</option>
 					<option value="block">block</option>
 					<option value="inline">inline</option>
@@ -19,17 +19,17 @@
 				</select></td>
 		</tr>
 		<tr>
-			<td style="width:50px">[[Float]]:
+			<td style="width:50">[[Float]]:
 			</td>
-			<td><select style="width:80px" id="sel_float">
+			<td><select style="width:80" id="sel_float">
 					<option value="">[[NotSet]]</option>
 					<option value="left">[[FloatLeft]]</option>
 					<option value="right">[[FloatRight]]</option>
 					<option value="none">[[FloatNone]]</option>
 				</select></td>
-			<td>[[Clear]]:
+			<td style="width:50">[[Clear]]:
 			</td>
-			<td><select style="width:80px" id="sel_clear">
+			<td><select style="width:80" id="sel_clear">
 					<option value="">[[NotSet]]</option>
 					<option value="left">[[ClearLeft]]</option>
 					<option value="right">[[ClearRight]]</option>
@@ -42,8 +42,8 @@
 <fieldset><legend>[[Size]]</legend>
 	<table border="0" cellspacing="0" cellpadding="2" class="normal">
 		<tr>
-			<td style="width:50px">[[Top]]</td>
-			<td nowrap><input type="text" id="tb_top" style="width:50px" />
+			<td style="width:50">[[Top]]</td>
+			<td><input type="text" id="tb_top" style="width:42" />
 				<select id="sel_top_unit">
 					<option value="px">px</option>
 					<option value="pt">pt</option>
@@ -53,8 +53,8 @@
 					<option value="mm">mm</option>
 					<option value="in">in</option>
 				</select></td>
-			<td style="width:50px">[[Height]]</td>
-			<td nowrap><input type="text" id="tb_height" style="width:50px" />
+			<td style="width:50">[[Height]]</td>
+			<td><input type="text" id="tb_height" style="width:42" />
 				<select id="sel_height_unit">
 					<option value="px">px</option>
 					<option value="%">%</option>
@@ -67,8 +67,8 @@
 				</select></td>
 		</tr>
 		<tr>
-			<td style="width:50px">[[Left]]</td>
-			<td nowrap><input type="text" id="tb_left" style="width:50px" />
+			<td style="width:50">[[Left]]</td>
+			<td><input type="text" id="tb_left" style="width:42" />
 				<select id="sel_left_unit">
 					<option value="px">px</option>
 					<option value="pt">pt</option>
@@ -78,8 +78,8 @@
 					<option value="mm">mm</option>
 					<option value="in">in</option>
 				</select></td>
-			<td style="width:50px">[[Width]]</td>
-			<td nowrap><input type="text" id="tb_width" style="width:50px" />
+			<td style="width:50">[[Width]]</td>
+			<td><input type="text" id="tb_width" style="width:42" />
 				<select id="sel_width_unit">
 					<option value="px">px</option>
 					<option value="%">%</option>
@@ -96,8 +96,8 @@
 <fieldset><legend>[[Clipping]]</legend>
 	<table border="0" cellspacing="0" cellpadding="2" class="normal">
 		<tr>
-			<td style="width:50px">[[Top]]</td>
-			<td><input type="text" id="tb_cliptop" style="width:45px" />
+			<td style="width:50">[[Top]]</td>
+			<td><input type="text" id="tb_cliptop" style="width:42" />
 				<select id="sel_cliptop_unit">
 					<option value="px">px</option>
 					<option value="%">%</option>
@@ -108,8 +108,8 @@
 					<option value="mm">mm</option>
 					<option value="in">in</option>
 				</select></td>
-			<td style="width:50px">[[Bottom]]</td>
-			<td><input type="text" id="tb_clipbottom" style="width:45px" />
+			<td style="width:50">[[Bottom]]</td>
+			<td><input type="text" id="tb_clipbottom" style="width:42" />
 				<select id="sel_clipbottom_unit">
 					<option value="px">px</option>
 					<option value="%">%</option>
@@ -122,8 +122,8 @@
 				</select></td>
 		</tr>
 		<tr>
-			<td style="width:50px">[[Left]]</td>
-			<td><input type="text" id="tb_clipleft" style="width:45px" />
+			<td style="width:50">[[Left]]</td>
+			<td><input type="text" id="tb_clipleft" style="width:42" />
 				<select id="sel_clipleft_unit">
 					<option value="px">px</option>
 					<option value="%">%</option>
@@ -134,8 +134,8 @@
 					<option value="mm">mm</option>
 					<option value="in">in</option>
 				</select></td>
-			<td style="width:50px">[[Right]]</td>
-			<td><input type="text" id="tb_clipright" style="width:45px" />
+			<td style="width:50">[[Right]]</td>
+			<td><input type="text" id="tb_clipright" style="width:42" />
 				<select id="sel_clipright_unit">
 					<option value="px">px</option>
 					<option value="%">%</option>
@@ -158,9 +158,9 @@
 			<option value="visible">[[OverflowVisible]]</option>
 			<option value="hidden">[[OverflowHidden]]</option>
 		</select>
-		z-index: <input type="text" style="width:60px" id="tb_zindex" />
+		z-index: <input type="text" style="width:60" id="tb_zindex" />
 	</div>
-	<table border="0" cellspacing="0" cellpadding="3" class="normal">
+	<table border="0" cellspacing="0" cellpadding="0" class="normal">
 		<tr>
 			<td style="width:120">[[PrintingBefore]]:</td>
 			<td><select id="sel_pagebreakbefore"><option value="">[[NotSet]]</option>
@@ -179,6 +179,6 @@
 		</tr>
 	</table>
 </fieldset>
-<div id="outer" style="height:80px;"><div id="div_demo">[[DemoText]]</div>
+<div id="outer"><div id="div_demo">[[DemoText]]</div>
 </div>
-<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=Dialog_Tag_Style_Layout.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Style_Layout.js"></script>

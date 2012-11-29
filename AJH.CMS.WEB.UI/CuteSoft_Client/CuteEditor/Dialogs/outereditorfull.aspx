@@ -27,11 +27,10 @@ override protected void OnInit(EventArgs args)
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head runat="server">
+	<head>
 		<meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)" />
 		<meta http-equiv="Page-Exit" content="blendTrans(Duration=0.1)" />
-		<link href='Load.ashx?type=themecss&file=dialog.css&theme=[[_Theme_]]' type="text/css" rel="stylesheet" />
-		<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=DialogHead.js"></script>
+		<link href="Load.ashx?type=style&file=dialog.css" type="text/css" rel="stylesheet" />
 		<!--[if IE]>
 			<link href="Load.ashx?type=style&file=IE.css" type="text/css" rel="stylesheet" />
 		<![endif]-->
@@ -41,10 +40,9 @@ override protected void OnInit(EventArgs args)
 		<form runat="server" id="Form1">
 			<CE:EDITOR 
 					id="OuterEditor" 
-					AutoConfigure="Compact"
+					AutoConfigure="Full"
 					ShowDecreaseButton="false" 
 					ShowEnlargeButton="false" 
-					UseStandardDialog="true" 
 					runat="server"
 					DisableItemList="print,DocumentPropertyPage,ToFullPage,FromFullPage,CssStyle,InsertTemplate"
 				>
@@ -64,7 +62,7 @@ override protected void OnInit(EventArgs args)
 			Image1.ImageUrl				= "../Themes/custom/images/close.gif";
 			Image1.CssClass				= "CuteEditorButton";
 			SetMouseEvents(Image1);
-			Image1.Attributes["onclick"]="doClose();";
+			Image1.Attributes["onclick"]="top.returnValue=null; top.close();";
 			
 			System.Web.UI.WebControls.Image Image2 = new System.Web.UI.WebControls.Image ();
 			Image2.ToolTip				= "Add uneditable regions";
@@ -99,8 +97,7 @@ override protected void OnInit(EventArgs args)
 		
 			OuterEditor.SaveFile(filename); 
 			
-			savedpanel.Visible=true;
-			
+			HttpContext.Current.Response.Write("<script language='javascript'>top.returnValue=true;top.close();</scr" + "ipt>");
 	    } 
 	    if(OuterEditor.BrowserType==BrowserType.CompatibleIE)
 	    {
@@ -135,14 +132,3 @@ override protected void OnInit(EventArgs args)
 		control.Attributes["ondragstart"]="CuteEditor_CancelEvent()";
 	}
 </script>
-
-
-<script language="JavaScript" type="text/javascript" >
-var OxO8a2b=["postback","Save"];function doClose(){Window_SetDialogReturnValue(window,null);var OxOe16e=[];Window_CloseDialog(window);} ;function CuteEditor_OnCommand(editor,Ox4d,Ox4e,Ox4f){if(Ox4d.toLowerCase()==OxO8a2b[0]&&Ox4f==OxO8a2b[1]){Window_SetDialogReturnValue(window,'<%= Request.QueryString["f"]%>');} ;} ;
-</script>
-
-<asp:Panel runat=server Visible=false id="savedpanel">
-<script language="JavaScript" type="text/javascript" >
-var OxOe16e=[];Window_CloseDialog(window);
-</script>
-</asp:Panel>

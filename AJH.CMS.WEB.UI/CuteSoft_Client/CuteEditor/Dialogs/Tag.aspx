@@ -1,24 +1,18 @@
-<%@ Import Namespace="System.Xml"%>
 <%@ Page Language="C#" Inherits="CuteEditor.EditorUtilityPage" %>
-<html>
-	<head>
-		<title>[[Tag]]</title>
-		<script runat="server">
+<%@ Import Namespace="System.Xml"%>
+<script runat="server">
 override protected void OnInit(EventArgs args)
 {
-	if(Context.Request.QueryString["Dialog"]=="Standard")
-	{
 	if(Context.Request.QueryString["IsFrame"]==null)
 	{
 		string FrameSrc="Tag.Aspx?IsFrame=1&"+Request.ServerVariables["QUERY_STRING"];
 		CuteEditor.CEU.WriteDialogOuterFrame(Context,"[[Tag]]",FrameSrc);
 		Context.Response.End();
 	}
-	}
 	base.OnInit(args);
 }
-		</script>
-		<script runat="server">
+</script>
+<script runat="server">
 public bool IsTagPattern(string tagname,string pattern)
 {
 	if(pattern=="*")return true;
@@ -49,8 +43,8 @@ public string GetTagDisplayName(string tagname)
 	}
 }
 bool nocancel=false;
-		</script>
-		<%
+</script>
+<%
 	if(Context.Request.QueryString["NoCancel"]=="True")
 		nocancel=true;
 		
@@ -61,28 +55,37 @@ bool nocancel=false;
 	string tabcontrol=null;
 	string tabtext="";
 %>
-		<meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)">
-		<meta http-equiv="Page-Exit" content="blendTrans(Duration=0.1)">
-		<link href='Load.ashx?type=themecss&amp;file=dialog.css&amp;theme=[[_Theme_]]' type="text/css"	rel="stylesheet"> 
-		<!--[if IE]><LINK 
-rel=stylesheet type=text/css href="Load.ashx?type=style&amp;file=IE.css"><![endif]-->
-			<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&amp;file=DialogHead.js"></script>
-			<%if(nocancel){%>
-			<script type="text/javascript">
-			var OxOd689=["nocancel"];top[OxOd689[0]]=true;
-			</script>
-			<%}else{%>
-			<script type="text/javascript">
-			var OxO98f8=["nocancel"];top[OxO98f8[0]]=false;
-			</script>
-			<%}%>
-			<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&amp;file=Dialog_TagHead.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)" />
+		<meta http-equiv="Page-Exit" content="blendTrans(Duration=0.1)" />
+		<link href="Load.ashx?type=style&file=dialog.css" type="text/css" rel="stylesheet" />
+		<!--[if IE]>
+			<link href="Load.ashx?type=style&file=IE.css" type="text/css" rel="stylesheet" />
+		<![endif]-->
+		<script type="text/javascript" src="Load.ashx?type=dialogscript&file=DialogHead.js"></script>
+		<%if(nocancel){%>
+		<script type="text/javascript">
+	var OxO5217=["nocancel"]; top[OxO5217[0x0]]=true ;
+		</script>
+		<%}else{%>
+		<script type="text/javascript">
+	var OxO4a83=["nocancel"]; top[OxO4a83[0x0]]=false ;
+		</script>
+		<%}%>
+		<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_TagHead.js"></script>
+		<title></title>
 	</head>
-	<body>
-		<div id="ajaxdiv" style="padding:10px;margin:0;text-align:center; background:#eeeeee;height:100%;width:100%">
-			<div class="tab-pane-control tab-pane" id="controlparent">
-				<div class="tab-row">
-					<%
+	<body style="border-width:0px;padding-top:4px;padding-left:4px;padding-right:4px;;margin:0px;">
+		<span style="font-size:10pt;font-family:Tahoma; font-weight:bold;TEXT-TRANSFORM: capitalize">
+			<%=GetTagDisplayName(tagName)%>
+		</span>
+		<fieldset id="controlparent" style="width:100%; height:386px; padding-left:7px; padding-right:7px; padding-bottom:7px;">
+			<legend align="right">
+				<table>
+					<tr>
+						<td id="menu">
+							<%
 					int index=0;
 					foreach(XmlElement xe in doc.DocumentElement.SelectNodes("add"))
 					{
@@ -97,21 +100,21 @@ rel=stylesheet type=text/css href="Load.ashx?type=style&amp;file=IE.css"><![endi
 								tabtext=xe.GetAttribute("text");
 							}
 						%>
-					<h2 class='<%=isactive?"tab selected":"tab"%>'>
-						<a tabindex="-1" href='<%=CuteEditor.EditorUtility.ReplaceParam(Request.RawUrl,"Tab",tab)%>'>
-							<span style="WHITE-SPACE:nowrap">
-								<%=xe.GetAttribute("text")%>
-							</span>
-						</a>
-					</h2>
-					<%
+							<a class='<%=isactive?"ActiveTabNav":"TabNav"%>' tabindex="-1" href='<%=CuteEditor.EditorUtility.ReplaceParam(Request.RawUrl,"Tab",tab)%>'>
+								<span style="white-space:nowrap;" >
+									<%=xe.GetAttribute("text")%>
+								</span>
+							</a>
+							<%
 							index++;
 						}
 					}	
 					%>
-				</div>
-				<div class="tab-page" style="WIDTH:450px">
-					<%
+						</td>
+					</tr>
+				</table>
+			</legend>
+			<%
 				if(tabcontrol!=null)
 				{
 					try
@@ -124,23 +127,22 @@ rel=stylesheet type=text/css href="Load.ashx?type=style&amp;file=IE.css"><![endi
 						if(Context.Request.QueryString["_err"]=="2")
 							throw;
 						%>
-					<iframe style="WIDTH:378px;HEIGHT:333px" src='<%=Context.Request.RawUrl+"&amp;_err=2"%>'>
-					</iframe>
-					<%
+			<iframe style="width:378;height:333" src='<%=Context.Request.RawUrl+"&_err=2"%>'>
+			</iframe>
+			<%
 					}
 				}
 			%>
-					<asp:PlaceHolder id="holder1" Runat="server"></asp:PlaceHolder>
-				</div>
-			</div>
-			<br>
-			<div id="container-bottom">
-				<input type="button" id="btn_editinwin" class="formbutton" value="[[EditHtml]]">
-				&nbsp;&nbsp;&nbsp; <input type="button" id="btnok" class="formbutton" value="[[OK]]" style="width:80px;">&nbsp;
-				<input type="button" id="btncc" class="formbutton" value="[[Cancel]]" style="width:80px;">
-			</div>
+			<asp:PlaceHolder id="holder1" Runat="server"></asp:PlaceHolder>
+		</fieldset>
+		<div style="text-align:right;padding-top:8px;padding-bottom:2px;padding-right:12px;">
+			<input type="button" id="btn_editinwin" value="[[EditHtml]]" />				
+			&nbsp;&nbsp;&nbsp;
+			<input type="button" id="btnok" value="[[OK]]" style="width:80px"/>&nbsp;
+			<input type="button" id="btncc" value="[[Cancel]]" style="width:80px"/>
+
 		</div>
-		<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&amp;file=DialogFoot.js"></script>
-		<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&amp;file=Dialog_TagFoot.js"></script>
 	</body>
-</HTML>
+	<script type="text/javascript" src="Load.ashx?type=dialogscript&file=DialogFoot.js"></script>
+	<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_TagFoot.js"></script>
+</html>

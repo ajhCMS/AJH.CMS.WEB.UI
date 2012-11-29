@@ -48,10 +48,19 @@ namespace AJH.CMS.WEB.UI
                 XsltArgumentList arguments = new XsltArgumentList();
                 arguments.AddExtensionObject("CMS:UserControl", this);
 
-                xmlMenu.DocumentContent = MenuManager.GetMenuItemTemplateXml(menuID, CMSContext.LanguageID);
+                Menu menu = new Menu();
+                xmlMenu.DocumentContent = MenuManager.GetMenuItemTemplateXml(menuID, CMSContext.LanguageID, out menu);
                 xmlMenu.TransformSource = xslPath;
                 xmlMenu.TransformArgumentList = arguments;
                 xmlMenu.DataBind();
+
+                bool SetPageTitle = false;
+                bool.TryParse(this.Attributes["SetPageTitle"], out SetPageTitle);
+
+                if (SetPageTitle && menu != null)
+                {
+                    this.Page.Title = menu.Name;
+                }
             }
         }
         #endregion

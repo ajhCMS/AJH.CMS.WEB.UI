@@ -9,6 +9,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
+	<asp:ScriptManager ID="scManager" EnableCdn="false" runat="server">
+	</asp:ScriptManager>
     <div>
         <asp:ContentPlaceHolder ID="plcHolder" runat="server">
         </asp:ContentPlaceHolder>

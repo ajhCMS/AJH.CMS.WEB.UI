@@ -1,8 +1,8 @@
 <%@ Control Inherits="CuteEditor.EditorUtilityCtrl" Language="c#" AutoEventWireup="false" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <fieldset><legend>Textarea</legend>
-	<table class="normal" width="98%">
+	<table class="normal">
 		<tr>
-			<td style="width:60px">[[Name]]:</td>
+			<td style="width:60">[[Name]]:</td>
 			<td><input type="text" id="inp_name" style="width:100px" /></td>
 		</tr>
 		<tr>
@@ -29,7 +29,7 @@
 			</td>		
 		</tr>
 		<tr>
-			<td style="width:60px">[[ID]]:</td>
+			<td style="width:60">[[ID]]:</td>
 			<td><input type="text" id="inp_id" style="width:100px" /></td>
 		</tr>
 		<tr>
@@ -58,5 +58,5 @@
 		</tr>
 	</table>
 </fieldset>
-<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=Dialog_Tag_Textarea.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Textarea.js"></script>
 

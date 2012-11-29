@@ -4,28 +4,19 @@
 if(Request.HttpMethod!="POST")
 {
 	string referrer=Request.QueryString["Referrer"];
-	if(referrer!=null)
-	{
-		if(referrer.IndexOfAny("<>\'\"".ToCharArray())!=-1)
-			referrer=null;
-	}
 	if(referrer==null)
 	{
 		referrer=Convert.ToString(Request.UrlReferrer);
-	}
-	if(referrer==null||referrer=="")
-	{
-		referrer=Request.Url.ToString();
 	}
 %>
 <html>
 	<head>
 		<title>Untitled</title>
 		<meta name="GENERATOR" content="CuteEditor">
-		<base target="_blank"  href="<%=Server.HtmlEncode(referrer)%>" />
-		<link type="text/css" rel="stylesheet" href='<%=CuteEditor.EditorUtility.ProcessWebPath(Context,Page,"Load.ashx?type=style&file=SyntaxHighlighter.css")%>' />
+		<base target="_blank"  href="<%=referrer%>" />
 	</head>
 	<body>
+	
 	</body>
 </html>
 <%

@@ -113,7 +113,8 @@ namespace AJH.CMS.Core.Data
                     XmlElement xmlEle = xmlDoc.CreateElement("Menu");
                     xmlRoot.AppendChild(xmlEle);
                     SetAttributeMenuNode(xmlEle, item);
-                    SetElementChildMenu(xmlEle, menus, item.MainParentID);//Id Of Main Parent (PArent Of Parent Obj Id to Handle Language Issue)
+                    SetElementChildMenu(xmlEle, menus, item.ID);//Id Of Main Parent (PArent Of Parent Obj Id to Handle Language Issue)
+                    //SetElementChildMenu(xmlEle, menus, item.MainParentID);//Id Of Main Parent (PArent Of Parent Obj Id to Handle Language Issue)
                 }
 
                 XmlWriter xmlWriter = XmlWriter.Create(MenuCategoryPath);
@@ -124,7 +125,7 @@ namespace AJH.CMS.Core.Data
             return MenuCategoryPath;
         }
 
-        public static string GetMenuItemTemplateXml(int menuId, int languageId)
+        public static string GetMenuItemTemplateXml(int menuId, int languageId, out Menu menu)
         {
             XmlDocument xmlDoc = new XmlDocument();
 
@@ -134,7 +135,7 @@ namespace AJH.CMS.Core.Data
             XmlElement menuItemElement = xmlDoc.CreateElement("Menu");
             xmlRoot.AppendChild(menuItemElement);
 
-            Menu menu = GetMenuByIdAndLanguage(menuId, languageId);
+            menu = GetMenuByIdAndLanguage(menuId, languageId);
             if (menu != null)
             {
                 SetAttributeMenuNode(menuItemElement, menu);

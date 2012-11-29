@@ -1,7 +1,7 @@
 <%@ Control Inherits="CuteEditor.EditorUtilityCtrl" Language="c#" AutoEventWireup="false" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
-<fieldset style="padding:4px;">
+<fieldset>
     <legend>[[SystemFont]]</legend>
-	<select id="sel_font" style="width:240px">
+	<select id="sel_font" style="width:240">
 		<option value="">[[NotSet]]</option>
 		<option value="caption">[[Caption]]</option>
 		<option value="icon">[[Icon]]</option>
@@ -12,8 +12,8 @@
 	</select>
 </fieldset>
 <div id="div_font_detail">
-	<fieldset style="padding:4px;"><legend>[[FontFamily]]</legend>
-	<select id="sel_fontfamily" style="width:240px">
+	<fieldset><legend>[[FontFamily]]</legend>
+	<select id="sel_fontfamily" style="width:240">
 		<option value="">[[NotSet]]</option>
 		<option value="Arial">Arial</option>
 		<option value="Verdana">Verdana</option>
@@ -25,12 +25,12 @@
 		<option value="Wingdings">Wingdings</option>
 	</select>
 	</fieldset>
-	<fieldset style="padding:4px;"><legend>[[Decoration]]</legend>
+	<fieldset><legend>[[Decoration]]</legend>
 		<input type="checkbox" id="cb_decoration_under" /><label for="cb_decoration_under">[[Underline]]</label>
 		<input type="checkbox" id="cb_decoration_over" /><label for="cb_decoration_over">[[Overline]]</label>
 		<input type="checkbox" id="cb_decoration_through" /><label for="cb_decoration_through">[[Strikethrough]]</label>
 	</fieldset>
-	<fieldset style="padding:4px;"><legend>[[Style]]</legend>
+	<fieldset><legend>[[Style]]</legend>
 		<input type="checkbox" id="cb_style_bold" /><label for="cb_style_bold">[[Bold]]</label>
 		<input type="checkbox" id="cb_style_italic" /><label for="cb_style_italic">[[Italic]]</label>
 		&nbsp;&nbsp;[[Capitalization]]:
@@ -41,8 +41,8 @@
 			<option value="capitalize">[[InitialCap]]</option>
 		</select>
 	</fieldset>
-	<fieldset style="padding:4px;"><legend>[[Size]]</legend>
-		<select id="sel_fontsize" style="width:80px">
+	<fieldset><legend>[[Size]]</legend>
+		<select id="sel_fontsize">
 			<option value="">[[NotSet]]</option>
 			<option value="xx-large">xx-large</option>
 			<option value=" x-large">x-large</option>
@@ -54,7 +54,7 @@
 			<option value="larger">larger</option>
 			<option value="smaller">Smaller</option>
 		</select>
-		[[OR]] <input type="text" id="inp_fontsize" style="width:70px" />
+		[[OR]] <input type="text" id="inp_fontsize" style="width:56" />
 		<select id="sel_fontsize_unit">
 			<option value="px">px</option>
 			<option value="pt">pt</option>
@@ -65,10 +65,10 @@
 			<option value="in">in</option>
 		</select>
 	</fieldset>
-	<fieldset style="padding:4px;"><legend>[[Color]]</legend>
-		<input size="14" type="text" id="inp_color"/>
-		<img alt="" id="inp_color_Preview" src="Load.ashx?type=image&file=colorpicker.gif" class="cursor" />
+	<fieldset><legend>[[Color]]</legend>
+		<input size="14" type="text" id="inp_color" oncolorpopup="this.selectedColor=value" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)' oncolorchange='inp_color.value=this.selectedColor; inp_color.style.backgroundColor=this.selectedColor' />
 	</fieldset>
 </div>
-<div id="outer" style="height:100px; margin-bottom:10px; padding:5px;"><div id="div_demo">[[DemoText]]</div></div><br />
-<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=Dialog_Tag_Style_Font.js"></script>
+<div id="outer"><div id="div_demo">[[DemoText]]</div>
+</div>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Style_Font.js"></script>

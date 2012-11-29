@@ -87,14 +87,20 @@
                         Text="Register Control"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="txtRegisterControl" runat="server" Width="100%" Height="100px" TextMode="MultiLine"></asp:TextBox>
+                    <CE:Editor ID="txtRegisterControl" BreakElement="Br" runat="server" Width="100%"
+                        Height="100px" EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code"
+                        ShowEditMode="false" ShowPreviewMode="false" EnableStripScriptTags="false">
+                    </CE:Editor>
                 </td>
                 <td>
                     <asp:Label ID="lblUserControlTag" runat="server" AssociatedControlID="txtUserControlTag"
                         Text="User Control Tag"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="txtUserControlTag" runat="server" Width="270px" Height="100px" TextMode="MultiLine"></asp:TextBox>
+                    <CE:Editor ID="txtUserControlTag" BreakElement="Br" runat="server" Width="270px"
+                        Height="100px" EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code"
+                        ShowEditMode="false" ShowPreviewMode="false" EnableStripScriptTags="false">
+                    </CE:Editor>
                 </td>
             </tr>
         </table>

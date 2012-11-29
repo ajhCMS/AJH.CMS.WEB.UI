@@ -1,6 +1,6 @@
 <%@ Control Inherits="CuteEditor.EditorUtilityCtrl" Language="c#" AutoEventWireup="false" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <fieldset><legend>[[EditRow]]</legend>
-	<table class="normal" width="98%">
+	<table class="normal">
 		<tr>
 			<td colspan="2">
 				<table class="normal" cellpadding="2" cellspacing="1">
@@ -33,25 +33,25 @@
 						</td>
 					</tr>
 					<tr>
-						<td width="100">[[BackgroundColor]]:</td>
+						<td>[[BackgroundColor]]:</td>
 						<td>
-<input autocomplete="off" size="14" type="text" id="inp_bgColor" />
+<input autocomplete="off" size="14" type="text" id="inp_bgColor" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)'	/>
 						</td>
 						<td></td>
 						<td>[[BorderColor]]:</td>
 						<td>
-<input autocomplete="off" size="14" type="text" id="inp_borderColor" />
+<input autocomplete="off" size="14" type="text" id="inp_borderColor" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)' />
 						</td>
 					</tr>
 					<tr>
 						<td>[[BorderColorLight]]:</td>
 						<td>
-<input autocomplete="off" size="14" type="text" id="inp_borderColorLight" />
+<input autocomplete="off" size="14" type="text" id="inp_borderColorLight" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)' />
 						</td>
 						<td></td>
 						<td>[[BorderColorDark]]:</td>
 						<td>
-<input autocomplete="off" size="14" type="text" id="inp_borderColorDark" />
+<input autocomplete="off" size="14" type="text" id="inp_borderColorDark" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)' />
 						</td>
 					</tr>
 					<tr>
@@ -70,4 +70,4 @@
 		</tr>
 	</table>
 </fieldset>
-<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=Dialog_Tag_Tr.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Tr.js"></script>

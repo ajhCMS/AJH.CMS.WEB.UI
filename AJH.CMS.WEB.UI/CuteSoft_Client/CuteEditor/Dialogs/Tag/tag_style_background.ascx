@@ -1,21 +1,20 @@
 <%@ Control Inherits="CuteEditor.EditorUtilityCtrl" Language="c#" AutoEventWireup="false" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
-<fieldset style="padding:4px;">
-	<legend>[[Backgroundcolor]]</legend>
-	<div style="padding:3px;">
-		<input autocomplete="off" type="text" id="inp_color" name="inp_color" size="7" style='width:60px;vertical-align:top;' />
-		<img alt="" src="Load.ashx?type=image&file=colorpicker.gif" id="inp_color_Preview" style='vertical-align:top;' />
-	</div>
+<fieldset><legend>[[Color]]</legend>
+	<input type="text" id="inp_color" name="inp_color" size="7" style="WIDTH:57px" />
+	<img alt="" src="Load.ashx?type=image&file=colorpicker.gif"  style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc); vertical-align:inherit;'
+			oncolorchange="inp_color.value=this.selectedColor; inp_color.style.backgroundColor=this.selectedColor; FireUIChanged()" />
+	
 </fieldset>
-<fieldset style="padding:4px;"><legend>[[Backgroundimage]]</legend>
-	<div style="padding:3px;">
-		[[Url]]: <input id="tb_image" type="text" style="width:220px" />
+<fieldset><legend>[[Backgroundimage]]</legend>
+	<div>
+		[[Url]]: <input id="tb_image" type="text" style="width:220" />
 		<input type="button" id="btnbrowse" value=" ... "/>
 	</div>
 	<div style="padding-left: 32px;">
 		<table border="0" cellpadding="2" cellspacing="0" class="normal">
 			<tr>
-				<td style="width:80px">[[Tiling]]: </td>
-				<td><select id="sel_bgrepeat" style="width:140px">
+				<td style="width:80">[[Tiling]]: </td>
+				<td><select id="sel_bgrepeat" style="width:140">
 						<option value="">[[NotSet]]</option>
 						<option value="repeat">[[Tilingboth]]</option>
 						<option value="repeat-x">[[Tilingorizontal]]</option>
@@ -26,7 +25,7 @@
 			</tr>
 			<tr>
 				<td>[[Scrolling]]: </td>
-				<td><select id="sel_bgattach" style="width:140px">
+				<td><select id="sel_bgattach" style="width:140">
 						<option value="">[[NotSet]]</option>
 						<option value="scroll">[[Scrollingbackground]]</option>
 						<option value="fixed">[[ScrollingFixed]]</option>
@@ -35,7 +34,7 @@
 			</tr>
 		</table>
 	</div>
-	<fieldset style="padding:4px;"><legend>[[Position]]</legend>
+	<fieldset><legend>[[Position]]</legend>
 		<table border="0" cellpadding="2" cellspacing="0" class="normal">
 			<tr>
 				<td>[[Horizontal]]</td>
@@ -45,7 +44,7 @@
 						<option value="center">[[Center]]</option>
 						<option value="right">[[Right]]</option>
 					</select>
-					[[OR]] <input type="text" id="tb_hor" style="width:60px" />
+					[[OR]] <input type="text" id="tb_hor" style="width:42" />
 					<select id="sel_hor_unit">
 						<option value="px">px</option>
 						<option value="pt">pt</option>
@@ -65,7 +64,7 @@
 						<option value="center">[[Center]]</option>
 						<option value="bottom">[[Bottom]]</option>
 					</select>
-					[[OR]] <input type="text" id="tb_ver" style="width:60px" />
+					[[OR]] <input type="text" id="tb_ver" style="width:42" />
 					<select id="sel_ver_unit">
 						<option value="px">px</option>
 						<option value="pt">pt</option>
@@ -80,6 +79,6 @@
 		</table>
 	</fieldset>
 </fieldset>
-<div id="outer" style="height:100px; margin-bottom:10px; padding:5px;"><div id="div_demo">[[DemoText]]</div></div><br />
+<div id="outer"><div id="div_demo">[[DemoText]]</div></div>
 
-<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=Dialog_Tag_Style_Background.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Style_Background.js"></script>

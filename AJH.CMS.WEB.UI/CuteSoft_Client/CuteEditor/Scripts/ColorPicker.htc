@@ -8,59 +8,6 @@
 
 <script type="text/javascript">
 
-
-/****************************************************************\
-	Cookie Functions
-\****************************************************************/
-
-
-function SetCookie(name,value,seconds)
-{
-	var cookie=name+"="+escape(value)+"; path=/;";
-	if(seconds)
-	{
-		var d=new Date();
-		d.setSeconds(d.getSeconds()+seconds);
-		cookie+=" expires="+d.toUTCString()+";";
-	}
-	document.cookie=cookie;
-}
-function GetCookie(name)
-{
-	var cookies=document.cookie.split(';');
-	for(var i=0;i<cookies.length;i++)
-	{
-		var parts=cookies[i].split('=');
-		if(name==parts[0].replace(/\s/g,''))
-			return unescape(parts[1])
-	}
-	//return undefined..
-}
-function GetCookieDictionary()
-{
-	var dict={};
-	var cookies=document.cookie.split(';');
-	for(var i=0;i<cookies.length;i++)
-	{
-		var parts=cookies[i].split('=');
-		dict[parts[0].replace(/\s/g,'')]=unescape(parts[1]);
-	}
-	return dict;
-}
-function GetCookieArray()
-{
-	var arr=[];
-	var cookies=document.cookie.split(';');
-	for(var i=0;i<cookies.length;i++)
-	{
-		var parts=cookies[i].split('=');
-		var cookie={name:parts[0].replace(/\s/g,''),value:unescape(parts[1])};
-		arr[arr.length]=cookie;
-	}
-	return arr;
-}
-
-
 function HideSelects()
 {
 	var cmd=element.getAttribute("Command");
@@ -88,7 +35,7 @@ var colorsArray = new Array("#000000","#993300","#333300","#003300","#003366","#
 			"#FF0000","#FF9900","#99CC00","#339966","#33CCCC","#3366FF","#800080","#999999",
 			"#FF00FF","#FFCC00","#FFFF00","#00FF00","#00FFFF","#00CCFF","#993366","#C0C0C0",
 			"#FF99CC","#FFCC99","#FFFF99","#CCFFCC","#CCFFFF","#99CCFF","#CC99FF","#FFFFFF");
-	
+			
 var ShowMoreColors = true;
 
 var dlgurl='[[_CuteEditorResource_]]Load.ashx?type=dialog&file=ColorPicker.Aspx&culture=[[_culture_]]'+"&[[DNN_Arg]]"
@@ -101,60 +48,46 @@ function element._cphtc_dlg()
 {
 	CloseDiv();
 
-	var oldvalue=_color;
-		
-	function HandleReturn(res)
+	event_oncolorpopup.fire();
+	var option='dialogWidth:500px;dialogHeight:330px;help:0;status:0;resizable:1'
+	if(element.disableVisual)
 	{
-		if(res!=null&&res!==false)
+		var res=showModalDialog(dlgurl
+			,{color:oldvalue}
+			,option);
+		if(res!=null&&res!=false)
 		{
 			_color=res;
 			event_oncolorchange.fire();
-		}
-		else if(element.disableVisual)
-		{
-			_color=oldvalue;
-			event_oncolorchange.fire();
-		}
-	}
-	
-	event_oncolorpopup.fire();
-	_colorpickerDialogFeature = "dialogWidth:520px;dialogHeight:420px;help:0;status:0;resizable:1";
-	if(element.disableVisual)
-	{
-		if(window.editor)
-		{
-			window.editor.ShowDialog(HandleReturn,dlgurl
-			,{editor:editor}
-			,_colorpickerDialogFeature);
-		}
-		else
-		{
-			var res=showModalDialog(dlgurl
-				,{color:oldvalue}
-				,_colorpickerDialogFeature);
-			HandleReturn(res);
+			
 		}
 	}
 	else
 	{
 		//FEATURE:change the color in ColorPicker.aspx would fire the event so the changing would affect immediately , and it could be auto rollback
 		
+		var oldvalue=_color;
 		
-		if(window.editor)
+		var res=showModalDialog(dlgurl+'?culture=[[_culture_]]'+"&[[DNN_Arg]]"
+			,{color:oldvalue,onchange:SetColor}
+			,option);
+
+		if(res!=null&&res!=false)
 		{
-			window.editor.ShowDialog(HandleReturn,dlgurl
-			,{editor:editor}
-			,_colorpickerDialogFeature);
+			_color=res;
 		}
 		else
 		{
-			var res=showModalDialog(dlgurl+'?culture=[[_culture_]]'+"&[[DNN_Arg]]"
-				,{color:oldvalue,onchange:HandleReturn}
-				,_colorpickerDialogFeature);
-
-			HandleReturn(res);
+			_color=oldvalue;
 		}
 		
+		event_oncolorchange.fire();
+		
+		function SetColor(val)
+		{
+			_color=val;
+			event_oncolorchange.fire();
+		}
 	}
 }
 
@@ -261,7 +194,7 @@ function _mtd_popupColor()
 	for(var i=0;i<coll.length;i++)
 		coll[i].unselectable='on';
 		
-	if(div.focus)div.focus();
+	div.focus();
 	
 	var manager=new CaptureManager(element,handlelosecapture);
 	manager.AddElement(div);
@@ -289,268 +222,73 @@ function CloseDiv()
 <script type="text/javascript">
 
 
-//Old_Position_Functions.js
-
 /****************************************************************\
 	Position Functions
 \****************************************************************/
-	
-//TODO:firefox,fixed,body width
-
-function GetIsFixedPosition(e)
+//get the position of a element ( by the scroll offset )
+function GetScrollPostion(e)
 {
-	var isfirefox=navigator.userAgent.indexOf("Firefox")>-1;
-	if(!isfirefox)
+	var b=window.document.body;
+	var p=b;
+	if(window.document.compatMode=='CSS1Compat')
 	{
-		if(e.offsetParent!=null)
-			return false;
+		p=window.document.documentElement;
 	}
-	var stylepos;
-	if(e.currentStyle)
-		stylepos=e.currentStyle.position;
-	else
-		stylepos=window.getComputedStyle(e,null).getPropertyValue("position");
-	return stylepos=="fixed";
+	
+	if(e==b)return {left:0,top:0};
+	with(e.getBoundingClientRect())
+	{
+		return {left:p.scrollLeft+left,top:p.scrollTop+top};
+	}
 }
-function GetCurrentBorderWidth(p,side)
-{
-	var val="";
-	if(p.currentStyle)
-	{
-		if(p.currentStyle["border"+side+"Style"]=="none")
-			return 0;
-		val=p.currentStyle["border"+side+"Width"]
-	}
-	else
-	{
-		side=side.toLowerCase();
-		var s=window.getComputedStyle(p,null);
-		
-		if(s.getPropertyValue("border-style-"+side)=="none")
-			return 0;
-		val=s.getPropertyValue("border-"+side+"-width")
-	}
-	if(!val)
-		return 0;
-	switch(val)
-	{
-		case "thin":
-			return 1;
-		case "medium":
-			if(navigator.userAgent.indexOf("MSIE 7.")>-1||window.document.compatMode!="CSS1Compat")
-			{
-				if(p.nodeName=="TABLE"||p.nodeName=="TD")
-					return 0;
-			}
-			return 3;
-		case "thick":
-			return 5;
-	}
-	return parseInt(val)||0;
-}
-
-function GetScrollPosition(e)
-{
-	var isxhtml=window.document.compatMode=="CSS1Compat";
-	var isie=navigator.userAgent.indexOf("MSIE")>-1;
-	var isie5=isie&&navigator.userAgent.indexOf("MSIE 5.")>-1;
-	var isie6=isie&&navigator.userAgent.indexOf("MSIE 6.")>-1;
-	var isie7=isie&&navigator.userAgent.indexOf("MSIE 7.")>-1;
-	var isie8=isie&&parseInt(navigator.userAgent.split("MSIE ")[1].split(".")[0])>7;
-	var isopera=!!window.opera;
-	var iswebkit=navigator.userAgent.indexOf("AppleWebKit")>-1;
-	var isfirefox=navigator.userAgent.indexOf("Firefox")>-1;
-
-	var pos={left:0,top:0};
-
-	var ffborderfix=0;
-	
-	
-	function AddBoder(par)
-	{
-		if(par.nodeName!="BODY"&&par.nodeName!="HTML")
-		{
-			pos.left+=GetCurrentBorderWidth(par,"Left");
-			pos.top+=GetCurrentBorderWidth(par,"Top");
-		}
-	}
-			
-	while(e)
-	{
-		pos.left+=e.offsetLeft;
-		pos.top+=e.offsetTop;		
-		
-		var par=GetStandParent(e);
-		
-		if(par)
-		{
-			//fix the offsetTop/offsetLeft bug.?
-			for(var p=e.parentNode;p!=par;p=p.parentNode)
-			{
-				pos.top-=p.scrollTop;
-				pos.left-=p.scrollLeft;
-			}
-		}
-		
-		if(GetIsFixedPosition(e))
-		{
-			if(isopera)
-			{
-				if(e.offsetTop==0)
-					pos.top+=parseInt(window.getComputedStyle(e,null).getPropertyValue("top"))||0;
-				if(e.offsetLeft==0)
-					pos.left+=parseInt(window.getComputedStyle(e,null).getPropertyValue("left"))||0;
-			}
-			pos.top+=Math.max(document.body.scrollTop,document.documentElement.scrollTop);
-			pos.left+=Math.max(document.body.scrollLeft,document.documentElement.scrollLeft);
-			if(isie8)
-			{
-				if(e.parentElement&&e.parentElement.style.position=="absolute")
-				{
-					var ppos=GetScrollPosition(e.parentElement);
-					pos.top+=ppos.top;
-					pos.left+=ppos.left;
-				}
-			}
-			return pos;
-		}
-		
-
-		if(!par)
-			return pos;
-		
-		if(isopera)
-		{
-			//NOTE: only tested opera 10
-			//do not check the border!
-		}
-		else if(isfirefox)
-		{
-			//TODO:-moz-box-sizing:border-box;
-			AddBoder(par);
-			//for firefox bug!
-			if(ffborderfix==0)
-			{
-				if(window.getComputedStyle(e,null).getPropertyValue("position")=="absolute")
-				{
-					AddBoder(par);
-					ffborderfix=1;
-				}
-			}
-		}	
-		else if(isxhtml)
-		{
-			if(isie8)
-			{
-			}
-			else
-			{
-				AddBoder(par);
-			}
-		}
-		else
-		{
-			AddBoder(par);
-		}
-		
-		if(isxhtml)
-		{
-			// if(isie8||isopera||iswebkit) root offsetParent is BODY
-			if(iswebkit)
-			{
-				//if(iswebkit) , the document.body.scrollTop has value , document.documentElement.scrollTop is awlasy zero
-				if(par.nodeName!="BODY")
-				{
-					pos.left-=par.scrollLeft;
-					pos.top-=par.scrollTop;
-				}
-			}
-			else
-			{
-				if(par.nodeName!="HTML")
-				{
-					pos.left-=par.scrollLeft;
-					pos.top-=par.scrollTop;
-				}
-			}
-		}
-		else
-		{
-			if(par.nodeName!="BODY")
-			{
-				pos.left-=par.scrollLeft;
-				pos.top-=par.scrollTop;
-			}
-		}
-		
-		e=par;
-	}
-	
-		
-	if(isfirefox)
-	{
-		pos.left-=GetCurrentBorderWidth(document.body,"Left");
-		pos.top-=GetCurrentBorderWidth(document.body,"Top");
-		pos.left+=GetCurrentBorderWidth(document.documentElement,"Left");
-		pos.top+=GetCurrentBorderWidth(document.documentElement,"Top");
-	}
-	
-	return pos;
-}
-function GetStandParent(e)
-{
-	if(e.offsetParent)
-		return e.offsetParent;
-	if(e.nodeName=="BODY"||e.nodeName=="HTML")
-		return null;
-	return document.body;
-}
-function CalcPosition(floate, e)
-{
-	var epos=GetScrollPosition(e);
-	if(GetIsFixedPosition(floate))
-	{
-		epos.top-=Math.max(document.body.scrollTop,document.documentElement.scrollTop);
-		epos.left-=Math.max(document.body.scrollLeft,document.documentElement.scrollLeft);
-		
-		return {left:epos.left,top:epos.top};
-	}
-	else
-	{
-		var spar=GetStandParent(floate);
-		var spos=GetScrollPosition(spar);
-		if(spar.nodeName!="BODY"&&spar.nodeName!="HTML")
-		{
-			spos.left+=GetCurrentBorderWidth(spar,"Left");
-			spos.top+=GetCurrentBorderWidth(spar,"Top");
-			spos.left-=spar.scrollLeft;
-			spos.top-=spar.scrollTop;
-		}
-	}
-	return {left:epos.left-spos.left,top:epos.top-spos.top};
-}
-	
-
-
-	
+//get the position of a element ( by the client offset )
 function GetClientPosition(e)
 {
-	var pos=GetScrollPosition(e);
-	pos.top-=Math.max(document.body.scrollTop,document.documentElement.scrollTop);
-	pos.left-=Math.max(document.body.scrollLeft,document.documentElement.scrollLeft);
-	return pos;
+	var b=window.document.body;
+	var p=b;
+	if(window.document.compatMode=='CSS1Compat')
+	{
+		p=window.document.documentElement;
+	}
+	
+	if(e==b)return {left:-p.scrollLeft,top:-p.scrollTop};
+	with(e.getBoundingClientRect())
+	{
+		return {left:left-p.clientLeft,top:top-p.clientTop};
+	}
 }
-
+//get absolute or relative parent
+function GetStandParent(e)
+{
+	//Adam: this doesn't work-- for(var pe=e.parentNode;pe!=null;pe=pe.parentNode)
+	for(var pe=e.parentElement;pe!=null;pe=pe.parentElement)
+	{
+		var sp=pe.currentStyle.position;
+		if(sp=='absolute'||sp=='relative')
+		return pe;
+	}
+	
+	return window.document.body;
+}
+//calc the position of floate that relative to e
+function CalcPosition(floate,e)
+{
+	//var b=window.document.body;
+	var epos=GetScrollPostion(e);
+	var spos=GetScrollPostion(GetStandParent(floate));
+	var s=GetStandParent(floate);
+	return {left:epos.left-spos.left-s.clientLeft,top:epos.top-spos.top-s.clientTop};
+}
 
 //get the best position to put the floate
 function AdjustMirror(floate,e,pos)
 {
-	//c:Client,f:floate,e:e,p:floate"s StandParent,m:Mirror
+	//c:Client,f:floate,e:e,p:floate's StandParent,m:Mirror
 
 	//get the size of window
 	var cw=window.document.body.clientWidth;
 	var ch=window.document.body.clientHeight;
-	if(window.document.compatMode=="CSS1Compat")
+	if(window.document.compatMode=='CSS1Compat')
 	{
 		cw=window.document.documentElement.clientWidth;
 		ch=window.document.documentElement.clientHeight;
@@ -567,29 +305,23 @@ function AdjustMirror(floate,e,pos)
 
 	var empos={left:pcpos.left+pos.left,top:pcpos.top+pos.top};
 
-	var isbody=false;
 	if(e!=null)
 	{
-		if(e.nodeName=="BODY")
-		{
-			isbody=true;
-		}
-		
 		var ecpos=GetClientPosition(e);
+		
 		//get the center of the relative element
 		empos={left:ecpos.left+e.offsetWidth/2,top:ecpos.top+e.offsetHeight/2};//
 	}
 	
-	var allowjump=!isbody;
 	var allowmove=true;
-	
+ 
 	//left<-->right
 
 	if(fmpos.left-fw/2<0)
 	{
 		if((empos.left*2-fmpos.left)+fw/2<=cw)
 		{
-			if(allowjump)fmpos.left=empos.left*2-fmpos.left;
+			fmpos.left=empos.left*2-fmpos.left;
 		}
 		else if(allowmove)
 		{
@@ -600,7 +332,7 @@ function AdjustMirror(floate,e,pos)
 	{
 		if((empos.left*2-fmpos.left)-fw/2>=0)
 		{
-			if(allowjump)fmpos.left=empos.left*2-fmpos.left;
+			fmpos.left=empos.left*2-fmpos.left;
 		}
 		else if(allowmove)
 		{
@@ -615,7 +347,7 @@ function AdjustMirror(floate,e,pos)
 	{
 		if((empos.top*2-fmpos.top)+fh/2<=ch)
 		{
-			if(allowjump)fmpos.top=empos.top*2-fmpos.top;
+			fmpos.top=empos.top*2-fmpos.top;
 		}
 		else if(allowmove)
 		{
@@ -626,19 +358,17 @@ function AdjustMirror(floate,e,pos)
 	{
 		if((empos.top*2-fmpos.top)-fh/2>=0)
 		{
-			if(allowjump)fmpos.top=empos.top*2-fmpos.top;
+			fmpos.top=empos.top*2-fmpos.top;
 		}
 		else if(allowmove)
 		{
 			fmpos.top=ch-fh/2-4;
 		}
 	}
-	
+ 
 	pos.left=fmpos.left-pcpos.left-fw/2;
 	pos.top=fmpos.top-pcpos.top-fh/2;
 }
-
-
 
 
 
@@ -844,67 +574,11 @@ function CaptureManager(element,handlelosecapture)
 		}
 	}
 }
-
-if(!window.attachEvent)CaptureManager=CaptureManager_NoneIE;
-
-
-function CaptureManager_NoneIE(element,handlelosecapture)
-{
-	var manager={};
-	var elements=[element];
-
-	Window_Focus(window);
-	window.addEventListener("blur",LoseCapture,true);
-	window.document.addEventListener("click",HandleDocumentClick,true);
-	
-	function LoseCapture()
-	{
-		setTimeout(manager.Unregister,1);
-	}
-	function HandleDocumentClick()
-	{
-		var src=Event_GetSrcElement();
-		for(var i=0;i<elements.length;i++)
-		{
-			if(Element_Contains(elements[i],src))
-				return;
-		}
-		LoseCapture();
-	}
-	manager.AddElement=function manager_AddElement(subelement)
-	{
-		elements.push(subelement);
-	}
-	manager.Unregister=function manager_Unregister()
-	{
-		window.removeEventListener("blur",LoseCapture,true);
-		window.document.removeEventListener("click",LoseCapture,true);
-		element.capturemanager=null;
-		handlelosecapture();
-	}
-	
-	element.capturemanager=manager;
-	
-	return manager;
-}
-
 function CaptureManager.Register(element,handlelosecapture)
 {
 	return new CaptureManager(element,handlelosecapture);
 }
 function CaptureManager.Unregister(element)
-{
-	if(element&&element.capturemanager)
-	{
-		element.capturemanager.Unregister();
-	}
-}
-
-
-
-
-</script>
-ureManager.Unregister(element)
 {
 	if(element&&element.capturemanager)
 	{

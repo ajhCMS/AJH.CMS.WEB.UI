@@ -117,124 +117,124 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnSendResource1.Text" xml:space="preserve">
+  <data name="btnSend.Text" xml:space="preserve">
     <value>إرسال</value>
   </data>
-  <data name="btnSendResource1.ToolTip" xml:space="preserve">
+  <data name="btnSend.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="cbSendCopyToYourSelfResource1.Text" xml:space="preserve">
+  <data name="cbSendCopyToYourSelf.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="cbSendCopyToYourSelfResource1.ToolTip" xml:space="preserve">
+  <data name="cbSendCopyToYourSelf.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="lblEmailResource1.Text" xml:space="preserve">
+  <data name="lblEmail.Text" xml:space="preserve">
     <value>البريد الإلكتروني</value>
   </data>
-  <data name="lblEmailResource1.ToolTip" xml:space="preserve">
+  <data name="lblEmail.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="lblMessageResource1.Text" xml:space="preserve">
+  <data name="lblMessage.Text" xml:space="preserve">
     <value>الرسالة</value>
   </data>
-  <data name="lblMessageResource1.ToolTip" xml:space="preserve">
+  <data name="lblMessage.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="lblMsgconfirmationResource1.Text" xml:space="preserve">
+  <data name="lblMsgconfirmation.Text" xml:space="preserve">
     <value>تم استلام طلبك،شكراَ لكـ</value>
   </data>
-  <data name="lblMsgconfirmationResource1.ToolTip" xml:space="preserve">
+  <data name="lblMsgconfirmation.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="lblNameResource1.Text" xml:space="preserve">
+  <data name="lblName.Text" xml:space="preserve">
     <value>الاسم</value>
   </data>
-  <data name="lblNameResource1.ToolTip" xml:space="preserve">
+  <data name="lblName.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="lblSendCopyToYourSelfResource1.Text" xml:space="preserve">
+  <data name="lblSendCopyToYourSelf.Text" xml:space="preserve">
     <value>ارسال نسخة لنفسك</value>
   </data>
-  <data name="lblSendCopyToYourSelfResource1.ToolTip" xml:space="preserve">
+  <data name="lblSendCopyToYourSelf.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="lblSubjectResource1.Text" xml:space="preserve">
+  <data name="lblSubject.Text" xml:space="preserve">
     <value>الموضوع</value>
   </data>
-  <data name="lblSubjectResource1.ToolTip" xml:space="preserve">
+  <data name="lblSubject.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="pnlContactUsResource1.GroupingText" xml:space="preserve">
+  <data name="pnlContactUs.GroupingText" xml:space="preserve">
     <value />
   </data>
-  <data name="pnlContactUsResource1.ToolTip" xml:space="preserve">
+  <data name="pnlContactUs.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="revEmailResource1.ErrorMessage" xml:space="preserve">
+  <data name="revEmail.ErrorMessage" xml:space="preserve">
     <value>الرجاء إدخال بريد إلكتروني على الصيغة التالية : example@example.root</value>
   </data>
-  <data name="revEmailResource1.Text" xml:space="preserve">
+  <data name="revEmail.Text" xml:space="preserve">
     <value>*</value>
   </data>
-  <data name="revEmailResource1.ToolTip" xml:space="preserve">
+  <data name="revEmail.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="rfvEmailResource1.ErrorMessage" xml:space="preserve">
+  <data name="rfvEmail.ErrorMessage" xml:space="preserve">
     <value>البرؤيد الإلكتروني</value>
   </data>
-  <data name="rfvEmailResource1.Text" xml:space="preserve">
+  <data name="rfvEmail.Text" xml:space="preserve">
     <value>*</value>
   </data>
-  <data name="rfvEmailResource1.ToolTip" xml:space="preserve">
+  <data name="rfvEmail.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="rfvMessageResource1.ErrorMessage" xml:space="preserve">
+  <data name="rfvMessage.ErrorMessage" xml:space="preserve">
     <value>الرسالة</value>
   </data>
-  <data name="rfvMessageResource1.Text" xml:space="preserve">
+  <data name="rfvMessage.Text" xml:space="preserve">
     <value>*</value>
   </data>
-  <data name="rfvMessageResource1.ToolTip" xml:space="preserve">
+  <data name="rfvMessage.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="rfvSubjectResource1.ErrorMessage" xml:space="preserve">
+  <data name="rfvSubject.ErrorMessage" xml:space="preserve">
     <value>الموضوع</value>
   </data>
-  <data name="rfvSubjectResource1.Text" xml:space="preserve">
+  <data name="rfvSubject.Text" xml:space="preserve">
     <value>*</value>
   </data>
-  <data name="rfvSubjectResource1.ToolTip" xml:space="preserve">
+  <data name="rfvSubject.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="txtEmailResource1.Text" xml:space="preserve">
+  <data name="txtEmail.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="txtEmailResource1.ToolTip" xml:space="preserve">
+  <data name="txtEmail.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="txtMessageResource1.Text" xml:space="preserve">
+  <data name="txtMessage.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="txtMessageResource1.ToolTip" xml:space="preserve">
+  <data name="txtMessage.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="txtNameResource1.Text" xml:space="preserve">
+  <data name="txtName.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="txtNameResource1.ToolTip" xml:space="preserve">
+  <data name="txtName.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="txtSubjectResource1.Text" xml:space="preserve">
+  <data name="txtSubject.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="txtSubjectResource1.ToolTip" xml:space="preserve">
+  <data name="txtSubject.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="valSumContactUsResource1.HeaderText" xml:space="preserve">
+  <data name="valSumContactUs.HeaderText" xml:space="preserve">
     <value>الرجاء مراجعة الحقول التالية :</value>
   </data>
-  <data name="valSumContactUsResource1.ToolTip" xml:space="preserve">
+  <data name="valSumContactUs.ToolTip" xml:space="preserve">
     <value />
   </data>
 </root>

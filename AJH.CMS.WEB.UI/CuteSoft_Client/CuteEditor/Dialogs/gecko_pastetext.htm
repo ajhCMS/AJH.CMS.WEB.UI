@@ -1,48 +1,53 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>[[PasteText]]</title>		
+		<title>[[PasteText]] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			&nbsp; </title>
+		
 		<meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)" />
 		<meta http-equiv="Page-Exit" content="blendTrans(Duration=0.1)" />
-		<link href='Load.ashx?type=themecss&file=dialog.css&theme=[[_Theme_]]' type="text/css" rel="stylesheet" />
-		<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=DialogHead.js"></script>
-		<style type="text/css">	
-		html, body,#ajaxdiv {height: 100%;}
-		#idSource{width: 430px; height: 300px;background-color:#ffffff;padding:0;border:1px solid #a0a0a0;}
-		#divouter{border:1px solid #a0a0a0;vertical-align: top;width: 430px; height: 300px;background-color:white;}
-		</style>
+		<link href="Load.ashx?type=style&file=dialog.css" type="text/css" rel="stylesheet" />
+		<!--[if IE]>
+			<link href="Load.ashx?type=style&file=IE.css" type="text/css" rel="stylesheet" />
+		<![endif]-->
+		<script type="text/javascript" src="Load.ashx?type=dialogscript&file=DialogHead.js"></script>
+		<script type="text/javascript">
+		
+			var OxOb545=["value","idSource","length","checked","linebreaks","\x0D\x0A","ig","\x3Cbr /\x3E","\x0D","\x0A"];var editor=Window_GetDialogArguments(window); function cancel(){ Window_CloseDialog(window) ;}  ; function insertContent(){var Ox8f=document.getElementById(OxOb545[0x1])[OxOb545[0x0]];if(Ox8f&&Ox8f[OxOb545[0x2]]>0x0){if(document.getElementById(OxOb545[0x4])[OxOb545[0x3]]){ Ox8f=Ox8f.replace(( new RegExp(OxOb545[0x5],OxOb545[0x6])),OxOb545[0x7]) ; Ox8f=Ox8f.replace(( new RegExp(OxOb545[0x8],OxOb545[0x6])),OxOb545[0x7]) ; Ox8f=Ox8f.replace(( new RegExp(OxOb545[0x9],OxOb545[0x6])),OxOb545[0x7]) ;} ; editor.PasteHTML(Ox8f) ; Window_CloseDialog(window) ;} ;}  ;
+		</script>
 	</head>
 	<body>
-		<div id="ajaxdiv">
-			<table cellspacing="0" cellpadding="5" class="normal" ID="Table1" width="100%">
-				<tr>
-					<td>[[UseCtrl_VtoPaste]]</td>
-					<td>
-						<input type="checkbox" name="linebreaks" id="linebreaks" checked="checked" />[[KeepLinebreaks]]
-					</td> 
-				</tr>
-				<tr>
-					<td colspan="2">
-						<textarea name="idSource" id="idSource" rows="20" cols="58"></textarea>
-          			</td>
-				</tr>
-			</table>
-			<br/>
-			<table border="0" cellpadding="0" cellspacing="5" width="100%" ID="Table3">
-				<tr>
-					<td align="left"><input type="button" value="[[CleanUpBox]]" class="formbutton" onclick="document.getElementById('idSource').value='';" id="Button2" />
-					</td>
-					<td align="right" style="padding-right:100px">
-						<input type="button" id="insert" name="insert" value="[[Insert]]" class="formbutton" onclick="insertContent();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<input type="button" value="[[Cancel]]" onclick="cancel();" class="formbutton" id="Button1" />
-					</td>
-				</tr>
-			</table>
-    </div>
+		<table border="0" cellpadding="0" cellspacing="2" width="100%" id="Table1">
+        <tr>
+            <td class="title line_1">[[PasteText]]</td>
+            <td align="right" style="white-space:nowrap" >
+                <input type="checkbox" name="linebreaks" id="linebreaks" checked="checked" />[[KeepLinebreaks]]
+            </td> 
+        </tr>
+        <tr>
+            <td colspan="2">[[UseCtrl_VtoPaste]]</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" style="height:100%">
+                  <textarea name="idSource" id="idSource" rows="20" cols="58" dir="ltr"></textarea>
+          	</td>
+        </tr>
+        <tr>
+			<td align="left"><input type="button" value="[[CleanUpBox]]" onclick="document.getElementById('idSource').value='';" id="Button2" />
+			</td>
+            <td align="right">
+				<input type="button" id="insert" name="insert" value="[[Insert]]" onclick="insertContent();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" value="[[Cancel]]" onclick="cancel();" id="Button1" />
+			</td>
+        </tr>
+    </table>
 	</body>
 	<script type="text/javascript">		
-			var OxO65eb=["width","style","idSource","100%","height"];if(!Browser_IsSafari()){document.getElementById(OxO65eb[2])[OxO65eb[1]][OxO65eb[0]]=OxO65eb[3];document.getElementById(OxO65eb[2])[OxO65eb[1]][OxO65eb[4]]=OxO65eb[3];} ;
+			var OxO7e9c=["width","style","idSource","100%","height"];if(!Browser_IsSafari()){ document.getElementById(OxO7e9c[0x2])[OxO7e9c[0x1]][OxO7e9c[0x0]]=OxO7e9c[0x3] ; document.getElementById(OxO7e9c[0x2])[OxO7e9c[0x1]][OxO7e9c[0x4]]=OxO7e9c[0x3] ;} ;
 	</script>
-	<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=DialogFoot.js"></script>
-	<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=Dialog_gecko_pastetext.js"></script>
+	<script type="text/javascript" src="Load.ashx?type=dialogscript&file=DialogFoot.js"></script>
 </html>

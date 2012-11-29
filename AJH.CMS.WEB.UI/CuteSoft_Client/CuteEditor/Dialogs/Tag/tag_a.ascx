@@ -1,11 +1,11 @@
 <%@ Control Inherits="CuteEditor.EditorUtilityCtrl" Language="c#" AutoEventWireup="false" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <fieldset><legend>[[Hyperlink_Information]]</legend>
-	<table class="normal" width="98%">
+	<table class="normal">
 		<tr>
 			<td style="width:60px">[[Url]]:</td>
 			<td colspan="3"><input type="text" id="inp_src" style="width:260px" />
 			</td>
-			<td><button id="btnbrowse" class="formbutton">[[Browse]]</button></td>
+			<td><button id="btnbrowse">[[Browse]]</button></td>
 		</tr>
 		<tr>
 			<td style="width:60px">[[Type]]:</td>
@@ -40,17 +40,10 @@
 			<td>
 				<input type="text" id="inp_id" size="14" />
 			</td>
-			<td>Nofollow:</td>
-			<td>
-				<input type="checkbox" name="Nofollow" id="Nofollow" value="Nofollow" />
-			</td>
-		</tr>
-		<tr>
-			<td valign="middle" style="white-space:nowrap" >[[CssClass]]:</td>
+			<td>[[CssClass]]:</td>
 			<td>
 				<input type="text" id="inp_class" size="14" />
 			</td>
-			<td></td>
 			<td></td>
 		</tr>
 		<tr>
@@ -62,14 +55,13 @@
 				<input type="text" id="inp_index" size="5" maxlength="5" onkeypress="return CancelEventIfNotDigit()" />
 				&nbsp;
 				[[Color]]:&nbsp;
-				<input autocomplete="off" type="text" id="inp_color" size="7" style="width:57px" />
-				<img alt="" id="inp_color_Preview" src="Load.ashx?type=image&file=colorpicker.gif" class="cursor" style="margin-bottom:-2px;" />
+				<input autocomplete="off" type="text" id="inp_color" size="7" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)' />
 			</td>
 		</tr>
 		<tr>
 			<td>[[Title]]:</td>
 			<td colspan="3">
-				<textarea id="inp_title" rows="3" cols="20" style="width:260px"></textarea>
+				<textarea id="inp_title" rows="2" cols="20" style="width:260px"></textarea>
 			</td>
 			<td></td>
 		</tr>
@@ -81,6 +73,9 @@
 				<select size="5" name="allanchors" style="width: 255" id="allanchors" onchange="selectAnchor(this.value);"></select>
 			</td>
 		</tr>
-	</table>				
+	</table>
+		
+									
 </fieldset>
-<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=Dialog_Tag_A.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_A.js"></script>
+

@@ -1,9 +1,9 @@
 body, a, input, option, select, table, tr, table
 {
-	font:normal 11px Tahoma;
+	font:normal 11px verdana;
 }
 body {
-	background-color: #eeeeee;
+	background-color: #d7d3cc;
 }
 
 input.suggestion, select.suggestion, select.suggestion option

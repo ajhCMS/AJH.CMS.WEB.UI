@@ -1,8 +1,11 @@
 <%@ Control Inherits="CuteEditor.EditorUtilityCtrl" Language="c#" AutoEventWireup="false" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <fieldset><legend>[[EditCell]]</legend>
-				<table class="normal" cellpadding="2" cellspacing="1" width="98%">
+	<table class="normal">
+		<tr>
+			<td colspan="2">
+				<table class="normal" cellpadding="2" cellspacing="1">
 					<tr>
-						<td style="white-space:nowrap; width:100px;" >[[Width]] :</td>
+						<td style="white-space:nowrap; width:80;" >[[Width]] :</td>
 						<td><input type="text" id="inp_width" size="14" /></td>
 						<td>&nbsp;</td>
 						<td style="white-space:nowrap; width:80;" >[[Height]] :</td>
@@ -30,25 +33,25 @@
 						</td>
 					</tr>
 					<tr>
-						<td width="100">[[BackgroundColor]]:</td>
+						<td>[[BackgroundColor]]:</td>
 						<td>
-<input autocomplete="off" size="14" type="text" id="inp_bgColor" />
+<input autocomplete="off" size="14" type="text" id="inp_bgColor" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)' />
 						</td>
 						<td></td>
 						<td>[[BorderColor]]:</td>
 						<td>
-<input autocomplete="off" size="14" type="text" id="inp_borderColor" />
+<input autocomplete="off" size="14" type="text" id="inp_borderColor" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)' />
 						</td>
 					</tr>
 					<tr>
-						<td width="100">[[BorderColorLight]]:</td>
+						<td>[[BorderColorLight]]:</td>
 						<td>
-<input autocomplete="off" size="14" type="text" id="inp_borderColorLight" />
+<input autocomplete="off" size="14" type="text" id="inp_borderColorLight" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)' />
 						</td>
 						<td></td>
 						<td>[[BorderColorDark]]:</td>
 						<td>
-<input autocomplete="off" size="14" type="text" id="inp_borderColorDark" />
+<input autocomplete="off" size="14" type="text" id="inp_borderColorDark" style='behavior:url(Load.ashx?type=htc&file=ColorPicker.htc)'	/>
 						</td>
 					</tr>
 					<tr>
@@ -83,6 +86,9 @@
 						<td colspan="4"><textarea id="inp_tooltip" rows="6" cols="53"></textarea></td>
 					</tr>
 				</table>
+			</td>			
+		</tr>
+	</table>
 </fieldset>
-<script type="text/javascript" src="Load.ashx?type=dialogscript&verfix=1006&file=Dialog_Tag_Td.js"></script>
+<script type="text/javascript" src="Load.ashx?type=dialogscript&file=Dialog_Tag_Td.js"></script>
 
