@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using System.Linq;
-using AJH.CMS.Core.Entities;
-using AJH.CMS.Core.Enums;
+﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml;
+using AJH.CMS.Core.Entities;
 
 namespace AJH.CMS.Core.Data
 {

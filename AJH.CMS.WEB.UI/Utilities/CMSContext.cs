@@ -1,9 +1,9 @@
 ﻿
+using System;
+using System.Collections.Generic;
 using System.Web;
 using AJH.CMS.Core.Data;
 using AJH.CMS.Core.Entities;
-using System.Collections.Generic;
-using System;
 
 namespace AJH.CMS.WEB.UI.Utilities
 {
@@ -131,6 +131,14 @@ namespace AJH.CMS.WEB.UI.Utilities
             get
             {
                 return "~/Portals/Portal" + PortalID + "/Uploads/Thumbnail/";
+            }
+        }
+
+        public static string VirtualPortalFolder
+        {
+            get
+            {
+                return "~/Portals/Portal" + PortalID + "/";
             }
         }
     }

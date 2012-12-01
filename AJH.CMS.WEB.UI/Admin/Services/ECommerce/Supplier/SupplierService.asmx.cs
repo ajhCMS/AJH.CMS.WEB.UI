@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Web.Services;
-using AJH.CMS.Core.Configuration;
 using AJH.CMS.Core.Data;
 using AJH.CMS.Core.Entities;
 using AJH.CMS.WEB.UI.Utilities;
-using AJH.CMS.Core.Enums;
 
 namespace AJH.CMS.WEB.UI.Admin.Services
 {

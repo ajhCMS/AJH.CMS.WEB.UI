@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Web.UI;
 using AJH.CMS.WEB.UI.Utilities;
-using System.Linq;
 
 namespace AJH.CMS.WEB.UI.Controls.SWFUpload
 {

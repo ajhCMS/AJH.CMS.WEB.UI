@@ -6,6 +6,7 @@
 <head runat="server">
     <title>
         <%=PageTitle() %></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
     <link href="~/App_Themes/Admin/login.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="headContent" runat="server">
     </asp:ContentPlaceHolder>

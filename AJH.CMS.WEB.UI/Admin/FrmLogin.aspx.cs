@@ -21,6 +21,7 @@ namespace AJH.CMS.WEB.UI.Admin
         #region FrmLogin_Load
         void FrmLogin_Load(object sender, EventArgs e)
         {
+            this.Header.DataBind();
             if (CMSContext.CurrentUserID > 0)
             {
                 Response.Redirect(CMSConfig.CMSAdminPages.GetAdminLandingPage(), true);

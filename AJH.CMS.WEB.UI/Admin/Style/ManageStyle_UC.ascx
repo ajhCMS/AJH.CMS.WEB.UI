@@ -62,12 +62,9 @@
                         <asp:Label ID="lblDetails" runat="server" Text="Details" AssociatedControlID="txtDetails"></asp:Label>
                     </td>
                     <td>
-                        <CE:Editor ID="txtDetails" BreakElement="Br" runat="server" Width="100%" Height="500px"
-                            EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code" ShowEditMode="false"
-                            ShowPreviewMode="false">
-                        </CE:Editor>
-                        <asp:RequiredFieldValidator ID="rfvDetails" runat="server" ControlToValidate="txtDetails"
-                            ValidationGroup="AddEditStyle" Text="*" Display="Dynamic" ErrorMessage="Details"></asp:RequiredFieldValidator>
+                        <controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="500px" EditModes="Html"
+                            ContentFilters="None" IsRequired="true" ValidationGroup="AddEditStyle" ErrorMessage="Details"
+                            Text="*"></controls:Editor_UC>
                     </td>
                 </tr>
             </table>

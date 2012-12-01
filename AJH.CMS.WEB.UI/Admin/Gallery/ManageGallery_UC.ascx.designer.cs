@@ -325,7 +325,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteEditor.Editor txtDetails;
+        protected global::AJH.CMS.WEB.UI.Controls.Editor_UC txtDetails;
         
         /// <summary>
         /// btnExit control.

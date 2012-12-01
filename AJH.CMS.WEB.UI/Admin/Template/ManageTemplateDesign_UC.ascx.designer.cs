@@ -181,7 +181,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteEditor.Editor txtRegisterControl;
+        protected global::AJH.CMS.WEB.UI.Controls.Editor_UC txtRegisterControl;
         
         /// <summary>
         /// lblUserControlTag control.
@@ -199,7 +199,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteEditor.Editor txtUserControlTag;
+        protected global::AJH.CMS.WEB.UI.Controls.Editor_UC txtUserControlTag;
         
         /// <summary>
         /// upnlTemplateStyle control.
@@ -280,7 +280,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteEditor.Editor txtStyleTag;
+        protected global::AJH.CMS.WEB.UI.Controls.Editor_UC txtStyleTag;
         
         /// <summary>
         /// upnlTemplateItem control.
@@ -307,7 +307,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteEditor.Editor txtDetails;
+        protected global::AJH.CMS.WEB.UI.Controls.Editor_UC txtDetails;
         
         /// <summary>
         /// btnUpdate control.
@@ -317,5 +317,14 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
+        
+        /// <summary>
+        /// valsummaryDesign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary valsummaryDesign;
     }
 }

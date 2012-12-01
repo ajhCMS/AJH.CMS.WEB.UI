@@ -1,6 +1,4 @@
-﻿using System;
-using AJH.CMS.Core.Enums;
-
+﻿
 namespace AJH.CMS.Core.Entities
 {
     public class Supplier : IEntity

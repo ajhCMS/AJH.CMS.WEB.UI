@@ -86,21 +86,17 @@
                     <asp:Label ID="lblRegisterControl" runat="server" AssociatedControlID="txtRegisterControl"
                         Text="Register Control"></asp:Label>
                 </td>
-                <td>                    
-                    <CE:Editor ID="txtRegisterControl" BreakElement="Br" runat="server" Width="100%" Height="100px"
-                        EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code" ShowEditMode="false"
-                        ShowPreviewMode="false" EnableStripScriptTags="false">
-                    </CE:Editor>
+                <td>
+                    <controls:Editor_UC ID="txtRegisterControl" runat="server" Width="100%" Height="70px"
+                        EditModes="Html" ContentFilters="None"></controls:Editor_UC>
                 </td>
                 <td>
                     <asp:Label ID="lblUserControlTag" runat="server" AssociatedControlID="txtUserControlTag"
                         Text="User Control Tag"></asp:Label>
                 </td>
-                <td>                    
-                    <CE:Editor ID="txtUserControlTag" BreakElement="Br" runat="server" Width="100%" Height="100px"
-                        EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code" ShowEditMode="false"
-                        ShowPreviewMode="false" EnableStripScriptTags="false">
-                    </CE:Editor>
+                <td>
+                    <controls:Editor_UC ID="txtUserControlTag" runat="server" Width="100%" Height="70px"
+                        EditModes="Html" ContentFilters="None"></controls:Editor_UC>
                 </td>
             </tr>
         </table>
@@ -148,10 +144,8 @@
                     <asp:Label ID="lblStyleTag" runat="server" AssociatedControlID="txtStyleTag" Text="Style Tag"></asp:Label>
                 </td>
                 <td>
-                    <CE:Editor ID="txtStyleTag" BreakElement="Br" runat="server" Width="100%" Height="100px"
-                        EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code" ShowEditMode="false"
-                        ShowPreviewMode="false" EnableStripScriptTags="false">
-                    </CE:Editor>
+                    <controls:Editor_UC ID="txtStyleTag" runat="server" Width="100%" Height="100px" EditModes="Html"
+                        ContentFilters="None" IsRequired="false"></controls:Editor_UC>
                 </td>
             </tr>
         </table>
@@ -169,16 +163,18 @@
             </tr>
             <tr>
                 <td>
-                    <CE:Editor ID="txtDetails" BreakElement="Br" runat="server" Width="100%" Height="600px"
-                        EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code" ShowEditMode="false"
-                        ShowPreviewMode="false" EnableStripScriptTags="false">
-                    </CE:Editor>
+                    <controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="400px" EditModes="Html"
+                        ContentFilters="None" IsRequired="true" ValidationGroup="TemplateDesign" ErrorMessage="Details"
+                        ErrorText="*"></controls:Editor_UC>
                 </td>
             </tr>
         </table>
         <div>
             <asp:Button ID="btnUpdate" runat="server" Text="Update" NotificationOperationDone="true"
-                CssClass="btn-update" />
+                ValidationGroup="TemplateDesign" CssClass="btn-update" />
         </div>
+        <asp:ValidationSummary ID="valsummaryDesign" runat="server" ValidationGroup="TemplateDesign"
+            HeaderText="Please review the following field(s):" DisplayMode="BulletList" ShowMessageBox="true"
+            ShowSummary="false" />
     </ContentTemplate>
 </asp:UpdatePanel>

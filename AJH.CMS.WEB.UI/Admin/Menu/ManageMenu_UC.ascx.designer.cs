@@ -487,16 +487,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteEditor.Editor txtDetails;
-        
-        /// <summary>
-        /// rfvDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDetails;
+        protected global::AJH.CMS.WEB.UI.Controls.Editor_UC txtDetails;
         
         /// <summary>
         /// btnExit control.

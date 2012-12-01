@@ -212,9 +212,8 @@
                             <asp:Label ID="lblSizeChart" runat="server" Text="Details" AssociatedControlID="txtSizeChart"></asp:Label>
                         </td>
                         <td>
-                            <CE:Editor ID="txtSizeChart" BreakElement="Br" runat="server" Width="100%" Height="500px"
-                                EnableBrowserContextMenu="False" AutoConfigure="Simple">
-                            </CE:Editor>
+                            <controls:Editor_UC ID="txtSizeChart" runat="server" Width="100%" Height="500px"
+                                EditModes="All" ContentFilters="RemoveScripts" IsRequired="false"></controls:Editor_UC>
                         </td>
                     </tr>
                     <tr>

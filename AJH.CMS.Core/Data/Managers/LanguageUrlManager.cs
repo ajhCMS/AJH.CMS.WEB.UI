@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using AJH.CMS.Core.Entities;
 
 namespace AJH.CMS.Core.Data

@@ -20,7 +20,6 @@ namespace AJH.CMS.WEB.UI.Admin
         void CMSAdmin_Load(object sender, EventArgs e)
         {
             LoadMenus();
-
             if (!IsPostBack)
             {
                 lblLogoName.Text = CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.Name;

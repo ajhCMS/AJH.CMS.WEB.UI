@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using AJH.CMS.Core.Entities;
-using AJH.CMS.Core.Enums;
-using System;
 
 namespace AJH.CMS.Core.Data
 {

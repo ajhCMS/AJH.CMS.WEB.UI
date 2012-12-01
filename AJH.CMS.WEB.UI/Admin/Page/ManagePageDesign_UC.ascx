@@ -87,20 +87,16 @@
                         Text="Register Control"></asp:Label>
                 </td>
                 <td>
-                    <CE:Editor ID="txtRegisterControl" BreakElement="Br" runat="server" Width="100%"
-                        Height="100px" EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code"
-                        ShowEditMode="false" ShowPreviewMode="false" EnableStripScriptTags="false">
-                    </CE:Editor>
+                    <controls:Editor_UC ID="txtRegisterControl" runat="server" Width="100%" Height="70px"
+                        IsRequired="false" EditModes="Html" ContentFilters="None"></controls:Editor_UC>
                 </td>
                 <td>
                     <asp:Label ID="lblUserControlTag" runat="server" AssociatedControlID="txtUserControlTag"
                         Text="User Control Tag"></asp:Label>
                 </td>
                 <td>
-                    <CE:Editor ID="txtUserControlTag" BreakElement="Br" runat="server" Width="270px"
-                        Height="100px" EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code"
-                        ShowEditMode="false" ShowPreviewMode="false" EnableStripScriptTags="false">
-                    </CE:Editor>
+                    <controls:Editor_UC ID="txtUserControlTag" runat="server" Width="270px" Height="70px"
+                        EditModes="Html" ContentFilters="None"></controls:Editor_UC>
                 </td>
             </tr>
         </table>
@@ -118,16 +114,18 @@
             </tr>
             <tr>
                 <td>
-                    <CE:Editor ID="txtDetails" BreakElement="Br" runat="server" Width="100%" Height="600px"
-                        EnableBrowserContextMenu="False" AutoConfigure="Simple" ActiveTab="Code" ShowEditMode="false"
-                        ShowPreviewMode="false" EnableStripScriptTags="false">
-                    </CE:Editor>
+                    <controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="400px" EditModes="Html"
+                        ContentFilters="None" IsRequired="true" ValidationGroup="PageDesign" ErrorMessage="Details"
+                        ErrorText="*"></controls:Editor_UC>
                 </td>
             </tr>
         </table>
         <div>
             <asp:Button ID="btnUpdate" runat="server" Text="Update" NotificationOperationDone="true"
-                CssClass="btn-update" />
+                ValidationGroup="PageDesign" CssClass="btn-update" />
         </div>
+        <asp:ValidationSummary ID="valsummaryDesign" runat="server" ValidationGroup="PageDesign"
+            HeaderText="Please review the following field(s):" DisplayMode="BulletList" ShowMessageBox="true"
+            ShowSummary="false" />
     </ContentTemplate>
 </asp:UpdatePanel>

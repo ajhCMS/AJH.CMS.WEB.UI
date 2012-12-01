@@ -10,6 +10,7 @@
     <title>
         <%=PageTitle() %>
     </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
     <link href="~/App_Themes/Admin/CMS.css" rel="stylesheet" type="text/css" />
     <link href="~/App_Themes/Admin/JQTabContainer.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="headContent" runat="server">

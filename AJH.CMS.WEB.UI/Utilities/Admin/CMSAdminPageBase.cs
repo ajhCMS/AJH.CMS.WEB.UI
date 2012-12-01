@@ -13,6 +13,7 @@ namespace AJH.CMS.WEB.UI
         #region OnInit
         protected override void OnInit(System.EventArgs e)
         {
+            base.OnInit(e);
             Response.Cache.SetCacheability(System.Web.HttpCacheability.NoCache);
             if (CMSContext.CurrentUser == null)
             {
@@ -28,6 +29,14 @@ namespace AJH.CMS.WEB.UI
                     Response.Redirect(CMSConfig.CMSAdminPages.GetAdminAccessDenied(), true);
                 }
             }
+            this.Load += new System.EventHandler(CMSAdminPageBase_Load);
+        }
+        #endregion
+
+        #region CMSAdminPageBase_Load
+        void CMSAdminPageBase_Load(object sender, System.EventArgs e)
+        {
+            this.Header.DataBind();
         }
         #endregion
 

@@ -68,6 +68,9 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\References\Telerik.Web.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AdminFiles\XslFile\AdminDashboardXSL.xslt" />
@@ -231,6 +234,8 @@
     <Content Include="Controls\SWFUpload\script\swfupload.swf" />
     <Content Include="Controls\SWFUpload\script\swfuploadbutton.swf" />
     <Content Include="Controls\SWFUpload\SWFUpload_UC.ascx" />
+    <Content Include="Controls\Editor_UC.ascx" />
+    <Content Include="Controls\Editor_HTML.xml" />
     <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Clean.htm" />
     <Content Include="CuteSoft_Client\CuteEditor\Dialogs\colorpicker.aspx" />
     <Content Include="CuteSoft_Client\CuteEditor\Dialogs\colorpicker_basic.aspx" />
@@ -2313,6 +2318,13 @@
     </Compile>
     <Compile Include="Controls\SWFUpload\SWFUpload_UC.ascx.designer.cs">
       <DependentUpon>SWFUpload_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editor_UC.ascx.cs">
+      <DependentUpon>Editor_UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editor_UC.ascx.designer.cs">
+      <DependentUpon>Editor_UC.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Article\ArticleXSL_UC.ascx.cs">
       <DependentUpon>ArticleXSL_UC.ascx</DependentUpon>

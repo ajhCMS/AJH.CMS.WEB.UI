@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml;
 using System.Xml.Xsl;
+using AJH.CMS.Core.Configuration;
 using AJH.CMS.Core.Data;
 using AJH.CMS.Core.Entities;
 using AJH.CMS.WEB.UI.Utilities;
@@ -33,6 +35,9 @@ namespace AJH.CMS.WEB.UI
         #region LoadMenu
         void LoadMenu()
         {
+            int menuID = 0;
+            int.TryParse(Request.QueryString[CMSConfig.QueryString.MenuID], out menuID);
+
             if (base.XSLTemplateID > 0 && base.ContainerValue > 0)
             {
                 string menuCategoryPath = CMSWebHelper.GetMenuPathByCategory(base.ContainerValue);
@@ -44,7 +49,17 @@ namespace AJH.CMS.WEB.UI
                 XsltArgumentList arguments = new XsltArgumentList();
                 arguments.AddExtensionObject("CMS:UserControl", this);
 
-                xmlMenu.DocumentSource = menuCategoryPath;
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(menuCategoryPath);
+
+                XmlAttribute xmlAtt = xmlDoc.CreateAttribute("CurrentMenu");
+                xmlAtt.Value = menuID.ToString();
+                if (xmlDoc.ChildNodes.Count > 1 && xmlDoc.ChildNodes[1] != null)
+                {
+                    xmlDoc.ChildNodes[1].Attributes.Append(xmlAtt);
+                }
+
+                xmlMenu.DocumentContent = xmlDoc.OuterXml;
                 xmlMenu.TransformSource = xslPath;
                 xmlMenu.TransformArgumentList = arguments;
                 xmlMenu.DataBind();

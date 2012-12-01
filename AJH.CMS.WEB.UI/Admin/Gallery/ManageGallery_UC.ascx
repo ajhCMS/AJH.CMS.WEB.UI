@@ -141,9 +141,8 @@
                         <asp:Label ID="lblDetails" runat="server" Text="Details" AssociatedControlID="txtDetails"></asp:Label>
                     </td>
                     <td>
-                        <CE:Editor ID="txtDetails" BreakElement="Br" runat="server" Width="100%" Height="500px"
-                            EnableBrowserContextMenu="False" AutoConfigure="Simple">
-                        </CE:Editor>
+                        <controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="500px" EditModes="All"
+                            ContentFilters="RemoveScripts" IsRequired="false"></controls:Editor_UC>
                     </td>
                 </tr>
             </table>

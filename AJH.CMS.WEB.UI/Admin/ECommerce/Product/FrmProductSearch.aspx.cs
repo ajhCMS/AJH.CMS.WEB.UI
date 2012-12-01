@@ -1,12 +1,12 @@
 ﻿
-using System.Web.UI.WebControls;
-using System.Web.UI.HtmlControls;
 using System;
-using AJH.CMS.Core.Data;
-using AJH.CMS.Core.Configuration;
-using AJH.CMS.WEB.UI.Utilities;
-using AJH.CMS.Core.Entities;
 using System.Collections.Generic;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using AJH.CMS.Core.Configuration;
+using AJH.CMS.Core.Data;
+using AJH.CMS.Core.Entities;
+using AJH.CMS.WEB.UI.Utilities;
 namespace AJH.CMS.WEB.UI.Admin
 {
     public partial class FrmProductSearch : CMSAdminPageBase
