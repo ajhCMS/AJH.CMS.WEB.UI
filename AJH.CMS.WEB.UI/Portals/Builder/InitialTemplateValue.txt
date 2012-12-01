@@ -9,7 +9,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-	<asp:ScriptManager ID="scManager" EnableCdn="false" runat="server">
+	<asp:ScriptManager ID="scManager" EnableCdn="false" ScriptMode="Release" EnableScriptLocalization="true"
+        EnableScriptGlobalization="true" runat="server" EnablePartialRendering="true"
+        LoadScriptsBeforeUI="true" EnablePageMethods="true">
 	</asp:ScriptManager>
     <div>
         <asp:ContentPlaceHolder ID="plcHolder" runat="server">

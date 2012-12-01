@@ -15,7 +15,7 @@
     <asp:ScriptManager ID="scManager" EnableCdn="false" runat="server">
         <CompositeScript>
             <Scripts>
-                <asp:ScriptReference Path="~/Scripts/jquery-1.7.1.min.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.min.js" />
                 <asp:ScriptReference Path="~/Scripts/CMSPageSettings.js" />
                 <asp:ScriptReference Path="~/Scripts/CMSLogin.js" />
             </Scripts>

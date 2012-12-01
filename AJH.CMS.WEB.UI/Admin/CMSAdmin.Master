@@ -17,15 +17,17 @@
 </head>
 <body>
     <form id="Form1" runat="server" enctype="multipart/form-data">
-    <asp:ScriptManager ID="scManager" EnableCdn="false" runat="server">
+    <asp:ScriptManager ID="scManager" EnableCdn="false" ScriptMode="Release" EnableScriptLocalization="true"
+        EnableScriptGlobalization="true" runat="server" EnablePartialRendering="true"
+        LoadScriptsBeforeUI="true" EnablePageMethods="true">
         <CompositeScript>
             <Scripts>
+                <asp:ScriptReference Path="~/Scripts/jquery.min.js" />
                 <asp:ScriptReference Path="~/Scripts/CMSPageSettings.js" />
-                <asp:ScriptReference Path="~/Scripts/jquery-1.7.1.min.js" />
-                <asp:ScriptReference Path="~/Scripts/jquery.mousewheel.js" />
-                <asp:ScriptReference Path="~/Scripts/jScrollPane.js" />
                 <asp:ScriptReference Path="~/Scripts/Global.js" />
                 <asp:ScriptReference Path="~/Scripts/CMSAdmin.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.mousewheel.js" />
+                <asp:ScriptReference Path="~/Scripts/jScrollPane.js" />
                 <asp:ScriptReference Path="~/Scripts/jquery-ui-personalized-1.5.2.packed.js" />
                 <asp:ScriptReference Path="~/Scripts/sprinkle.js" />
             </Scripts>
