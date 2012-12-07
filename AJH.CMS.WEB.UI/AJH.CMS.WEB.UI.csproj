@@ -109,6 +109,8 @@
     <Content Include="Admin\ECommerce\Group\ManageGroup_UC.ascx" />
     <Content Include="Admin\ECommerce\Attribute\FrmAttribute.aspx" />
     <Content Include="Admin\ECommerce\Attribute\ManageAttribute_UC.ascx" />
+    <Content Include="Admin\FileManager\FileManager_UC.ascx" />
+    <Content Include="Admin\FileManager\FrmFileManager.aspx" />
     <Content Include="Admin\FrmAccessDenied.aspx" />
     <Content Include="Admin\Gallery\FrmGallery.aspx" />
     <Content Include="Admin\Gallery\ManageGallery_UC.ascx" />
@@ -180,6 +182,7 @@
     <Content Include="App_Themes\Image\Dashboard-Article.png" />
     <Content Include="App_Themes\Image\Dashboard-Category.png" />
     <Content Include="App_Themes\Image\Dashboard-CMSControl.png" />
+    <Content Include="App_Themes\Image\Dashboard-FileManager.png" />
     <Content Include="App_Themes\Image\Dashboard-Forms.png" />
     <Content Include="App_Themes\Image\Dashboard-Gallery.png" />
     <Content Include="App_Themes\Image\Dashboard-HTML.png" />
@@ -2045,6 +2048,20 @@
     </Compile>
     <Compile Include="Admin\ECommerce\Attribute\ManageAttribute_UC.ascx.designer.cs">
       <DependentUpon>ManageAttribute_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FileManager\FileManager_UC.ascx.cs">
+      <DependentUpon>FileManager_UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FileManager\FileManager_UC.ascx.designer.cs">
+      <DependentUpon>FileManager_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FileManager\FrmFileManager.aspx.cs">
+      <DependentUpon>FrmFileManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FileManager\FrmFileManager.aspx.designer.cs">
+      <DependentUpon>FrmFileManager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\FrmAccessDenied.aspx.cs">
       <DependentUpon>FrmAccessDenied.aspx</DependentUpon>

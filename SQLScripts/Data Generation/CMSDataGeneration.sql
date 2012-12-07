@@ -2,6 +2,8 @@
 SET XACT_ABORT ON;
 GO
 
+EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"
+
 SET IDENTITY_INSERT [SECURITY].[FORM] ON;
 
 BEGIN TRANSACTION;
@@ -32,7 +34,8 @@ SELECT 36, N'ProductSearch', N'ProductSearch', N'~/Admin/ECommerce/Product/FrmPr
 SELECT 37, N'Product', N'Product', N'~/Admin/ECommerce/Product/FrmProduct.aspx', N'/Admin/ECommerce/Product/FrmProduct.aspx', 0, 0 UNION ALL
 SELECT 38, N'PageDesign', N'PageDesign', N'~/Admin/Page/FrmPageDesign.aspx', N'/Admin/Page/FrmPageDesign.aspx', 0, 0 UNION ALL
 SELECT 40, N'TemplateDesign', N'TemplateDesign', N'~/Admin/Template/FrmTemplateDesign.aspx', N'/Admin/Template/FrmTemplateDesign.aspx', 0, 0 UNION ALL
-SELECT 41, N'Preference', N'Preference', N'~/Admin/ECommerce/Preference/FrmPreference.aspx', N'/Admin/ECommerce/Preference/FrmPreference.aspx', 0, 0
+SELECT 41, N'Preference', N'Preference', N'~/Admin/ECommerce/Preference/FrmPreference.aspx', N'/Admin/ECommerce/Preference/FrmPreference.aspx', 0, 0 UNION ALL
+SELECT 42, N'File Manager', N'File Manager', N'~/Admin/FileManager/FrmFileManager.aspx', N'/Admin/FileManager/FrmFileManager.aspx', 0, 0
 COMMIT;
 RAISERROR (N'[SECURITY].[FORM]: Insert Batch: 1.....Done!', 10, 1) WITH NOWAIT;
 GO
@@ -69,7 +72,8 @@ SELECT 24, 36, 1, 1 UNION ALL
 SELECT 25, 37, 1, 1 UNION ALL
 SELECT 27, 38, 1, 1 UNION ALL
 SELECT 28, 40, 1, 1 UNION ALL
-SELECT 29, 41, 1, 1
+SELECT 29, 41, 1, 1 UNION ALL
+SELECT 30, 42, 1, 1
 COMMIT;
 RAISERROR (N'[SECURITY].[FORM_ROLE]: Insert Batch: 1.....Done!', 10, 1) WITH NOWAIT;
 GO
@@ -126,7 +130,9 @@ SELECT 14, N'CatalogSitePath', N'CatalogSitePath', N'~/GUI/ECommerce/Catalog/Cat
 SELECT 15, N'ContactUs_UC', N'ContactUs_UC', N'~/GUI/Contact/ContactUs_UC.ascx', 0, 8242, 5427, 3, 1 UNION ALL
 SELECT 16, N'Gallery Template Server', N'Gallery Template Server', N'~/GUI/Gallery/GalleryXSL_UC.ascx', 0, 8244, 67766, 4, 1 UNION ALL
 SELECT 17, N'Gallery Template Service', N'Gallery Template Service', N'~/GUI/Gallery/GalleryServiceXSL_UC.ascx', 0, 8244, 67793, 4, 1 UNION ALL
-SELECT 18, N'Menu Item Template XSL', N'Menu Item Template', N'~/GUI/Menu/MenuItemTemplateXSL_UC.ascx', 0, 8246, 3057, 3, 1
+SELECT 18, N'Menu Item Template XSL', N'Menu Item Template', N'~/GUI/Menu/MenuItemTemplateXSL_UC.ascx', 0, 8246, 3057, 3, 1 UNION ALL
+SELECT 19, N'Menu Item Parent Child XSL', N'Menu Item Parent Child XSL', N'~/GUI/Menu/MenuItemParentChildXSL_UC.ascx', 0, 8246, 3057, 3, 1 UNION ALL
+SELECT 20, N'Menu Parent Child XSL', N'Menu Parent Child XSL', N'~/GUI/Menu/MenuParentChildXSL_UC.ascx', 0, 8246, 3057, 3, 1
 COMMIT;
 RAISERROR (N'[SETUP].[CMSCONTROL]: Insert Batch: 1.....Done!', 10, 1) WITH NOWAIT;
 GO
@@ -151,3 +157,35 @@ GO
 
 SET IDENTITY_INSERT [SETUP].[MODULE] OFF;
 GO
+
+SET IDENTITY_INSERT [SETUP].[LANGUAGE] ON;
+
+BEGIN TRANSACTION;
+INSERT INTO [SETUP].[LANGUAGE]([LANGUAGE_ID], [LANGUAGE_NAME], [LANGUAGE_CULTURE], [LANGUAGE_IMAGE])
+SELECT 1, N'English', N'en-US', N'english.png' UNION ALL
+SELECT 2, N'Arabic', N'ar-JO', N'arabic.png'
+COMMIT;
+RAISERROR (N'[SETUP].[LANGUAGE]: Insert Batch: 1.....Done!', 10, 1) WITH NOWAIT;
+GO
+
+SET IDENTITY_INSERT [SETUP].[LANGUAGE] OFF;
+
+SET IDENTITY_INSERT [SETUP].[LANGUAGE_URL] ON;
+
+BEGIN TRANSACTION;
+INSERT INTO [SETUP].[LANGUAGE_URL]([LANGUAGE_URL_ID], [LANGUAGE_URL_LANGUAGE_ID], [LANGUAGE_URL_NAME], [LANGUAGE_URL_PORTAL_ID])
+SELECT 1, 1, N'http://ayman-laptop', 1
+COMMIT;
+RAISERROR (N'[SETUP].[LANGUAGE_URL]: Insert Batch: 1.....Done!', 10, 1) WITH NOWAIT;
+GO
+
+SET IDENTITY_INSERT [SETUP].[LANGUAGE_URL] OFF;
+
+BEGIN TRANSACTION;
+INSERT INTO [SETUP].[PORTAL_LANGUAGE]([PORTAL_ID], [LANGUAGE_ID])
+SELECT 1, 1
+COMMIT;
+RAISERROR (N'[SETUP].[PORTAL_LANGUAGE]: Insert Batch: 1.....Done!', 10, 1) WITH NOWAIT;
+GO
+
+EXEC sp_msforeachtable "ALTER TABLE ? CHECK CONSTRAINT all"
