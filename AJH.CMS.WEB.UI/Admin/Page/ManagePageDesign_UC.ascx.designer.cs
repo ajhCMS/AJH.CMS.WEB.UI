@@ -181,7 +181,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AJH.CMS.WEB.UI.Controls.Editor_UC txtRegisterControl;
+        protected global::System.Web.UI.WebControls.TextBox txtRegisterControl;
         
         /// <summary>
         /// lblUserControlTag control.
@@ -199,7 +199,7 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AJH.CMS.WEB.UI.Controls.Editor_UC txtUserControlTag;
+        protected global::System.Web.UI.WebControls.TextBox txtUserControlTag;
         
         /// <summary>
         /// upnlPageItem control.
@@ -226,7 +226,16 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AJH.CMS.WEB.UI.Controls.Editor_UC txtDetails;
+        protected global::System.Web.UI.WebControls.TextBox txtDetails;
+        
+        /// <summary>
+        /// rfvDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDetails;
         
         /// <summary>
         /// btnUpdate control.

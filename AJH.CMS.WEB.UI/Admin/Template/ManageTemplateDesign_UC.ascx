@@ -87,16 +87,18 @@
                         Text="Register Control"></asp:Label>
                 </td>
                 <td>
-                    <controls:Editor_UC ID="txtRegisterControl" runat="server" Width="100%" Height="70px"
-                        EditModes="Html" ContentFilters="None"></controls:Editor_UC>
+                    <asp:TextBox ID="txtRegisterControl" runat="server" Width="100%" Height="70px" TextMode="MultiLine"></asp:TextBox>
+                    <%--<controls:Editor_UC ID="txtRegisterControl" runat="server" Width="100%" Height="70px"
+                        EditModes="Html" ContentFilters="None"></controls:Editor_UC>--%>
                 </td>
                 <td>
                     <asp:Label ID="lblUserControlTag" runat="server" AssociatedControlID="txtUserControlTag"
                         Text="User Control Tag"></asp:Label>
                 </td>
                 <td>
-                    <controls:Editor_UC ID="txtUserControlTag" runat="server" Width="100%" Height="70px"
-                        EditModes="Html" ContentFilters="None"></controls:Editor_UC>
+                    <asp:TextBox ID="txtUserControlTag" runat="server" Width="100%" Height="70px" TextMode="MultiLine"></asp:TextBox>
+                    <%--<controls:Editor_UC ID="txtUserControlTag" runat="server" Width="100%" Height="70px"
+                        EditModes="Html" ContentFilters="None"></controls:Editor_UC>--%>
                 </td>
             </tr>
         </table>
@@ -144,8 +146,9 @@
                     <asp:Label ID="lblStyleTag" runat="server" AssociatedControlID="txtStyleTag" Text="Style Tag"></asp:Label>
                 </td>
                 <td>
-                    <controls:Editor_UC ID="txtStyleTag" runat="server" Width="100%" Height="100px" EditModes="Html"
-                        ContentFilters="None" IsRequired="false"></controls:Editor_UC>
+                    <asp:TextBox ID="txtStyleTag" runat="server" Width="100%" Height="100px" TextMode="MultiLine"></asp:TextBox>
+                    <%--<controls:Editor_UC ID="txtStyleTag" runat="server" Width="100%" Height="100px" EditModes="Html"
+                        ContentFilters="None" IsRequired="false"></controls:Editor_UC>--%>
                 </td>
             </tr>
         </table>
@@ -163,9 +166,13 @@
             </tr>
             <tr>
                 <td>
-                    <controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="400px" EditModes="Html"
+                    <%--<controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="400px" EditModes="Html"
                         ContentFilters="None" IsRequired="true" ValidationGroup="TemplateDesign" ErrorMessage="Details"
-                        ErrorText="*"></controls:Editor_UC>
+                        ErrorText="*">
+                    </controls:Editor_UC>--%>
+                    <asp:TextBox ID="txtDetails" runat="server" Width="100%" Height="400px" TextMode="MultiLine"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvDetails" runat="server" ControlToValidate="txtDetails"
+                        ErrorMessage="Details" Text="*" Display="Dynamic" ValidationGroup="TemplateDesign"></asp:RequiredFieldValidator>
                 </td>
             </tr>
         </table>

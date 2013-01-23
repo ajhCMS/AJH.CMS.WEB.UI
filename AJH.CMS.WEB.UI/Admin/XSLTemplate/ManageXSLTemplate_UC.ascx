@@ -77,9 +77,13 @@
                         <asp:Label ID="lblDetails" runat="server" Text="Details" AssociatedControlID="txtDetails"></asp:Label>
                     </td>
                     <td>
-                        <controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="500px" EditModes="Html"
+                        <asp:TextBox ID="txtDetails" runat="server" Width="100%" Height="500px" TextMode="MultiLine"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvDetails" runat="server" ControlToValidate="txtDetails"
+                            ErrorMessage="Details" Text="*" Display="Dynamic" ValidationGroup="AddEditXSLTemplate"></asp:RequiredFieldValidator>
+                        <%--<controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="500px" EditModes="Html"
                             ContentFilters="None" IsRequired="true" ErrorMessage="Details" ErrorText="*"
-                            ValidationGroup="AddEditXSLTemplate"></controls:Editor_UC>
+                            ValidationGroup="AddEditXSLTemplate">
+                        </controls:Editor_UC>--%>
                     </td>
                 </tr>
             </table>

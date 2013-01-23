@@ -90,5 +90,8 @@
     <NotInBuild Include="CMS_Database_CREATE\CMS_Database_CREATE.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step1\01 Add CategoryName in the Select ArticleGetByCategoryXML.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
   </ItemGroup>
 </Project>

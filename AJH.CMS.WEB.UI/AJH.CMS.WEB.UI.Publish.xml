@@ -3,11 +3,10 @@
   <publishProfile publishUrl="E:\AYMAN\Libraries\Programs\Projects .Net2010\AJH.CMS.WEB.UI\CMS_Build\CMS_Publish" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="CMS_Publish" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
     <file relUrl="Admin/CMSLogin.Master" publishTime="12/02/2012 00:12:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/help.gif" publishTime="11/30/2012 00:07:30" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/justifyfull.gif" publishTime="11/30/2012 00:04:54" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/s_refresh.gif" publishTime="11/30/2012 00:04:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/cut.gif" publishTime="11/30/2012 00:10:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/right.gif" publishTime="11/30/2012 00:07:12" />
     <file relUrl="Admin/CMSControl/FrmCMSControl.aspx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/codeeditor.gif" publishTime="11/30/2012 00:08:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/doubleline.gif" publishTime="11/30/2012 00:08:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/submit.gif" publishTime="11/30/2012 00:11:14" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emclock.gif" publishTime="11/30/2012 00:05:26" />
@@ -15,6 +14,7 @@
     <file relUrl="App_Themes/Image/deactive.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/textbox.gif" publishTime="11/30/2012 00:10:17" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/eximage.gif" publishTime="11/30/2012 00:10:03" />
+    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/drawtransparentrectangle.gif" publishTime="11/30/2012 00:04:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/colorpen.gif" publishTime="11/30/2012 00:08:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/inscol_l.gif" publishTime="11/30/2012 00:09:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emembarrassed.gif" publishTime="11/30/2012 00:05:24" />
@@ -22,6 +22,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/r1.png" publishTime="11/30/2012 00:08:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/ContextMenuMode/Full_noform.config" publishTime="11/30/2012 00:03:22" />
     <file relUrl="Admin/FrmLanding.aspx" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/wri.gif" publishTime="11/30/2012 00:04:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/l1.gif" publishTime="11/30/2012 00:08:12" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/textarea.gif" publishTime="11/30/2012 00:08:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/find.gif" publishTime="11/30/2012 00:10:03" />
@@ -39,7 +40,6 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/under.gif" publishTime="11/30/2012 00:10:16" />
     <file relUrl="App_Themes/Image/Dashboard-Users.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/Separator.gif" publishTime="11/30/2012 00:09:40" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/style_safari.css" publishTime="11/30/2012 00:11:05" />
     <file relUrl="Admin/HTML/FrmHtmlBlock.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Style_Text.js" publishTime="11/30/2012 00:06:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/ContextMenuMode/Simple.config" publishTime="11/30/2012 00:03:22" />
@@ -47,13 +47,11 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/space.gif" publishTime="11/30/2012 00:04:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/colorpicker.gif" publishTime="11/30/2012 00:08:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Common.js" publishTime="11/30/2012 00:06:22" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/ucase.gif" publishTime="11/30/2012 00:09:32" />
     <file relUrl="App_Themes/Image/osx_arrow_down.gif" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/select.gif" publishTime="11/30/2012 00:03:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/layer.gif" publishTime="11/30/2012 00:04:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/BackColor.gif" publishTime="11/30/2012 00:09:26" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/imagebutton.gif" publishTime="11/30/2012 00:08:18" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/spltcell_b.gif" publishTime="11/30/2012 00:10:25" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/textarea.gif" publishTime="11/30/2012 00:07:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/Form.gif" publishTime="11/30/2012 00:10:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/justifynone.gif" publishTime="11/30/2012 00:09:03" />
     <file relUrl="App_Themes/Image/bg-actions.png" publishTime="11/05/2012 00:51:32" />
@@ -66,12 +64,14 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/selectnone.gif" publishTime="11/30/2012 00:11:17" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/ImageMap.gif" publishTime="11/30/2012 00:04:56" />
     <file relUrl="App_Themes/Image/add.png" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/delcol.gif" publishTime="11/30/2012 00:11:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/ascx.gif" publishTime="11/30/2012 00:05:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/selectnone.gif" publishTime="11/30/2012 00:07:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/r1.png" publishTime="11/30/2012 00:10:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/close.gif" publishTime="11/30/2012 00:11:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/selectall.gif" publishTime="11/30/2012 00:09:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/all.png" publishTime="11/30/2012 00:09:28" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/inscol_r.gif" publishTime="11/30/2012 00:10:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/backward.gif" publishTime="11/30/2012 00:08:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/code.gif" publishTime="11/30/2012 00:10:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/lightblue_fontcolor.gif" publishTime="11/30/2012 00:09:01" />
@@ -90,16 +90,12 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/spltcell.gif" publishTime="11/30/2012 00:07:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/help.gif" publishTime="11/30/2012 00:05:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/spltcell_b.gif" publishTime="11/30/2012 00:11:15" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/ch_preview.gif" publishTime="11/30/2012 00:08:32" />
-    <file relUrl="bin/Telerik.Web.UI.dll" publishTime="11/27/2012 15:18:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/InsertPageBreak.gif" publishTime="11/30/2012 00:11:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/document.gif" publishTime="11/30/2012 00:09:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/table.gif" publishTime="11/30/2012 00:08:46" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/border_top.gif" publishTime="11/30/2012 00:05:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/listbox.gif" publishTime="11/30/2012 00:11:31" />
     <file relUrl="App_Themes/Image/chart.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_TagFoot.js" publishTime="11/30/2012 00:06:23" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/text.gif" publishTime="11/30/2012 00:11:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emlips.gif" publishTime="11/30/2012 00:05:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/help.gif" publishTime="11/30/2012 00:10:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/style.Border.gif" publishTime="11/30/2012 00:04:34" />
@@ -109,7 +105,6 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/buttons.gif" publishTime="11/30/2012 00:05:43" />
     <file relUrl="GUI/ECommerce/Catalog/CatalogXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/snapgrid.gif" publishTime="11/30/2012 00:11:17" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/code.gif" publishTime="11/30/2012 00:09:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/bspreview.gif" publishTime="11/30/2012 00:11:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/zh-cn.xml" publishTime="11/30/2012 00:05:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/dialog.css" publishTime="11/30/2012 00:06:57" />
@@ -130,7 +125,6 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/f_bold.gif" publishTime="11/30/2012 00:11:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/right_to_left.gif" publishTime="11/30/2012 00:07:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/link.gif" publishTime="11/30/2012 00:04:51" />
-    <file relUrl="Scripts/jquery.min.js" publishTime="12/01/2012 14:42:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Keyboard/keyboard-data.js" publishTime="11/30/2012 00:06:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/clear.gif" publishTime="11/30/2012 00:04:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/cssclass.gif" publishTime="11/30/2012 00:05:32" />
@@ -154,9 +148,8 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/youtube.gif" publishTime="11/30/2012 00:08:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_select.ascx" publishTime="11/30/2012 00:03:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/specialchar.gif" publishTime="11/30/2012 00:11:17" />
-    <file relUrl="bin/AJH.CMS.Core.dll" publishTime="12/07/2012 18:22:32" />
+    <file relUrl="bin/AJH.CMS.Core.dll" publishTime="01/23/2013 18:06:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emsmilep.gif" publishTime="11/30/2012 00:05:16" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/ForeColor.gif" publishTime="11/30/2012 00:08:22" />
     <file relUrl="Admin/ECommerce/Preference/FrmPreference.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/outdent.gif" publishTime="11/30/2012 00:07:18" />
     <file relUrl="Admin/Services/Category/CategoryService.asmx" publishTime="11/05/2012 00:51:32" />
@@ -182,31 +175,30 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/delrow.gif" publishTime="11/30/2012 00:10:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/timer.gif" publishTime="11/30/2012 00:08:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/insertDate.gif" publishTime="11/30/2012 00:04:55" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Configuration/ContextMenuMode/Default.config" publishTime="11/30/2012 00:03:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/r1.png" publishTime="11/30/2012 00:07:59" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/italic.gif" publishTime="11/30/2012 00:11:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/mp3.gif" publishTime="11/30/2012 00:11:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/optionbutton.gif" publishTime="11/30/2012 00:09:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Gecko_Loader/Loader.js" publishTime="11/30/2012 00:06:36" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/edit2.gif" publishTime="11/30/2012 00:05:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/center.gif" publishTime="11/30/2012 00:11:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/youtube.gif" publishTime="11/30/2012 00:09:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/InsertMedia.aspx" publishTime="11/30/2012 00:03:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/flash.gif" publishTime="11/30/2012 00:07:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/SelectFile.aspx" publishTime="11/30/2012 00:03:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/preview.gif" publishTime="11/30/2012 00:09:45" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/face5.gif" publishTime="11/30/2012 00:05:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/l1.png" publishTime="11/30/2012 00:11:34" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_InsertImage.js" publishTime="11/30/2012 00:06:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/break.gif" publishTime="11/30/2012 00:11:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/keyboard.gif" publishTime="11/30/2012 00:10:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/filpvertical.gif" publishTime="11/30/2012 00:04:04" />
     <file relUrl="GUI/ECommerce/Product/ProductDetailsXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/reset.gif" publishTime="11/30/2012 00:10:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/b1.png" publishTime="11/30/2012 00:09:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/insrow_b.gif" publishTime="11/30/2012 00:08:14" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/l2.png" publishTime="11/30/2012 00:07:23" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/t3.png" publishTime="11/30/2012 00:10:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Flash.js" publishTime="11/30/2012 00:06:21" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_table.ascx" publishTime="11/30/2012 00:03:45" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/flash.gif" publishTime="11/30/2012 00:08:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/1x1.gif" publishTime="11/30/2012 00:05:52" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/close.gif" publishTime="11/30/2012 00:09:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/left.gif" publishTime="11/30/2012 00:08:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/Security/Admin.config" publishTime="11/30/2012 00:03:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/horizontal.start.gif" publishTime="11/30/2012 00:04:59" />
@@ -219,53 +211,57 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/AutoConfigure/Sample.config" publishTime="11/30/2012 00:03:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/table.gif" publishTime="11/30/2012 00:09:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/t-minus.gif" publishTime="11/30/2012 00:04:32" />
+    <file relUrl="GUI/Menu/MenuParentChildXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
+    <file relUrl="App_Themes/Image/osx_drag_top.gif" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/pushbutton.gif" publishTime="11/30/2012 00:11:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/abspos.gif" publishTime="11/30/2012 00:08:38" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/ContextMenuMode/Full.config" publishTime="11/30/2012 00:03:23" />
-    <file relUrl="App_Themes/Image/Dashboard-Article.png" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/outdent.gif" publishTime="11/30/2012 00:08:57" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/style_safari12.css" publishTime="11/30/2012 00:11:05" />
     <file relUrl="GUI/Contact/Career_UC.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/redo.gif" publishTime="11/30/2012 00:07:58" />
-    <file relUrl="App_Themes/Image/windows_drag_top.gif" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/style_gecko.css" publishTime="11/30/2012 00:08:39" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Languages/en-ZA.xml" publishTime="11/30/2012 00:06:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/One-Column-Table.gif" publishTime="11/30/2012 00:04:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/pushbutton.gif" publishTime="11/30/2012 00:10:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/SyntaxHighlighter/shBrushPython.js" publishTime="11/30/2012 00:06:50" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/image.gif" publishTime="11/30/2012 00:10:46" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/t1.png" publishTime="11/30/2012 00:07:06" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Gecko_InsertMedia.aspx" publishTime="11/30/2012 00:03:38" />
     <file relUrl="Admin/Services/Security/UserService.asmx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="App_Themes/Image/notpublished.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/inscol.gif" publishTime="11/30/2012 00:07:27" />
     <file relUrl="Admin/Security/ManagePermission_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/r1.png" publishTime="11/30/2012 00:09:43" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/lightblue_colorpen.gif" publishTime="11/30/2012 00:09:01" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/link.gif" publishTime="11/30/2012 00:11:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/refresh.gif" publishTime="11/30/2012 00:04:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_td.ascx" publishTime="11/30/2012 00:03:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/hlp.gif" publishTime="11/30/2012 00:05:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/b1.png" publishTime="11/30/2012 00:07:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/spell.css.gif" publishTime="11/30/2012 00:07:55" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/strike.gif" publishTime="11/30/2012 00:10:24" />
     <file relUrl="GUI/Menu/MenuItemParentChildXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/delrow.gif" publishTime="11/30/2012 00:05:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/inscell.gif" publishTime="11/30/2012 00:10:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/horizontal.background.gif" publishTime="11/30/2012 00:04:59" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/mid.gif" publishTime="11/30/2012 00:11:30" />
+    <file relUrl="Admin/ECommerce/Attribute/FrmAttribute.aspx" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/l2.gif" publishTime="11/30/2012 00:07:23" />
     <file relUrl="Controls/SWFUpload/script/swfupload.js" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/multiclavier.gif" publishTime="11/30/2012 00:04:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/paragraph.gif" publishTime="11/30/2012 00:08:02" />
     <file relUrl="Admin/Style/FrmStyle.aspx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_ColorSpace2.png" publishTime="11/30/2012 00:05:35" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/tw_design.gif" publishTime="11/30/2012 00:07:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/insrow.gif" publishTime="11/30/2012 00:08:14" />
     <file relUrl="App_Themes/Image/ajax-loader.gif" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/closedfolder.gif" publishTime="11/30/2012 00:08:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/l1.png" publishTime="11/30/2012 00:09:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/it-IT.xml" publishTime="11/30/2012 00:06:02" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Languages/en-ZA.xml" publishTime="11/30/2012 00:06:06" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/style_gecko.css" publishTime="11/30/2012 00:09:30" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/face13.gif" publishTime="11/30/2012 00:05:12" />
     <file relUrl="Admin/Page/ManagePage_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/border_none.gif" publishTime="11/30/2012 00:05:45" />
-    <file relUrl="bin/AJH.CMS.WEB.UI.dll" publishTime="12/07/2012 18:22:35" />
+    <file relUrl="bin/AJH.CMS.WEB.UI.dll" publishTime="01/23/2013 18:06:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/checkbox.gif" publishTime="11/30/2012 00:10:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/right_to_left.gif" publishTime="11/30/2012 00:04:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/ar.xml" publishTime="11/30/2012 00:06:10" />
-    <file relUrl="App_Themes/Image/active-tool.png" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/bullist.gif" publishTime="11/30/2012 00:11:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/paragraph.gif" publishTime="11/30/2012 00:07:17" />
     <file relUrl="Admin/ECommerce/Tax/FrmTax.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/mp3.gif" publishTime="11/30/2012 00:08:06" />
@@ -273,6 +269,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/outdent.gif" publishTime="11/30/2012 00:09:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/horizontal.background.gif" publishTime="11/30/2012 00:07:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/InsertPageBreak.gif" publishTime="11/30/2012 00:07:26" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/emcocktl.gif" publishTime="11/30/2012 00:05:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/fontdropdown.gif" publishTime="11/30/2012 00:05:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/erase.cur" publishTime="11/30/2012 00:04:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/jpeg.gif" publishTime="11/30/2012 00:04:54" />
@@ -287,13 +284,13 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/cut.gif" publishTime="11/30/2012 00:10:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag.aspx" publishTime="11/30/2012 00:03:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/tbdown.gif" publishTime="11/30/2012 00:10:19" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/undo.gif" publishTime="11/30/2012 00:09:32" />
     <file relUrl="Scripts/CMSLogin.js" publishTime="11/05/2012 00:51:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/f_under.gif" publishTime="11/30/2012 00:08:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/fontend.gif" publishTime="11/30/2012 00:05:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/cut.gif" publishTime="11/30/2012 00:07:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/layer.gif" publishTime="11/30/2012 00:09:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face1.gif" publishTime="11/30/2012 00:05:14" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/textbox.gif" publishTime="11/30/2012 00:09:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/r1.gif" publishTime="11/30/2012 00:09:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/italic.gif" publishTime="11/30/2012 00:09:04" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/emotion.gif" publishTime="11/30/2012 00:11:45" />
@@ -307,12 +304,13 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/restore.gif" publishTime="11/30/2012 00:07:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/delcell.gif" publishTime="11/30/2012 00:08:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emthup.gif" publishTime="11/30/2012 00:05:15" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/layer.gif" publishTime="11/30/2012 00:10:38" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/save.gif" publishTime="11/30/2012 00:04:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/inscol_r.gif" publishTime="11/30/2012 00:09:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/inc.gif" publishTime="11/30/2012 00:08:17" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/page.gif" publishTime="11/30/2012 00:08:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/page.gif" publishTime="11/30/2012 00:09:47" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/image.gif" publishTime="11/30/2012 00:10:46" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/mrgcell_r.gif" publishTime="11/30/2012 00:09:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/groupbox.gif" publishTime="11/30/2012 00:10:00" />
     <file relUrl="Controls/AjaxDate_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/cleanup.gif" publishTime="11/30/2012 00:11:51" />
@@ -323,81 +321,81 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Style/ColorPicker_NS.css" publishTime="11/30/2012 00:06:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/fontcolor.gif" publishTime="11/30/2012 00:10:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/ColorPicker.htc" publishTime="11/30/2012 00:06:13" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/emcocktl.gif" publishTime="11/30/2012 00:05:26" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/box.gif" publishTime="11/30/2012 00:05:44" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/link.gif" publishTime="11/30/2012 00:08:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/asax.gif" publishTime="11/30/2012 00:05:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/droparrow.gif" publishTime="11/30/2012 00:05:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/insertform.gif" publishTime="11/30/2012 00:09:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/save.gif" publishTime="11/30/2012 00:03:59" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/preview.gif" publishTime="11/30/2012 00:08:55" />
-    <file relUrl="Admin/ECommerce/Supplier/ManageSupplier_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/document.gif" publishTime="11/30/2012 00:10:57" />
     <file relUrl="Admin/ECommerce/Preference/ManagePreference_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face16.gif" publishTime="11/30/2012 00:05:12" />
-    <file relUrl="Admin/ECommerce/Product/ManageProducts_UC.ascx" publishTime="12/01/2012 22:56:43" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/copy.gif" publishTime="11/30/2012 00:05:38" />
+    <file relUrl="Admin/ECommerce/Product/ManageProducts_UC.ascx" publishTime="01/23/2013 16:39:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_gecko_pastehtml.js" publishTime="11/30/2012 00:06:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/horizontal.gif" publishTime="11/30/2012 00:09:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/l1.png" publishTime="11/30/2012 00:10:39" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/bestfit.gif" publishTime="11/30/2012 00:05:47" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/horizontal.start.gif" publishTime="11/30/2012 00:11:40" />
     <file relUrl="Portals/GeneralPortal/Uploads/Upload/english.png" publishTime="11/05/2012 00:51:34" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/face9.gif" publishTime="11/30/2012 00:05:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face7.gif" publishTime="11/30/2012 00:05:08" />
     <file relUrl="App_Themes/Image/signin-btn.png" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="Admin/Article/ManageArticle_UC.ascx" publishTime="01/23/2013 16:39:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/style_safari.css" publishTime="11/30/2012 00:09:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/layer.gif" publishTime="11/30/2012 00:07:22" />
     <file relUrl="Admin/Page/FrmPage.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/under.gif" publishTime="11/30/2012 00:06:59" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/anchor.gif" publishTime="11/30/2012 00:07:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/abspos.gif" publishTime="11/30/2012 00:10:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/lightblue_colorpen.gif" publishTime="11/30/2012 00:04:52" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Li.js" publishTime="11/30/2012 00:06:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/right_to_left.gif" publishTime="11/30/2012 00:10:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/paragraph.gif" publishTime="11/30/2012 00:10:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/italic.gif" publishTime="11/30/2012 00:09:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/ppt.gif" publishTime="11/30/2012 00:04:42" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/insrow.gif" publishTime="11/30/2012 00:10:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Gecko_InsertTemplate.aspx" publishTime="11/30/2012 00:03:38" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/toolbarbutton.over.gif" publishTime="11/30/2012 00:08:42" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/r1.gif" publishTime="11/30/2012 00:08:54" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/lightblue_colorpen.gif" publishTime="11/30/2012 00:09:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/ImageMap.gif" publishTime="11/30/2012 00:09:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_Vertical2.png" publishTime="11/30/2012 00:05:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/codedropdown.gif" publishTime="11/30/2012 00:05:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emangel.gif" publishTime="11/30/2012 00:05:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/t1.png" publishTime="11/30/2012 00:08:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/fontcolor.gif" publishTime="11/30/2012 00:09:13" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/mov.gif" publishTime="11/30/2012 00:04:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/zoom_out.gif" publishTime="11/30/2012 00:04:20" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/colorpen.gif" publishTime="11/30/2012 00:05:40" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Clean.htm" publishTime="11/30/2012 00:03:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/paste.gif" publishTime="11/30/2012 00:09:46" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/cell.gif" publishTime="11/30/2012 00:11:53" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/textarea.gif" publishTime="11/30/2012 00:07:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emsmile.gif" publishTime="11/30/2012 00:05:17" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emunlove.gif" publishTime="11/30/2012 00:05:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/dropdownbox.gif" publishTime="11/30/2012 00:11:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/horizontal.start.gif" publishTime="11/30/2012 00:09:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/InsertDocument.aspx" publishTime="11/30/2012 00:03:35" />
     <file relUrl="Admin/Services/ECommerce/Supplier/SupplierService.asmx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/xmllib.js" publishTime="11/30/2012 00:03:53" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/t1.gif" publishTime="11/30/2012 00:10:22" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/b1.gif" publishTime="11/30/2012 00:11:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/horizontal.gif" publishTime="11/30/2012 00:07:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/left.gif" publishTime="11/30/2012 00:07:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/horizontal.background.gif" publishTime="11/30/2012 00:09:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/image.gif" publishTime="11/30/2012 00:09:58" />
-    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/redo.gif" publishTime="11/30/2012 00:04:01" />
+    <file relUrl="Controls/Editor_UC.ascx" publishTime="01/23/2013 16:39:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_style_border.ascx" publishTime="11/30/2012 00:03:47" />
-    <file relUrl="GUI/HTML/HTMLViewer_UC.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/unformat.gif" publishTime="11/30/2012 00:09:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/selectall.gif" publishTime="11/30/2012 00:11:18" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/de-de.xml" publishTime="11/30/2012 00:06:08" />
     <file relUrl="Admin/ECommerce/Manufacturar/FrmManufacturar.aspx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Clean.htm" publishTime="11/30/2012 00:03:43" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/instable.gif" publishTime="11/30/2012 00:07:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/inscell.gif" publishTime="11/30/2012 00:08:16" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/colorpen.gif" publishTime="11/30/2012 00:10:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/vi-vn.xml" publishTime="11/30/2012 00:05:56" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/fpreview.gif" publishTime="11/30/2012 00:08:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/insrow_t.gif" publishTime="11/30/2012 00:09:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/delete.gif" publishTime="11/30/2012 00:05:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/border_outside.gif" publishTime="11/30/2012 00:05:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/delrow.gif" publishTime="11/30/2012 00:10:06" />
+    <file relUrl="Scripts/CMSPageSettings.js" publishTime="11/05/2012 00:51:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face22.gif" publishTime="11/30/2012 00:05:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/insertDate.gif" publishTime="11/30/2012 00:11:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_InsertMedia.js" publishTime="11/30/2012 00:06:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/insrow.gif" publishTime="11/30/2012 00:09:55" />
-    <file relUrl="Admin/Article/ManageArticle_UC.ascx" publishTime="12/01/2012 22:53:34" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/mid.gif" publishTime="11/30/2012 00:08:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/css.gif" publishTime="11/30/2012 00:05:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/lcase.gif" publishTime="11/30/2012 00:08:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Help/default.htm" publishTime="11/30/2012 00:03:53" />
@@ -415,19 +413,15 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/timer.gif" publishTime="11/30/2012 00:07:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/gecko_pastetext.htm" publishTime="11/30/2012 00:03:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/rule.gif" publishTime="11/30/2012 00:07:12" />
-    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Symbols/sample4.gif" publishTime="11/30/2012 00:04:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/pen.cur" publishTime="11/30/2012 00:04:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/htm.gif" publishTime="11/30/2012 00:04:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_InsertTemplate.js" publishTime="11/30/2012 00:06:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/mrgcell.gif" publishTime="11/30/2012 00:07:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/print.gif" publishTime="11/30/2012 00:10:31" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/find.gif" publishTime="11/30/2012 00:09:14" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/gecko_pasteword.htm" publishTime="11/30/2012 00:03:36" />
-    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/pasteword.gif" publishTime="11/30/2012 00:04:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/mov.gif" publishTime="11/30/2012 00:11:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/ContextMenuMode/None.config" publishTime="11/30/2012 00:03:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/imagebutton.gif" publishTime="11/30/2012 00:09:58" />
-    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/zoomout.gif" publishTime="11/30/2012 00:03:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/download.gif" publishTime="11/30/2012 00:05:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/pushbutton.gif" publishTime="11/30/2012 00:07:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/left_to_right.gif" publishTime="11/30/2012 00:10:38" />
@@ -438,12 +432,11 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face21.gif" publishTime="11/30/2012 00:05:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/paste.gif" publishTime="11/30/2012 00:04:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/unlink.gif" publishTime="11/30/2012 00:11:07" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/tw_design.gif" publishTime="11/30/2012 00:07:47" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/colorpicker.aspx" publishTime="11/30/2012 00:03:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/selectall.gif" publishTime="11/30/2012 00:08:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/style.css" publishTime="11/30/2012 00:06:57" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/area.gif" publishTime="11/30/2012 00:05:51" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/colorpicker.gif" publishTime="11/30/2012 00:11:50" />
     <file relUrl="App_Themes/Image/Dashboard-Gallery.png" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/design.gif" publishTime="11/30/2012 00:10:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emdgust.gif" publishTime="11/30/2012 00:05:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/EditInNewWindow.gif" publishTime="11/30/2012 00:10:04" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/inscol_r.gif" publishTime="11/30/2012 00:11:37" />
@@ -463,11 +456,12 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/table.gif" publishTime="11/30/2012 00:11:12" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Td.js" publishTime="11/30/2012 00:06:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emtea.gif" publishTime="11/30/2012 00:05:16" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/style_gecko.css" publishTime="11/30/2012 00:08:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/ResizeCorner.gif" publishTime="11/30/2012 00:04:40" />
     <file relUrl="App_Themes/Image/schoual.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/ImageMap.gif" publishTime="11/30/2012 00:09:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/mrgcell_b.gif" publishTime="11/30/2012 00:11:27" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/border_right.gif" publishTime="11/30/2012 00:05:44" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/colorpen.gif" publishTime="11/30/2012 00:10:07" />
     <file relUrl="App_Themes/Image/ddl_enter.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/delcell.gif" publishTime="11/30/2012 00:11:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/pushbutton.gif" publishTime="11/30/2012 00:08:54" />
@@ -477,17 +471,17 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/document.gif" publishTime="11/30/2012 00:05:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/break.gif" publishTime="11/30/2012 00:10:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/link.gif" publishTime="11/30/2012 00:07:21" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/eximage.gif" publishTime="11/30/2012 00:11:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/bold.gif" publishTime="11/30/2012 00:11:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/crop.gif" publishTime="11/30/2012 00:04:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/copy.gif" publishTime="11/30/2012 00:11:49" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/open.gif" publishTime="11/30/2012 00:11:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/vbs.gif" publishTime="11/30/2012 00:04:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/formbg2.gif" publishTime="11/30/2012 00:05:04" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_style_layout.ascx" publishTime="11/30/2012 00:03:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emfemale.gif" publishTime="11/30/2012 00:05:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/listbox.gif" publishTime="11/30/2012 00:08:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/forward.gif" publishTime="11/30/2012 00:08:21" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/insertDate.gif" publishTime="11/30/2012 00:09:06" />
+    <file relUrl="bin/NetSpell.SpellChecker.dll" publishTime="12/01/2012 15:15:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/toolbarbutton.over.gif" publishTime="11/30/2012 00:07:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/close.gif" publishTime="11/30/2012 00:05:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/AutoConfigure/None.config" publishTime="11/30/2012 00:03:19" />
@@ -499,6 +493,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/SyntaxHighlighter/shBrushJScript.js" publishTime="11/30/2012 00:06:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/groupbox.gif" publishTime="11/30/2012 00:10:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/left.gif" publishTime="11/30/2012 00:10:38" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/borders.gif" publishTime="11/30/2012 00:07:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/dialog.css" publishTime="11/30/2012 00:09:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/mrgcell.gif" publishTime="11/30/2012 00:08:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face15.gif" publishTime="11/30/2012 00:05:12" />
@@ -508,22 +503,21 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Template.aspx" publishTime="11/30/2012 00:03:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/l2.gif" publishTime="11/30/2012 00:10:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emcake.gif" publishTime="11/30/2012 00:05:26" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/row.gif" publishTime="11/30/2012 00:07:12" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/justifyfull.gif" publishTime="11/30/2012 00:09:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/selectnone.gif" publishTime="11/30/2012 00:09:40" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/horizontal.end.gif" publishTime="11/30/2012 00:09:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/formbg.gif" publishTime="11/30/2012 00:09:12" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face4.gif" publishTime="11/30/2012 00:05:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/indent.gif" publishTime="11/30/2012 00:10:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/cpie_GradientPositionLight.gif" publishTime="11/30/2012 00:05:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/IE_Implementation/CuteEditorImplementation.js" publishTime="11/30/2012 00:06:38" />
-    <file relUrl="Admin/HTML/ManageHtmlBlock_UC.ascx" publishTime="12/01/2012 22:58:01" />
+    <file relUrl="Admin/HTML/ManageHtmlBlock_UC.ascx" publishTime="01/23/2013 16:39:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/r2.png" publishTime="11/30/2012 00:07:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/colorpen.gif" publishTime="11/30/2012 00:04:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/r2.gif" publishTime="11/30/2012 00:10:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/new.gif" publishTime="11/30/2012 00:04:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/delcol.gif" publishTime="11/30/2012 00:09:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/reload.gif" publishTime="11/30/2012 00:04:01" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/ch_preview.gif" publishTime="11/30/2012 00:11:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/youtube.gif" publishTime="11/30/2012 00:04:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/inscol.gif" publishTime="11/30/2012 00:09:07" />
     <file relUrl="App_Themes/Admin/JQTabContainer.css" publishTime="11/05/2012 00:51:32" />
@@ -536,12 +530,16 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/paragraphdropdown.gif" publishTime="11/30/2012 00:04:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emrainbow.gif" publishTime="11/30/2012 00:05:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/lcase.gif" publishTime="11/30/2012 00:10:38" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/indent.gif" publishTime="11/30/2012 00:09:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Web.config" publishTime="11/30/2012 00:03:26" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/bullist.gif" publishTime="11/30/2012 00:08:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/toolbarbutton.over.gif" publishTime="11/30/2012 00:10:17" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/keyboard.gif" publishTime="11/30/2012 00:08:12" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Textarea.js" publishTime="11/30/2012 00:06:15" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/fontcolor.gif" publishTime="11/30/2012 00:07:32" />
+    <file relUrl="App_Themes/Image/windows_drag_top.gif" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face19.gif" publishTime="11/30/2012 00:05:11" />
-    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/drawtransparentrectangle.gif" publishTime="11/30/2012 00:04:05" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/code.gif" publishTime="11/30/2012 00:09:22" />
     <file relUrl="App_Themes/Image/gauge.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/delrow.gif" publishTime="11/30/2012 00:11:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/numlist.gif" publishTime="11/30/2012 00:11:25" />
@@ -551,7 +549,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/mrgcell.gif" publishTime="11/30/2012 00:08:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/eximage.gif" publishTime="11/30/2012 00:08:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face8.gif" publishTime="11/30/2012 00:05:08" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/flash.gif" publishTime="11/30/2012 00:09:13" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/listbox.gif" publishTime="11/30/2012 00:09:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/unformat.gif" publishTime="11/30/2012 00:11:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/paragraph.gif" publishTime="11/30/2012 00:09:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/flashplayer.swf" publishTime="11/30/2012 00:03:18" />
@@ -580,6 +578,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emangry.gif" publishTime="11/30/2012 00:05:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/italic.gif" publishTime="11/30/2012 00:08:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Constant.js" publishTime="11/30/2012 00:06:12" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/bullist.gif" publishTime="11/30/2012 00:07:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/spell.gif" publishTime="11/30/2012 00:07:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/under.gif" publishTime="11/30/2012 00:09:32" />
     <file relUrl="Portals/GeneralPortal/Uploads/Thumbnail/english.png" publishTime="11/05/2012 00:51:34" />
@@ -587,15 +586,13 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/ja-JP.xml" publishTime="11/30/2012 00:06:02" />
     <file relUrl="App_Themes/Image/windows_track.gif" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/b1.png" publishTime="11/30/2012 00:10:12" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/style_safari.css" publishTime="11/30/2012 00:06:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/justifyfull.gif" publishTime="11/30/2012 00:10:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/all.png" publishTime="11/30/2012 00:11:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/inscol_l.gif" publishTime="11/30/2012 00:09:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/horizontal.gif" publishTime="11/30/2012 00:04:59" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Style.js" publishTime="11/30/2012 00:06:18" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/delcol.gif" publishTime="11/30/2012 00:07:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/undo.gif" publishTime="11/30/2012 00:03:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/h-f-3Columns-Body.gif" publishTime="11/30/2012 00:05:01" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/instable.gif" publishTime="11/30/2012 00:10:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/tw_html.gif" publishTime="11/30/2012 00:07:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Style/dialog.css" publishTime="11/30/2012 00:06:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emphoto.gif" publishTime="11/30/2012 00:05:19" />
@@ -605,7 +602,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/r2.png" publishTime="11/30/2012 00:09:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/subscript.gif" publishTime="11/30/2012 00:07:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/mid.gif" publishTime="11/30/2012 00:04:49" />
-    <file relUrl="Admin/Template/ManageTemplateDesign_UC.ascx" publishTime="12/01/2012 23:52:37" />
+    <file relUrl="Admin/Template/ManageTemplateDesign_UC.ascx" publishTime="01/23/2013 18:10:16" />
     <file relUrl="App_Themes/Image/windows_arrow_down.gif" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face24.gif" publishTime="11/30/2012 00:05:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/copy.gif" publishTime="11/30/2012 00:10:58" />
@@ -616,11 +613,11 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Safari12_Loader/Loader.js" publishTime="11/30/2012 00:06:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/BackColor.gif" publishTime="11/30/2012 00:08:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/cpie_GradientPositionDark.gif" publishTime="11/30/2012 00:05:38" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/lightblue_colorpen.gif" publishTime="11/30/2012 00:10:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emnote.gif" publishTime="11/30/2012 00:05:20" />
     <file relUrl="App_GlobalResources/CMSSetupResource.ar-JO.resx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/text.gif" publishTime="11/30/2012 00:07:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/Close2.gif" publishTime="11/30/2012 00:09:23" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/fit.gif" publishTime="11/30/2012 00:07:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/left-corners.png" publishTime="11/30/2012 00:04:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/paragraph.gif" publishTime="11/30/2012 00:11:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/blank2020.gif" publishTime="11/30/2012 00:05:47" />
@@ -631,13 +628,14 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/fit.gif" publishTime="11/30/2012 00:11:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/noneditable.gif" publishTime="11/30/2012 00:10:35" />
     <file relUrl="Admin/Article/FrmArticle.aspx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/mid.gif" publishTime="11/30/2012 00:08:07" />
+    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/rightline.gif" publishTime="11/30/2012 00:04:00" />
     <file relUrl="Admin/ECommerce/Manufacturar/ManageManufacturar_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="App_Themes/Image/basic_arrow_up.gif" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/insrow_t.gif" publishTime="11/30/2012 00:10:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/bat.gif" publishTime="11/30/2012 00:05:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/SyntaxHighlighter/shBrushVb.js" publishTime="11/30/2012 00:06:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/passwordfield.gif" publishTime="11/30/2012 00:04:43" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/inscol_r.gif" publishTime="11/30/2012 00:10:44" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/tbdown.gif" publishTime="11/30/2012 00:07:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/box.gif" publishTime="11/30/2012 00:11:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/inscell.gif" publishTime="11/30/2012 00:09:07" />
     <file relUrl="Admin/ECommerce/Group/FrmGroup.aspx" publishTime="11/05/2012 00:51:32" />
@@ -645,23 +643,27 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/t2.png" publishTime="11/30/2012 00:11:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/restore.gif" publishTime="11/30/2012 00:11:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/linkdropdown.gif" publishTime="11/30/2012 00:04:51" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/t3.gif" publishTime="11/30/2012 00:08:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/colorpicker_more_ie.aspx" publishTime="11/30/2012 00:03:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/anchor.gif" publishTime="11/30/2012 00:09:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/table.gif" publishTime="11/30/2012 00:10:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/l1.png" publishTime="11/30/2012 00:09:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Symbols/sample5.jpg" publishTime="11/30/2012 00:04:10" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/emotion.gif" publishTime="11/30/2012 00:07:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/spltcell.gif" publishTime="11/30/2012 00:11:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/undo.gif" publishTime="11/30/2012 00:11:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/dot.gif" publishTime="11/30/2012 00:04:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/h-R-t-Body.gif" publishTime="11/30/2012 00:05:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/pasteword.gif" publishTime="11/30/2012 00:10:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/bullist.gif" publishTime="11/30/2012 00:11:53" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/anchor.gif" publishTime="11/30/2012 00:11:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/ForeColor.gif" publishTime="11/30/2012 00:09:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/superscript.gif" publishTime="11/30/2012 00:07:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/fit.gif" publishTime="11/30/2012 00:09:13" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/t3.gif" publishTime="11/30/2012 00:08:46" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/DatePicker.js" publishTime="11/30/2012 00:06:12" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/EditInNewWindow.gif" publishTime="11/30/2012 00:10:53" />
     <file relUrl="Admin/Services/CMSControl/CMSControlService.asmx" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/insrow_t.gif" publishTime="11/30/2012 00:09:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/docx.gif" publishTime="11/30/2012 00:05:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/openfolder.gif" publishTime="11/30/2012 00:08:04" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/style.Layout.gif" publishTime="11/30/2012 00:04:34" />
@@ -669,9 +671,8 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/t2.png" publishTime="11/30/2012 00:09:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/rotateleft90.gif" publishTime="11/30/2012 00:03:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/en-US.xml" publishTime="11/30/2012 00:06:06" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/horizontal.start.gif" publishTime="11/30/2012 00:11:40" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/save.gif" publishTime="11/30/2012 00:11:18" />
-    <file relUrl="bin/AJH.CMS.WEB.UI.pdb" publishTime="12/07/2012 18:22:35" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/codeeditor.gif" publishTime="11/30/2012 00:08:29" />
+    <file relUrl="bin/AJH.CMS.WEB.UI.pdb" publishTime="01/23/2013 18:06:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/code.gif" publishTime="11/30/2012 00:05:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/insertDate.gif" publishTime="11/30/2012 00:07:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/l1.png" publishTime="11/30/2012 00:08:11" />
@@ -681,7 +682,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/zh-tw.xml" publishTime="11/30/2012 00:05:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/media.gif" publishTime="11/30/2012 00:04:50" />
     <file relUrl="Admin/Gallery/FrmGallery.aspx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/cab.gif" publishTime="11/30/2012 00:05:43" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/zip.gif" publishTime="11/30/2012 00:04:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/paste.gif" publishTime="11/30/2012 00:08:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/menuleft.gif" publishTime="11/30/2012 00:07:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/SyntaxHighlighter/shBrushXml.js" publishTime="11/30/2012 00:06:49" />
@@ -689,6 +690,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/insrow_b.gif" publishTime="11/30/2012 00:11:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/pen.gif" publishTime="11/30/2012 00:04:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/edit.gif" publishTime="11/30/2012 00:08:25" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/InsertPageBreak.gif" publishTime="11/30/2012 00:08:14" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/eximage.gif" publishTime="11/30/2012 00:05:14" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_image.ascx" publishTime="11/30/2012 00:03:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Style/SyntaxHighlighter.css" publishTime="11/30/2012 00:06:53" />
@@ -697,26 +699,23 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/rule.gif" publishTime="11/30/2012 00:09:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/box.gif" publishTime="11/30/2012 00:11:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/zh-SG.xml" publishTime="11/30/2012 00:05:54" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/face13.gif" publishTime="11/30/2012 00:05:12" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/ch_html.gif" publishTime="11/30/2012 00:11:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/log.gif" publishTime="11/30/2012 00:08:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/left_to_right.gif" publishTime="11/30/2012 00:09:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/row.gif" publishTime="11/30/2012 00:08:51" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/colorpicker_basic.aspx" publishTime="11/30/2012 00:03:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/inscol.gif" publishTime="11/30/2012 00:09:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/optionbutton.gif" publishTime="11/30/2012 00:04:45" />
     <file relUrl="GUI/Menu/MenuDetails_UC.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/media.gif" publishTime="11/30/2012 00:08:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/timer.gif" publishTime="11/30/2012 00:11:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Safari12_Implementation/CuteEditorImplementation.js" publishTime="11/30/2012 00:06:45" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/link.gif" publishTime="11/30/2012 00:11:31" />
     <file relUrl="Admin/Controls/ColorPicker_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/InsertAnchor.htm" publishTime="11/30/2012 00:03:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Gecko_InsertImage.aspx" publishTime="11/30/2012 00:03:39" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/fit.gif" publishTime="11/30/2012 00:10:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/en-en.xml" publishTime="11/30/2012 00:06:07" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_style_other.ascx" publishTime="11/30/2012 00:03:46" />
+    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/xmllib.js" publishTime="11/30/2012 00:03:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/noneditable.gif" publishTime="11/30/2012 00:11:26" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/link.gif" publishTime="11/30/2012 00:08:09" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/style_gecko.css" publishTime="11/30/2012 00:06:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/bullist.gif" publishTime="11/30/2012 00:05:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/formbg.gif" publishTime="11/30/2012 00:05:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/download.gif" publishTime="11/30/2012 00:08:26" />
@@ -733,7 +732,6 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/pasteAsHTML.gif" publishTime="11/30/2012 00:08:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/lightblue_colorpen.gif" publishTime="11/30/2012 00:11:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/InsertChars.htm" publishTime="11/30/2012 00:03:35" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/spltcell.gif" publishTime="11/30/2012 00:10:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/l1.png" publishTime="11/30/2012 00:07:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/open.gif" publishTime="11/30/2012 00:08:04" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emsad.gif" publishTime="11/30/2012 00:05:18" />
@@ -744,9 +742,8 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/anchor.gif" publishTime="11/30/2012 00:05:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/new.gif" publishTime="11/30/2012 00:04:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/avi.gif" publishTime="11/30/2012 00:05:48" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/htc.htc" publishTime="11/30/2012 00:03:36" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/emwink.gif" publishTime="11/30/2012 00:05:14" />
     <file relUrl="Admin/Services/ECommerce/Manufacturar/ManufacturarService.asmx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/InsertPageBreak.gif" publishTime="11/30/2012 00:09:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/ko-KR.xml" publishTime="11/30/2012 00:06:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/bspreview.gif" publishTime="11/30/2012 00:08:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/find.gif" publishTime="11/30/2012 00:07:32" />
@@ -769,17 +766,17 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/codeeditor.gif" publishTime="11/30/2012 00:09:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/SyntaxHighlighter/shBrushCSharp.js" publishTime="11/30/2012 00:06:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/timer.gif" publishTime="11/30/2012 00:07:00" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/style_safari12.css" publishTime="11/30/2012 00:11:05" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/ch_design.gif" publishTime="11/30/2012 00:11:52" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/EditInNewWindow.gif" publishTime="11/30/2012 00:07:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/code.gif" publishTime="11/30/2012 00:10:58" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/bestfit.gif" publishTime="11/30/2012 00:05:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/justifyfull.gif" publishTime="11/30/2012 00:11:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/design.gif" publishTime="11/30/2012 00:08:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/dialog.css" publishTime="11/30/2012 00:10:14" />
     <file relUrl="Admin/Services/ECommerce/Group/GroupService.asmx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/InsertPageBreak.gif" publishTime="11/30/2012 00:10:43" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/bullist.gif" publishTime="11/30/2012 00:11:00" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/emstar.gif" publishTime="11/30/2012 00:05:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/AutoConfigure/Default.config" publishTime="11/30/2012 00:03:21" />
-    <file relUrl="Web.config" publishTime="12/07/2012 18:22:36" />
+    <file relUrl="Web.config" publishTime="01/23/2013 18:06:17" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/t1.png" publishTime="11/30/2012 00:07:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/t3.gif" publishTime="11/30/2012 00:10:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/cleanup.gif" publishTime="11/30/2012 00:10:09" />
@@ -794,6 +791,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/noneditable.gif" publishTime="11/30/2012 00:09:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/backward.gif" publishTime="11/30/2012 00:05:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/copy.gif" publishTime="11/30/2012 00:04:07" />
+    <file relUrl="bin/CuteEditor.ImageEditor.dll" publishTime="12/01/2012 15:15:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/print.gif" publishTime="11/30/2012 00:09:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emgift.gif" publishTime="11/30/2012 00:05:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/Express.gif" publishTime="11/30/2012 00:07:33" />
@@ -806,12 +804,13 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/insrow.gif" publishTime="11/30/2012 00:09:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/delete.gif" publishTime="11/30/2012 00:09:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/subscript.gif" publishTime="11/30/2012 00:11:14" />
-    <file relUrl="GUI/Menu/MenuXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Find.js" publishTime="11/30/2012 00:06:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/embeer.gif" publishTime="11/30/2012 00:05:27" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/italic.gif" publishTime="11/30/2012 00:11:35" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/checkbox.gif" publishTime="11/30/2012 00:07:38" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/justifynone.gif" publishTime="11/30/2012 00:11:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/right.gif" publishTime="11/30/2012 00:11:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/strike.gif" publishTime="11/30/2012 00:11:15" />
+    <file relUrl="App_Themes/Image/ibtnpublish.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/nl-NL.xml" publishTime="11/30/2012 00:05:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/tif.gif" publishTime="11/30/2012 00:04:27" />
     <file relUrl="App_Themes/Image/Dashboard-Template.png" publishTime="11/05/2012 00:51:32" />
@@ -827,7 +826,6 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/indent.gif" publishTime="11/30/2012 00:11:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/SpacePen.cur" publishTime="11/30/2012 00:03:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/borders.gif" publishTime="11/30/2012 00:11:56" />
-    <file relUrl="App_Themes/Image/osx_track.gif" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/Express.gif" publishTime="11/30/2012 00:10:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/document.gif" publishTime="11/30/2012 00:07:34" />
     <file relUrl="Controls/SWFUpload/script/swfupload.queue.js" publishTime="11/05/2012 00:51:32" />
@@ -842,12 +840,13 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/subscript.gif" publishTime="11/30/2012 00:10:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/find.gif" publishTime="11/30/2012 00:08:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/menuleft.gif" publishTime="11/30/2012 00:09:49" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_Vertical1.png" publishTime="11/30/2012 00:05:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/spltcell.gif" publishTime="11/30/2012 00:09:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face12.gif" publishTime="11/30/2012 00:05:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emcat.gif" publishTime="11/30/2012 00:05:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/preview.gif" publishTime="11/30/2012 00:07:15" />
-    <file relUrl="Admin/Gallery/ManageGallery_UC.ascx" publishTime="12/01/2012 22:56:01" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/copy.gif" publishTime="11/30/2012 00:07:36" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/mrgcell_b.gif" publishTime="11/30/2012 00:10:36" />
+    <file relUrl="Admin/Gallery/ManageGallery_UC.ascx" publishTime="01/23/2013 16:39:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/box.gif" publishTime="11/30/2012 00:09:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_gradients.png" publishTime="11/30/2012 00:05:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face3.gif" publishTime="11/30/2012 00:05:09" />
@@ -856,14 +855,16 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/left.gif" publishTime="11/30/2012 00:09:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emsmileo.gif" publishTime="11/30/2012 00:05:17" />
     <file relUrl="Admin/AdminFiles/XslFile/AdminChildMenuXSL.xslt" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/insertform.gif" publishTime="11/30/2012 00:07:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/code.gif" publishTime="11/30/2012 00:07:37" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/minus.gif" publishTime="11/30/2012 00:09:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Span.js" publishTime="11/30/2012 00:06:18" />
-    <file relUrl="Admin/ECommerce/Tax/ManageTax_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/rule.gif" publishTime="11/30/2012 00:10:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Safari_Loader/Loader.js" publishTime="11/30/2012 00:06:46" />
+    <file relUrl="bin/AJH.CMS.Core.pdb" publishTime="01/23/2013 18:06:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/pasteAsHTML.gif" publishTime="11/30/2012 00:11:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/table.gif" publishTime="11/30/2012 00:04:31" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/justifynone.gif" publishTime="11/30/2012 00:04:54" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/unlink.gif" publishTime="11/30/2012 00:06:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/help.gif" publishTime="11/30/2012 00:09:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/mrgcell.gif" publishTime="11/30/2012 00:09:49" />
     <file relUrl="Controls/SWFUpload/script/swfupload.swf" publishTime="11/16/2012 14:50:04" />
@@ -871,13 +872,11 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/design.gif" publishTime="11/30/2012 00:11:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/_default.xml" publishTime="11/30/2012 00:05:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_gecko_pasteword.js" publishTime="11/30/2012 00:06:30" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/ucase.gif" publishTime="11/30/2012 00:04:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/save.gif" publishTime="11/30/2012 00:07:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/ColorPicker.js" publishTime="11/30/2012 00:06:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/mrgcell_r.gif" publishTime="11/30/2012 00:11:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/backward.gif" publishTime="11/30/2012 00:11:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/mpg.gif" publishTime="11/30/2012 00:08:06" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/anchor.gif" publishTime="11/30/2012 00:11:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/closedfolder.gif" publishTime="11/30/2012 00:11:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/htmlview.gif" publishTime="11/30/2012 00:04:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/pastetext.gif" publishTime="11/30/2012 00:10:32" />
@@ -885,6 +884,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/PasteAsHtml.gif" publishTime="11/30/2012 00:10:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/style.css" publishTime="11/30/2012 00:09:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/r2.gif" publishTime="11/30/2012 00:07:59" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/print.gif" publishTime="11/30/2012 00:08:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/txt.gif" publishTime="11/30/2012 00:04:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/style.font.gif" publishTime="11/30/2012 00:04:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/spltcell_r.gif" publishTime="11/30/2012 00:08:49" />
@@ -892,9 +892,11 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/mpg.gif" publishTime="11/30/2012 00:11:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/snapgrid.gif" publishTime="11/30/2012 00:07:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/save.gif" publishTime="11/30/2012 00:07:57" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/t1.png" publishTime="11/30/2012 00:09:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_ColorPicker.js" publishTime="11/30/2012 00:06:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/pasteword.gif" publishTime="11/30/2012 00:04:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/right_to_left.gif" publishTime="11/30/2012 00:11:19" />
+    <file relUrl="App_Themes/Image/Dashboard-FileManager.png" publishTime="12/07/2012 19:22:50" />
     <file relUrl="Admin/Security/ManageUser_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/Close2.gif" publishTime="11/30/2012 00:07:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/left_to_right.gif" publishTime="11/30/2012 00:09:51" />
@@ -903,61 +905,60 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/spltcell_b.gif" publishTime="11/30/2012 00:07:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/restore.gif" publishTime="11/30/2012 00:07:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/reset.gif" publishTime="11/30/2012 00:08:52" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/keyboard.gif" publishTime="11/30/2012 00:11:34" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/style_gecko.css" publishTime="11/30/2012 00:09:30" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/InsertPageBreak.gif" publishTime="11/30/2012 00:09:55" />
+    <file relUrl="App_Themes/Image/Dashboard-Article.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/spltcell.gif" publishTime="11/30/2012 00:07:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/close.gif" publishTime="11/30/2012 00:07:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/SelectImage.aspx" publishTime="11/30/2012 00:03:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/zoom.gif" publishTime="11/30/2012 00:04:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/cell.gif" publishTime="11/30/2012 00:08:34" />
+    <file relUrl="Admin/FrmAccessDenied.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="Admin/Services/XSLTemplate/XSLTemplateService.asmx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/colorpicker.gif" publishTime="11/30/2012 00:11:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/emotion.gif" publishTime="11/30/2012 00:08:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_ColorPicker_NS.js" publishTime="11/30/2012 00:06:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/bold.gif" publishTime="11/30/2012 00:04:08" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/redo.gif" publishTime="11/30/2012 00:07:13" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/emteeth.gif" publishTime="11/30/2012 00:05:16" />
     <file relUrl="Admin/ECommerce/Catalog/FrmCatalog.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/Gecko_horizontal.end.gif" publishTime="11/30/2012 00:11:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_InsertGallery.js" publishTime="11/30/2012 00:06:28" />
     <file relUrl="Admin/ECommerce/Catalog/ManageCatalog_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/asa.gif" publishTime="11/30/2012 00:05:50" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/blank2020.png" publishTime="11/30/2012 00:05:46" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/l1.gif" publishTime="11/30/2012 00:09:53" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/ch_design.gif" publishTime="11/30/2012 00:11:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/minus.gif" publishTime="11/30/2012 00:11:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_textarea.ascx" publishTime="11/30/2012 00:03:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/close.gif" publishTime="11/30/2012 00:08:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/strike.gif" publishTime="11/30/2012 00:07:54" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Keyboard/keyboard-multihexa.js" publishTime="11/30/2012 00:06:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/horizontal.end.gif" publishTime="11/30/2012 00:11:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_gecko_pastetext.js" publishTime="11/30/2012 00:06:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/openfolder.gif" publishTime="11/30/2012 00:04:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emvamp.gif" publishTime="11/30/2012 00:05:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/break.gif" publishTime="11/30/2012 00:05:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/tbdown.gif" publishTime="11/30/2012 00:11:11" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/justifyfull.gif" publishTime="11/30/2012 00:08:12" />
     <file relUrl="Admin/ECommerce/Group/ManageGroup_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/indent.gif" publishTime="11/30/2012 00:08:17" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/InsertTemplate.aspx" publishTime="11/30/2012 00:03:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/paste.gif" publishTime="11/30/2012 00:07:17" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/locked.gif" publishTime="11/30/2012 00:04:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/style_gecko.css" publishTime="11/30/2012 00:07:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/openfolder.gif" publishTime="11/30/2012 00:11:25" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/break.gif" publishTime="11/30/2012 00:11:01" />
     <file relUrl="App_Themes/Image/Dashboard-XSLTemplate.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/listfiles.aspx" publishTime="11/30/2012 00:03:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/row.gif" publishTime="11/30/2012 00:09:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/forward.gif" publishTime="11/30/2012 00:09:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/ImageMap.gif" publishTime="11/30/2012 00:08:17" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/justifynone.gif" publishTime="11/30/2012 00:08:12" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/indent.gif" publishTime="11/30/2012 00:09:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Media.js" publishTime="11/30/2012 00:06:18" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/mrgcell_b.gif" publishTime="11/30/2012 00:08:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/InsertEmotion.htm" publishTime="11/30/2012 00:03:34" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/bold.gif" publishTime="11/30/2012 00:09:25" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/close.gif" publishTime="11/30/2012 00:09:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/b1.gif" publishTime="11/30/2012 00:07:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/help.gif" publishTime="11/30/2012 00:08:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/template.gif" publishTime="11/30/2012 00:07:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/ContextMenuMode/Compact.config" publishTime="11/30/2012 00:03:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/insrow.gif" publishTime="11/30/2012 00:11:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/h-l-tr-Body.gif" publishTime="11/30/2012 00:05:01" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/tbdown.gif" publishTime="11/30/2012 00:07:50" />
     <file relUrl="App_Themes/Image/button_upload.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="Admin/ECommerce/Feature/FrmFeature.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/r1.gif" publishTime="11/30/2012 00:08:00" />
@@ -967,6 +968,8 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/t2.gif" publishTime="11/30/2012 00:07:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_InsertFlash.js" publishTime="11/30/2012 00:06:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/text.gif" publishTime="11/30/2012 00:08:44" />
+    <file relUrl="Admin/FileManager/FileManager_UC.ascx" publishTime="12/07/2012 19:43:35" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/ini.gif" publishTime="11/30/2012 00:08:17" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/borders.gif" publishTime="11/30/2012 00:10:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/htmlview.gif" publishTime="11/30/2012 00:09:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/IE_Loader/Loader.js" publishTime="11/30/2012 00:06:38" />
@@ -974,7 +977,8 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/Separator.gif" publishTime="11/30/2012 00:08:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/template.gif" publishTime="11/30/2012 00:08:45" />
     <file relUrl="Admin/CMSAdmin.Master" publishTime="12/02/2012 00:16:04" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/flash.gif" publishTime="11/30/2012 00:08:23" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/area.gif" publishTime="11/30/2012 00:05:51" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_Color.cur" publishTime="11/30/2012 00:05:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/textbox.gif" publishTime="11/30/2012 00:07:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/drawtransparentellipse.gif" publishTime="11/30/2012 00:04:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/instable.gif" publishTime="11/30/2012 00:09:54" />
@@ -986,6 +990,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/gif.gif" publishTime="11/30/2012 00:05:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/reload.gif" publishTime="11/30/2012 00:04:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face11.gif" publishTime="11/30/2012 00:05:13" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/textarea.gif" publishTime="11/30/2012 00:09:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/t2.gif" publishTime="11/30/2012 00:10:22" />
     <file relUrl="GUI/ECommerce/Product/ProductXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/ucase.gif" publishTime="11/30/2012 00:08:42" />
@@ -1001,27 +1006,25 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/pasteword.gif" publishTime="11/30/2012 00:09:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/reset.gif" publishTime="11/30/2012 00:11:20" />
     <file relUrl="App_Themes/Image/reset.png" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/colorpen.gif" publishTime="11/30/2012 00:09:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/restore.gif" publishTime="11/30/2012 00:09:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/restore.gif" publishTime="11/30/2012 00:04:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/colorfocus.gif" publishTime="11/30/2012 00:05:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/drawrectangle.gif" publishTime="11/30/2012 00:04:06" />
-    <file relUrl="Controls/Editor_UC.ascx" publishTime="12/02/2012 00:03:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/emotion.gif" publishTime="11/30/2012 00:10:04" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/minus.gif" publishTime="11/30/2012 00:07:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/cuteeditor_imageeditor.js.aspx" publishTime="11/30/2012 00:03:56" />
     <file relUrl="Scripts/CMSAdmin.js" publishTime="11/05/2012 00:51:35" />
+    <file relUrl="App_Themes/Image/close.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="App_Themes/Image/Dashboard-Page.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="Admin/Services/Style/StyleService.asmx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="App_GlobalResources/CMSSetupResource.resx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/link.gif" publishTime="11/30/2012 00:09:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/Form.gif" publishTime="11/30/2012 00:05:05" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/table.gif" publishTime="11/30/2012 00:07:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/spell.js" publishTime="11/30/2012 00:06:11" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/Express.gif" publishTime="11/30/2012 00:11:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/inscol.gif" publishTime="11/30/2012 00:11:38" />
     <file relUrl="App_Themes/Image/Calendar_scheduleHS.png" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/pastetext.gif" publishTime="11/30/2012 00:07:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/style.Background.gif" publishTime="11/30/2012 00:04:36" />
+    <file relUrl="App_Themes/Image/active-tool.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/specialchar.gif" publishTime="11/30/2012 00:07:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/document.gif" publishTime="11/30/2012 00:08:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Safar_Implementation/CuteEditorImplementation.js" publishTime="11/30/2012 00:06:48" />
@@ -1030,7 +1033,6 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/bold.gif" publishTime="11/30/2012 00:10:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/mpeg.gif" publishTime="11/30/2012 00:04:48" />
     <file relUrl="App_Themes/Image/save.png" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Gecko_InsertMedia.aspx" publishTime="11/30/2012 00:03:38" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/unformat.gif" publishTime="11/30/2012 00:06:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/codeeditor.gif" publishTime="11/30/2012 00:10:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emrosesad.gif" publishTime="11/30/2012 00:05:18" />
@@ -1044,8 +1046,9 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/optionbutton.gif" publishTime="11/30/2012 00:08:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/forward.gif" publishTime="11/30/2012 00:11:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/paragraph.gif" publishTime="11/30/2012 00:08:56" />
-    <file relUrl="Admin/Page/ManagePageDesign_UC.ascx" publishTime="12/01/2012 23:53:20" />
+    <file relUrl="Admin/Page/ManagePageDesign_UC.ascx" publishTime="01/23/2013 18:10:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/specialchar.gif" publishTime="11/30/2012 00:10:27" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/delcell.gif" publishTime="11/30/2012 00:10:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/minus.gif" publishTime="11/30/2012 00:10:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/lightblue_fontcolor.gif" publishTime="11/30/2012 00:04:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face6.gif" publishTime="11/30/2012 00:05:08" />
@@ -1066,7 +1069,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/vb.gif" publishTime="11/30/2012 00:04:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/box.gif" publishTime="11/30/2012 00:07:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/xlsx.gif" publishTime="11/30/2012 00:04:23" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/border_right.gif" publishTime="11/30/2012 00:05:44" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/eximage.gif" publishTime="11/30/2012 00:11:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/optionbutton.gif" publishTime="11/30/2012 00:08:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/lcase.gif" publishTime="11/30/2012 00:09:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/droparrow.gif" publishTime="11/30/2012 00:11:46" />
@@ -1076,7 +1079,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/under.gif" publishTime="11/30/2012 00:08:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/horizontal.background.gif" publishTime="11/30/2012 00:10:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/t1.png" publishTime="11/30/2012 00:11:13" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/l2.gif" publishTime="11/30/2012 00:07:23" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_InsertImage.js" publishTime="11/30/2012 00:06:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/SyntaxHighlighter/shBrushCss.js" publishTime="11/30/2012 00:06:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/sizedropdown.gif" publishTime="11/30/2012 00:04:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/tbdown.gif" publishTime="11/30/2012 00:04:31" />
@@ -1085,6 +1088,8 @@
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Symbols/sample3.jpg" publishTime="11/30/2012 00:04:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/t2.png" publishTime="11/30/2012 00:10:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/optionbutton.gif" publishTime="11/30/2012 00:07:18" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/l2.png" publishTime="11/30/2012 00:07:23" />
+    <file relUrl="Scripts/sprinkle.js" publishTime="11/05/2012 00:51:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/imageeditor.aspx" publishTime="11/30/2012 00:03:55" />
     <file relUrl="GUI/Contact/ContactUs_UC.ascx" publishTime="11/29/2012 23:32:01" />
     <file relUrl="Portals/GeneralPortal/Uploads/Upload/arabic.png" publishTime="11/05/2012 00:51:34" />
@@ -1093,7 +1098,8 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/Two-Column-Table.gif" publishTime="11/30/2012 00:04:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emlove.gif" publishTime="11/30/2012 00:05:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/style.List.gif" publishTime="11/30/2012 00:04:33" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/textarea.gif" publishTime="11/30/2012 00:09:34" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/style.css" publishTime="11/30/2012 00:11:06" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/table.gif" publishTime="11/30/2012 00:07:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/inscell.gif" publishTime="11/30/2012 00:07:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/mrgcell_r.gif" publishTime="11/30/2012 00:07:19" />
     <file relUrl="Services/Gallery/frmGalleryServiceXsl.ashx" publishTime="11/05/2012 00:51:35" />
@@ -1101,19 +1107,17 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/htmlview.gif" publishTime="11/30/2012 00:11:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/xbl.xml" publishTime="11/30/2012 00:03:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/inscol_r.gif" publishTime="11/30/2012 00:09:06" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/bspreview.gif" publishTime="11/30/2012 00:11:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/justifyfull.gif" publishTime="11/30/2012 00:09:04" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/vsdisco.gif" publishTime="11/30/2012 00:04:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/preview.gif" publishTime="11/30/2012 00:10:31" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/mrgcell_b.gif" publishTime="11/30/2012 00:10:36" />
+    <file relUrl="Scripts/jquery.min.js" publishTime="12/01/2012 14:42:34" />
     <file relUrl="Controls/Editor_HTML.xml" publishTime="12/01/2012 23:44:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/r2.gif" publishTime="11/30/2012 00:08:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/image.gif" publishTime="11/30/2012 00:07:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/unformat.gif" publishTime="11/30/2012 00:10:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/l1.gif" publishTime="11/30/2012 00:10:40" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/lightblue_colorpen.gif" publishTime="11/30/2012 00:08:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/listbox.gif" publishTime="11/30/2012 00:07:20" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/wri.gif" publishTime="11/30/2012 00:04:23" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/ucase.gif" publishTime="11/30/2012 00:04:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/lightblue_fontcolor.gif" publishTime="11/30/2012 00:07:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/Close2.gif" publishTime="11/30/2012 00:11:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Keyboard.js" publishTime="11/30/2012 00:06:25" />
@@ -1141,11 +1145,9 @@
     <file relUrl="App_Themes/Image/drag_grab.gif" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emsmiled.gif" publishTime="11/30/2012 00:05:17" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/reset.gif" publishTime="11/30/2012 00:07:13" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/listbox.gif" publishTime="11/30/2012 00:09:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/all.gif" publishTime="11/30/2012 00:05:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/save.gif" publishTime="11/30/2012 00:10:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/lightblue_colorpen.gif" publishTime="11/30/2012 00:09:51" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/face18.gif" publishTime="11/30/2012 00:05:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/cleanup.gif" publishTime="11/30/2012 00:07:38" />
     <file relUrl="GUI/ECommerce/Catalog/CatalogSitePath.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/nb-NO.xml" publishTime="11/30/2012 00:06:00" />
@@ -1158,23 +1160,27 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/emotion.gif" publishTime="11/30/2012 00:09:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/copy.gif" publishTime="11/30/2012 00:10:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/doubleline.gif" publishTime="11/30/2012 00:11:47" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/emwink.gif" publishTime="11/30/2012 00:05:14" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/fontcolor.gif" publishTime="11/30/2012 00:05:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/undo.gif" publishTime="11/30/2012 00:10:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/subscript.gif" publishTime="11/30/2012 00:09:38" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/layout.gif" publishTime="11/30/2012 00:04:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/keyboard.gif" publishTime="11/30/2012 00:09:03" />
     <file relUrl="Controls/SWFUpload/frmSWFUpload.ashx" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/optionbutton.gif" publishTime="11/30/2012 00:10:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/r2.png" publishTime="11/30/2012 00:07:59" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/cab.gif" publishTime="11/30/2012 00:05:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/fpreview.gif" publishTime="11/30/2012 00:11:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/delcell.gif" publishTime="11/30/2012 00:07:35" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/Form.gif" publishTime="11/30/2012 00:10:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/SpellCheck.aspx" publishTime="11/30/2012 00:03:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/inscol_r.gif" publishTime="11/30/2012 00:07:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/delcol.gif" publishTime="11/30/2012 00:10:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/r1.png" publishTime="11/30/2012 00:07:14" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/DatePicker.js" publishTime="11/30/2012 00:06:12" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/redo.gif" publishTime="11/30/2012 00:10:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/zoom_in.gif" publishTime="11/30/2012 00:04:21" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/selectall.gif" publishTime="11/30/2012 00:10:27" />
     <file relUrl="App_Themes/Image/Dashboard-Roles.png" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/copy.gif" publishTime="11/30/2012 00:09:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Gecko_InsertFlash.aspx" publishTime="11/30/2012 00:03:39" />
     <file relUrl="bin/AjaxControlToolkit.pdb" publishTime="11/05/2012 00:51:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/cell.gif" publishTime="11/30/2012 00:09:24" />
@@ -1183,28 +1189,26 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/numlist.gif" publishTime="11/30/2012 00:08:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/checkbox.gif" publishTime="11/30/2012 00:11:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/AutoConfigure/Simple.config" publishTime="11/30/2012 00:03:18" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/unlink.gif" publishTime="11/30/2012 00:06:58" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/anchor.gif" publishTime="11/30/2012 00:08:37" />
+    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/zoomout.gif" publishTime="11/30/2012 00:03:56" />
+    <file relUrl="Admin/Security/FrmUser.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/BackColor.gif" publishTime="11/30/2012 00:11:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/pen_m.cur" publishTime="11/30/2012 00:04:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/horizontal.gif" publishTime="11/30/2012 00:09:12" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/l2.png" publishTime="11/30/2012 00:09:02" />
     <file relUrl="App_Themes/Image/basic_arrow_down.gif" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/strike.gif" publishTime="11/30/2012 00:07:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/t1.gif" publishTime="11/30/2012 00:08:47" />
     <file relUrl="Admin/ECommerce/Attribute/ManageAttribute_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Symbols/sample2.jpg" publishTime="11/30/2012 00:04:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/image.gif" publishTime="11/30/2012 00:08:18" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Opera_Implementation/CuteEditorImplementation.js" publishTime="11/30/2012 00:06:43" />
     <file relUrl="GUI/Category/CategoryXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
-    <file relUrl="Admin/Menu/ManageMenu_UC.ascx" publishTime="12/01/2012 22:52:45" />
+    <file relUrl="Admin/Menu/ManageMenu_UC.ascx" publishTime="01/23/2013 16:39:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/Images1x1.gif" publishTime="11/30/2012 00:04:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/vi.xml" publishTime="11/30/2012 00:05:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/au.gif" publishTime="11/30/2012 00:05:48" />
     <file relUrl="App_Themes/Image/uploading.gif" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/template.gif" publishTime="11/30/2012 00:07:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/move.gif" publishTime="11/30/2012 00:04:48" />
-    <file relUrl="example.css" publishTime="11/30/2012 00:12:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/resizecell.gif" publishTime="11/30/2012 00:04:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/superscript.gif" publishTime="11/30/2012 00:09:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/horizontal.background.gif" publishTime="11/30/2012 00:08:19" />
@@ -1232,13 +1236,10 @@
     <file relUrl="Admin/AdminFiles/XslFile/AdminParentMenuXSL.xslt" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/delrow.gif" publishTime="11/30/2012 00:08:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/forward.gif" publishTime="11/30/2012 00:05:01" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/ucase.gif" publishTime="11/30/2012 00:06:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/l1.gif" publishTime="11/30/2012 00:11:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/r2.png" publishTime="11/30/2012 00:08:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/tw_preview.gif" publishTime="11/30/2012 00:11:08" />
     <file relUrl="App_Themes/Image/category.png" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/Tag_li.ascx" publishTime="11/30/2012 00:03:49" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/disco.gif" publishTime="11/30/2012 00:05:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/page.gif" publishTime="11/30/2012 00:08:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/close.gif" publishTime="11/30/2012 00:10:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/center.gif" publishTime="11/30/2012 00:07:38" />
@@ -1246,18 +1247,19 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/find.gif" publishTime="11/30/2012 00:11:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/dropdownbox.gif" publishTime="11/30/2012 00:10:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/break.gif" publishTime="11/30/2012 00:09:25" />
-    <file relUrl="Admin/Style/ManageStyle_UC.ascx" publishTime="12/01/2012 23:12:19" />
+    <file relUrl="Admin/Style/ManageStyle_UC.ascx" publishTime="01/23/2013 18:10:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/abspos.gif" publishTime="11/30/2012 00:11:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/AutoConfigure/MyTool.config" publishTime="11/30/2012 00:03:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_hr.ascx" publishTime="11/30/2012 00:03:50" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/break.gif" publishTime="11/30/2012 00:11:01" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/cut.gif" publishTime="11/30/2012 00:05:31" />
+    <file relUrl="Admin/ECommerce/Supplier/ManageSupplier_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/under.gif" publishTime="11/30/2012 00:07:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/BackColor.gif" publishTime="11/30/2012 00:07:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/jpg.gif" publishTime="11/30/2012 00:08:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_InsertTable.js" publishTime="11/30/2012 00:06:19" />
     <file relUrl="App_Themes/Image/Dashboard-Style.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/horizontal.gif" publishTime="11/30/2012 00:10:46" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/ch_html.gif" publishTime="11/30/2012 00:11:52" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/spell.gif" publishTime="11/30/2012 00:09:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/xls.gif" publishTime="11/30/2012 00:04:23" />
     <file relUrl="Admin/FrmLogin.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_InsertAnchor.js" publishTime="11/30/2012 00:06:30" />
@@ -1268,13 +1270,13 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/EditInNewWindow.gif" publishTime="11/30/2012 00:09:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/template.gif" publishTime="11/30/2012 00:04:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/droparrow.gif" publishTime="11/30/2012 00:07:34" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/t3.png" publishTime="11/30/2012 00:10:20" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/locked.gif" publishTime="11/30/2012 00:04:51" />
+    <file relUrl="Admin/FileManager/FrmFileManager.aspx" publishTime="12/07/2012 19:50:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/colorpicker.gif" publishTime="11/30/2012 00:05:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/SyntaxHighlighter/shCore.js" publishTime="11/30/2012 00:06:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/l2.png" publishTime="11/30/2012 00:10:39" />
     <file relUrl="Admin/Page/FrmPageDesign.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/spltcell_r.gif" publishTime="11/30/2012 00:07:54" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/mov.gif" publishTime="11/30/2012 00:08:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/Shared/Common.config" publishTime="11/30/2012 00:03:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/imageeditor_showimage.aspx" publishTime="11/30/2012 00:03:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/log.gif" publishTime="11/30/2012 00:04:50" />
@@ -1284,28 +1286,26 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/formbn.gif" publishTime="11/30/2012 00:05:04" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/row.gif" publishTime="11/30/2012 00:10:28" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/style_safari12.css" publishTime="11/30/2012 00:06:55" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/template.gif" publishTime="11/30/2012 00:11:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_style_text.ascx" publishTime="11/30/2012 00:03:45" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/t1.png" publishTime="11/30/2012 00:07:06" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/emfilm.gif" publishTime="11/30/2012 00:05:24" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/pastetext.gif" publishTime="11/30/2012 00:11:23" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/instable.gif" publishTime="11/30/2012 00:10:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emidea.gif" publishTime="11/30/2012 00:05:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/mrgcell.gif" publishTime="11/30/2012 00:10:36" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/emhug2.gif" publishTime="11/30/2012 00:05:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/t2.png" publishTime="11/30/2012 00:08:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_WebSafe.gif" publishTime="11/30/2012 00:05:33" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/bspreview.gif" publishTime="11/30/2012 00:05:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_YouTube.js" publishTime="11/30/2012 00:06:14" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/newdoc.gif" publishTime="11/30/2012 00:07:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/row.gif" publishTime="11/30/2012 00:04:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/delete.gif" publishTime="11/30/2012 00:10:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/fontcolor.gif" publishTime="11/30/2012 00:08:22" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/r2.gif" publishTime="11/30/2012 00:11:20" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/colorpicker_basic.aspx" publishTime="11/30/2012 00:03:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/leftline.gif" publishTime="11/30/2012 00:04:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/row.gif" publishTime="11/30/2012 00:11:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/minus.gif" publishTime="11/30/2012 00:08:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/page.gif" publishTime="11/30/2012 00:10:34" />
     <file relUrl="Admin/Template/FrmTemplateDesign.aspx" publishTime="11/16/2012 21:53:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/keyboard.gif" publishTime="11/30/2012 00:04:53" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/style_gecko.css" publishTime="11/30/2012 00:06:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/r1.gif" publishTime="11/30/2012 00:11:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/layer.gif" publishTime="11/30/2012 00:11:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/left.gif" publishTime="11/30/2012 00:04:52" />
@@ -1317,6 +1317,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Gecko_InsertDocument.aspx" publishTime="11/30/2012 00:03:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/midi.gif" publishTime="11/30/2012 00:11:30" />
     <file relUrl="Scripts/Global.js" publishTime="11/05/2012 00:51:35" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/htc.htc" publishTime="11/30/2012 00:03:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/b1.png" publishTime="11/30/2012 00:11:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/standardtoolbar.gif" publishTime="11/30/2012 00:04:36" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/horizontal.start.gif" publishTime="11/30/2012 00:09:59" />
@@ -1326,12 +1327,14 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/bold.gif" publishTime="11/30/2012 00:05:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/b1.gif" publishTime="11/30/2012 00:10:12" />
     <file relUrl="Admin/Services/Template/TemplateService.asmx" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/spltcell_b.gif" publishTime="11/30/2012 00:10:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/ru-RU.xml" publishTime="11/30/2012 00:05:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/checkbox.gif" publishTime="11/30/2012 00:09:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/instable.gif" publishTime="11/30/2012 00:08:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/dropdownbox.gif" publishTime="11/30/2012 00:09:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/lightblue_colorpen.gif" publishTime="11/30/2012 00:07:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/fr-FR.xml" publishTime="11/30/2012 00:06:03" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/l2.gif" publishTime="11/30/2012 00:08:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/checkbox.gif" publishTime="11/30/2012 00:08:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/mpeg.gif" publishTime="11/30/2012 00:11:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/r2.gif" publishTime="11/30/2012 00:07:14" />
@@ -1345,40 +1348,39 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/mpeg.gif" publishTime="11/30/2012 00:08:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/break.gif" publishTime="11/30/2012 00:07:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/ForeColor.gif" publishTime="11/30/2012 00:07:31" />
-    <file relUrl="Admin/ECommerce/Attribute/FrmAttribute.aspx" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/strike.gif" publishTime="11/30/2012 00:10:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/superscript.gif" publishTime="11/30/2012 00:10:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/rotate.gif" publishTime="11/30/2012 00:04:00" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/img.gif" publishTime="11/30/2012 00:04:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/t2.gif" publishTime="11/30/2012 00:08:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/superscript.gif" publishTime="11/30/2012 00:07:53" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/optionbutton.gif" publishTime="11/30/2012 00:11:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/plus.gif" publishTime="11/30/2012 00:11:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/AquariumPen.cur" publishTime="11/30/2012 00:04:09" />
-    <file relUrl="Admin/XSLTemplate/ManageXSLTemplate_UC.ascx" publishTime="12/01/2012 22:42:08" />
+    <file relUrl="Admin/XSLTemplate/ManageXSLTemplate_UC.ascx" publishTime="01/23/2013 18:09:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/lcase.gif" publishTime="11/30/2012 00:11:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/droparrow.gif" publishTime="11/30/2012 00:04:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/text.gif" publishTime="11/30/2012 00:09:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/AutoConfigure/Full_noform.config" publishTime="11/30/2012 00:03:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/keyboard.gif" publishTime="11/30/2012 00:07:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/groupbox.gif" publishTime="11/30/2012 00:07:31" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/emhug.gif" publishTime="11/30/2012 00:05:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/gecko_pasteashtml.htm" publishTime="11/30/2012 00:03:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/redo.gif" publishTime="11/30/2012 00:08:53" />
     <file relUrl="GUI/Gallery/GalleryXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/embeer.gif" publishTime="11/30/2012 00:05:27" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/fit.gif" publishTime="11/30/2012 00:08:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/save.gif" publishTime="11/30/2012 00:08:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/center.gif" publishTime="11/30/2012 00:05:42" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/zip.gif" publishTime="11/30/2012 00:04:22" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/horizontal.end.gif" publishTime="11/30/2012 00:09:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/t3.gif" publishTime="11/30/2012 00:07:51" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Languages/sv-SE.xml" publishTime="11/30/2012 00:05:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/inscol.gif" publishTime="11/30/2012 00:10:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/restore.gif" publishTime="11/30/2012 00:08:52" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_TagHead.js" publishTime="11/30/2012 00:06:22" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/emotion.gif" publishTime="11/30/2012 00:07:33" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Languages/sv-SE.xml" publishTime="11/30/2012 00:05:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/rtf.gif" publishTime="11/30/2012 00:04:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/media.gif" publishTime="11/30/2012 00:07:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/b1.gif" publishTime="11/30/2012 00:08:37" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/jpg.gif" publishTime="11/30/2012 00:04:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/insrow_t.gif" publishTime="11/30/2012 00:08:14" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/droparrow.gif" publishTime="11/30/2012 00:09:15" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/instable.gif" publishTime="11/30/2012 00:07:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Image.js" publishTime="11/30/2012 00:06:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/youtube.gif" publishTime="11/30/2012 00:06:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/t3.png" publishTime="11/30/2012 00:07:51" />
@@ -1386,28 +1388,30 @@
     <file relUrl="Controls/SWFUpload/SWFUpload_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/paste.gif" publishTime="11/30/2012 00:10:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/right_to_left.gif" publishTime="11/30/2012 00:07:12" />
-    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/rightline.gif" publishTime="11/30/2012 00:04:00" />
     <file relUrl="App_Themes/Image/active.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/Actualsize.gif" publishTime="11/30/2012 00:05:51" />
     <file relUrl="App_Themes/Image/windows_drag_bottom.gif" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/r2.gif" publishTime="11/30/2012 00:11:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/f_under.gif" publishTime="11/30/2012 00:11:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/menuleft.gif" publishTime="11/30/2012 00:08:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/right.gif" publishTime="11/30/2012 00:07:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/eximage.gif" publishTime="11/30/2012 00:07:33" />
     <file relUrl="GUI/Article/ArticleXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/pasteword.gif" publishTime="11/30/2012 00:08:01" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/b1.png" publishTime="11/30/2012 00:11:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/right.gif" publishTime="11/30/2012 00:04:39" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/eximage.gif" publishTime="11/30/2012 00:10:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emmale.gif" publishTime="11/30/2012 00:05:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/pasteword.gif" publishTime="11/30/2012 00:11:23" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/flash.gif" publishTime="11/30/2012 00:11:44" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/pasteword.gif" publishTime="11/30/2012 00:08:01" />
     <file relUrl="App_Themes/Image/digram.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/help.gif" publishTime="11/30/2012 00:10:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/print.gif" publishTime="11/30/2012 00:07:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_style.ascx" publishTime="11/30/2012 00:03:48" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/style_safari12.css" publishTime="11/30/2012 00:08:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/config.gif" publishTime="11/30/2012 00:05:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/bspreview.gif" publishTime="11/30/2012 00:09:24" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_style_other.ascx" publishTime="11/30/2012 00:03:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/chm.gif" publishTime="11/30/2012 00:05:42" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/PasteAsHtml.gif" publishTime="11/30/2012 00:08:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/da.xml" publishTime="11/30/2012 00:06:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/cleanup.gif" publishTime="11/30/2012 00:08:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/spell.gif" publishTime="11/30/2012 00:07:55" />
@@ -1423,38 +1427,37 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/forward.gif" publishTime="11/30/2012 00:07:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_flash.ascx" publishTime="11/30/2012 00:03:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/print.gif" publishTime="11/30/2012 00:08:54" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/selectall.gif" publishTime="11/30/2012 00:11:18" />
+    <file relUrl="example.css" publishTime="11/30/2012 00:12:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/mrgcell_r.gif" publishTime="11/30/2012 00:08:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/UniversalKeyboard.aspx" publishTime="11/30/2012 00:03:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/passwordfield.gif" publishTime="11/30/2012 00:08:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/page.gif" publishTime="11/30/2012 00:04:45" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/dll.gif" publishTime="11/30/2012 00:05:30" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/anchor.gif" publishTime="11/30/2012 00:11:03" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/open.gif" publishTime="11/30/2012 00:04:46" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/r1.gif" publishTime="11/30/2012 00:08:54" />
+    <file relUrl="GUI/Contact/App_LocalResources/Career_UC.ascx.resx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/link.gif" publishTime="11/30/2012 00:10:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/insertform.gif" publishTime="11/30/2012 00:10:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/InsertFlash.aspx" publishTime="11/30/2012 00:03:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/edit.gif" publishTime="11/30/2012 00:05:28" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/emteeth.gif" publishTime="11/30/2012 00:05:16" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/justifyfull.gif" publishTime="11/30/2012 00:08:12" />
     <file relUrl="App_Themes/Image/delete.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_ColorSpace1.png" publishTime="11/30/2012 00:05:36" />
-    <file relUrl="GUI/Contact/App_LocalResources/Career_UC.ascx.resx" publishTime="11/05/2012 00:51:34" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/open.gif" publishTime="11/30/2012 00:04:46" />
     <file relUrl="Scripts/jquery-ui.min.js" publishTime="12/01/2012 14:42:34" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/fpreview.gif" publishTime="11/30/2012 00:08:21" />
+    <file relUrl="Admin/ECommerce/Tax/ManageTax_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/plus.gif" publishTime="11/30/2012 00:07:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/box.gif" publishTime="11/30/2012 00:08:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/under.gif" publishTime="11/30/2012 00:03:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/l2.gif" publishTime="11/30/2012 00:09:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/unformat.gif" publishTime="11/30/2012 00:07:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/undo.gif" publishTime="11/30/2012 00:07:46" />
-    <file relUrl="bin/AJH.CMS.Core.pdb" publishTime="12/07/2012 18:22:31" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/borders.gif" publishTime="11/30/2012 00:07:40" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_Vertical1.png" publishTime="11/30/2012 00:05:33" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/ch_preview.gif" publishTime="11/30/2012 00:08:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/groupbox.gif" publishTime="11/30/2012 00:09:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/newdoc.gif" publishTime="11/30/2012 00:08:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/tag.config" publishTime="11/30/2012 00:03:28" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/jpg.gif" publishTime="11/30/2012 00:04:54" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/undo.gif" publishTime="11/30/2012 00:09:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/inscol.gif" publishTime="11/30/2012 00:08:16" />
-    <file relUrl="bin/NetSpell.SpellChecker.dll" publishTime="12/01/2012 15:15:53" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/colorpen.gif" publishTime="11/30/2012 00:09:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/superscript.gif" publishTime="11/30/2012 00:08:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_SelectFile.js" publishTime="11/30/2012 00:06:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/row.gif" publishTime="11/30/2012 00:07:57" />
@@ -1465,7 +1468,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/bold.gif" publishTime="11/30/2012 00:07:40" />
     <file relUrl="GUI/ECommerce/Product/ProductSitePath.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/border_left.gif" publishTime="11/30/2012 00:05:45" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/fontcolor.gif" publishTime="11/30/2012 00:07:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/colorpen.gif" publishTime="11/30/2012 00:05:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/asp.gif" publishTime="11/30/2012 00:05:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/redo.gif" publishTime="11/30/2012 00:11:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/newdoc.gif" publishTime="11/30/2012 00:10:35" />
@@ -1474,44 +1477,43 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/textarea.gif" publishTime="11/30/2012 00:11:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/ContextMenuMode/Minimal.config" publishTime="11/30/2012 00:03:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/groupbox.gif" publishTime="11/30/2012 00:11:41" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/b1.png" publishTime="11/30/2012 00:11:03" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/layout.gif" publishTime="11/30/2012 00:04:53" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Li.js" publishTime="11/30/2012 00:06:19" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/dll.gif" publishTime="11/30/2012 00:05:30" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/Express.gif" publishTime="11/30/2012 00:11:45" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/lightblue_colorpen.gif" publishTime="11/30/2012 00:08:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/BackColor.gif" publishTime="11/30/2012 00:11:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/spell.gif" publishTime="11/30/2012 00:11:16" />
     <file relUrl="Admin/Template/ManageTemplate_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/swf.gif" publishTime="11/30/2012 00:07:53" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/l1.gif" publishTime="11/30/2012 00:09:53" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/disco.gif" publishTime="11/30/2012 00:05:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/print.gif" publishTime="11/30/2012 00:04:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/spltcell.gif" publishTime="11/30/2012 00:08:49" />
     <file relUrl="App_Themes/Image/Dashboard-CMSControl.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/r1.gif" publishTime="11/30/2012 00:07:14" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Keyboard/keyboard-diacritic.js" publishTime="11/30/2012 00:06:40" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/style.css" publishTime="11/30/2012 00:11:06" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/spltcell.gif" publishTime="11/30/2012 00:10:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/media.gif" publishTime="11/30/2012 00:11:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/InsertImage.aspx" publishTime="11/30/2012 00:03:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/s_cut.gif" publishTime="11/30/2012 00:04:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/pt-BR.xml" publishTime="11/30/2012 00:05:59" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/row.gif" publishTime="11/30/2012 00:07:12" />
+    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/redo.gif" publishTime="11/30/2012 00:04:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/l2.png" publishTime="11/30/2012 00:11:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/flash.gif" publishTime="11/30/2012 00:10:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/hiddenfield.gif" publishTime="11/30/2012 00:11:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/border_bottom.gif" publishTime="11/30/2012 00:05:45" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/r2.gif" publishTime="11/30/2012 00:09:43" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/t1.png" publishTime="11/30/2012 00:09:37" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/tw_preview.gif" publishTime="11/30/2012 00:07:47" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/fit.gif" publishTime="11/30/2012 00:10:03" />
     <file relUrl="Admin/ECommerce/Feature/ManageFeature_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/plus.gif" publishTime="11/30/2012 00:08:01" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/midi.gif" publishTime="11/30/2012 00:04:49" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/style_safari.css" publishTime="11/30/2012 00:06:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/style.Text.gif" publishTime="11/30/2012 00:04:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/subscript.gif" publishTime="11/30/2012 00:08:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/undo.gif" publishTime="11/30/2012 00:08:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Keyboard/keyboard-dialogue.js" publishTime="11/30/2012 00:06:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/ucase.gif" publishTime="11/30/2012 00:10:16" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/ImageMap.gif" publishTime="11/30/2012 00:11:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Configuration/AutoConfigure/Compact.config" publishTime="11/30/2012 00:03:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/left_to_right.gif" publishTime="11/30/2012 00:07:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/undo.gif" publishTime="11/30/2012 00:06:59" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/flash.gif" publishTime="11/30/2012 00:11:44" />
     <file relUrl="Admin/Services/ECommerce/Tax/TaxService.asmx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/justifyfull.gif" publishTime="11/30/2012 00:07:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/Separator.gif" publishTime="11/30/2012 00:07:56" />
@@ -1520,71 +1522,70 @@
     <file relUrl="App_Themes/Image/bg-left-menu-item-hover.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face14.gif" publishTime="11/30/2012 00:05:12" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/forward.gif" publishTime="11/30/2012 00:10:01" />
-    <file relUrl="App_Themes/Image/ibtnpublish.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Load.ashx" publishTime="11/30/2012 00:03:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/horizontal.start.gif" publishTime="11/30/2012 00:07:29" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/delcell.gif" publishTime="11/30/2012 00:10:06" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/anchor.gif" publishTime="11/30/2012 00:08:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/delcell.gif" publishTime="11/30/2012 00:10:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/l2.png" publishTime="11/30/2012 00:09:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/MapLink.htm" publishTime="11/30/2012 00:03:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/inscell.gif" publishTime="11/30/2012 00:09:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/SyntaxHighlighter/shBrushCpp.js" publishTime="11/30/2012 00:06:52" />
     <file relUrl="App_Themes/Image/roles.png" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/bullist.gif" publishTime="11/30/2012 00:08:34" />
+    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Symbols/sample4.gif" publishTime="11/30/2012 00:04:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/SyntaxHighlighter.htm" publishTime="11/30/2012 00:03:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/droparrow.gif" publishTime="11/30/2012 00:10:54" />
     <file relUrl="App_Themes/Image/Dashboard-Permissions.png" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/face5.gif" publishTime="11/30/2012 00:05:08" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/colorpen.gif" publishTime="11/30/2012 00:10:07" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Style.js" publishTime="11/30/2012 00:06:18" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/InsertPageBreak.gif" publishTime="11/30/2012 00:09:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/th.xml" publishTime="11/30/2012 00:05:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/Express.gif" publishTime="11/30/2012 00:10:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/bmp.gif" publishTime="11/30/2012 00:05:46" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_table.ascx" publishTime="11/30/2012 00:03:45" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/template.gif" publishTime="11/30/2012 00:11:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/under.gif" publishTime="11/30/2012 00:04:25" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/chm.gif" publishTime="11/30/2012 00:08:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/submit.gif" publishTime="11/30/2012 00:09:38" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/mrgcell_b.gif" publishTime="11/30/2012 00:09:49" />
     <file relUrl="Admin/Security/ManageRole_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="Admin/Services/ECommerce/Catalog/CatalogService.asmx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/indent.gif" publishTime="11/30/2012 00:09:07" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/mid.gif" publishTime="11/30/2012 00:11:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face2.gif" publishTime="11/30/2012 00:05:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/Separator.gif" publishTime="11/30/2012 00:10:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/t2.gif" publishTime="11/30/2012 00:11:13" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/emhug2.gif" publishTime="11/30/2012 00:05:22" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/copy.gif" publishTime="11/30/2012 00:09:21" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/imagebutton.gif" publishTime="11/30/2012 00:08:18" />
+    <file relUrl="GUI/Menu/MenuXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/html.gif" publishTime="11/30/2012 00:04:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/delete.gif" publishTime="11/30/2012 00:08:27" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/center.gif" publishTime="11/30/2012 00:10:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/pastetext.gif" publishTime="11/30/2012 00:09:45" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/s_refresh.gif" publishTime="11/30/2012 00:04:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/strike.gif" publishTime="11/30/2012 00:07:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/all.png" publishTime="11/30/2012 00:11:04" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/close.gif" publishTime="11/30/2012 00:10:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/he-IL.xml" publishTime="11/30/2012 00:06:03" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/insertform.gif" publishTime="11/30/2012 00:07:26" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/ImageMap.gif" publishTime="11/30/2012 00:11:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/checkbox.gif" publishTime="11/30/2012 00:10:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/bold.gif" publishTime="11/30/2012 00:11:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/unformat.gif" publishTime="11/30/2012 00:08:41" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/minus.gif" publishTime="11/30/2012 00:09:49" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/b1.gif" publishTime="11/30/2012 00:11:03" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/mrgcell_r.gif" publishTime="11/30/2012 00:09:48" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/copy.gif" publishTime="11/30/2012 00:05:38" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/find.gif" publishTime="11/30/2012 00:09:14" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/InsertPageBreak.gif" publishTime="11/30/2012 00:09:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/textbox.gif" publishTime="11/30/2012 00:11:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/ForeColor.gif" publishTime="11/30/2012 00:10:51" />
-    <file relUrl="Admin/Security/ManageForm_UC.ascx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/selectall.gif" publishTime="11/30/2012 00:10:27" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/mov.gif" publishTime="11/30/2012 00:08:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/instable.gif" publishTime="11/30/2012 00:11:36" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/print.gif" publishTime="11/30/2012 00:08:00" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/delcol.gif" publishTime="11/30/2012 00:11:48" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/anchor.gif" publishTime="11/30/2012 00:07:42" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/insrow_t.gif" publishTime="11/30/2012 00:10:42" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/layer.gif" publishTime="11/30/2012 00:10:38" />
+    <file relUrl="GUI/HTML/HTMLViewer_UC.ascx" publishTime="11/05/2012 00:51:34" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/design.gif" publishTime="11/30/2012 00:10:05" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/face18.gif" publishTime="11/30/2012 00:05:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/exe.gif" publishTime="11/30/2012 00:05:14" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/fit.gif" publishTime="11/30/2012 00:08:23" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/anchor.gif" publishTime="11/30/2012 00:11:57" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/t2.png" publishTime="11/30/2012 00:07:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/dialog.css" publishTime="11/30/2012 00:08:40" />
-    <file relUrl="Scripts/CMSPageSettings.js" publishTime="11/05/2012 00:51:35" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/bspreview.gif" publishTime="11/30/2012 00:11:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/mrgcell_b.gif" publishTime="11/30/2012 00:07:19" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Configuration/ContextMenuMode/Default.config" publishTime="11/30/2012 00:03:23" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/bspreview.gif" publishTime="11/30/2012 00:05:43" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/face9.gif" publishTime="11/30/2012 00:05:07" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/ucase.gif" publishTime="11/30/2012 00:06:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emmoon.gif" publishTime="11/30/2012 00:05:20" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/colorpicker.aspx" publishTime="11/30/2012 00:03:42" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/justifyfull.gif" publishTime="11/30/2012 00:04:54" />
     <file relUrl="Admin/Security/FrmRole.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="GUI/Gallery/GalleryServiceXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/TempFiles/4fa96880-9345-4e38-b951-a50307a3f3e1000001-.gif" publishTime="11/30/2012 00:04:16" />
@@ -1595,27 +1596,27 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/ini.gif" publishTime="11/30/2012 00:11:38" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/paste.gif" publishTime="11/30/2012 00:04:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/cpie_WebSafe.gif" publishTime="11/30/2012 00:05:36" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/mov.gif" publishTime="11/30/2012 00:04:49" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_TagHead.js" publishTime="11/30/2012 00:06:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/colorpicker_more_ns.aspx" publishTime="11/30/2012 00:03:41" />
     <file relUrl="Portals/GeneralPortal/Uploads/Thumbnail/arabic.png" publishTime="11/05/2012 00:51:34" />
-    <file relUrl="App_Themes/Image/close.png" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/checkbox.gif" publishTime="11/30/2012 00:07:38" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/redo.gif" publishTime="11/30/2012 00:07:13" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/preview.gif" publishTime="11/30/2012 00:08:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/cut.gif" publishTime="11/30/2012 00:09:21" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/optionbutton.gif" publishTime="11/30/2012 00:10:34" />
+    <file relUrl="bin/Telerik.Web.UI.dll" publishTime="11/27/2012 15:18:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/submit.gif" publishTime="11/30/2012 00:07:53" />
     <file relUrl="Admin/XSLTemplate/FrmXSLTemplate.aspx" publishTime="12/01/2012 15:25:08" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/t2.gif" publishTime="11/30/2012 00:09:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/noneditable.gif" publishTime="11/30/2012 00:07:18" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/InsertPageBreak.gif" publishTime="11/30/2012 00:08:14" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/edit2.gif" publishTime="11/30/2012 00:05:28" />
     <file relUrl="GUI/Contact/App_LocalResources/ContactUs_UC.ascx.resx" publishTime="11/29/2012 23:28:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/lightblue_fontcolor.gif" publishTime="11/30/2012 00:09:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_VerticalPosition.gif" publishTime="11/30/2012 00:05:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/delete.gif" publishTime="11/30/2012 00:07:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/l1.gif" publishTime="11/30/2012 00:07:24" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/PasteAsHtml.gif" publishTime="11/30/2012 00:08:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/pushbutton.gif" publishTime="11/30/2012 00:09:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/l2.png" publishTime="11/30/2012 00:08:11" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/en-CA.xml" publishTime="11/30/2012 00:06:08" />
-    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/rotateright90.gif" publishTime="11/30/2012 00:03:59" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/style_safari12.css" publishTime="11/30/2012 00:08:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/italic.gif" publishTime="11/30/2012 00:07:25" />
     <file relUrl="App_Themes/Image/builder.png" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/justifynone.gif" publishTime="11/30/2012 00:10:40" />
@@ -1624,32 +1625,33 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/outereditorfull.aspx" publishTime="11/30/2012 00:03:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/specialchar.gif" publishTime="11/30/2012 00:09:40" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/r1.gif" publishTime="11/30/2012 00:10:31" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/copy.gif" publishTime="11/30/2012 00:07:36" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/ch_preview.gif" publishTime="11/30/2012 00:11:52" />
     <file relUrl="Admin/Category/ManageCategory_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/paste.gif" publishTime="11/30/2012 00:11:23" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/help.gif" publishTime="11/30/2012 00:11:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/submit.gif" publishTime="11/30/2012 00:10:24" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/l2.gif" publishTime="11/30/2012 00:08:11" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/justifynone.gif" publishTime="11/30/2012 00:04:54" />
     <file relUrl="Admin/Controls/Logout_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/numlist.gif" publishTime="11/30/2012 00:10:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/textarea.gif" publishTime="11/30/2012 00:10:18" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Keyboard/keyboard-multihexa.js" publishTime="11/30/2012 00:06:40" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/emhug.gif" publishTime="11/30/2012 00:05:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/outdent.gif" publishTime="11/30/2012 00:08:03" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Symbols/sample1.jpg" publishTime="11/30/2012 00:04:11" />
-    <file relUrl="Admin/AdminFiles/XmlFile/AdminMenuXML.xml" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="Admin/AdminFiles/XmlFile/AdminMenuXML.xml" publishTime="12/07/2012 19:23:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/png.gif" publishTime="11/30/2012 00:04:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/face23.gif" publishTime="11/30/2012 00:05:09" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Table.js" publishTime="11/30/2012 00:06:15" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/newdoc.gif" publishTime="11/30/2012 00:09:48" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/spell.gif" publishTime="11/30/2012 00:09:40" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/open.gif" publishTime="11/30/2012 00:11:25" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/justifynone.gif" publishTime="11/30/2012 00:08:12" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/ini.gif" publishTime="11/30/2012 00:08:17" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/pastetext.gif" publishTime="11/30/2012 00:11:23" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/colorpen.gif" publishTime="11/30/2012 00:10:58" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/ucase.gif" publishTime="11/30/2012 00:09:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/text.gif" publishTime="11/30/2012 00:11:11" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/reset.gif" publishTime="11/30/2012 00:10:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/a_template.gif" publishTime="11/30/2012 00:05:48" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/com.gif" publishTime="11/30/2012 00:05:39" />
     <file relUrl="Admin/Services/Gallery/GalleryService.asmx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/insertform.gif" publishTime="11/30/2012 00:11:37" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/t2.gif" publishTime="11/30/2012 00:09:37" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/optionbutton.gif" publishTime="11/30/2012 00:11:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/xml.gif" publishTime="11/30/2012 00:04:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/EditInNewWindow.gif" publishTime="11/30/2012 00:08:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/zoomin.gif" publishTime="11/30/2012 00:03:56" />
@@ -1660,7 +1662,7 @@
     <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/drawline.gif" publishTime="11/30/2012 00:04:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/t2.png" publishTime="11/30/2012 00:07:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/flash32.gif" publishTime="11/30/2012 00:05:07" />
-    <file relUrl="GUI/Menu/MenuParentChildXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/pastetext.gif" publishTime="11/30/2012 00:07:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/spltcell_b.gif" publishTime="11/30/2012 00:08:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/htmlview.gif" publishTime="11/30/2012 00:09:08" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/asmx.gif" publishTime="11/30/2012 00:05:49" />
@@ -1669,35 +1671,35 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/toolbarbutton.over.gif" publishTime="11/30/2012 00:09:33" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/restore.gif" publishTime="11/30/2012 00:10:29" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/zoomout.gif" publishTime="11/30/2012 00:04:21" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/insrow.gif" publishTime="11/30/2012 00:10:43" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/cut.gif" publishTime="11/30/2012 00:05:31" />
-    <file relUrl="Admin/Security/FrmUser.aspx" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/blank2020.png" publishTime="11/30/2012 00:05:46" />
+    <file relUrl="App_Themes/Image/osx_track.gif" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/insertDate.gif" publishTime="11/30/2012 00:09:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/redo.gif" publishTime="11/30/2012 00:09:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/pastetext.gif" publishTime="11/30/2012 00:08:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/r1.png" publishTime="11/30/2012 00:11:21" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/PasteAsHtml.gif" publishTime="11/30/2012 00:09:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/SyntaxHighlighter/_shCore.js" publishTime="11/30/2012 00:06:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/Form.gif" publishTime="11/30/2012 00:07:31" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/t1.gif" publishTime="11/30/2012 00:10:22" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/delcol.gif" publishTime="11/30/2012 00:07:35" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/cell.gif" publishTime="11/30/2012 00:11:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/timer.gif" publishTime="11/30/2012 00:10:17" />
     <file relUrl="Admin/Template/FrmTemplate.aspx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/SyntaxHighlighter/shBrushSql.js" publishTime="11/30/2012 00:06:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/Languages.xml" publishTime="11/30/2012 00:06:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/wmv.gif" publishTime="11/30/2012 00:04:23" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/Close2.gif" publishTime="11/30/2012 00:08:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/timer.gif" publishTime="11/30/2012 00:09:33" />
     <file relUrl="empty.css" publishTime="11/30/2012 00:12:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/inscol_l.gif" publishTime="11/30/2012 00:08:16" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/emstar.gif" publishTime="11/30/2012 00:05:16" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/menuleft.gif" publishTime="11/30/2012 00:04:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/emteeth.gif" publishTime="11/30/2012 00:08:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/t1.gif" publishTime="11/30/2012 00:09:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/italic.gif" publishTime="11/30/2012 00:04:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/horizontal.end.gif" publishTime="11/30/2012 00:08:19" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/forward.gif" publishTime="11/30/2012 00:10:48" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/chm.gif" publishTime="11/30/2012 00:08:33" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/style_safari.css" publishTime="11/30/2012 00:11:05" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_style_background.ascx" publishTime="11/30/2012 00:03:47" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/contact.gif" publishTime="11/30/2012 00:05:38" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/bold.gif" publishTime="11/30/2012 00:09:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/find.gif" publishTime="11/30/2012 00:10:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/borders.gif" publishTime="11/30/2012 00:09:25" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/passwordfield.gif" publishTime="11/30/2012 00:09:46" />
@@ -1708,30 +1710,29 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Images/emmessag.gif" publishTime="11/30/2012 00:05:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/bspreview.gif" publishTime="11/30/2012 00:07:39" />
     <file relUrl="Admin/CMSControl/ManageCMSControl_UC.ascx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="Admin/FrmAccessDenied.aspx" publishTime="11/05/2012 00:51:32" />
-    <file relUrl="Portals/Builder/InitialTemplateValue.txt" publishTime="12/01/2012 14:43:54" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/flash.gif" publishTime="11/30/2012 00:09:13" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/plus.gif" publishTime="11/30/2012 00:08:55" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/style_safari12.css" publishTime="11/30/2012 00:07:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/pdf.gif" publishTime="11/30/2012 00:04:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_GradientPositionLight.gif" publishTime="11/30/2012 00:05:34" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Gecko_Implementation/CuteEditorImplementation.js" publishTime="11/30/2012 00:06:37" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Hr.js" publishTime="11/30/2012 00:06:20" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/textbox.gif" publishTime="11/30/2012 00:09:34" />
+    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/pasteword.gif" publishTime="11/30/2012 00:04:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/Express.gif" publishTime="11/30/2012 00:09:14" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/img.gif" publishTime="11/30/2012 00:04:56" />
-    <file relUrl="Scripts/sprinkle.js" publishTime="11/05/2012 00:51:35" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/tw_preview.gif" publishTime="11/30/2012 00:07:47" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/emfilm.gif" publishTime="11/30/2012 00:05:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/timer.gif" publishTime="11/30/2012 00:04:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/text.gif" publishTime="11/30/2012 00:07:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/reset.gif" publishTime="11/30/2012 00:09:42" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/Form.gif" publishTime="11/30/2012 00:11:43" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_Color.cur" publishTime="11/30/2012 00:05:36" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/fit.gif" publishTime="11/30/2012 00:07:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/backward.gif" publishTime="11/30/2012 00:11:02" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/lcase.gif" publishTime="11/30/2012 00:07:22" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/bullist.gif" publishTime="11/30/2012 00:07:39" />
+    <file relUrl="Portals/Builder/InitialTemplateValue.txt" publishTime="12/01/2012 14:43:54" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/ch_html.gif" publishTime="11/30/2012 00:08:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/delcol.gif" publishTime="11/30/2012 00:10:56" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/style_gecko.css" publishTime="11/30/2012 00:11:05" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/eximage.gif" publishTime="11/30/2012 00:10:53" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/Tag_li.ascx" publishTime="11/30/2012 00:03:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/keyboard.gif" publishTime="11/30/2012 00:09:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/unlink.gif" publishTime="11/30/2012 00:08:41" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/bullist.gif" publishTime="11/30/2012 00:10:10" />
@@ -1742,9 +1743,10 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/textbox.gif" publishTime="11/30/2012 00:08:43" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/EditInNewWindow.gif" publishTime="11/30/2012 00:11:46" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/selectall.gif" publishTime="11/30/2012 00:07:11" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/minus.gif" publishTime="11/30/2012 00:07:20" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/insrow_t.gif" publishTime="11/30/2012 00:09:05" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/outdent.gif" publishTime="11/30/2012 00:08:57" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/border_top.gif" publishTime="11/30/2012 00:05:44" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/imagebutton.gif" publishTime="11/30/2012 00:09:08" />
+    <file relUrl="CuteSoft_Client/CuteEditor/ImageEditor/Images/rotateright90.gif" publishTime="11/30/2012 00:03:59" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_a.ascx" publishTime="11/30/2012 00:03:52" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/specialchar.gif" publishTime="11/30/2012 00:08:50" />
     <file relUrl="CuteSoft_Client/CuteEditor/Dialogs/Tag/tag_div.ascx" publishTime="11/30/2012 00:03:51" />
@@ -1757,19 +1759,20 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/newdoc.gif" publishTime="11/30/2012 00:11:26" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/dialog.css" publishTime="11/30/2012 00:11:06" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/left.gif" publishTime="11/30/2012 00:09:51" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/midi.gif" publishTime="11/30/2012 00:04:49" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/submit.gif" publishTime="11/30/2012 00:07:07" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/lightblue_colorpen.gif" publishTime="11/30/2012 00:10:37" />
+    <file relUrl="Admin/Security/ManageForm_UC.ascx" publishTime="11/05/2012 00:51:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/design.gif" publishTime="11/30/2012 00:10:54" />
     <file relUrl="bin/CuteEditor.dll" publishTime="12/01/2012 15:15:53" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_ColorPicker_IE.js" publishTime="11/30/2012 00:06:33" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/EditInNewWindow.gif" publishTime="11/30/2012 00:07:33" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/cpns_ColorSpace2.png" publishTime="11/30/2012 00:05:35" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/reset.gif" publishTime="11/30/2012 00:07:58" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/cs.xml" publishTime="11/30/2012 00:06:10" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Input.js" publishTime="11/30/2012 00:06:20" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Tag_Style_Background.js" publishTime="11/30/2012 00:06:17" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003/Images/lcase.gif" publishTime="11/30/2012 00:09:02" />
     <file relUrl="GUI/ECommerce/Catalog/CatalogDetailsXSL_UC.ascx" publishTime="11/05/2012 00:51:34" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/Close2.gif" publishTime="11/30/2012 00:08:30" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/ForeColor.gif" publishTime="11/30/2012 00:08:22" />
     <file relUrl="CuteSoft_Client/CuteEditor/Languages/Ko.xml" publishTime="11/30/2012 00:06:01" />
     <file relUrl="CuteSoft_Client/CuteEditor/Scripts/Dialog/Dialog_Preview.js" publishTime="11/30/2012 00:06:24" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/signature.gif" publishTime="11/30/2012 00:04:38" />
@@ -1778,14 +1781,14 @@
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2007/Images/plus.gif" publishTime="11/30/2012 00:10:32" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/imagebutton.gif" publishTime="11/30/2012 00:11:39" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/Gecko_horizontal.end.gif" publishTime="11/30/2012 00:08:20" />
-    <file relUrl="bin/CuteEditor.ImageEditor.dll" publishTime="12/01/2012 15:15:53" />
-    <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2003_BlueTheme/Images/Form.gif" publishTime="11/30/2012 00:10:01" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Images/box.gif" publishTime="11/30/2012 00:05:44" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/save.gif" publishTime="11/30/2012 00:11:18" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/code.gif" publishTime="11/30/2012 00:08:30" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/design.gif" publishTime="11/30/2012 00:05:31" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/Images/preview.gif" publishTime="11/30/2012 00:08:00" />
     <file relUrl="CuteSoft_Client/CuteEditor/Images/listbar.gif" publishTime="11/30/2012 00:04:51" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Custom/Images/t1.gif" publishTime="11/30/2012 00:07:07" />
     <file relUrl="CuteSoft_Client/CuteEditor/Themes/Office2000/style.css" publishTime="11/30/2012 00:07:44" />
-    <file relUrl="App_Themes/Image/osx_drag_top.gif" publishTime="11/05/2012 00:51:32" />
+    <file relUrl="CuteSoft_Client/CuteEditor/Themes/OfficeXp/Images/keyboard.gif" publishTime="11/30/2012 00:11:34" />
   </publishProfile>
 </publishData>

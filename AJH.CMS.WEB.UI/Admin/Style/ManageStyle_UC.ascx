@@ -62,9 +62,13 @@
                         <asp:Label ID="lblDetails" runat="server" Text="Details" AssociatedControlID="txtDetails"></asp:Label>
                     </td>
                     <td>
-                        <controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="500px" EditModes="Html"
+                        <%--<controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="500px" EditModes="Html"
                             ContentFilters="None" IsRequired="true" ValidationGroup="AddEditStyle" ErrorMessage="Details"
-                            Text="*"></controls:Editor_UC>
+                            Text="*">
+                        </controls:Editor_UC>--%>
+                        <asp:TextBox ID="txtDetails" runat="server" Width="100%" Height="500px" TextMode="MultiLine"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvDetails" runat="server" ControlToValidate="txtDetails"
+                            ErrorMessage="Details" Text="*" Display="Dynamic" ValidationGroup="AddEditStyle"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
             </table>
