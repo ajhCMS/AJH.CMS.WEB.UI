@@ -2486,6 +2486,9 @@
     <Compile Include="Services\Gallery\frmGalleryServiceXsl.ashx.cs">
       <DependentUpon>frmGalleryServiceXsl.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Services\Gallery\frmGalleryXMLFile.ashx.cs">
+      <DependentUpon>frmGalleryXMLFile.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Services\Gallery\GalleryXSL_UC.ascx.cs">
       <DependentUpon>GalleryXSL_UC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2627,6 +2630,7 @@
     <None Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\Thumbs.db" />
     <None Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\Thumbs.db" />
     <Content Include="CuteSoft_Client\CuteEditor\Uploader.ashx" />
+    <Content Include="Services\Gallery\frmGalleryXMLFile.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\CMSSetupResource.resx">
