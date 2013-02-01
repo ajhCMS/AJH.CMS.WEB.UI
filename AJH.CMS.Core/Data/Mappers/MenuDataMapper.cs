@@ -32,6 +32,7 @@ namespace AJH.CMS.Core.Data
         internal const string CN_MENU_CREATED_BY = "MENU_CREATED_BY";
         internal const string CN_MENU_PARENT_OBJ_ID = "MENU_PARENT_OBJ_ID";
         internal const string CN_MAIN_PARENT_ID = "MAIN_PARENT_ID";
+        internal const string CN_MENU_GALLERY_CATEGORY_ID = "MENU_GALLERY_CATEGORY_ID";
 
 
         internal const string PN_MENU_ID = "P_MENU_ID";
@@ -54,6 +55,7 @@ namespace AJH.CMS.Core.Data
         internal const string PN_MENU_ORDER = "P_MENU_ORDER";
         internal const string PN_MENU_CREATED_BY = "P_MENU_CREATED_BY";
         internal const string PN_MENU_PARENT_OBJ_ID = "P_MENU_PARENT_OBJ_ID";
+        internal const string PN_MENU_GALLERY_CATEGORY_ID = "P_MENU_GALLERY_CATEGORY_ID";
 
         internal const string SN_MENU_ADD = "[SETUP].[MenuAdd]";
         internal const string SN_MENU_UPDATE = "[SETUP].[MenuUpdate]";
@@ -188,6 +190,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter.Value = menuEntity.ParentObjectID;
                 sqlCommand.Parameters.Add(sqlParameter);
 
+                sqlParameter = new SqlParameter(PN_MENU_GALLERY_CATEGORY_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = menuEntity.GalleryCategoryID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
                 try
                 {
                     sqlCommand.Connection.Open();
@@ -317,6 +324,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_MENU_PARENT_OBJ_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = menuEntity.ParentObjectID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_MENU_GALLERY_CATEGORY_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = menuEntity.GalleryCategoryID;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 try
@@ -857,6 +869,10 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(PublishDataMapper.CN_PUBLISH_TYPE_ID);
             if (!reader.IsDBNull(colIndex))
                 menu.IsPublished = reader.GetInt32(colIndex) == (int)AJH.CMS.Core.Enums.CMSEnums.PublishType.PublishNow;
+
+            colIndex = reader.GetOrdinal(CN_MENU_GALLERY_CATEGORY_ID);
+            if (!reader.IsDBNull(colIndex))
+                menu.GalleryCategoryID = reader.GetInt32(colIndex);
         }
 
         internal static void FillFromReaderByParentObjID(Menu menu, SqlDataReader reader)
@@ -944,6 +960,10 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(CN_MENU_PARENT_OBJ_ID);
             if (!reader.IsDBNull(colIndex))
                 menu.ParentObjectID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_GALLERY_CATEGORY_ID);
+            if (!reader.IsDBNull(colIndex))
+                menu.GalleryCategoryID = reader.GetInt32(colIndex);
         }
         /// <summary>
         /// This Method Fills Main Parent Id (Parent Id Of Parent Obj Id If Exists Else Parent Id Of Item It Self)
@@ -1043,6 +1063,10 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(CN_MAIN_PARENT_ID);
             if (!reader.IsDBNull(colIndex))
                 menu.MainParentID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_MENU_GALLERY_CATEGORY_ID);
+            if (!reader.IsDBNull(colIndex))
+                menu.GalleryCategoryID = reader.GetInt32(colIndex);
         }
 
         #endregion

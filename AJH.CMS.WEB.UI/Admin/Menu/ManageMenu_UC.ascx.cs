@@ -226,6 +226,7 @@ namespace AJH.CMS.WEB.UI.Admin
                         menu.ParentID = Convert.ToInt32(cddParentMenu.SelectedValue);
                         menu.PortalID = CMSContext.PortalID;
                         menu.SEOName = string.Empty;
+                        menu.GalleryCategoryID = Convert.ToInt32(cddGalleryCategory.SelectedValue);
 
                         switch (menu.MenuType)
                         {
@@ -298,6 +299,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     menu.PortalID = CMSContext.PortalID;
                     menu.SEOName = string.Empty;
                     menu.CreatedBy = CMSContext.CurrentUserID;
+                    menu.GalleryCategoryID = Convert.ToInt32(cddGalleryCategory.SelectedValue);
 
                     switch (menu.MenuType)
                     {
@@ -324,6 +326,7 @@ namespace AJH.CMS.WEB.UI.Admin
                             menu.URL = txtURL.Text;
                             break;
                     }
+
                     MenuManager.Add(menu);
 
                     //Publish Menu
@@ -427,6 +430,8 @@ namespace AJH.CMS.WEB.UI.Admin
 
                         menu.SEOName = string.Empty;
 
+                        menu.GalleryCategoryID = Convert.ToInt32(cddGalleryCategory.SelectedValue);
+
                         switch (menu.MenuType)
                         {
                             case CMSEnums.MenuType.Page:
@@ -496,6 +501,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     menu.PortalID = CMSContext.PortalID;
                     menu.SEOName = string.Empty;
                     menu.CreatedBy = CMSContext.CurrentUserID;
+                    menu.GalleryCategoryID = Convert.ToInt32(cddGalleryCategory.SelectedValue);
 
                     switch (menu.MenuType)
                     {
@@ -652,6 +658,7 @@ namespace AJH.CMS.WEB.UI.Admin
         void PerformSettings()
         {
             cddSearchCategory.Category = CMSConfig.ConstantManager.CategoryCategory + (int)CMSEnums.Modules.Menu;
+            cddGalleryCategory.Category = CMSConfig.ConstantManager.CategoryCategory + (int)CMSEnums.Modules.Gallery;
 
             ibtnDelete.OnClientClick = "return ConfirmOperation('" + trvMenu.ClientID + "','Are you sure to delete this item(s)?');";
             ibtnPublish.OnClientClick = "return ConfirmOperation('" + trvMenu.ClientID + "','Are you sure to publish this item(s)?');";
@@ -704,6 +711,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 cddParentMenu.Category = CMSConfig.ConstantManager.CategoryMenu + ViewState[CMSViewStateManager.CategoryID];
                 ddlMenuType.SelectedValue = ((int)CMSEnums.MenuType.Static).ToString();
                 cddPage.SelectedValue = cddPage.PromptValue;
+                cddGalleryCategory.SelectedValue = cddGalleryCategory.PromptValue;
             }
         }
         #endregion
@@ -766,6 +774,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     cddParentMenu.Category = CMSConfig.ConstantManager.CategoryMenu + ViewState[CMSViewStateManager.CategoryID] + CMSConfig.ConstantManager.BreakItem + CMSConfig.ConstantManager.CurrentMenu + SelectedParentMenuObjID;
                     ddlMenuType.SelectedValue = ((int)menu.MenuType).ToString();
                     cddPage.SelectedValue = menu.PageID.ToString();
+                    cddGalleryCategory.SelectedValue = menu.GalleryCategoryID.ToString();
                 }
             }
         }
@@ -780,6 +789,8 @@ namespace AJH.CMS.WEB.UI.Admin
                 cddParentMenu.SelectedValue = Request.Params[ddlParentMenu.UniqueID];
             if (Request.Params[ddlPage.UniqueID] != null)
                 cddPage.SelectedValue = Request.Params[ddlPage.UniqueID];
+            if (Request.Params[ddlGalleryCategory.UniqueID] != null)
+                cddGalleryCategory.SelectedValue = Request.Params[ddlGalleryCategory.UniqueID];
         }
         #endregion
 
@@ -820,6 +831,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 cddParentMenu.Category = CMSConfig.ConstantManager.CategoryMenu + ViewState[CMSViewStateManager.CategoryID] + CMSConfig.ConstantManager.BreakItem + CMSConfig.ConstantManager.CurrentMenu + SelectedParentMenuObjID;
                 ddlMenuType.SelectedValue = ((int)CMSEnums.MenuType.Static).ToString();
                 cddPage.SelectedValue = cddPage.PromptValue;
+                cddGalleryCategory.SelectedValue = cddGalleryCategory.PromptValue;
             }
         }
         #endregion
@@ -877,6 +889,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     cddParentMenu.Category = CMSConfig.ConstantManager.CategoryMenu + ViewState[CMSViewStateManager.CategoryID] + CMSConfig.ConstantManager.BreakItem + CMSConfig.ConstantManager.CurrentMenu + SelectedParentMenuObjID;
                     ddlMenuType.SelectedValue = ((int)menu.MenuType).ToString();
                     cddPage.SelectedValue = menu.PageID.ToString();
+                    cddGalleryCategory.SelectedValue = menu.GalleryCategoryID.ToString();
                 }
                 else
                 {
@@ -904,7 +917,6 @@ namespace AJH.CMS.WEB.UI.Admin
             return publish;
 
         }
-
         #endregion
 
         #endregion

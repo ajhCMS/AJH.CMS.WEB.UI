@@ -139,6 +139,18 @@
                             ButtonText="Upload" />
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblGalleryCategory" runat="server" Text="Gallery" AssociatedControlID="ddlGalleryCategory"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlGalleryCategory" runat="server">
+                        </asp:DropDownList>
+                        <ajax:CascadingDropDown ID="cddGalleryCategory" runat="server" TargetControlID="ddlGalleryCategory"
+                            Category="ParentGallery" PromptValue="-1" PromptText="[Select]" LoadingText="[Loading...]"
+                            ServicePath="~/Admin/Services/Category/CategoryService.asmx" ServiceMethod="GetDropDownCategories" />
+                    </td>
+                </tr>
                 <tr id="trPage" runat="server" visible="false">
                     <td>
                         <asp:Label ID="lblPage" runat="server" Text="Page URL" AssociatedControlID="ddlPage"></asp:Label>

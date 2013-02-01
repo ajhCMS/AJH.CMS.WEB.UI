@@ -90,7 +90,13 @@
     <NotInBuild Include="CMS_Database_CREATE\CMS_Database_CREATE.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
-    <NotInBuild Include="Scripts\2_Deployment\Step1\01 Add CategoryName in the Select ArticleGetByCategoryXML.sql">
+    <NotInBuild Include="Scripts\2_Deployment\Step2\02 Add CategoryName in the Select ArticleGetByCategoryXML.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step1\01 Add GalleryCategoryToMenuTable.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step2\01 Add GalleryCategoryToMenu SP.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
   </ItemGroup>

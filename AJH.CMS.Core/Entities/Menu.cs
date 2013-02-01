@@ -107,6 +107,12 @@ namespace AJH.CMS.Core.Entities
             set;
         }
 
+        public int GalleryCategoryID
+        {
+            get;
+            set;
+        }
+
         #region IEntity Members
 
         public int ID
@@ -158,6 +164,7 @@ namespace AJH.CMS.Core.Entities
             this.ParentObjectID = 0;
             this.IsPublished = false;
             this.MainParentID = 0;
+            this.GalleryCategoryID = 0;
         }
     }
 }

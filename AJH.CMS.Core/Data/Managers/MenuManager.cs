@@ -203,6 +203,17 @@ namespace AJH.CMS.Core.Data
                     }
                     break;
             }
+            if (menuItem.GalleryCategoryID > 0)
+            {
+                if (menuItem.URL.Contains("?"))
+                {
+                    menuItem.URL += "&" + CMSConfig.QueryString.CategoryID + "=" + menuItem.GalleryCategoryID;
+                }
+                else
+                {
+                    menuItem.URL += "?" + CMSConfig.QueryString.CategoryID + "=" + menuItem.GalleryCategoryID;
+                }
+            }
             xmlAtt = xmlEle.OwnerDocument.CreateAttribute("URL");
             xmlAtt.Value = menuItem.URL;
             xmlEle.Attributes.Append(xmlAtt);
@@ -217,6 +228,10 @@ namespace AJH.CMS.Core.Data
 
             xmlAtt = xmlEle.OwnerDocument.CreateAttribute("CategoryID");
             xmlAtt.Value = menuItem.CategoryID.ToString();
+            xmlEle.Attributes.Append(xmlAtt);
+
+            xmlAtt = xmlEle.OwnerDocument.CreateAttribute("GalleryCategoryID");
+            xmlAtt.Value = menuItem.GalleryCategoryID.ToString();
             xmlEle.Attributes.Append(xmlAtt);
         }
     }
