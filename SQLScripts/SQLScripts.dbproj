@@ -99,5 +99,8 @@
     <NotInBuild Include="Scripts\2_Deployment\Step2\01 Add GalleryCategoryToMenu SP.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step2\03 Fix Gallery List XML.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
   </ItemGroup>
 </Project>

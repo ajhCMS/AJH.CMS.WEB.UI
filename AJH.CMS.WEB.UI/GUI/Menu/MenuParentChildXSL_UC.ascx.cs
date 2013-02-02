@@ -91,6 +91,10 @@ namespace AJH.CMS.WEB.UI
                     xmlAtt.Value = currentMenu.ID.ToString();
                     xmlNode.Attributes.Append(xmlAtt);
 
+                    xmlAtt = xmlDoc.CreateAttribute("CurrentParentMenu");
+                    xmlAtt.Value = currentMenu.ParentID.ToString();
+                    xmlNode.Attributes.Append(xmlAtt);
+
                     XsltArgumentList arguments = new XsltArgumentList();
                     arguments.AddExtensionObject("CMS:UserControl", this);
 

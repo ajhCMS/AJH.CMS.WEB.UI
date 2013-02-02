@@ -39,7 +39,7 @@ namespace AJH.CMS.WEB.UI
             if (CategoryId <= 0)
                 int.TryParse(Request.QueryString[CMSConfig.QueryString.CategoryID], out CategoryId);
 
-            if (base.XSLTemplateID > 0 && CategoryId > 0)
+            if (base.XSLTemplateID > 0)
             {
                 int PageSize = 10;
                 if (!string.IsNullOrEmpty(Attributes["PageSize"]))
