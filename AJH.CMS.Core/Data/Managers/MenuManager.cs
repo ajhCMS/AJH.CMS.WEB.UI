@@ -113,7 +113,7 @@ namespace AJH.CMS.Core.Data
                     XmlElement xmlEle = xmlDoc.CreateElement("Menu");
                     xmlRoot.AppendChild(xmlEle);
                     SetAttributeMenuNode(xmlEle, item);
-                    SetElementChildMenu(xmlEle, menus, item.ID);//Id Of Main Parent (PArent Of Parent Obj Id to Handle Language Issue)
+                    SetElementChildMenu(xmlEle, menus, item.ParentObjectID == 0 ? item.ID : item.ParentObjectID);//Id Of Main Parent (PArent Of Parent Obj Id to Handle Language Issue)
                     //SetElementChildMenu(xmlEle, menus, item.MainParentID);//Id Of Main Parent (PArent Of Parent Obj Id to Handle Language Issue)
                 }
 

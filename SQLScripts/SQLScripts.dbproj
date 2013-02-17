@@ -102,5 +102,8 @@
     <NotInBuild Include="Scripts\2_Deployment\Step2\03 Fix Gallery List XML.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step2\04 Fix Menu Issues on publish SP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
   </ItemGroup>
 </Project>
