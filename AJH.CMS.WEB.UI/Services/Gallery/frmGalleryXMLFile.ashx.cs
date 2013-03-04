@@ -36,7 +36,7 @@ namespace AJH.CMS.WEB.UI.Services
 
             for (int i = 0; i < galleries.Count; i++)
             {
-                xmlGallery += "<photo imageURL=\"Portals/Portal1/Uploads/Upload/" + galleries[i].File + "\" linkData=\"#\" linkType=\"URL\" linkTarget=\"_self\" captionText=\"Design - PinnacleCAD\" captionText2=\"Totally Integrated Design to Production LGS Solution! \"  captionText3=\" \" enableButtonWhenInFront=\"1\"/>";
+                xmlGallery += "<photo imageURL=\"Portals/Portal1/Uploads/Upload/" + galleries[i].File + "\" linkData=\"#\" linkType=\"URL\" linkTarget=\"_self\" captionText=\"" + galleries[i].Description + "\" captionText2=\"" + galleries[i].Description + "\"  captionText3=\" \" enableButtonWhenInFront=\"1\"/>";
             }
             xmlGallery += "</photos>";
 
