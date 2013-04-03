@@ -35,6 +35,7 @@ namespace AJH.CMS.WEB.UI
 
             mail.Subject = Server.HtmlEncode(txtSubject.Text);
             mail.Body = message;
+            mail.IsBodyHtml = true;
 
             mail.Priority = MailPriority.High;
 
