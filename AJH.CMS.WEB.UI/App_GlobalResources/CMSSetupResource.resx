@@ -132,6 +132,9 @@
   <data name="External" xml:space="preserve">
     <value>External</value>
   </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
@@ -140,6 +143,9 @@
   </data>
   <data name="Internal" xml:space="preserve">
     <value>Internal</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
   </data>
   <data name="NotPublish" xml:space="preserve">
     <value>Not Publish</value>
@@ -158,6 +164,9 @@
   </data>
   <data name="System" xml:space="preserve">
     <value>System</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
   </data>
   <data name="URL" xml:space="preserve">
     <value>URL</value>

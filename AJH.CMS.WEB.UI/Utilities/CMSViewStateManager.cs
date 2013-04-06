@@ -33,5 +33,6 @@ namespace AJH.CMS.WEB.UI.Utilities
         public const string SupplierID = "SupplierID";
         public const string ManufacturarID = "ManufacturarID";
         public const string CatalogImageID = "CatalogImageID";
+        public const string CustomerID = "CustomerID";
     }
 }

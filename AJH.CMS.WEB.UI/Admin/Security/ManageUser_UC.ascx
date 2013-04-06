@@ -114,7 +114,7 @@
                 <asp:Button CssClass="btn" ID="btnReset" runat="server" Width="60px" CausesValidation="false"
                     Text="Reset" />
                 <asp:Button CssClass="btn" ID="btnSave" runat="server" Width="60px" ValidationGroup="AddEditUser"
-                    Text="Save" NotificationOperationDone="true" />
+                    Text="Save" NotificationOperationDone="true" onclick="btnSave_Click1" />
                 <asp:Button CssClass="btn" ID="btnUpdate" runat="server" Width="60px" ValidationGroup="AddEditUser"
                     Text="Update" NotificationOperationDone="true" />
             </div>

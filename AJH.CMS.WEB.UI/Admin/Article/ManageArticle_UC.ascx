@@ -125,7 +125,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="lblDate" runat="server" Text="Date" AssociatedControlID="txtOrderNumber"></asp:Label>
+                        <asp:Label ID="lblDate" runat="server" Text="Date" AssociatedControlID="ucAjaxDate"></asp:Label>
                     </td>
                     <td class="ajaxdate-cntrl">
                         <controls:AjaxDate_UC ID="ucAjaxDate" runat="server" IsRequired="true" Format="dd MMM yyyy" />

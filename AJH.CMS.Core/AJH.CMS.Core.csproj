@@ -53,6 +53,8 @@
     <Compile Include="Data\Managers\CMSControlManager.cs" />
     <Compile Include="Data\Managers\ArticleManager.cs" />
     <Compile Include="Data\Managers\ECommerce\CatalogImageManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\CountriesManager.cs" />
+    <Compile Include="Data\Managers\ECommerce\CustomerManager.cs" />
     <Compile Include="Data\Managers\ECommerce\PreferenceManager.cs" />
     <Compile Include="Data\Managers\LanguageUrlManager.cs" />
     <Compile Include="Data\Managers\ECommerce\AttributeManager.cs" />
@@ -81,6 +83,8 @@
     <Compile Include="Data\Mappers\CMSControlDataMapper.cs" />
     <Compile Include="Data\Mappers\ArticleDataMapper.cs" />
     <Compile Include="Data\Mappers\ECommerce\CatalogImageDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\CountriesDataMapper.cs" />
+    <Compile Include="Data\Mappers\ECommerce\CustomerDataMapper.cs" />
     <Compile Include="Data\Mappers\ECommerce\PreferenceDataMapper.cs" />
     <Compile Include="Data\Mappers\LanguageUrlDataMapper.cs" />
     <Compile Include="Data\Mappers\ECommerce\AttributeDataMapper.cs" />
@@ -111,6 +115,8 @@
     <Compile Include="Entities\CMSControl.cs" />
     <Compile Include="Entities\Article.cs" />
     <Compile Include="Entities\ECommerce\CatalogImage.cs" />
+    <Compile Include="Entities\ECommerce\Countries.cs" />
+    <Compile Include="Entities\ECommerce\Customer.cs" />
     <Compile Include="Entities\ECommerce\Preference.cs" />
     <Compile Include="Entities\LanguageURL.cs" />
     <Compile Include="Entities\ECommerce\Attribute.cs" />

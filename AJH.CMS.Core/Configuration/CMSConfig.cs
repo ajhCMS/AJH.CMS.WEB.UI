@@ -72,6 +72,7 @@ namespace AJH.CMS.Core.Configuration
             {
                 return "~/Admin/ECommerce/Product/FrmProduct.aspx?" + QueryString.ModuleID + "=4";
             }
+
         }
 
         public static class CMSPage
@@ -84,6 +85,11 @@ namespace AJH.CMS.Core.Configuration
             public static string GetNewsDetailsPage()
             {
                 return "~/NewsDetails.aspx";
+            }
+
+            public static string GetCustomerPage()
+            {
+                return "~/GUI/ECommerce/Customer/TestCustomerReg.aspx";
             }
         }
     }

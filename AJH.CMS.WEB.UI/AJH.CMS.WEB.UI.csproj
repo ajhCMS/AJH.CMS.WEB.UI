@@ -92,6 +92,8 @@
     <Content Include="Admin\Controls\PortalLanguages_UC.ascx" />
     <Content Include="Admin\ECommerce\Catalog\FrmCatalog.aspx" />
     <Content Include="Admin\ECommerce\Catalog\ManageCatalog_UC.ascx" />
+    <Content Include="Admin\ECommerce\Customer\FrmManageCustomers.aspx" />
+    <Content Include="Admin\ECommerce\Customer\ManageCustomer_UC.ascx" />
     <Content Include="Admin\ECommerce\Manufacturar\FrmManufacturar.aspx" />
     <Content Include="Admin\ECommerce\Manufacturar\ManageManufacturar_UC.ascx" />
     <Content Include="Admin\ECommerce\Preference\FrmPreference.aspx" />
@@ -1791,6 +1793,8 @@
     <Content Include="GUI\ECommerce\Catalog\CatalogDetailsXSL_UC.ascx" />
     <Content Include="GUI\ECommerce\Catalog\CatalogXSL_UC.ascx" />
     <Content Include="GUI\ECommerce\Catalog\CatalogSitePath.ascx" />
+    <Content Include="GUI\ECommerce\Customer\CustomerLogin_UC.ascx" />
+    <Content Include="GUI\ECommerce\Customer\CustomerRegistration_UC.ascx" />
     <Content Include="GUI\ECommerce\Product\ProductDetailsXSL_UC.ascx" />
     <Content Include="GUI\ECommerce\Product\ProductSitePath.ascx" />
     <Content Include="GUI\ECommerce\Product\ProductXSL_UC.ascx" />
@@ -1929,6 +1933,20 @@
     </Compile>
     <Compile Include="Admin\ECommerce\Catalog\ManageCatalog_UC.ascx.designer.cs">
       <DependentUpon>ManageCatalog_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ECommerce\Customer\FrmManageCustomers.aspx.cs">
+      <DependentUpon>FrmManageCustomers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ECommerce\Customer\FrmManageCustomers.aspx.designer.cs">
+      <DependentUpon>FrmManageCustomers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ECommerce\Customer\ManageCustomer_UC.ascx.cs">
+      <DependentUpon>ManageCustomer_UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ECommerce\Customer\ManageCustomer_UC.ascx.designer.cs">
+      <DependentUpon>ManageCustomer_UC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ECommerce\Manufacturar\FrmManufacturar.aspx.cs">
       <DependentUpon>FrmManufacturar.aspx</DependentUpon>
@@ -2398,6 +2416,20 @@
     </Compile>
     <Compile Include="GUI\ECommerce\Catalog\CatalogSitePath.ascx.designer.cs">
       <DependentUpon>CatalogSitePath.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Customer\CustomerLogin_UC.ascx.cs">
+      <DependentUpon>CustomerLogin_UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Customer\CustomerLogin_UC.ascx.designer.cs">
+      <DependentUpon>CustomerLogin_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Customer\CustomerRegistration_UC.ascx.cs">
+      <DependentUpon>CustomerRegistration_UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Customer\CustomerRegistration_UC.ascx.designer.cs">
+      <DependentUpon>CustomerRegistration_UC.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\ECommerce\Product\ProductDetailsXSL_UC.ascx.cs">
       <DependentUpon>ProductDetailsXSL_UC.ascx</DependentUpon>

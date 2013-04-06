@@ -1,0 +1,26 @@
+﻿-- Created By : Qasem Hammouri
+-- Cration Date : March 31,2013
+
+CREATE TABLE [ECOMMERCE].[CUSTOMER]
+(
+[CUSTOMER_ID] int NOT NULL IDENTITY(1, 1),
+[CUSTOMER_FNAME] nvarchar (250)  NOT NULL,
+[CUSTOMER_LNAME] nvarchar (250)  NOT NULL,
+[CUSTOMER_GENDER] int  default(0),
+[CUSTOMER_BIRTHDAY] datetime not null,
+[CUSTOMER_ZIP_CODE] nvarchar(50),
+[CUSTOMER_COUNTRY] int not null,
+[CUSTOMER_CITY] nvarchar(50) ,
+[CUSTOMER_ADDRESS1] nvarchar(500) not null,
+[CUSTOMER_ADDRESS2] nvarchar(500),
+[CUSTOMER_ADDRESS3] nvarchar(500),
+[CUSTOMER_MOBILE_PHONE] nvarchar(15),
+[CUSTOMER_HOME_PHONE] nvarchar(15),
+[CUSTOMER_STATUS] int default(1),
+[CUSTOMER_NEWSLETTER] int default(0),
+[CUSTOMER_OPT_IN] int default(0),
+[CUSTOMER_USER_ID] int not null
+
+)
+go
+ALTER TABLE [ECOMMERCE].[CUSTOMER] ADD CONSTRAINT [PK_ECOMMERCE.CUSTOMER] PRIMARY KEY CLUSTERED  ([CUSTOMER_ID])

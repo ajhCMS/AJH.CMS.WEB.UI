@@ -105,5 +105,20 @@
     <NotInBuild Include="Scripts\2_Deployment\Step2\04 Fix Menu Issues on publish SP.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step1\05 Add CustomerTable.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step1\06 Add CountryTable.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step2\05 Add Customer SP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step2\06 Add Country SP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step3\01 Add Roles And Permession CustomerManager.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
   </ItemGroup>
 </Project>

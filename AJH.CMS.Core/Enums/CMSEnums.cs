@@ -68,9 +68,15 @@ namespace AJH.CMS.Core.Enums
             Feature = 4,
             Group = 5,
             Manufacturar = 6,
-            Supplier =7,
+            Supplier = 7,
             Product = 8,
             ProductImage = 9,
+        }
+        public enum Gender : int
+        {
+            Unknown = 0,
+            Male = 1,
+            Female = 2
         }
     }
 }

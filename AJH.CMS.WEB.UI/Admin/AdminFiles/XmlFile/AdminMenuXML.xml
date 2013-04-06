@@ -32,5 +32,6 @@
     <Menu Id="27" Name="Product" Url="~/Admin/ECommerce/Product/FrmProductSearch.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png" Visible="true"></Menu>
     <Menu Id="28" Name="ProductItem" Url="~/Admin/ECommerce/Product/FrmProduct.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png" Visible="false"></Menu>
     <Menu Id="29" Name="Preferences" Url="~/Admin/ECommerce/Preference/FrmPreference.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png" Visible="true"></Menu>
+	  <Menu Id="29" Name="Customers" Url="~/Admin/ECommerce/Customer/FrmManageCustomers.aspx" Class="" ParentID="4" Image="~/App_Themes/Image/Dashboard-HTML.png" Visible="true"></Menu>
   </Menu>
 </Menus>
