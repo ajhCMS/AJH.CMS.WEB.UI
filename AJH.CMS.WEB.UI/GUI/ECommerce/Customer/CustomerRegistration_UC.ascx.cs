@@ -64,6 +64,8 @@ namespace AJH.CMS.WEB.UI.GUI.ECommerce.Customer
 
                 UserManager.LoginIn(user, true);
 
+                Response.Redirect("~/Default.aspx");
+
             }
             catch (Exception ex)
             {
@@ -117,6 +119,12 @@ namespace AJH.CMS.WEB.UI.GUI.ECommerce.Customer
             rblGender.DataTextField = "key";
             rblGender.DataValueField = "value";
             rblGender.DataBind();
+
+            ddlCountry.SelectedIndex = -1;
+            rblGender.SelectedIndex = 2;
+            rblnewsletter.SelectedIndex = 0;
+            rblOptIn.SelectedIndex = 0;
+            rblstauts.SelectedIndex = 0;
         }
         #endregion
 

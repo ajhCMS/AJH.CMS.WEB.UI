@@ -67,6 +67,15 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liCombinationProduct;
         
         /// <summary>
+        /// liProductAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liProductAttribute;
+        
+        /// <summary>
         /// dvProduct control.
         /// </summary>
         /// <remarks>
@@ -949,13 +958,13 @@ namespace AJH.CMS.WEB.UI.Admin {
         protected global::System.Web.UI.WebControls.Label lblValue;
         
         /// <summary>
-        /// nValue control.
+        /// NumericUpDownExtender1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.NumericUpDownExtender nValue;
+        protected global::AjaxControlToolkit.NumericUpDownExtender NumericUpDownExtender1;
         
         /// <summary>
         /// txtValue control.
@@ -1847,5 +1856,158 @@ namespace AJH.CMS.WEB.UI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSaveCombinationImage;
+        
+        /// <summary>
+        /// dvProductAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvProductAttribute;
+        
+        /// <summary>
+        /// upnlProductAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlProductAttribute;
+        
+        /// <summary>
+        /// pnlProductAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlProductAttribute;
+        
+        /// <summary>
+        /// ibtnDeleteProductAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnDeleteProductAttribute;
+        
+        /// <summary>
+        /// lblProductAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProductAttribute;
+        
+        /// <summary>
+        /// gvProductAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvProductAttribute;
+        
+        /// <summary>
+        /// upnlProductAttributeDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlProductAttributeDetails;
+        
+        /// <summary>
+        /// dvProductAttributeProblems control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvProductAttributeProblems;
+        
+        /// <summary>
+        /// pnlProductAttributeDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlProductAttributeDetails;
+        
+        /// <summary>
+        /// lblAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAttribute;
+        
+        /// <summary>
+        /// ddlGroupAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlGroupAttribute;
+        
+        /// <summary>
+        /// cddlAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CascadingDropDown cddlAttribute;
+        
+        /// <summary>
+        /// rfvAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAttribute;
+        
+        /// <summary>
+        /// btnGetAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGetAttribute;
+        
+        /// <summary>
+        /// lblAttributes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAttributes;
+        
+        /// <summary>
+        /// chkAttributes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList chkAttributes;
+        
+        /// <summary>
+        /// btnSaveProductAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveProductAttribute;
     }
 }

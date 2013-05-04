@@ -1795,9 +1795,25 @@
     <Content Include="GUI\ECommerce\Catalog\CatalogSitePath.ascx" />
     <Content Include="GUI\ECommerce\Customer\CustomerLogin_UC.ascx" />
     <Content Include="GUI\ECommerce\Customer\CustomerRegistration_UC.ascx" />
+    <Content Include="GUI\ECommerce\Customer\LoginStatus_UC.ascx" />
+    <Content Include="GUI\ECommerce\Customer\testLoggedUser.aspx" />
+    <Content Include="GUI\ECommerce\Order\AddOrder_UC.ascx" />
+    <Content Include="GUI\ECommerce\Order\testAddOrder.aspx" />
     <Content Include="GUI\ECommerce\Product\ProductDetailsXSL_UC.ascx" />
     <Content Include="GUI\ECommerce\Product\ProductSitePath.ascx" />
     <Content Include="GUI\ECommerce\Product\ProductXSL_UC.ascx" />
+    <Content Include="jquery.jqzoom.css" />
+    <Content Include="Scripts\jquery.jqzoom-core.js" />
+    <Content Include="source\blank.gif" />
+    <Content Include="source\fancybox_loading.gif" />
+    <Content Include="source\fancybox_overlay.png" />
+    <Content Include="source\fancybox_sprite.png" />
+    <Content Include="source\jquery.fancybox.css" />
+    <Content Include="source\jquery.fancybox.js" />
+    <Content Include="source\jquery.fancybox.pack.js" />
+    <Content Include="source\jquery.scrollTo-1.4.2-min.js" />
+    <Content Include="source\jquery.serialScroll-1.2.2-min.js" />
+    <Content Include="testDetails.aspx" />
     <Content Include="GUI\Gallery\GalleryServiceXSL_UC.ascx" />
     <Content Include="GUI\Gallery\GalleryXSL_UC.ascx" />
     <Content Include="GUI\HTML\HTMLViewer_UC.ascx" />
@@ -2431,6 +2447,34 @@
     <Compile Include="GUI\ECommerce\Customer\CustomerRegistration_UC.ascx.designer.cs">
       <DependentUpon>CustomerRegistration_UC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ECommerce\Customer\LoginStatus_UC.ascx.cs">
+      <DependentUpon>LoginStatus_UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Customer\LoginStatus_UC.ascx.designer.cs">
+      <DependentUpon>LoginStatus_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Customer\testLoggedUser.aspx.cs">
+      <DependentUpon>testLoggedUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Customer\testLoggedUser.aspx.designer.cs">
+      <DependentUpon>testLoggedUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Order\AddOrder_UC.ascx.cs">
+      <DependentUpon>AddOrder_UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Order\AddOrder_UC.ascx.designer.cs">
+      <DependentUpon>AddOrder_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Order\testAddOrder.aspx.cs">
+      <DependentUpon>testAddOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ECommerce\Order\testAddOrder.aspx.designer.cs">
+      <DependentUpon>testAddOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ECommerce\Product\ProductDetailsXSL_UC.ascx.cs">
       <DependentUpon>ProductDetailsXSL_UC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2451,6 +2495,13 @@
     </Compile>
     <Compile Include="GUI\ECommerce\Product\ProductXSL_UC.ascx.designer.cs">
       <DependentUpon>ProductXSL_UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="testDetails.aspx.cs">
+      <DependentUpon>testDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testDetails.aspx.designer.cs">
+      <DependentUpon>testDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Gallery\GalleryServiceXSL_UC.ascx.cs">
       <DependentUpon>GalleryServiceXSL_UC.ascx</DependentUpon>

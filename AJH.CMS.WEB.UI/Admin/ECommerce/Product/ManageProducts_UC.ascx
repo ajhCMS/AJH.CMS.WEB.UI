@@ -20,6 +20,8 @@
             Price</a></li>
         <li id="liCombinationProduct" runat="server"><a href="#<%=dvCombinationProduct.ClientID %>">
             Combination Prodcut</a></li>
+        <li id="liProductAttribute" runat="server"><a href="#<%=dvProductAttribute.ClientID %>">
+            Product Attributes</a></li>
     </ul>
     <div id="dvProduct" runat="server" class="tabdiv">
         <asp:UpdatePanel ID="upnlProduct" runat="server" UpdateMode="Conditional">
@@ -319,8 +321,8 @@
                                 <asp:Label ID="lblValue" runat="server" Text="Value" AssociatedControlID="txtValue"></asp:Label>
                             </td>
                             <td>
-                                <ajax:NumericUpDownExtender ID="nValue" runat="server" TargetControlID="txtValue"
-                                    Width="100" Minimum="1" Maximum="100">
+                                <ajax:NumericUpDownExtender ID="NumericUpDownExtender1" runat="server" TargetControlID="txtValue"
+                                    Width="100" Minimum="1">
                                 </ajax:NumericUpDownExtender>
                                 <asp:TextBox ID="txtValue" runat="server" MaxLength="4"></asp:TextBox>
                             </td>
@@ -651,8 +653,8 @@
                                             <input type="hidden" id="hdnID" runat="server" value='<%# ((AJH.CMS.Core.Entities.Attribute)Container.DataItem).ID%>' />
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:BoundField DataField="ID" HeaderText="ID" />
-                                    <asp:BoundField DataField="Name" HeaderText="Name" />
+                                    
+                                    <asp:BoundField DataField="Name" HeaderText="Attribute Name" />
                                 </Columns>
                             </asp:GridView>
                         </div>
@@ -706,6 +708,9 @@
                         </div>
                     </asp:Panel>
                 </asp:Panel>
+                <br />
+                <br />
+                <br />
                 <asp:Panel ID="pnlCombinationImage" runat="server" Style="display: none;">
                     <div>
                         <div class="grid-actions">
@@ -763,6 +768,80 @@
                                 Text="Save" NotificationOperationDone="true" ValidationGroup="AddEditProductImage" />
                         </div>
                     </div>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+    <div id="dvProductAttribute" runat="server" class="tabdiv">
+        <asp:UpdatePanel ID="upnlProductAttribute" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <asp:Panel ID="pnlProductAttribute" runat="server" Visible="true">
+                    <div class="grid-actions">
+                        <asp:ImageButton ID="ibtnDeleteProductAttribute" runat="server" ImageUrl="~/App_Themes/image/delete.png"
+                            ToolTip="Delete" NotificationOperationDone="true"></asp:ImageButton>
+                    </div>
+                    <div class="grid-headers">
+                        <asp:Label ID="lblProductAttribute" runat="server" Text="Product Attribute"></asp:Label>
+                    </div>
+                    <div class="grid-items">
+                        <asp:GridView ID="gvProductAttribute" runat="server" AllowPaging="true" PageSize="10"
+                            AutoGenerateColumns="false" CssClass="grd" Width="100%" DataKeyNames="ID">
+                            <EmptyDataTemplate>
+                                No Items found
+                            </EmptyDataTemplate>
+                            <Columns>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="chkItem" runat="server" />
+                                        <input type="hidden" id="hdnID" runat="server" value='<%# ((AJH.CMS.Core.Entities.ProductAttribute)Container.DataItem).ID%>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:BoundField DataField="GroupName" HeaderText="Group Name" />
+                                <asp:BoundField DataField="ECO_LAN_NAME" HeaderText="Attribute" />
+                            </Columns>
+                        </asp:GridView>
+                    </div>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <asp:UpdatePanel ID="upnlProductAttributeDetails" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <div id="dvProductAttributeProblems" runat="server" class="dv-problem">
+                </div>
+                <asp:Panel ID="pnlProductAttributeDetails" runat="server" Visible="true">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblAttribute" runat="server" Text="Group" AssociatedControlID="ddlGroupAttribute"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:DropDownList ID="ddlGroupAttribute" runat="server" Width="254">
+                                </asp:DropDownList>
+                                <ajax:CascadingDropDown ID="cddlAttribute" runat="server" TargetControlID="ddlGroupAttribute"
+                                    Category="Attribute" PromptValue="-1" PromptText="[Select]" LoadingText="[Loading...]"
+                                    ServicePath="~/Admin/Services/ECommerce/Group/GroupService.asmx" ServiceMethod="GetAllGroups" />
+                                <asp:RequiredFieldValidator ID="rfvAttribute" runat="server" ControlToValidate="ddlGroupAttribute"
+                                    ValidationGroup="AddEditAttributeValue" Display="Dynamic" ErrorMessage="Feature"
+                                    InitialValue="-1">*</asp:RequiredFieldValidator>
+                                <div class="footer-buttons">
+                                    <asp:Button CssClass="btn" ID="btnGetAttribute" runat="server" Width="60px" Text="Show" />
+                                </div>
+                            </td>
+                            <td>
+                                <asp:Label ID="lblAttributes" runat="server" Text="Attributes" AssociatedControlID="chkAttributes"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:CheckBoxList ID="chkAttributes" runat="server">
+                                </asp:CheckBoxList>
+                            </td>
+                            <td>
+                                <div class="footer-buttons">
+                                    <asp:Button CssClass="btn" ID="btnSaveProductAttribute" runat="server" Width="60px"
+                                        ValidationGroup="AddEditAttributeValue" Text="Save" NotificationOperationDone="true" />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </asp:Panel>
             </ContentTemplate>
         </asp:UpdatePanel>

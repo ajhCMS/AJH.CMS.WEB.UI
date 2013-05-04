@@ -127,8 +127,16 @@ namespace AJH.CMS.WEB.UI.Admin
             this.btnSaveCombinationAttribute.Click += new EventHandler(btnSaveCombinationAttribute_Click);
             #endregion
 
+            #region Product Attribute Events
+            this.ibtnDeleteProductAttribute.Click += new ImageClickEventHandler(ibtnDeleteProductAttribute_Click);
+            this.btnSaveProductAttribute.Click += new EventHandler(btnSaveProductAttribute_Click);
+            //ddlGroupAttribute.SelectedIndexChanged += new EventHandler(ddlGroupAttribute_SelectedIndexChanged);
+            this.btnGetAttribute.Click += new EventHandler(btnGetAttribute_Click);
+            #endregion
+
             base.OnInit(e);
         }
+
 
         #endregion
 
@@ -545,8 +553,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 if (featureId > 0 && SelecedProductId > 0)
                 {
                     FeatureManager.DeleteProductFeature(featureId, SelecedProductId);
-                    FeatureManager.AddProductFeature(featureId,
-                        SelecedProductId, Convert.ToInt32(txtValue.Text));
+                    FeatureManager.AddProductFeature(featureId,SelecedProductId, Convert.ToInt32(txtValue.Text));
 
                     FillProductFeatures(SelecedProductId);
                 }
@@ -1035,6 +1042,62 @@ namespace AJH.CMS.WEB.UI.Admin
 
         #endregion
 
+        #region Product Attribute Event
+        void ibtnDeleteProductAttribute_Click(object sender, ImageClickEventArgs e)
+        {
+            for (int i = 0; i < gvProductAttribute.Rows.Count; i++)
+            {
+                CheckBox chkItem = (CheckBox)gvProductAttribute.Rows[i].FindControl("chkItem");
+                if (chkItem != null && chkItem.Checked)
+                {
+                    HtmlInputHidden hdnID = (HtmlInputHidden)gvProductAttribute.Rows[i].FindControl("hdnID");
+                    if (hdnID != null && !string.IsNullOrEmpty(hdnID.Value))
+                    {
+                        int ProductAttributeID = Convert.ToInt32(hdnID.Value);
+                        AttributeManager.DeleteProductAttribute(ProductAttributeID);
+                    }
+                }
+            }
+            FillProductAttribute(SelecedProductId);
+            upnlProductAttribute.Update();
+        }
+
+        void btnSaveProductAttribute_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                foreach (ListItem AttributeItem in chkAttributes.Items)
+                {
+                    if (AttributeItem.Selected)
+                    {
+                        AttributeManager.AddProductAttribute(Convert.ToInt32(AttributeItem.Value), SelecedProductId, "");
+                    }
+                }
+
+                
+                    FillProductAttribute(SelecedProductId);
+            
+            }
+            catch (Exception ex)
+            {
+                dvProductAttributeProblems.Visible = true;
+                dvProductAttributeProblems.InnerText = ex.ToString();
+            }
+            finally
+            {
+                upnlProductAttribute.Update();
+            }
+
+        }
+
+        void btnGetAttribute_Click(object sender, EventArgs e)
+        {
+            GetAttributeByGroup(Convert.ToInt32(ddlGroupAttribute.SelectedItem.Value));
+        }
+
+        #endregion
+
         #region Methods
 
         #region General Methods
@@ -1048,6 +1111,7 @@ namespace AJH.CMS.WEB.UI.Admin
             ibtnDeleteCombinationImage.OnClientClick = "return ConfirmOperation('" + dlsConnectedCombinationImage.ClientID + "','Are you sure to delete this item(s)?');";
             btnSaveCombinationImage.OnClientClick = "return ConfirmOperation('" + dlsAllProdcutImage.ClientID + "','Are you sure to Add this item(s)?');";
             btnSaveCombinationAttribute.OnClientClick = "return ConfirmOperation('" + gvNotConnectedCombinationAttributes.ClientID + "','Are you sure to Add this item(s)?');";
+            ibtnDeleteProductAttribute.OnClientClick = "return ConfirmOperation('" + gvProductAttribute.ClientID + "','Are you sure to delete this item(s)?');";
         }
 
         #endregion
@@ -1110,13 +1174,15 @@ namespace AJH.CMS.WEB.UI.Admin
             liProductImage.Visible = false;
             liProductPrice.Visible = false;
             liCombinationProduct.Visible = false;
-
+            liProductAttribute.Visible = false;
+            
 
             dvProductCatalog.Visible = false;
             dvProductFeature.Visible = false;
             dvProductImage.Visible = false;
             dvProductPrice.Visible = false;
             dvCombinationProduct.Visible = false;
+            dvProductAttribute.Visible = false;
 
         }
 
@@ -1176,6 +1242,11 @@ namespace AJH.CMS.WEB.UI.Admin
                     liCombinationProduct.Visible = true;
                     dvCombinationProduct.Visible = true;
                     FillCombinationProduct(productID);
+
+                    //fill Product Attribute
+                    liProductAttribute.Visible = true;
+                    dvProductAttribute.Visible = true;
+                    FillProductAttribute(productID);
 
                     //for each One begin Edit Mode  :
                     dvProductImage.Visible = true;
@@ -1520,6 +1591,32 @@ namespace AJH.CMS.WEB.UI.Admin
             return CMSContext.VirtualUploadFolder + imageName;
         }
 
+        #endregion
+
+        #region product Attributes Method
+        private void FillProductAttribute(int productID)
+        {
+            List<AJH.CMS.Core.Entities.ProductAttribute> productAttributes = ProductAttributeManager.GetAttributeByProductID(productID, CMSContext.LanguageID);
+            gvProductAttribute.DataSource = productAttributes;
+            gvProductAttribute.DataBind();
+        }
+
+        private void GetAttributeByGroup(int GroupID)
+        {
+            chkAttributes.Items.Clear();
+            IList<AJH.CMS.Core.Entities.Attribute> _Attribute = new List<AJH.CMS.Core.Entities.Attribute>().ToList();
+            _Attribute = AttributeManager.GetAttributesByGroupID(GroupID, CMSContext.LanguageID);
+            if (null != _Attribute)
+            {
+                foreach (AJH.CMS.Core.Entities.Attribute attribute in _Attribute)
+                {
+                    ListItem AttributeItem = new ListItem();
+                    AttributeItem.Text = attribute.Name;
+                    AttributeItem.Value = attribute.ID.ToString();
+                    chkAttributes.Items.Add(AttributeItem);
+                }
+            }
+        }
         #endregion
 
         #region ReflectDDL
