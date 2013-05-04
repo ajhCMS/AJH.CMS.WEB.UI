@@ -120,5 +120,20 @@
     <NotInBuild Include="Scripts\2_Deployment\Step3\01 Add Roles And Permession CustomerManager.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step1\07 Add Order_OrderDetails Table.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step2\07 Product Attribute SP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step2\08 Order Table SP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step2\09 OrderDetails SP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\2_Deployment\Step2\10 Product Order Detials SP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
   </ItemGroup>
 </Project>

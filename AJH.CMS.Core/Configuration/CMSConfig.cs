@@ -39,6 +39,7 @@ namespace AJH.CMS.Core.Configuration
             public const string PageNumber = "PageNumber";
             public const string ProductID = "ProductID";
             public const string CatalogID = "CatalogID";
+            public const string CombinationPrductID = "ComProductID";
         }
 
         public static class CMSAdminPages

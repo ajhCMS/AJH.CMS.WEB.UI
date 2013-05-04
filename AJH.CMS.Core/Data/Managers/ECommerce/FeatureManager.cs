@@ -30,7 +30,7 @@ namespace AJH.CMS.Core.Data
             FeatureDataMapper.DeleteLogical(id);
         }
 
-        public static void AddProductFeature(int featureId, int productId, int productFeatureValue)
+        public static void AddProductFeature(int featureId, int productId, int   productFeatureValue)
         {
             FeatureDataMapper.AddProductFeature(featureId, productId, productFeatureValue);
         }

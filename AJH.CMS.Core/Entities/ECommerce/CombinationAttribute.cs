@@ -1,31 +1,24 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 namespace AJH.CMS.Core.Entities
 {
-    public class Attribute : IEntity
+    public class CombinationAttribute : IEntity
     {
-        public int GroupID
-        {
-            get;
-            set;
-        }
-
-        public int ModuleID
-        {
-            get;
-            set;
-        }
-
-        public bool IsDeleted
+        int COMBINATION_ID
         {
             set;
             get;
         }
+        int ATTRIBUTE_ID
+        {
+            set;
+            get;
+        }
+        
 
-        //public string Details
-        //{
-        //    set;
-        //    get;
-        //}
         #region IEntity Members
 
         public int ID
@@ -54,16 +47,14 @@ namespace AJH.CMS.Core.Entities
 
         #endregion
 
-        public Attribute()
+        public CombinationAttribute()
         {
+            this.ATTRIBUTE_ID = 0;
+            this.COMBINATION_ID = 0;
             this.ID = 0;
             this.Name = string.Empty;
             this.PortalID = 0;
             this.LanguageID = 0;
-            this.ModuleID = 0;
-            this.GroupID = 0;
-            this.IsDeleted = false;
-            //this.Details = string.Empty;
         }
     }
 }

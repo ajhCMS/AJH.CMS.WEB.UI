@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AJH.CMS.Core.Entities;
 
 namespace AJH.CMS.Core.Data
 {
@@ -47,6 +48,21 @@ namespace AJH.CMS.Core.Data
         public static List<AJH.CMS.Core.Entities.Attribute> GetAttributesByGroupID(int groupID, int languageID)
         {
             return AttributeDataMapper.GetAttributesByGroupID(groupID, languageID);
+        }
+
+        public static void AddProductAttribute(int attributeID, int ProductID, string Details)
+        {
+            AttributeDataMapper.AddProductAttribute(attributeID, ProductID, Details);
+        }
+
+        public static void DeleteProductAttribute(int ProductAttributeID)
+        {
+            AttributeDataMapper.DeleteProductAttribute(ProductAttributeID);
+        }
+
+        public static List<Attribute> GetAttributeByProductID(int productID, int LanguageID)
+        {
+            return AttributeDataMapper.GetAttributeByProductId(productID, LanguageID);
         }
     }
 }
