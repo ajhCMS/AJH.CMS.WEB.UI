@@ -117,61 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Active" xml:space="preserve">
-    <value>Active</value>
+  <data name="lblAddress1.Text" xml:space="preserve">
+    <value>Address</value>
   </data>
-  <data name="Admin" xml:space="preserve">
-    <value>Admin</value>
+  <data name="lblAddress2.Text" xml:space="preserve">
+    <value>Address (Line 2)</value>
   </data>
-  <data name="Allow" xml:space="preserve">
-    <value>مسموح</value>
+  <data name="lblAddress3.Text" xml:space="preserve">
+    <value>Address (line 3)</value>
   </data>
-  <data name="Deny" xml:space="preserve">
-    <value>غير مسموح</value>
+  <data name="lblCity.Text" xml:space="preserve">
+    <value>City</value>
   </data>
-  <data name="External" xml:space="preserve">
-    <value>External</value>
+  <data name="lblConfirmPassword.Text" xml:space="preserve">
+    <value>Confirm Password</value>
   </data>
-  <data name="Female" xml:space="preserve">
-    <value>أنثى</value>
+  <data name="lblCountry.Text" xml:space="preserve">
+    <value>Country</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>الرئيسية</value>
+  <data name="lblDate.Text" xml:space="preserve">
+    <value>BirthDate</value>
   </data>
-  <data name="InActive" xml:space="preserve">
-    <value>InActive</value>
+  <data name="lblEmail.Text" xml:space="preserve">
+    <value>E-mail (Username)</value>
   </data>
-  <data name="Internal" xml:space="preserve">
-    <value>Internal</value>
+  <data name="lblfName.Text" xml:space="preserve">
+    <value>First Name</value>
   </data>
-  <data name="Male" xml:space="preserve">
-    <value>ذكر</value>
+  <data name="lblGender.Text" xml:space="preserve">
+    <value>Gender</value>
   </data>
-  <data name="NotPublish" xml:space="preserve">
-    <value>Not Publish</value>
+  <data name="lblHomePhone.Text" xml:space="preserve">
+    <value>Home Phone</value>
   </data>
-  <data name="Page" xml:space="preserve">
-    <value>Page</value>
+  <data name="lbllName.Text" xml:space="preserve">
+    <value>Last Name</value>
   </data>
-  <data name="Publish" xml:space="preserve">
-    <value>Publish</value>
+  <data name="lblMobile.Text" xml:space="preserve">
+    <value>Mobile Phone</value>
   </data>
-  <data name="PublishInterval" xml:space="preserve">
-    <value>Publish Interval</value>
+  <data name="lblNewsLetter.Text" xml:space="preserve">
+    <value>NewsLetter</value>
   </data>
-  <data name="Static" xml:space="preserve">
-    <value>Static</value>
+  <data name="lblOptIn.Text" xml:space="preserve">
+    <value>Opt-In</value>
   </data>
-  <data name="System" xml:space="preserve">
-    <value>System</value>
+  <data name="lblPassword.Text" xml:space="preserve">
+    <value>Password</value>
   </data>
-  <data name="Unknown" xml:space="preserve">
-    <value>غير معروف</value>
+  <data name="lblStatus.Text" xml:space="preserve">
+    <value>Status</value>
   </data>
-  <data name="URL" xml:space="preserve">
-    <value>URL</value>
-  </data>
-  <data name="User" xml:space="preserve">
-    <value>User</value>
+  <data name="lblZip.Text" xml:space="preserve">
+    <value>Zip Code</value>
   </data>
 </root>
