@@ -83,6 +83,51 @@ namespace AJH.CMS.WEB.UI
                 List<ProductImage> productImages =
                     ProductImageManager.GetProductImagesByProductID(product.ID, CMSContext.LanguageID);
 
+                /// Load Groups
+                List<Group> Groups =
+                    GroupManager.GetGroups(CMSContext.PortalID, CMSContext.LanguageID);
+                foreach (Group oGroup in Groups)
+                {
+                    if (!oGroup.IsDeleted)
+                    {
+
+                        XmlElement groupElement = xmlDoc.CreateElement("Group");
+                        XmlAttribute GroupAttr = xmlDoc.CreateAttribute("ID");
+                        GroupAttr.Value = oGroup.ID.ToString();
+                        groupElement.Attributes.Append(GroupAttr);
+
+                        GroupAttr = xmlDoc.CreateAttribute("Name");
+                        GroupAttr.Value = oGroup.Name;
+                        groupElement.Attributes.Append(GroupAttr);
+
+                        GroupAttr = xmlDoc.CreateAttribute("PublicName");
+                        GroupAttr.Value = oGroup.PublicName;
+
+                        groupElement.Attributes.Append(GroupAttr);
+                        root.AppendChild(groupElement);
+
+                        /// Load Group Attributes 
+                        List<AJH.CMS.Core.Entities.Attribute> Attributes = AttributeManager.GetAttributesByGroupID(oGroup.ID, CMSContext.LanguageID);
+                        foreach (AJH.CMS.Core.Entities.Attribute oAttribute in Attributes)
+                        {
+                            if (!oAttribute.IsDeleted)
+                            {
+                                XmlElement AttributesElement = xmlDoc.CreateElement("Attribute");
+                                XmlAttribute AttributesAttr = xmlDoc.CreateAttribute("ID");
+                                AttributesAttr.Value = oAttribute.ID.ToString();
+                                AttributesElement.Attributes.Append(AttributesAttr);
+
+                                AttributesAttr = xmlDoc.CreateAttribute("Name");
+                                AttributesAttr.Value = oAttribute.Name;
+
+                                AttributesElement.Attributes.Append(AttributesAttr);
+                                groupElement.AppendChild(AttributesElement);
+                            }
+                        }
+                    }
+
+                }
+
                 if (productImages != null && productImages.Count > 0)
                     for (int i = 0; i <= productImages.Count - 1; i++)
                     {
