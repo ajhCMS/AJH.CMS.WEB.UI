@@ -27,6 +27,11 @@ namespace AJH.CMS.Core.Entities
             set;
             get;
         }
+        public int ORD_PRO_DET_GROUP_ID
+        {
+            set;
+            get;
+        }
         #region IEntity Members
 
         public int ID
@@ -64,6 +69,7 @@ namespace AJH.CMS.Core.Entities
             this.ORD_PRO_DET_PRODUCT_ID = 0;
             this.ORD_PRO_DET_DETAILS_ID = 0;
             this.ORD_PRO_DET_XREF_PRODUCT_DETAILS = 0;
+            this.ORD_PRO_DET_GROUP_ID = 0;
         }
     }
 }
