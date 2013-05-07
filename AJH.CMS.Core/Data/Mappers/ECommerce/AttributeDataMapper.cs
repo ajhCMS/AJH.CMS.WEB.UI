@@ -38,6 +38,8 @@ namespace AJH.CMS.Core.Data
         internal const string SN_ATTRIBUTE_GET_BY_ID = "[ECOMMERCE].[AttributeGetByID]";
         internal const string SN_ATTRIBUTE_GET_ALL = "[ECOMMERCE].[AttributeGetAll]";
         internal const string SN_ATTRIBUTE_GET_BY_COMBINATION_ID = "[ECOMMERCE].[AttributeGetByCombinationID]";
+        internal const string SN_ATTRIBUTE_GET_BY_COMBINATION_GRP_ID = "[ECOMMERCE].[AttributeGetByCombinationGRPID]";
+        
         internal const string SN_ATTRIBUTE_GET_BY_GROUP_ID = "[ECOMMERCE].[AttributeGetByGroupID]";
 
         internal const string SN_PRODUCT_ATTRIBUTE_ADD = "[ECOMMERCE].[ProductAttributeAdd]";
@@ -312,6 +314,56 @@ namespace AJH.CMS.Core.Data
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = combinationID;
                 sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_ECO_LAN_LAN_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = languageID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_MODULE_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = (int)CMSEnums.ECommerceModule.Attribute;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlCommand.Connection.Open();
+                using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader(System.Data.CommandBehavior.CloseConnection))
+                {
+                    colAttributes = new List<AJH.CMS.Core.Entities.Attribute>();
+                    while (sqlDataReader.Read())
+                    {
+                        attribute = GetAttribute(colAttributes, sqlDataReader);
+                        FillFromReader(attribute, sqlDataReader);
+                    }
+
+                    sqlDataReader.Close();
+                    sqlCommand.Connection.Close();
+                }
+            }
+            return colAttributes;
+        }
+
+        internal static List<AJH.CMS.Core.Entities.Attribute> GetAttributesByCombinationGroupID(int combinationID,int GroupId, int languageID)
+        {
+            List<AJH.CMS.Core.Entities.Attribute> colAttributes = null;
+            AJH.CMS.Core.Entities.Attribute attribute = null;
+
+            using (SqlConnection sqlConnection = new SqlConnection(CMSCoreBase.CMSCoreConnectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(SN_ATTRIBUTE_GET_BY_COMBINATION_GRP_ID, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlParameter sqlParameter = null;
+                sqlParameter = new SqlParameter(CombinationProductDataMapper.PN_COMBINATION_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = combinationID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = null;
+                sqlParameter = new SqlParameter(CombinationProductDataMapper.PN_GROUP_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = GroupId;
+                sqlCommand.Parameters.Add(sqlParameter);
+                
 
                 sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_ECO_LAN_LAN_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;

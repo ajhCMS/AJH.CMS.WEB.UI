@@ -31,6 +31,7 @@ namespace AJH.CMS.Core.Data
         internal const string SN_GROUP_DELETE_LOGICAL = "[ECOMMERCE].[GroupDeleteLogical]";
         internal const string SN_GROUP_GET_BY_ID = "[ECOMMERCE].[GroupGetByID]";
         internal const string SN_GROUP_GET_ALL = "[ECOMMERCE].[GroupGetAll]";
+        internal const string SN_GROUP_GET_BY_COMB_ID = "[ECOMMERCE].[GroupGetBYCOMBINATIONID]";
 
         #endregion
 
@@ -271,6 +272,56 @@ namespace AJH.CMS.Core.Data
                 sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
 
                 SqlParameter sqlParameter = null;
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_ECO_LAN_LAN_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = languageID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_MODULE_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = (int)CMSEnums.ECommerceModule.Group;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_GROUP_PORTAL_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = portalID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+
+                sqlCommand.Connection.Open();
+                using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader(System.Data.CommandBehavior.CloseConnection))
+                {
+                    colGroups = new List<Group>();
+                    while (sqlDataReader.Read())
+                    {
+                        Group = GetGroup(colGroups, sqlDataReader);
+                        FillFromReader(Group, sqlDataReader);
+                    }
+
+                    sqlDataReader.Close();
+                    sqlCommand.Connection.Close();
+                }
+            }
+            return colGroups;
+        }
+
+        internal static List<Group> GetGroupsByCombinationID(int CombinationID, int portalID, int languageID)
+        {
+            List<Group> colGroups = null;
+            Group Group = null;
+
+            using (SqlConnection sqlConnection = new SqlConnection(CMSCoreBase.CMSCoreConnectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(SN_GROUP_GET_BY_COMB_ID, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlParameter sqlParameter = null;
+                sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_Combination_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CombinationID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                 sqlParameter = null;
                 sqlParameter = new SqlParameter(ECommerceDataMapperBase.PN_ECO_LAN_LAN_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = languageID;

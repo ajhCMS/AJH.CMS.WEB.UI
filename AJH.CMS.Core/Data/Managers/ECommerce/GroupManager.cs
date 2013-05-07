@@ -35,6 +35,11 @@ namespace AJH.CMS.Core.Data
             return GroupDataMapper.GetGroups(portalID, languageID);
         }
 
+        public static List<Group> GetGroupsByCombinationID(int CobinationID, int portalID, int languageID)
+        {
+            return GroupDataMapper.GetGroupsByCombinationID(CobinationID,portalID, languageID);
+        }
+
         public static Group GetGroup(int id, int languageID)
         {
             return GroupDataMapper.GetGroup(id, languageID);

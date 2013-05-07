@@ -29,6 +29,8 @@ namespace AJH.CMS.Core.Data
 
 
         internal const string PN_COMBINATION_ID = "P_COMBINATION_ID";
+        internal const string PN_GROUP_ID = "P_GROUP_ID";
+        
         internal const string PN_COMBINATION_PRODUCT_ID = "P_COMBINATION_PRODUCT_ID";
         internal const string PN_COMBINATION_PRODUCT_REFERENCE_NAME = "P_COMBINATION_PRODUCT_REFERENCE";
         internal const string PN_COMBINATION_PRODUCT_EAN13_NAME = "P_COMBINATION_PRODUCT_EAN13";
@@ -702,6 +704,10 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(CN_COMBINATION_PRODUCT_IS_DELETED);
             if (!reader.IsDBNull(colIndex))
                 combinationProduct.IsDefault = reader.GetBoolean(colIndex);
+
+            colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_NAME);
+            if (!reader.IsDBNull(colIndex))
+                combinationProduct.Location = reader.GetString(colIndex);
 
             colIndex = reader.GetOrdinal(ECommerceDataMapperBase.CN_ECO_LAN_NAME);
             if (!reader.IsDBNull(colIndex))

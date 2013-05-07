@@ -26,6 +26,8 @@ namespace AJH.CMS.Core.Data
         internal const string PN_ECO_LAN_MESSAGE1 = "P_ECO_LAN_MESSAGE1";
         internal const string PN_ECO_LAN_MESSAGE2 = "P_ECO_LAN_MESSAGE2";
         internal const string PN_ECO_LAN_MESSAGE3 = "P_ECO_LAN_MESSAGE3";
+        internal const string PN_Combination_ID = "P_COMBINATION_ID";
+        
 
         #endregion
 

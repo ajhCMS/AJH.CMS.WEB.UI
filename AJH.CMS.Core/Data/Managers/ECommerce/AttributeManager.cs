@@ -45,6 +45,11 @@ namespace AJH.CMS.Core.Data
             return AttributeDataMapper.GetAttributesByCombinationID(combinationID, languageID);
         }
 
+        public static List<AJH.CMS.Core.Entities.Attribute> GetAttributesByCombinationAndGroupID(int combinationID,int GroupID, int languageID)
+        {
+            return AttributeDataMapper.GetAttributesByCombinationGroupID(combinationID, GroupID, languageID);
+        }
+
         public static List<AJH.CMS.Core.Entities.Attribute> GetAttributesByGroupID(int groupID, int languageID)
         {
             return AttributeDataMapper.GetAttributesByGroupID(groupID, languageID);
