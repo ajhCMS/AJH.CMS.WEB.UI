@@ -18,15 +18,51 @@ namespace AJH.CMS.WEB.UI
         {
             base.OnInit(e);
             this.Load += new EventHandler(Product_UC_Load);
+            this.ddlCombinations.SelectedIndexChanged += new EventHandler(ddlCombinations_SelectedIndexChanged);
         }
         #endregion
 
         #region Product_UC_Load
         void Product_UC_Load(object sender, EventArgs e)
         {
-            LoadProduct();
+            if (!IsPostBack)
+            {
+                int productValue = -1;
+                if (base.ContainerValue > 0)
+                {
+                    productValue = base.ContainerValue;
+                }
+                else
+                {
+                    if (!string.IsNullOrEmpty(CMSConfig.QueryString.ProductID))
+                    {
+                        int.TryParse(Request.QueryString[CMSConfig.QueryString.ProductID], out productValue);
+                    }
+                }
+
+
+                Product product = ProductManager.GetProduct(productValue, CMSContext.PortalID, CMSContext.LanguageID);
+                    List<CombinationProduct> CombinationProducts = CombinationProductManager.GetCombinationProductsByProductId(product.ID, CMSContext.LanguageID);
+                    ddlCombinations.DataSource = CombinationProducts;
+                    ddlCombinations.DataTextField = "ProductReference";
+                    ddlCombinations.DataValueField = "ID";
+                    ddlCombinations.DataBind();
+                    if (ddlCombinations.Items.Count > 0)
+                    {
+                        ddlCombinations.SelectedIndex = 0;
+                        ddlCombinations_SelectedIndexChanged(null, null);
+                    }
+                
+            }
+                LoadProduct();
+            
         }
         #endregion
+
+         void ddlCombinations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadGroups();
+        }
 
         #endregion
 
@@ -83,50 +119,7 @@ namespace AJH.CMS.WEB.UI
                 List<ProductImage> productImages =
                     ProductImageManager.GetProductImagesByProductID(product.ID, CMSContext.LanguageID);
 
-                /// Load Groups
-                List<Group> Groups =
-                    GroupManager.GetGroups(CMSContext.PortalID, CMSContext.LanguageID);
-                foreach (Group oGroup in Groups)
-                {
-                    if (!oGroup.IsDeleted)
-                    {
-
-                        XmlElement groupElement = xmlDoc.CreateElement("Group");
-                        XmlAttribute GroupAttr = xmlDoc.CreateAttribute("ID");
-                        GroupAttr.Value = oGroup.ID.ToString();
-                        groupElement.Attributes.Append(GroupAttr);
-
-                        GroupAttr = xmlDoc.CreateAttribute("Name");
-                        GroupAttr.Value = oGroup.Name;
-                        groupElement.Attributes.Append(GroupAttr);
-
-                        GroupAttr = xmlDoc.CreateAttribute("PublicName");
-                        GroupAttr.Value = oGroup.PublicName;
-
-                        groupElement.Attributes.Append(GroupAttr);
-                        root.AppendChild(groupElement);
-
-                        /// Load Group Attributes 
-                        List<AJH.CMS.Core.Entities.Attribute> Attributes = AttributeManager.GetAttributesByGroupID(oGroup.ID, CMSContext.LanguageID);
-                        foreach (AJH.CMS.Core.Entities.Attribute oAttribute in Attributes)
-                        {
-                            if (!oAttribute.IsDeleted)
-                            {
-                                XmlElement AttributesElement = xmlDoc.CreateElement("Attribute");
-                                XmlAttribute AttributesAttr = xmlDoc.CreateAttribute("ID");
-                                AttributesAttr.Value = oAttribute.ID.ToString();
-                                AttributesElement.Attributes.Append(AttributesAttr);
-
-                                AttributesAttr = xmlDoc.CreateAttribute("Name");
-                                AttributesAttr.Value = oAttribute.Name;
-
-                                AttributesElement.Attributes.Append(AttributesAttr);
-                                groupElement.AppendChild(AttributesElement);
-                            }
-                        }
-                    }
-
-                }
+               
 
                 if (productImages != null && productImages.Count > 0)
                     for (int i = 0; i <= productImages.Count - 1; i++)
@@ -167,6 +160,81 @@ namespace AJH.CMS.WEB.UI
         }
         #endregion
 
+        #region LoadGroups
+        void LoadGroups()
+        {
+            if (base.XSLTemplateID > 0)
+            {
+                string xslPath = CMSWebHelper.GetXSLTemplateFilePath(base.XSLTemplateID);
+                xslPath = XSLTemplateManager.GetXSLTemplatePath(xslPath, base.XSLTemplateID);
+
+                XmlDocument xmlDoc = new XmlDocument();
+
+                XmlElement root = xmlDoc.CreateElement("Products");
+                xmlDoc.AppendChild(root);
+
+
+                CombinationProduct oCombinationProduct
+                 = CombinationProductManager.GetCombinationProduct(Convert.ToInt32(ddlCombinations.SelectedValue), CMSContext.LanguageID);
+                /// Load Groups
+                
+                List<Group> Groups =
+                    GroupManager.GetGroupsByCombinationID(oCombinationProduct.ID, CMSContext.PortalID, CMSContext.LanguageID);
+
+                foreach (Group oGroup in Groups)
+                {
+                    if (!oGroup.IsDeleted)
+                    {
+
+                        XmlElement groupElement = xmlDoc.CreateElement("Group");
+                        XmlAttribute GroupAttr = xmlDoc.CreateAttribute("ID");
+                        GroupAttr.Value = oGroup.ID.ToString();
+                        groupElement.Attributes.Append(GroupAttr);
+
+                        GroupAttr = xmlDoc.CreateAttribute("Name");
+                        GroupAttr.Value = oGroup.Name;
+                        groupElement.Attributes.Append(GroupAttr);
+
+                        GroupAttr = xmlDoc.CreateAttribute("PublicName");
+                        GroupAttr.Value = oGroup.PublicName;
+
+                        groupElement.Attributes.Append(GroupAttr);
+                        root.AppendChild(groupElement);
+
+                        /// Load Group Attributes
+                        /// 
+                        List<AJH.CMS.Core.Entities.Attribute> Attributes = AttributeManager.GetAttributesByCombinationAndGroupID( oCombinationProduct.ID,oGroup.ID, CMSContext.LanguageID);
+                        foreach (AJH.CMS.Core.Entities.Attribute oAttribute in Attributes)
+                        {
+                            if (!oAttribute.IsDeleted)
+                            {
+                                XmlElement AttributesElement = xmlDoc.CreateElement("Attribute");
+                                XmlAttribute AttributesAttr = xmlDoc.CreateAttribute("ID");
+                                AttributesAttr.Value = oAttribute.ID.ToString();
+                                AttributesElement.Attributes.Append(AttributesAttr);
+
+                                AttributesAttr = xmlDoc.CreateAttribute("Name");
+                                AttributesAttr.Value = oAttribute.Name;
+
+                                AttributesElement.Attributes.Append(AttributesAttr);
+                                groupElement.AppendChild(AttributesElement);
+                            }
+                        }
+                    }
+
+                }
+
+                XsltArgumentList arguments = new XsltArgumentList();
+                arguments.AddExtensionObject("CMS:UserControl", this);
+
+                xmlGroup.DocumentContent = xmlDoc.OuterXml;
+                xmlGroup.TransformSource = xslPath;
+                xmlGroup.TransformArgumentList = arguments;
+                xmlGroup.DataBind();
+            }
+        }
+        #endregion
+
         #region GetContainerValue
         public override Dictionary<string, string> GetContainerValue(int ModuleID, int PortalID, int LanguageID)
         {
@@ -180,6 +248,8 @@ namespace AJH.CMS.WEB.UI
             return items;
         }
         #endregion
+
+
 
         #endregion
     }

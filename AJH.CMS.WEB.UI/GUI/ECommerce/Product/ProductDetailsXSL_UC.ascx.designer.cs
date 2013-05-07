@@ -13,6 +13,33 @@ namespace AJH.CMS.WEB.UI {
     public partial class ProductDetailsXSL_UC {
         
         /// <summary>
+        /// lblCombination control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCombination;
+        
+        /// <summary>
+        /// ddlCombinations control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCombinations;
+        
+        /// <summary>
+        /// xmlGroup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Xml xmlGroup;
+        
+        /// <summary>
         /// xmlProduct control.
         /// </summary>
         /// <remarks>
