@@ -40,6 +40,7 @@ namespace AJH.CMS.WEB.UI
                     }
                 }
 
+                
 
                 Product product = ProductManager.GetProduct(productValue, CMSContext.PortalID, CMSContext.LanguageID);
                     List<CombinationProduct> CombinationProducts = CombinationProductManager.GetCombinationProductsByProductId(product.ID, CMSContext.LanguageID);
@@ -51,8 +52,10 @@ namespace AJH.CMS.WEB.UI
                     {
                         ddlCombinations.SelectedIndex = 0;
                         ddlCombinations_SelectedIndexChanged(null, null);
+                        CMSContext.CombinationID = Convert.ToInt32(ddlCombinations.SelectedValue);
                     }
                 
+                    
             }
                 LoadProduct();
             
@@ -61,6 +64,7 @@ namespace AJH.CMS.WEB.UI
 
          void ddlCombinations_SelectedIndexChanged(object sender, EventArgs e)
         {
+            CMSContext.CombinationID = Convert.ToInt32(ddlCombinations.SelectedValue);
             LoadGroups();
         }
 

@@ -29,6 +29,9 @@ namespace AJH.CMS.Core.Data
         internal const string CN_CUSTOMER_NEWSLETTER="CUSTOMER_NEWSLETTER";
         internal const string CN_CUSTOMER_OPT_IN="CUSTOMER_OPT_IN";
         internal const string CN_CUSTOMER_USER_ID="CUSTOMER_USER_ID";
+        internal const string CN_CUSTOMER_EDUCATION = "CUSTOMER_EDUCATION";
+        internal const string CN_CUSTOMER_POSITION = "CUSTOMER_POSITION";
+        internal const string CN_CUSTOMER_LOCATION = "CUSTOMER_LOCATION";
 
         internal const string PN_CUSTOMER_ID="P_CUSTOMER_ID";
         internal const string PN_CUSTOMER_FNAME="P_CUSTOMER_FNAME";
@@ -47,6 +50,9 @@ namespace AJH.CMS.Core.Data
         internal const string PN_CUSTOMER_NEWSLETTER="P_CUSTOMER_NEWSLETTER";
         internal const string PN_CUSTOMER_OPT_IN="P_CUSTOMER_OPT_IN";
         internal const string PN_CUSTOMER_USER_ID = "P_CUSTOMER_USER_ID";
+        internal const string PN_CUSTOMER_EDUCATION = "P_CUSTOMER_EDUCATION";
+        internal const string PN_CUSTOMER_POSITION = "P_CUSTOMER_POSITION";
+        internal const string PN_CUSTOMER_LOCATION = "P_CUSTOMER_LOCATION";
 
         internal const string SN_CUSTOMER_ADD = "[ECOMMERCE].[CustomerAdd]";
         internal const string SN_CUSTOMER_UPDATE = "[ECOMMERCE].[CustomerUpdate]";
@@ -153,6 +159,21 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_CUSTOMER_USER_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = CustomerEntity.CUSTOMER_USER_ID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_CUSTOMER_EDUCATION, System.Data.SqlDbType.NVarChar);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CustomerEntity.CUSTOMER_EDUCATION;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_CUSTOMER_POSITION, System.Data.SqlDbType.NVarChar);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CustomerEntity.CUSTOMER_POSITION;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_CUSTOMER_LOCATION, System.Data.SqlDbType.NVarChar);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CustomerEntity.CUSTOMER_LOCATION;
                 sqlCommand.Parameters.Add(sqlParameter);
 
 
@@ -266,6 +287,22 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_CUSTOMER_USER_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = CustomerEntity.CUSTOMER_USER_ID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+
+                sqlParameter = new SqlParameter(PN_CUSTOMER_EDUCATION, System.Data.SqlDbType.NVarChar);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CustomerEntity.CUSTOMER_EDUCATION;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_CUSTOMER_POSITION, System.Data.SqlDbType.NVarChar);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CustomerEntity.CUSTOMER_POSITION;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_CUSTOMER_LOCATION, System.Data.SqlDbType.NVarChar);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = CustomerEntity.CUSTOMER_LOCATION;
                 sqlCommand.Parameters.Add(sqlParameter);
 
                 try
@@ -489,6 +526,18 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(CN_CUSTOMER_USER_ID);
             if (!reader.IsDBNull(colIndex))
                 oCustomer.CUSTOMER_USER_ID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_CUSTOMER_EDUCATION);
+            if (!reader.IsDBNull(colIndex))
+                oCustomer.CUSTOMER_EDUCATION = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_CUSTOMER_POSITION);
+            if (!reader.IsDBNull(colIndex))
+                oCustomer.CUSTOMER_POSITION = reader.GetString(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_CUSTOMER_LOCATION);
+            if (!reader.IsDBNull(colIndex))
+                oCustomer.CUSTOMER_LOCATION = reader.GetString(colIndex);
         }
 
         #endregion

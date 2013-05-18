@@ -173,6 +173,34 @@
                         <asp:TextBox ID="txtHoemPhone" runat="server" MaxLength="50"></asp:TextBox>
                     </td>
                 </tr>
+
+                <tr>
+                    <td>
+                        <asp:Label ID="lblEducation" runat="server" Text="Education" AssociatedControlID="txtEducation"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtEducation" runat="server" MaxLength="50"></asp:TextBox>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <asp:Label ID="lblPosition" runat="server" Text="Position" AssociatedControlID="txtposition"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtposition" runat="server" MaxLength="50"></asp:TextBox>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <asp:Label ID="lblLocation" runat="server" Text="Location" AssociatedControlID="txtLocation"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtLocation" runat="server" MaxLength="50"></asp:TextBox>
+                    </td>
+                </tr>
+
                 <tr>
                     <td>
                         <asp:Label ID="lblStatus" runat="server" Text="Status" AssociatedControlID="rblstauts"></asp:Label>

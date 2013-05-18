@@ -33,6 +33,8 @@ namespace AJH.CMS.Core.Entities
             set;
             get;
         }
+        public DateTime ORDER_MODIFICATION_DATE
+        { set; get; }
 
         #region IEntity Members
 
@@ -73,6 +75,7 @@ namespace AJH.CMS.Core.Entities
             this.ORDER_TOTAL_AMOUNT = 0;
             this.PortalID = 0;
             this.XREF_ODER = 0;
+            this.ORDER_MODIFICATION_DATE = DateTime.Now;
         }
     }
 }

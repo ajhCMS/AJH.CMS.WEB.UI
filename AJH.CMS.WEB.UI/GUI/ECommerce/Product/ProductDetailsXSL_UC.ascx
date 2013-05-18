@@ -5,4 +5,4 @@
 <asp:DropDownList ID="ddlCombinations" runat="server" AutoPostBack="true" EnableViewState="true">
 </asp:DropDownList>
 <asp:Xml ID="xmlGroup" runat="server" EnableViewState="false"></asp:Xml>
-<asp:Xml ID="xmlProduct" runat="server" EnableViewState="false"></asp:Xml>
+<asp:Xml ID="xmlProduct" runat="server" EnableViewState="false" Visible="false"></asp:Xml>

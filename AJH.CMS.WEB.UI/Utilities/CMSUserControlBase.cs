@@ -23,6 +23,12 @@ namespace AJH.CMS.WEB.UI.Utilities
             set;
         }
 
+        public int CombinationID
+        {
+            set;
+            get;
+        }
+
         public virtual Dictionary<string, string> GetContainerValue(int ModuleID, int PortalID, int LanguageID)
         {
             Dictionary<string, string> items = new Dictionary<string, string>();

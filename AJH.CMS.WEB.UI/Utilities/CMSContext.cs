@@ -141,5 +141,11 @@ namespace AJH.CMS.WEB.UI.Utilities
                 return "~/Portals/Portal" + PortalID + "/";
             }
         }
+
+        public static int CombinationID
+        {
+            set;
+            get;
+        }
     }
 }

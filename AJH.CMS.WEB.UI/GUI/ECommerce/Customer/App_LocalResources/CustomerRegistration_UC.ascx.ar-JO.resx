@@ -171,4 +171,13 @@
   <data name="lblZip.Text" xml:space="preserve">
     <value>الرمز البريدي</value>
   </data>
+  <data name="lblEducation.Text" xml:space="preserve">
+    <value>التعليم</value>
+  </data>
+  <data name="lblLocation.Text" xml:space="preserve">
+    <value>المكان</value>
+  </data>
+  <data name="lblPosition.Text" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
 </root>

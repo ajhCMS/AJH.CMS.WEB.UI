@@ -60,6 +60,10 @@ namespace AJH.CMS.WEB.UI.GUI.ECommerce.Customer
                 customer.CUSTOMER_STATUS = (CMSEnums.AccessType)Convert.ToInt32(rblstauts.SelectedValue);
                 customer.CUSTOMER_COUNTRY = Convert.ToInt32(ddlCountry.SelectedValue);
                 customer.CUSTOMER_USER_ID = Ref_UserID;
+                customer.CUSTOMER_EDUCATION = txtEducation.Text;
+                customer.CUSTOMER_POSITION = txtposition.Text;
+                customer.CUSTOMER_LOCATION = txtLocation.Text;
+
                 CustomerManager.Add(customer);
 
                 UserManager.LoginIn(user, true);

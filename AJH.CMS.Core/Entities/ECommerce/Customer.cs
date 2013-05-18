@@ -88,6 +88,13 @@ namespace AJH.CMS.Core.Entities
             set;
             get;
         }
+        public string CUSTOMER_EDUCATION
+        { set; get; }
+        public string CUSTOMER_POSITION
+        { set; get; }
+        public string CUSTOMER_LOCATION
+        { set; get; }
+
 
         #region IEntity Members
 
@@ -147,6 +154,9 @@ namespace AJH.CMS.Core.Entities
             this.Name = string.Empty;
             this.Order = 0;
             this.PortalID = 0;
+            this.CUSTOMER_EDUCATION = string.Empty;
+            this.CUSTOMER_POSITION = string.Empty;
+            this.CUSTOMER_LOCATION = string.Empty;
             
         }
     }

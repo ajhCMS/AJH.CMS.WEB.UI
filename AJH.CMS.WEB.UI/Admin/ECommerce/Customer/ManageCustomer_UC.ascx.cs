@@ -124,6 +124,9 @@ namespace AJH.CMS.WEB.UI.Admin.ECommerce.Customer
                             customer.CUSTOMER_OPT_IN = (CMSEnums.AccessType)Convert.ToInt32(rblOptIn.SelectedValue);
                             customer.CUSTOMER_STATUS = (CMSEnums.AccessType)Convert.ToInt32(rblstauts.SelectedValue);
                             customer.CUSTOMER_COUNTRY = Convert.ToInt32(ddlCountry.SelectedValue);
+                            customer.CUSTOMER_EDUCATION = txtEducation.Text;
+                            customer.CUSTOMER_POSITION = txtposition.Text;
+                            customer.CUSTOMER_LOCATION = txtLocation.Text;
 
                             CustomerManager.Update(customer);
 
@@ -175,6 +178,9 @@ namespace AJH.CMS.WEB.UI.Admin.ECommerce.Customer
                 customer.CUSTOMER_STATUS = (CMSEnums.AccessType)Convert.ToInt32(rblstauts.SelectedValue);
                 customer.CUSTOMER_COUNTRY = Convert.ToInt32(ddlCountry.SelectedValue);
                 customer.CUSTOMER_USER_ID = Ref_UserID;
+                customer.CUSTOMER_EDUCATION = txtEducation.Text;
+                customer.CUSTOMER_POSITION = txtposition.Text;
+                customer.CUSTOMER_LOCATION = txtLocation.Text;
                 CustomerManager.Add(customer);
 
                 BeginAddMode();
@@ -300,6 +306,9 @@ namespace AJH.CMS.WEB.UI.Admin.ECommerce.Customer
             btnSave.Visible = true;
             btnUpdate.Visible = false;
             pnlCustomer.DefaultButton = btnSave.ID;
+            txtEducation.Text = string.Empty;
+            txtposition.Text = string.Empty;
+            txtLocation.Text = string.Empty;
         }
         #endregion
 
@@ -331,6 +340,9 @@ namespace AJH.CMS.WEB.UI.Admin.ECommerce.Customer
                     rblstauts.SelectedIndex = (int)customer.CUSTOMER_STATUS;
                     ddlCountry.SelectedValue = customer.CUSTOMER_COUNTRY.ToString();
                     ucAjaxDate.SelectedDateTime = customer.CUSTOMER_BIRTHDAY;
+                    txtLocation.Text = customer.CUSTOMER_EDUCATION;
+                    txtEducation.Text = customer.CUSTOMER_EDUCATION;
+                    txtposition.Text = customer.CUSTOMER_POSITION;
 
                     btnSave.Visible = false;
                     btnUpdate.Visible = true;

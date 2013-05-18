@@ -18,6 +18,8 @@ namespace AJH.CMS.Core.Data
         internal const string CN_ORDER_STATUS = "ORDER_STATUS";
         internal const string CN_ORDER_TOTAL_AMOUNT = "ORDER_TOTAL_AMOUNT";
         internal const string CN_XREF_ODER = "XREF_ODER";
+        internal const string CN_ORDER_MODIFICATION_DATE = "ORDER_MODIFICATION_DATE";
+        
 
         internal const string PN_ORDER_ID = "P_ORDER_ID";
         internal const string PN_ORDER_CUSTOMER_ID = "P_ORDER_CUSTOMER_ID";
@@ -25,6 +27,7 @@ namespace AJH.CMS.Core.Data
         internal const string PN_ORDER_STATUS = "P_ORDER_STATUS";
         internal const string PN_ORDER_TOTAL_AMOUNT = "P_ORDER_TOTAL_AMOUNT";
         internal const string PN_XREF_ODER = "P_XREF_ODER";
+        internal const string PN_ORDER_MODIFICATION_DATE = "P_ORDER_MODIFICATION_DATE";
 
         internal const string SN_ORDER_ADD = "[ECOMMERCE].[OrderAdd]";
         internal const string SN_ORDER_DELETE = "[ECOMMERCE].[OrderDelete]";
@@ -76,6 +79,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_XREF_ODER, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = OrderEntity.XREF_ODER;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_ORDER_MODIFICATION_DATE, System.Data.SqlDbType.DateTime);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = OrderEntity.ORDER_MODIFICATION_DATE;
                 sqlCommand.Parameters.Add(sqlParameter);
 
 
@@ -134,6 +142,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_XREF_ODER, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = OrderEntity.XREF_ODER;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_ORDER_MODIFICATION_DATE, System.Data.SqlDbType.DateTime);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = OrderEntity.ORDER_MODIFICATION_DATE;
                 sqlCommand.Parameters.Add(sqlParameter);
 
 
@@ -317,6 +330,10 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(CN_XREF_ODER);
             if (!reader.IsDBNull(colIndex))
                 oOrder.XREF_ODER = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_ORDER_MODIFICATION_DATE);
+            if (!reader.IsDBNull(colIndex))
+                oOrder.ORDER_MODIFICATION_DATE = reader.GetDateTime(colIndex);
         }
 
         #endregion

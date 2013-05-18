@@ -171,4 +171,13 @@
   <data name="lblZip.Text" xml:space="preserve">
     <value>Zip Code</value>
   </data>
+  <data name="lblEducation.Text" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="lblLocation.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="lblPosition.Text" xml:space="preserve">
+    <value>Position</value>
+  </data>
 </root>

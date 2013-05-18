@@ -16,6 +16,8 @@ namespace AJH.CMS.Core.Data
         internal const string CN_ORD_PRO_DET_DETAILS_ID = "ORD_PRO_DET_DETAILS_ID";
         internal const string CN_ORD_PRO_DET_XREF_PRODUCT_DETAILS = "ORD_PRO_DET_XREF_PRODUCT_DETAILS";
         internal const string CN_ORD_PRO_DET_GROUP_ID = "ORD_PRO_DET_GROUP_ID";
+        internal const string CN_ORD_PRO_DET_COMBINATION_ID = "ORD_PRO_DET_COMBINATION_ID";
+        
 
         internal const string PN_ORD_PRO_DET_ID = "P_ORD_PRO_DET_ID";
         internal const string PN_ORD_PRO_DET_PRODUCT_ID = "P_ORD_PRO_DET_PRODUCT_ID";
@@ -23,6 +25,9 @@ namespace AJH.CMS.Core.Data
         internal const string PN_ORD_PRO_DET_DETAILS_ID = "P_ORD_PRO_DET_DETAILS_ID";
         internal const string PN_ORD_PRO_DET_XREF_PRODUCT_DETAILS = "P_ORD_PRO_DET_XREF_PRODUCT_DETAILS";
         internal const string PN_ORD_PRO_DET_GROUP_ID = "P_ORD_PRO_DET_GROUP_ID";
+        internal const string PN_ORD_PRO_DET_COMBINATION_ID = "P_ORD_PRO_DET_COMBINATION_ID";
+
+
 
         internal const string SN_ORDER_PRODUCT_DETAILS_ADD = "[ECOMMERCE].[OrderProductDetailsAdd]";
         internal const string SN_ORDER_PRODUCT_DETAILS_DELETE = "[ECOMMERCE].[OrderProductDetailsDelete]";
@@ -55,7 +60,7 @@ namespace AJH.CMS.Core.Data
                 sqlParameter.Value = OrderProductDetailsEntity.ORD_PRO_DET_ATTRIBUTE_ID;
                 sqlCommand.Parameters.Add(sqlParameter);
 
-                sqlParameter = new SqlParameter(PN_ORD_PRO_DET_DETAILS_ID, System.Data.SqlDbType.DateTime);
+                sqlParameter = new SqlParameter(PN_ORD_PRO_DET_DETAILS_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = OrderProductDetailsEntity.ORD_PRO_DET_DETAILS_ID;
                 sqlCommand.Parameters.Add(sqlParameter);
@@ -73,6 +78,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_ORD_PRO_DET_GROUP_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = OrderProductDetailsEntity.ORD_PRO_DET_GROUP_ID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_ORD_PRO_DET_COMBINATION_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = OrderProductDetailsEntity.ORD_PRO_DET_COMBINATION_ID;
                 sqlCommand.Parameters.Add(sqlParameter);
                 
 
@@ -133,6 +143,11 @@ namespace AJH.CMS.Core.Data
                 sqlParameter = new SqlParameter(PN_ORD_PRO_DET_GROUP_ID, System.Data.SqlDbType.Int);
                 sqlParameter.Direction = System.Data.ParameterDirection.Input;
                 sqlParameter.Value = OrderProductDetailsEntity.ORD_PRO_DET_GROUP_ID;
+                sqlCommand.Parameters.Add(sqlParameter);
+
+                sqlParameter = new SqlParameter(PN_ORD_PRO_DET_COMBINATION_ID, System.Data.SqlDbType.Int);
+                sqlParameter.Direction = System.Data.ParameterDirection.Input;
+                sqlParameter.Value = OrderProductDetailsEntity.ORD_PRO_DET_COMBINATION_ID;
                 sqlCommand.Parameters.Add(sqlParameter);
 
 
@@ -316,6 +331,10 @@ namespace AJH.CMS.Core.Data
             colIndex = reader.GetOrdinal(CN_ORD_PRO_DET_GROUP_ID);
             if (!reader.IsDBNull(colIndex))
                 oOrderProductDetails.ORD_PRO_DET_GROUP_ID = reader.GetInt32(colIndex);
+
+            colIndex = reader.GetOrdinal(CN_ORD_PRO_DET_COMBINATION_ID);
+            if (!reader.IsDBNull(colIndex))
+                oOrderProductDetails.ORD_PRO_DET_COMBINATION_ID = reader.GetInt32(colIndex);
         }
 
         #endregion
