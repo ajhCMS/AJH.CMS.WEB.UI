@@ -222,6 +222,7 @@ namespace AJH.CMS.WEB.UI.Admin
                         menu.LanguageID = CMSContext.LanguageID;
                         menu.MenuType = (CMSEnums.MenuType)Convert.ToInt32(ddlMenuType.SelectedValue);
                         menu.Name = txtName.Text;
+                        menu.PageTitle = txtPageTitle.Text;
                         menu.Order = Convert.ToInt32(txtOrderNumber.Text);
                         menu.ParentID = Convert.ToInt32(cddParentMenu.SelectedValue);
                         menu.PortalID = CMSContext.PortalID;
@@ -294,6 +295,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     menu.LanguageID = CMSContext.LanguageID;
                     menu.MenuType = (CMSEnums.MenuType)Convert.ToInt32(ddlMenuType.SelectedValue);
                     menu.Name = txtName.Text;
+                    menu.PageTitle = txtPageTitle.Text;
                     menu.Order = Convert.ToInt32(txtOrderNumber.Text);
                     menu.ParentID = Convert.ToInt32(cddParentMenu.SelectedValue);
                     menu.PortalID = CMSContext.PortalID;
@@ -424,6 +426,7 @@ namespace AJH.CMS.WEB.UI.Admin
 
                         menu.MenuType = (CMSEnums.MenuType)Convert.ToInt32(ddlMenuType.SelectedValue);
                         menu.Name = txtName.Text;
+                        menu.PageTitle = txtPageTitle.Text;
                         menu.Order = Convert.ToInt32(txtOrderNumber.Text);
                         menu.ParentID = Convert.ToInt32(cddParentMenu.SelectedValue);
                         menu.PortalID = CMSContext.PortalID;
@@ -496,6 +499,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     menu.LanguageID = CMSContext.LanguageID;
                     menu.MenuType = (CMSEnums.MenuType)Convert.ToInt32(ddlMenuType.SelectedValue);
                     menu.Name = txtName.Text;
+                    menu.PageTitle = txtPageTitle.Text;
                     menu.Order = Convert.ToInt32(txtOrderNumber.Text);
                     menu.ParentID = Convert.ToInt32(cddParentMenu.SelectedValue);
                     menu.PortalID = CMSContext.PortalID;
@@ -682,6 +686,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 txtDescription.Text = string.Empty;
                 txtDetails.Text = string.Empty;
                 txtName.Text = string.Empty;
+                txtPageTitle.Text = string.Empty;
                 txtOrderNumber.Text = "0";
                 txtURL.Text = string.Empty;
                 txtPageURL.Text = string.Empty;
@@ -732,6 +737,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     txtDescription.Text = menu.Description;
                     txtDetails.Text = menu.Details;
                     txtName.Text = menu.Name;
+                    txtPageTitle.Text = menu.PageTitle;
                     txtOrderNumber.Text = menu.Order.ToString();
                     txtURL.Text = menu.URL;
                     txtPageURL.Text = menu.URL;
@@ -804,6 +810,7 @@ namespace AJH.CMS.WEB.UI.Admin
                 txtDescription.Text = string.Empty;
                 txtDetails.Text = string.Empty;
                 txtName.Text = string.Empty;
+                txtPageTitle.Text = string.Empty;
                 txtOrderNumber.Text = "0";
                 txtURL.Text = string.Empty;
                 txtPageURL.Text = string.Empty;
@@ -850,6 +857,7 @@ namespace AJH.CMS.WEB.UI.Admin
                     txtDescription.Text = menu.Description;
                     txtDetails.Text = menu.Details;
                     txtName.Text = menu.Name;
+                    txtPageTitle.Text = menu.PageTitle;
                     txtOrderNumber.Text = menu.Order.ToString();
                     txtURL.Text = menu.URL;
                     txtPageURL.Text = menu.URL;

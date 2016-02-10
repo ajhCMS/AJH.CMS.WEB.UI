@@ -32,6 +32,7 @@ BEGIN
 	M.[MENU_CREATED_BY],
 	M.[MENU_PARENT_OBJ_ID],
 	M.[MENU_GALLERY_CATEGORY_ID],
+	M.[MENU_PAGE_TITLE],
 	(select top 1 MENU_PARENT_ID from SETUP.MENU where M.[MENU_ID] = 
 			case when M.[MENU_PARENT_OBJ_ID] > 0 then M.[MENU_PARENT_OBJ_ID] else M.[MENU_ID] end )
 				 as MAIN_PARENT_ID, --parent id of parent Obj ID

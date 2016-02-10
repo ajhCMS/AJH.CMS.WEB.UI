@@ -41,7 +41,13 @@ namespace AJH.CMS.WEB.UI
                 {
                     lblMenuTitle.Text = menu.Name;
                     dvMenuDetails.InnerHtml = menu.Details;
-                    this.Page.Title = menu.Name;
+                    if (string.IsNullOrEmpty(menu.PageTitle))
+                        this.Page.Title = menu.Name;
+                    else
+                        this.Page.Title = menu.PageTitle;
+
+                    this.Page.MetaKeywords = menu.KeyWords;
+                    this.Page.MetaDescription = menu.Description;
                 }
             }
         }

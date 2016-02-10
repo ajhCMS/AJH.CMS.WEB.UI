@@ -43,8 +43,7 @@
                     <asp:ImageButton ID="ibtnAdd" runat="server" ToolTip="Add" CausesValidation="False"
                         ImageUrl="~/App_Themes/image/add.png"></asp:ImageButton>
                     <asp:ImageButton ID="ibtnGenerateXmlFiles" runat="server" ToolTip="Generate Menu"
-                        CausesValidation="False" NotificationOperationDone="true" ImageUrl="~/App_Themes/image/gen-menu.png">
-                    </asp:ImageButton>
+                        CausesValidation="False" NotificationOperationDone="true" ImageUrl="~/App_Themes/image/gen-menu.png"></asp:ImageButton>
                 </div>
             </div>
             <div class="grid-items">
@@ -73,6 +72,16 @@
                         <asp:TextBox ID="txtName" runat="server" MaxLength="100"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName"
                             ValidationGroup="AddEditMenu" Text="*" Display="Dynamic" ErrorMessage="Name"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblPageTitle" runat="server" Text="Page Title" AssociatedControlID="txtPageTitle"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtPageTitle" runat="server" MaxLength="100"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvPageTitle" runat="server" ControlToValidate="txtPageTitle"
+                            ValidationGroup="AddEditMenu" Text="*" Display="Dynamic" ErrorMessage="Page Title"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -187,7 +196,8 @@
                     <td>
                         <controls:Editor_UC ID="txtDetails" runat="server" Width="100%" Height="500px" EditModes="All"
                             ContentFilters="RemoveScripts" IsRequired="true" ErrorMessage="Details" ErrorText="*"
-                            ValidationGroup="AddEditMenu"></controls:Editor_UC>
+                            ValidationGroup="AddEditMenu">
+                        </controls:Editor_UC>
                     </td>
                 </tr>
             </table>

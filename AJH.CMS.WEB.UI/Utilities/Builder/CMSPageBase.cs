@@ -3,6 +3,7 @@ using System.Web.UI;
 using AJH.CMS.Core.Configuration;
 using AJH.CMS.Core.Data;
 using AJH.CMS.WEB.UI.Utilities;
+using System.Web.UI.HtmlControls;
 
 namespace AJH.CMS.WEB.UI
 {
@@ -28,6 +29,9 @@ namespace AJH.CMS.WEB.UI
             {
                 _CurrentPage = currentPage;
                 this.Title = currentPage.Title;
+
+                this.Page.MetaKeywords = currentPage.KeyWords;
+                this.Page.MetaDescription = currentPage.Description;
             }
             else
             {
@@ -40,6 +44,20 @@ namespace AJH.CMS.WEB.UI
         {
             base.OnPreRender(e);
             this.Title = CoreConfigurationManager._CoreConfigSectionHandler.CustomerElement.Name + " - " + this.Title;
+
+            //Add Keywords Meta Tag
+            HtmlMeta keywords = new HtmlMeta();
+            keywords.HttpEquiv = "keywords";
+            keywords.Name = "keywords";
+            keywords.Content = this.Page.MetaKeywords;
+            this.Page.Header.Controls.Add(keywords);
+
+            //Add Description Meta Tag
+            HtmlMeta description = new HtmlMeta();
+            description.HttpEquiv = "description";
+            description.Name = "description";
+            description.Content = this.Page.MetaDescription;
+            this.Page.Header.Controls.Add(description);
         }
 
         protected override void InitializeCulture()
